@@ -1,0 +1,906 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "category_image_banner_8Nie9D": {
+      "type": "category-image-banner",
+      "blocks": {
+        "caption_CthCLD": {
+          "type": "caption",
+          "settings": {
+            "text": "Popular"
+          }
+        },
+        "heading_H6Ehne": {
+          "type": "heading",
+          "settings": {
+            "heading": "Weight loss <em>that lasts<\/em>",
+            "heading_size": "h1",
+            "accenttext_block": false,
+            "color_accent": "#ccf9ab"
+          }
+        },
+        "text_68FUfP": {
+          "type": "text",
+          "settings": {
+            "text": "Your treatment pathway is individually designed to work with your body for lasting results. As you move through your journey and feel the benefits, you won't look back.",
+            "text_style": "body"
+          }
+        },
+        "list_text_EXGUkE": {
+          "type": "list_text",
+          "settings": {
+            "list_text": "<ul><li>Clinically designed weight-loss treatment<\/li><li>Monitor progress and stay on track<\/li><li>Ongoing one-to-one support<\/li><\/ul>"
+          }
+        },
+        "buttons_yVBXz9": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Start my journey",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_label_2": "Explore Treatments",
+            "button_link_2": "shopify:\/\/products\/mounjaro-kwikpen",
+            "button_style_2": "secondary-outline"
+          }
+        }
+      },
+      "block_order": [
+        "caption_CthCLD",
+        "heading_H6Ehne",
+        "text_68FUfP",
+        "list_text_EXGUkE",
+        "buttons_yVBXz9"
+      ],
+      "name": "Category image banner",
+      "settings": {
+        "allow_transparent_header": false,
+        "image": "shopify:\/\/shop_images\/Mask_group_8_4cfef2d5-5c41-4a9a-807f-47dafee32584.png",
+        "image_overlay_opacity": 10,
+        "image_border_radius": 0,
+        "fixed_attachment": false,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+        "color_accent": "#ccf9ab",
+        "stack_images_on_mobile": false,
+        "mobile_content_position": "middle-left",
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
+    "banner_card_blocks_L97AY9": {
+      "type": "banner-card-blocks",
+      "blocks": {
+        "banner_card_block_XFTdrA": {
+          "type": "banner_card_block",
+          "name": "Banner card 1",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/qwwq.jpg",
+            "title": "Mounjaro Kwikpen",
+            "price_text": "",
+            "list_text": "<ul><li>Lose up to 22.5% body weight*<\/li><li>Clinically proven<\/li><li>Discreet delivery<\/li><\/ul><p><\/p>",
+            "text": "A prescription-only medication that effectively targets weight loss. The active ingredient tirzepatide slows down digestion, reduces appetite and helps you feel fuller for longer.<strong> <\/strong>",
+            "button_label_1": "Start Consultation",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_label_2": "Learn more",
+            "button_link_2": "shopify:\/\/products\/mounjaro",
+            "button_style_2": "primary-outline",
+            "color_scheme_card": "scheme-0693f56c-984d-4ac3-bc37-3daf4f550925",
+            "color_background": "linear-gradient(103.46deg, #16527F 33.54%, #94CBF5 88.16%), linear-gradient(325.26deg, #E4BFAA 9.46%, #CC9D82 55.29%, #C78D6E 68.83%, #BB805E 103.83%), linear-gradient(194.03deg, #A59768 1.87%, #DFD09F 90%), linear-gradient(164.74deg, #A59768 1.42%, #DFD09F 89.28%)",
+            "color_accent": "#ffffff"
+          }
+        },
+        "banner_card_block_2_tVkR86": {
+          "type": "banner_card_block_2",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/xsa.png",
+            "title": "Wegovy <strong>®<\/strong>",
+            "price_text": "",
+            "list_text": "<ul><li>Lose up to 21% body weight*<\/li><li>Clinically proven<\/li><li>Discreet delivery<\/li><\/ul>",
+            "text": "A prescription-only medication called Wegovy that effectively targets weight loss. The active ingredient semaglutide reduces cravings and helps you feel fuller for longer.<strong>                       <\/strong>",
+            "button_label_1": "Start Consultation",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_label_2": "Learn more",
+            "button_link_2": "shopify:\/\/products\/wegovy-post-consultation-order",
+            "button_style_2": "primary-outline",
+            "color_scheme_card": "scheme-0693f56c-984d-4ac3-bc37-3daf4f550925",
+            "color_background": "linear-gradient(103.46deg, #16527F 33.54%, #94CBF5 88.16%), linear-gradient(325.26deg, #E4BFAA 9.46%, #CC9D82 55.29%, #C78D6E 68.83%, #BB805E 103.83%), linear-gradient(194.03deg, #A59768 1.87%, #DFD09F 90%), linear-gradient(164.74deg, #A59768 1.42%, #DFD09F 89.28%)",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "banner_card_block_XFTdrA",
+        "banner_card_block_2_tVkR86"
+      ],
+      "name": "Banner card blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Customised healthcare. <em>settlehealthd for you.<\/em>",
+        "heading_size": "h1",
+        "text": "<p>Everybody needs a different approach. Discover effective treatment tailored to you. For weight loss that lasts.<\/p>",
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "color_scheme": "",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "icon_text_blocks_MDGKWj": {
+      "type": "icon-text-blocks",
+      "blocks": {
+        "icon_text_block_nDbBYD": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_1.png",
+            "title": "Complete your online consultation",
+            "text": "<p>Let’s get to know you. Simply fill in our online questionnaire to check your eligibility for medication.<\/p>"
+          }
+        },
+        "icon_text_block_wJTNQK": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_1.png",
+            "title": "Get reviewed by a clinician ",
+            "text": "<p>One of our specialised clinicians will review your consultation. If approved, your personalised treatment pathway will be created.<\/p>"
+          }
+        },
+        "icon_text_block_tx7LL6": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_1.png",
+            "title": "Start your treatment",
+            "text": "<p>Treatment delivered and you’re ready to go. Don’t worry, our packaging is discreet. This is your journey, no one else’s.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_block_nDbBYD",
+        "icon_text_block_wJTNQK",
+        "icon_text_block_tx7LL6"
+      ],
+      "name": "Icon Text Blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Start your journey <em>in 3 simple steps<\/em>",
+        "heading_size": "h1",
+        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "image_with_list_reverse_text_PkCdah": {
+      "type": "image-with-list-reverse-text",
+      "blocks": {
+        "heading_mWCtam": {
+          "type": "heading",
+          "settings": {
+            "heading": "You're in control. <em>Set your pace and keep moving forward.<\/em>",
+            "heading_size": "h2"
+          }
+        },
+        "icon_text_aawnma": {
+          "type": "icon_text",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/80.svg",
+            "text": "<p>Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before<\/p>"
+          }
+        },
+        "text_XBr4mj": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Designed to work at your pace<\/li><li>Create and maintain lasting habits <\/li><li>A clear path forward to a healthier you<\/li><\/ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mWCtam",
+        "icon_text_aawnma",
+        "text_XBr4mj"
+      ],
+      "name": "Image list reverse text",
+      "settings": {
+        "enable_divider": true,
+        "image": "shopify:\/\/shop_images\/Frame_2141256448.png",
+        "color_scheme": "",
+        "color_accent": "#a9dc84",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "banner_blocks_8Xg6CL": {
+      "type": "banner-blocks",
+      "blocks": {
+        "banner_overlay_text_Ak7rDA": {
+          "type": "banner_overlay_text",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256167_1.png",
+            "pre_text": "",
+            "title": "",
+            "icon_image_1": "shopify:\/\/shop_images\/Group_2141256031.svg",
+            "block_title_1": "",
+            "block_text_1": "",
+            "icon_image_2": "shopify:\/\/shop_images\/Group_2141256032.svg",
+            "block_title_2": "",
+            "block_text_2": "",
+            "icon_image_3": "shopify:\/\/shop_images\/Group_2141256033.svg",
+            "block_title_3": "",
+            "block_text_3": "",
+            "icon_image_4": "shopify:\/\/shop_images\/Group_2141256034.svg",
+            "block_title_4": "",
+            "block_text_4": "",
+            "color_scheme_card": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+            "color_accent": "#7dae58"
+          }
+        },
+        "image_block_mdkd6m": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_2147236681.png",
+            "image_link": "",
+            "color_scheme_card": "scheme-4"
+          }
+        },
+        "text_block_8JhJgh": {
+          "type": "text_block",
+          "settings": {
+            "title": "Your treatment pathway is designed to evolve with you",
+            "text": "<p>As you move through your journey and your body changes, your treatment pathway will be adapted to change with you. <br\/><br\/><strong>Clinician chats<\/strong><br\/>Speak to one of our clinicians for ongoing support and reassurance.<br\/><br\/><strong>Switching medication<\/strong><br\/>If your medication needs to be switched, one of our clinicians will advise you on the most suitable adjustments.<br\/><br\/><br\/><\/p>",
+            "note": "",
+            "line_text_1": "Month <em>1 - 2.5mg<\/em>",
+            "line_text_2": "Month <em>2 - 5.0mg<\/em>",
+            "line_text_3": "Month<em> 3 - 7.5mg<\/em>",
+            "line_text_4": "Month <em>4 - 10mg<\/em>",
+            "color_scheme_card": "scheme-4",
+            "color_accent": "#5f9a35"
+          }
+        }
+      },
+      "block_order": [
+        "banner_overlay_text_Ak7rDA",
+        "image_block_mdkd6m",
+        "text_block_8JhJgh"
+      ],
+      "name": "Banner Blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "",
+        "heading_size": "hxl",
+        "text": "<p> <\/p>",
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "color_scheme": "",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "multicard_blocks_z89Frn": {
+      "type": "multicard-blocks",
+      "blocks": {
+        "card_block_kq8GWA": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256003_1.png",
+            "title": "One-to-one <em>clinician support<\/em>",
+            "text": "Medication adjustments, nutritious meal plans, an achievable fitness routine, wellness support or a motivational chat. We’re here through every step."
+          }
+        },
+        "card_block_t4EyC9": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256183.png",
+            "title": "Personalised <em>treatment pathway<\/em>",
+            "text": "Designed by a specialised clinician. Personalised to work with your body and lifestyle. The only way to achieve lasting results."
+          }
+        },
+        "card_block_payUFN": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256184.png",
+            "title": "Track your <em>weight-loss progress<\/em>",
+            "text": "Your dashboard gives you access to your treatment details, progress tracker, clinician messages and wellness support. Stay in control. Stay on track. "
+          }
+        },
+        "card_block_rXVeJ4": {
+          "type": "card_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256185.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "card_block_EctQVw": {
+          "type": "card_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256183.png",
+            "title": "Personalised <em>treatment plans<\/em>",
+            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+          }
+        },
+        "card_block_F7mb4K": {
+          "type": "card_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256185.png",
+            "title": "Supporting range<em> of supplements<\/em>",
+            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+          }
+        },
+        "card_block_bWPLTA": {
+          "type": "card_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256185.png",
+            "title": "Supporting range<em> of supplements<\/em>",
+            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_kq8GWA",
+        "card_block_t4EyC9",
+        "card_block_payUFN",
+        "card_block_rXVeJ4",
+        "card_block_EctQVw",
+        "card_block_F7mb4K",
+        "card_block_bWPLTA"
+      ],
+      "name": "Multicard blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Let's unpack <em>your weight-loss treatment pathway<\/em>",
+        "heading_size": "h1",
+        "text": "",
+        "alignment": "left",
+        "autoplay_enabled": false,
+        "autoplay_timeout": 5,
+        "loop_enabled": false,
+        "enable_pagination": false,
+        "enable_pagination_mobile": false,
+        "enable_navigation": false,
+        "enable_navigation_desktop": false,
+        "color_scheme_swiper": "",
+        "color_scheme": "",
+        "color_scheme_card": "scheme-12aabace-348a-4184-95ad-169e2a162b4f",
+        "color_accent": "#5f9a35",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "them_section_id": ""
+      }
+    },
+    "team_carousel_product_fPwkMj": {
+      "type": "team-carousel-product",
+      "blocks": {
+        "team_block_WbNpwM": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stars.jpg",
+            "name": "Blown away",
+            "designation": "",
+            "text": "\"I was blown away by the attention to detail and care from the settlehealth team. I have discussed in depth the benefits of their weight-loss medication and how it can help me. The team supported me from beginning to end and continue to be on hand with all my questions. I’ve been using the product for 2 months and I can’t believe how much it’s positively impacted my life.\" <em>Lauren<\/em>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_6hHFhP": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stars.jpg",
+            "name": "",
+            "designation": "",
+            "text": "\"All my family and friends comment on how well I am looking. settlehealth consistently cost me less than all the other providers, not just the first order like most companies do as an incentive to join them, but with every order. They send out my orders quickly, and they come chilled every time.\"",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_BrJEyz": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stars.jpg",
+            "name": "100% recommend",
+            "designation": "",
+            "text": "\"I’ve been ordering weight-loss medication from settlehealth monthly for over 12 months. I’ve never experienced any problems at all. I have contacted a couple of times to speak to a prescriber for advice around maintenance dosing and have always found them informative and extremely helpful. 100% recommend.\" <em>Anonymous <\/em>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_tfX9A3": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stars.jpg",
+            "name": "settlehealth is the best",
+            "designation": "",
+            "text": "\"I highly recommend settlehealth for weight management! They provide all the updates you need to stay on track, and their support team is fantastic at replying to emails quickly. I was also really impressed by how fast they approved and posted my prescription.\" <em>EMO<\/em>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_hKj7Re": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stars.jpg",
+            "name": "Very looked after",
+            "designation": "",
+            "text": "\"I feel I am looked after. Although everything is very efficient, it is also thorough in making sure the product is right for you and continues to be right for you. I have lost 20lbs in 10 weeks on Mounjaro, which feels sensible and not too dramatic. I’m learning lots about me and food on the journey.\" <em>Ms C<\/em>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_bEbrqD": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stars.jpg",
+            "name": "The process was very easy",
+            "designation": "",
+            "text": "\"The process was very easy - all information was emailed to me with instructions. The video call was straightforward. I received my first package quickly after this. Ordering is easy and delivery is fast, usually next day. When the item is delivered, it is in a good strong padded bag with an ice pack, so if I'm not home to receive the parcel, its not a problem.\" <em>Teresa<\/em>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "team_block_WbNpwM",
+        "team_block_6hHFhP",
+        "team_block_BrJEyz",
+        "team_block_tfX9A3",
+        "team_block_hKj7Re",
+        "team_block_bEbrqD"
+      ],
+      "name": "Team Carousel Product",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Hear from others <em>who love their settlehealthd pathway<\/em>",
+        "heading_size": "h2",
+        "text": "",
+        "alignment": "left",
+        "autoplay_enabled": false,
+        "autoplay_timeout": 5,
+        "loop_enabled": false,
+        "enable_pagination": false,
+        "enable_pagination_mobile": false,
+        "enable_navigation": true,
+        "enable_navigation_desktop": true,
+        "color_scheme_swiper": "scheme-32051e61-b6a4-4a5b-80c8-a81092a26e44",
+        "color_scheme": "",
+        "color_scheme_card": "scheme-1",
+        "color_accent": "#5f9a35",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "them_section_id": ""
+      }
+    },
+    "image_banner_jHEMRR": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8W3ptn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalised Healthcare <em>Designed for you. Built to last.<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_CMKyh7": {
+          "type": "text",
+          "settings": {
+            "text": "Whatever your story, we take a holistic approach to your healthcare. There is no quick fix for long-term health. One size can’t possibly fit all. Your journey with settlehealth is as individual as you.",
+            "text_style": "body"
+          }
+        },
+        "buttons_cKMCxR": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Start my journey",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8W3ptn",
+        "text_CMKyh7",
+        "buttons_cKMCxR"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "image": "shopify:\/\/shop_images\/Mask_group_13_cf052ccd-e55c-4308-8c37-d85e9a8ed5c3.png",
+        "image_overlay_opacity": 10,
+        "image_border_radius": 0,
+        "fixed_attachment": false,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+        "color_accent": "#ccf9ab",
+        "stack_images_on_mobile": false,
+        "mobile_content_position": "middle-center",
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
+    "text_block_with_image_geLiDC": {
+      "type": "text-block-with-image",
+      "blocks": {
+        "heading_H8w3fP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Because we're<em> all about you<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_mGBLKV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your journey with settlehealth is as individual as you. Clinically designed for your body with support, encouragement and guidance through every step.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_VAxfN6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Started",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        },
+        "icon_text_qnxG4e": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141255750.svg",
+            "title": "Treatment pathway <em>designed by clinician<\/em>",
+            "text": "<p>Clinically designed to work with your body. Using your data and analytics, this is personalised healthcare like never before.<\/p>"
+          }
+        },
+        "icon_text_Ht8RW7": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141255751.svg",
+            "title": "Holistic approach <em>to your health <\/em>",
+            "text": "<p>A prescription alone isn’t the answer to sustainable results. We bring personalised nutrition, exercise, sleep and general wellness guidance into your plan.<\/p>"
+          }
+        },
+        "icon_text_KKdRtQ": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141255752.svg",
+            "title": "Stay focused <em>and on track<\/em>",
+            "text": "<p>Your own personal dashboard stores all your personalised data. Record your results, monitor progress and keep moving forward. You’re in complete control.<\/p>"
+          }
+        },
+        "icon_text_RYwayB": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141255753.svg",
+            "title": "Ongoing support <em>throughout your journey<\/em>",
+            "text": "<p>Whether you need treatment advice, nutritional support, wellness tips or a little motivation, our specialised clinicians will guide you through every step.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_H8w3fP",
+        "text_mGBLKV",
+        "button_VAxfN6",
+        "icon_text_qnxG4e",
+        "icon_text_Ht8RW7",
+        "icon_text_KKdRtQ",
+        "icon_text_RYwayB"
+      ],
+      "name": "Text block with image",
+      "settings": {
+        "enable_divider": true,
+        "heading": "Why choose <em>settlehealth?<\/em>",
+        "heading_size": "h1",
+        "text": "",
+        "image": "shopify:\/\/shop_images\/Mask_group_14_70169244-b4a1-4b15-ac95-2565d422b5ba.png",
+        "color_scheme": "",
+        "color_accent": "#a5a5a5",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "team_carousel_BXYGe4": {
+      "type": "team-carousel-product",
+      "blocks": {
+        "team_block_VCyxAa": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "name": "Imrana Mohid",
+            "designation": "Prescribing Pharmacist",
+            "text": "Experience as a Primary Care Network (PCN) Clinical Pharmacist, Superintendent Community Pharmacist and Private Weight-Loss Prescriber. Focused on patient-centred care, medication optimisation and long-term condition management.",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "team_block_3ftVVg": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_28.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent Pharmacist",
+            "text": "Vast experience across some of the UK’s leading pharmacies. Specialising in clinical safety and digital healthcare, with a modern approach that embraces innovation and raises the standard. The driving force that leads our team of highly skilled clinicians. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_9EYiea": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_24.png",
+            "name": "Kiran Williamson",
+            "designation": "Director Of Operations",
+            "text": "Experienced leader with a track record of scaling high-growth businesses through process optimisation, cross-functional leadership, and data-driven decision making. Specialises in building operational infrastructure that supports rapid commercial expansion.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_m3Hye8": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Aumbreen Masood",
+            "designation": "Prescribing Pharmacist",
+            "text": "Specialises in weight loss, with a diverse background in community pharmacy management providing both NHS and private clinical services. Experienced in patient assessment, diagnosis and prescribing across a range of acute and chronic conditions. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_yXJrDp": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Fahima Tamannah",
+            "designation": "Prescribing Pharmacist",
+            "text": "Over a decade of experience in community pharmacy and store management, working both privately and with the NHS. A personable approach to help drive patients towards their weight-loss goals and long-term health.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_4A6JDD": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_23.png",
+            "name": "Nafisa Raza",
+            "designation": "Prescribing Pharmacist",
+            "text": "Patient-centred approach with hands-on experience working in a GP surgery. Specialised in weight management and type 2 diabetes, and dedicated to helping patients make sustainable health improvements using a personalised, evidence-based approach.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_ECLNDX": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Islam Ahmed",
+            "designation": "Prescribing Pharmacist",
+            "text": "Extensive experience within health in justice, supporting diverse patient groups. Committed to improving access to equitable care, particularly for neurodiverse patients. Focus on weight management and evidence-based prescribing to achieve long-term results.   ",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "team_block_VCyxAa",
+        "team_block_3ftVVg",
+        "team_block_9EYiea",
+        "team_block_m3Hye8",
+        "team_block_yXJrDp",
+        "team_block_4A6JDD",
+        "team_block_ECLNDX"
+      ],
+      "name": "Team Carousel Product",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Clinicians you can trust <em>Qualified. Compassionate. Committed.<\/em>",
+        "heading_size": "h2",
+        "text": "<p>Our UK-leading clinicians are at the top of their game. Highly skilled and individually specialised. Dedicated to giving you confidence, clarity and a clear path forward. <\/p>",
+        "alignment": "center",
+        "autoplay_enabled": false,
+        "autoplay_timeout": 5,
+        "loop_enabled": false,
+        "enable_pagination": false,
+        "enable_pagination_mobile": false,
+        "enable_navigation": false,
+        "enable_navigation_desktop": false,
+        "color_scheme_swiper": "scheme-32051e61-b6a4-4a5b-80c8-a81092a26e44",
+        "color_scheme": "",
+        "color_scheme_card": "scheme-1",
+        "color_accent": "#a5a5a5",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "them_section_id": ""
+      }
+    },
+    "faq_section_bjxzKR": {
+      "type": "faq-section",
+      "blocks": {
+        "collapsible_row_4VGV9b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When will I see results?",
+            "row_content": "<p>Everyone's journey is different. Most people begin to see a change within four to eight weeks, when the medication is combined with our recommended nutrition and exercise guidelines. <\/p><p>The pace depends on you, your medication and how you approach the lifestyle changes. Consistency matters more than speed, and we're here to keep you motivated every step of the way.<\/p>"
+          }
+        },
+        "collapsible_row_bzzp7L": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the difference between Mounjaro and Wegovy? ",
+            "row_content": "<p>Both are clinically proven weight-loss medications that are injected weekly. But they work differently. <\/p><p>Wegovy contains semaglutide, which mimics the single hormone glucagon-like peptide (GLP-1) to reduce cravings and help you feel fuller for longer. Mounjaro contains tirzepatide, which targets the two hormones GLP-1 and glucose-dependent insulinotropic polypeptide (GIP) simultaneously to slow digestion, reduce appetite and help you feel fuller for longer. Individual results vary with both medications. <\/p><p>The right choice depends on your health history, your body and your goals. And that’s what we’re here for. Your clinician will assess this during your consultation to find the most effective medication for you. <\/p>"
+          }
+        },
+        "collapsible_row_C9p89w": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use weight-loss medication long term? ",
+            "row_content": "<p>Yes — both Wegovy and Mounjaro may be used long-term as part of a personalised weight-loss pathway. The lifestyle habits you build during treatment are just as important as the medication itself, and your settlehealth pathway is designed to support both. Your clinician will review your treatment regularly to make sure it continues to work effectively for you.<\/p>"
+          }
+        },
+        "collapsible_row_VqL7ez": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What happens when I stop treatment? ",
+            "row_content": "<p>It's important to be honest about this. Research shows that stopping GLP-1 medication can lead to weight regain in many people — often because the hormonal drivers of appetite and metabolism return to their previous state. <\/p><p>This is why the lifestyle changes you make during treatment are so important. At settlehealth, your treatment pathway isn't just about the medication — it's about building sustainable habits that support you long after treatment ends. Maintaining a healthy diet with regular exercise will help you keep the weight off long-term. Any decision to stop should always be made with your clinician, not alone.<\/p>"
+          }
+        },
+        "collapsible_row_ALMQgt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why is settlehealth different from just taking medication alone? ",
+            "row_content": "<p>Medication is a powerful tool, but it’s most effective when combined with a whole-person approach. <\/p><p>Your personalised treatment pathway is individually designed by a specialised clinician who understands your health history, your goals and your individual response to treatment. This includes ongoing support, regular reviews, nutritional guidance and a personal dashboard to track your progress. The medication creates the conditions for change. The pathway is what makes that change last.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4VGV9b",
+        "collapsible_row_bzzp7L",
+        "collapsible_row_C9p89w",
+        "collapsible_row_VqL7ez",
+        "collapsible_row_ALMQgt"
+      ],
+      "name": "Faq Section",
+      "settings": {
+        "heading": "Questions?<em> We’re here to help.<\/em>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "disclosure_toggle": "plus",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "color_accent": "#a5a5a5",
+        "open_first_collapsible_row": true,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "author_block_Q7eG9e": {
+      "type": "author-block",
+      "blocks": {
+        "heading_WMmGM8": {
+          "type": "heading",
+          "settings": {
+            "heading": "A note from our Director"
+          }
+        },
+        "text_p4XQNh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“We have built settlehealth on the principle that health should be personalised, it should grow and change with you. Our team are aligned on the one clear vision that service is everything. Let our team take care of you through your journey with settlehealth”<\/p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_MD8QkF": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_1_976f2227-c59d-4dd1-b7ef-c4c58c8a1d5b.svg",
+            "title": "Kiran Williamson"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WMmGM8",
+        "text_p4XQNh",
+        "icon_text_MD8QkF"
+      ],
+      "name": "Author block",
+      "settings": {
+        "enable_divider": false,
+        "image": "shopify:\/\/shop_images\/Generated_with_Kive.ai_-_in_navy_pinstripe_power_suit_with_pearl_statement_necklace__seated_in_blush_velvet_armchair__direct_gaze__polished_blonde_bob__executive_portrait_lighting__cl.png",
+        "color_scheme": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
+        "color_accent": "#a5a5a5",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "category_image_banner_8Nie9D",
+    "banner_card_blocks_L97AY9",
+    "icon_text_blocks_MDGKWj",
+    "image_with_list_reverse_text_PkCdah",
+    "banner_blocks_8Xg6CL",
+    "multicard_blocks_z89Frn",
+    "team_carousel_product_fPwkMj",
+    "image_banner_jHEMRR",
+    "text_block_with_image_geLiDC",
+    "team_carousel_BXYGe4",
+    "faq_section_bjxzKR",
+    "author_block_Q7eG9e"
+  ]
+}

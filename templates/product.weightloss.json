@@ -1,0 +1,761 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "category_list_TVpC3H": {
+          "type": "category_list",
+          "settings": {
+            "badge_text": "Bestseller",
+            "badge_bg_color": "#ccf9ab",
+            "badge_color": "#2e4e16",
+            "category_1": "Rx",
+            "category_link_1": "",
+            "category_2": "Weekly weight loss injection",
+            "category_link_2": "",
+            "category_text_color": "#2e2e25"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "text_list_n9xGpm": {
+          "type": "text_list",
+          "settings": {
+            "title_1": "22.5<em>%<\/em>",
+            "text_1": "avg weight loss over a 72-week period*",
+            "title_2": "",
+            "text_2": ""
+          }
+        },
+        "short_description_48fMMW": {
+          "type": "short_description",
+          "settings": {
+            "text": "A prescription-only medication that effectively targets weight loss. Used weekly, Mounjaro works by slowing down digestion, reducing your appetite and helping you feel fuller for longer.<strong> <\/strong>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "promo_text": "Pay as you go. Promo and discount codes can be added at checkout"
+          }
+        },
+        "collapsible_tab_YrMwiT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Weight Loss with settlehealth",
+            "icon": "none",
+            "content": "<ul><li>Check your eligibility for weight-loss medication with a quick online consultation.<\/li><li>If eligible, book a short video call to ask questions and explore options.<\/li><li>Once approved, your personalised pathway is individually designed by a clinician.<\/li><li>Your medication is delivered, discreetly packaged. <\/li><li>You’re never alone with specialist one-to-one support throughout your journey.<\/li><li>Whole-person healthcare with nutrition, exercise and wellbeing advice.<\/li><li>Tailored supplements to work with your changing needs. <\/li><li>Measure your progress and stay on track through your own dashboard.<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_dAKmFD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How Mounjaro works",
+            "icon": "none",
+            "content": "<p>The active ingredient tirzepatide mimics two gut hormones, GLP-1 (glucagon-like peptide) and GIP (glucose-dependent insulinotropic polypeptide). They work together to target your metabolism. Here’s how:<\/p><p><strong>GLP-1 <\/strong>is the hormone released after eating. Mounjaro activates the GLP-1 receptor, slowing down stomach emptying to help you feel fuller for longer. It also boosts insulin release to regulate blood sugar levels, and the brain is cleverly alerted to reduce appetite and cravings. <\/p><p><strong>GIP<\/strong> compliments this perfectly by helping the body use insulin more efficiently. Blood sugar levels are regulated, the brain is signalled and you’ll feel satisfied with smaller, healthier portions.<\/p><p>Use this medication as part of your personalised treatment pathway for effective, lasting change.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_mCgyTh": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to use Mounjaro",
+            "icon": "none",
+            "content": "<p><strong>Dose and frequency <\/strong><\/p><p>Using Mounjaro is simple. Your pre-filled injection pen is used once a week (on the same day). To help your body adjust to the medication, we start with a low dose which gradually increases over time until you reach your maximum amount. It’s different for everyone, and your clinician will work with you to find your sweet spot. This method reduces potential side effects and increases effectiveness for lasting results. <\/p><p><strong>Where to inject<\/strong><\/p><p>Mounjaro is injected into fatty tissue (not your vein). Choose the area most comfortable for you:<\/p><p>Stomach - At least 2 inches\/5cm (no closer) away from your belly button. Many choose this as it’s easy to reach.<\/p><p>Either thigh - The front upper part, avoiding your inner thigh.<\/p><p>Upper arm: The back, outer area. This is tricky to reach, so you may need someone to help you.<\/p><p>Rotate the exact spot each week to avoid irritation. Avoid bruised, tender, sore or sunburnt skin, as well as scar tissue, moles, birthmarks, tattoos and varicose veins. <\/p><p><strong>STEP-BY-STEP GUIDE <\/strong><\/p><p>You'll need<\/p><ul><li>Your Mounjaro pen<\/li><li>New needle<\/li><li>Alcohol wipe<\/li><li>Sharps bin<\/li><\/ul><p><strong>Get prepared<\/strong><\/p><ul><li>Wash hands thoroughly. <\/li><li>Check the pen is in date and undamaged. The liquid should be clear or slightly yellow.<\/li><li>Let the pen come to room temperature for 15 minutes if it’s been stored in the fridge. It’ll feel more comfortable. <\/li><li>Take off the pen cap and clean the red inner seal with an alcohol wipe.<\/li><li>Always attach a new needle by removing the paper tab, pushing the needle onto the pen and twisting until secure.<\/li><li>Remove both outer and inner needle caps (keeping the outer cap for later).<\/li><\/ul><p><strong>Check the flow<\/strong><\/p><ul><li>Carefully turn the dose knob until it clicks twice and a long line appears in the dose window.<\/li><li>Hold the pen with the needle pointing up.<\/li><li>Push and hold the dose knob for 5 seconds. A ‘0’ will appear in the dose window and you should see a tiny drop of liquid.<\/li><li>If nothing appears, try a couple more times. Change the needle if there’s still nothing.<\/li><\/ul><p><strong>You’re ready to inject<\/strong><\/p><ul><li>Turn the dose knob until a ‘1’ appears in the dose window.<\/li><li>Clean the chosen area of your skin with an alcohol wipe.<\/li><li>Push the needle directly into your skin.<\/li><li>Press the dose knob until it stops.<\/li><li>Count to 5 seconds.<\/li><li>When the dose window shows ‘0’, carefully remove the needle from your skin. <\/li><\/ul><p><strong>After injecting<\/strong><\/p><ul><li>You may see a small drop of blood, which is normal. <\/li><li>Gently press and hold with a cotton pad or tissue. Do not rub.<\/li><li>Place the outer needle cap back on, unscrew and dispose of the needle in a sharps bin.<\/li><li>Replace the pen cap and store following the storage instructions. <\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_XVBCNd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Potential common side effects",
+            "icon": "none",
+            "content": "<p>Mounjaro is generally well-suited to most people. Common side effects are with the digestive system. They’re usually experienced at the start of treatment or when increasing the dose.<\/p><p>Most common side effects (may affect over 1 in 10 people):<\/p><ul><li>Nausea<\/li><li>Diarrhoea<\/li><li>Vomiting<\/li><li>Bloating <\/li><li>Constipation<\/li><li>Stomach pain or discomfort<\/li><\/ul><p>Your clinician will run through all side effects with you and discuss any concerns you may have. <\/p>",
+            "page": ""
+          }
+        },
+        "frequent_bundle_NgYx68": {
+          "type": "frequent_bundle",
+          "disabled": true,
+          "settings": {
+            "frequent_bundle": "mounjaro-kwikpen-meal-replacement-bundle",
+            "title": "Frequent Bundle",
+            "image": "shopify:\/\/shop_images\/Group_2141256028.png",
+            "price_suffix": "when purchased with Mounjaro",
+            "background_color": "#f6f7ef",
+            "text_color": "#243d11",
+            "accent_color": "#6f9850"
+          }
+        },
+        "terms_conditions_dKMfLF": {
+          "type": "terms_conditions",
+          "settings": {
+            "terms_conditions": "<p>Actual price will depend on pay as you go or subscription plan purchase, promotional offers and discount codes are available to input at checkout. Requires an online consultation with a clinician who will determine if treatment is appropriate.<\/p><p><br\/>*Jastreboff, A.M., Aronne, L.J., Ahmad, N.J., Wharton, S., Connery, L., Alves, B., Kiyosue, A., Zhang, S., Liu, B., Bunck, M.C. and Stefanski, A. (2022) ‘Tirzepatide once weekly for the treatment of obesity’, New England Journal of Medicine, 387(3), pp. 205–216. doi:10.1056\/NEJMoa2206038. In the <a href=\"https:\/\/investor.lilly.com\/news-releases\/news-release-details\/lillys-surmount-1-results-published-new-england-journal-medicine\"><span style=\"text-decoration:underline\">SURMOUNT-1 trial<\/span><\/a>, participants taking the 15mg dose lost an average of 22.5% of their body weight after 72 weeks.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_list_TVpC3H",
+        "title",
+        "text_list_n9xGpm",
+        "short_description_48fMMW",
+        "buy_buttons",
+        "collapsible_tab_YrMwiT",
+        "collapsible_tab_dAKmFD",
+        "collapsible_tab_mCgyTh",
+        "collapsible_tab_XVBCNd",
+        "frequent_bundle_NgYx68",
+        "terms_conditions_dKMfLF"
+      ],
+      "settings": {
+        "enable_divider": true,
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "color_accent": "#ccf9ab",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "columns",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "icon_text_blocks_MDGKWj": {
+      "type": "icon-text-blocks",
+      "blocks": {
+        "icon_text_block_nDbBYD": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_1.png",
+            "title": "Complete your online consultation",
+            "text": "<p>Let’s get to know you. Simply fill in our online questionnaire to check your eligibility for medication. <\/p>"
+          }
+        },
+        "icon_text_block_wJTNQK": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_1.png",
+            "title": "Get reviewed by a clinician ",
+            "text": "<p>One of our specialised clinicians will review your consultation. If approved, your personalised treatment pathway will be created.<\/p>"
+          }
+        },
+        "icon_text_block_tx7LL6": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_1.png",
+            "title": "Start your treatment ",
+            "text": "<p>Treatment delivered and you’re ready to go. Don’t worry, our packaging is discreet. This is your journey, no one else’s.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_block_nDbBYD",
+        "icon_text_block_wJTNQK",
+        "icon_text_block_tx7LL6"
+      ],
+      "name": "Icon Text Blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Start your journey <em>In 3 simple steps<\/em>",
+        "heading_size": "h1",
+        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "banner_blocks_8Xg6CL": {
+      "type": "banner-blocks",
+      "blocks": {
+        "banner_overlay_text_Ak7rDA": {
+          "type": "banner_overlay_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_2147236656.png",
+            "pre_text": "Your treatment pathway with settlehealth is much more than medication alone. Lasting change means a lifestyle change.",
+            "title": "Your settlehealthd journey <em>with Mounjaro<\/em>",
+            "icon_image_1": "shopify:\/\/shop_images\/Group_2141256031.svg",
+            "block_title_1": "Setting your pace ",
+            "block_text_1": "This is long-term change, not a quick fix. We’ll set the pace together to maximise results for you.",
+            "icon_image_2": "shopify:\/\/shop_images\/Group_2141256032.svg",
+            "block_title_2": "Managing your dose",
+            "block_text_2": "The average loss is 22.5% body weight over 72 weeks*. We’ll manage your dose and make necessary adjustments when needed.",
+            "icon_image_3": "shopify:\/\/shop_images\/Group_2141256033.svg",
+            "block_title_3": "Making lifestyle changes",
+            "block_text_3": "You’ll get the best results with achievable lifestyle changes. We’ll support you with nutritional recipes, eating plans and an exercise routine. ",
+            "icon_image_4": "shopify:\/\/shop_images\/Group_2141256034.svg",
+            "block_title_4": "Keeping consistent ",
+            "block_text_4": "Consistency with medication and lifestyle changes will get you the best results. We’ll help you set goals and keep you motivated to achieve them.",
+            "color_scheme_card": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+            "color_accent": "#7dae58"
+          }
+        },
+        "image_block_mdkd6m": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_2147236681_8187e2a1-6809-4b31-a94f-18c861da4774.png",
+            "image_link": "",
+            "color_scheme_card": "scheme-4"
+          }
+        },
+        "image_block_wide_YWt3eU": {
+          "type": "image_block_wide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_2147236683.png",
+            "image_link": "",
+            "color_scheme_card": "scheme-4"
+          }
+        },
+        "image_over_text_H4UHCK": {
+          "type": "image_over_text",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256036_55cd04b6-504f-4200-854e-b92abf3296a5.png",
+            "image_position_x": 50,
+            "image_position_y": 0,
+            "text_1": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
+            "position_text_1_x": 7,
+            "position_text_1_y": 70,
+            "sm_position_text_1_x": 1,
+            "sm_position_text_1_y": 70,
+            "text_2": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
+            "position_text_2_x": 72,
+            "position_text_2_y": 34,
+            "sm_position_text_2_x": 72,
+            "sm_position_text_2_y": 18,
+            "title": "<em>22.5%<\/em>",
+            "text": "average weight loss over a 72 weeks",
+            "color_scheme_card": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+            "color_background": "linear-gradient(103.46deg, rgba(22, 82, 127, 1) 33.54%, rgba(148, 203, 245, 1) 88.16%)",
+            "color_accent": "#ccf9ab"
+          }
+        }
+      },
+      "block_order": [
+        "banner_overlay_text_Ak7rDA",
+        "image_block_mdkd6m",
+        "image_block_wide_YWt3eU",
+        "image_over_text_H4UHCK"
+      ],
+      "name": "Banner Blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "",
+        "heading_size": "hxl",
+        "text": "<p> <\/p>",
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "color_scheme": "",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "timeline_blocks_hKYnhL": {
+      "type": "timeline-blocks",
+      "blocks": {
+        "timeline_block_KQUi93": {
+          "type": "timeline_block",
+          "settings": {
+            "pre_text": "Week 1",
+            "title": "Let’s go",
+            "text": "<ul><li>Choose the best day to use your weekly injection and off you go.<\/li><li>You may notice a reduced appetite within the first few days.<\/li><li>A little nausea or bloating is common as your body adjusts.<\/li><\/ul>"
+          }
+        },
+        "timeline_block_fQ6FGi": {
+          "type": "timeline_block",
+          "settings": {
+            "pre_text": "Week 2",
+            "title": "Get settled",
+            "text": "<ul><li>Use your second injection, on the same day, a week later.<\/li><li>A reduced appetite should become more consistent.<\/li><li>Get into a routine with your nutrition plan. And stay hydrated.<\/li><\/ul>"
+          }
+        },
+        "timeline_block_Td3Pt8": {
+          "type": "timeline_block",
+          "settings": {
+            "pre_text": "Week 3",
+            "title": "Consistency is key",
+            "text": "<ul><li>Use your third weekly injection exactly a week later.<\/li><li>Your energy levels and appetite should feel regulated.<\/li><li>Order your next monthly dose of Mounjaro to stay on track. <\/li><\/ul>"
+          }
+        },
+        "timeline_block_wBezVX": {
+          "type": "timeline_block",
+          "settings": {
+            "pre_text": "Week 4",
+            "title": "Month 1 complete",
+            "text": "<ul><li>Time for your last weekly injection of the month.<\/li><li>Record appetite and weight changes on your dashboard.<\/li><li>Check in with a clinician for a dose adjustment, if needed.<\/li><\/ul>"
+          }
+        },
+        "image_over_text_6JHUdA": {
+          "type": "image_over_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nurse.png",
+            "text_1": "Let me know how I can help",
+            "text_2": "I hope your first week goes well",
+            "color_scheme_card": "scheme-1",
+            "color_background": "linear-gradient(307.83deg, rgba(193, 232, 184, 1) 15.17%, rgba(240, 240, 240, 1) 81.18%)",
+            "color_accent": "#ccf9ab"
+          }
+        },
+        "image_over_list_qwznC6": {
+          "type": "image_over_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_240651200.png",
+            "text": "<ul><li>Sustained Energy <\/li><li>Metabolic Balance <\/li><li>Reduced Cravings <\/li><li>Improved Confidence <\/li><li>Healthier Body Composition<\/li><\/ul>",
+            "color_scheme_card": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+            "color_accent": "#ccf9ab"
+          }
+        },
+        "image_block_XxYpBx": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mounwithpen.png",
+            "image_link": "",
+            "color_scheme_card": ""
+          }
+        }
+      },
+      "block_order": [
+        "timeline_block_KQUi93",
+        "timeline_block_fQ6FGi",
+        "timeline_block_Td3Pt8",
+        "timeline_block_wBezVX",
+        "image_over_text_6JHUdA",
+        "image_over_list_qwznC6",
+        "image_block_XxYpBx"
+      ],
+      "name": "Timeline Blocks",
+      "settings": {
+        "enable_divider": false,
+        "page_width": "container",
+        "heading": "A new routine<em> for a whole new you <\/em>",
+        "heading_size": "h1",
+        "text": "",
+        "color_scheme": "",
+        "color_accent": "#7dae58",
+        "timeline_color_accent": "#ccf9ab",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "image_banner_jHEMRR": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8W3ptn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Designed for you. <em>Built to last.<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_CMKyh7": {
+          "type": "text",
+          "settings": {
+            "text": "Your personalised treatment pathway will map out a nutritious high-protein diet, balanced with the right wholefoods, along with an achievable exercise routine. As you see and feel the benefits, you won’t look back.",
+            "text_style": "body"
+          }
+        },
+        "buttons_cKMCxR": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Start my journey",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8W3ptn",
+        "text_CMKyh7",
+        "buttons_cKMCxR"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "image": "shopify:\/\/shop_images\/Group_2141256096.png",
+        "image_overlay_opacity": 10,
+        "image_border_radius": 0,
+        "fixed_attachment": false,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+        "color_accent": "#ccf9ab",
+        "stack_images_on_mobile": false,
+        "mobile_content_position": "middle-center",
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
+    "image_with_text_product_D9GCdN": {
+      "type": "image-with-text-product",
+      "blocks": {
+        "heading_txbzdX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mounjaro Kwikpen <em>Pricing Options<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "caption_Gj37VF": {
+          "type": "caption",
+          "settings": {
+            "caption": "Pay As You Go",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text_AyaQYL": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Take your fourth weekly injection this month<\/li><li>Reflect on weight progress and appetite changes<\/li><li>Prepare for potential dose escalation if clinically appropriate<\/li><\/ul>",
+            "text_style": "body"
+          }
+        },
+        "caption_xnjFNF": {
+          "type": "caption",
+          "settings": {
+            "caption": "Subscription",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text_diAEnL": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Take your fourth weekly injection this month<\/li><li>Reflect on weight progress and appetite changes<\/li><li>Prepare for potential dose escalation if clinically appropriate<\/li><\/ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_txbzdX",
+        "caption_Gj37VF",
+        "text_AyaQYL",
+        "caption_xnjFNF",
+        "text_diAEnL"
+      ],
+      "disabled": true,
+      "name": "Image with text product",
+      "settings": {
+        "enable_divider": true,
+        "image": "shopify:\/\/shop_images\/Frame_2141256474_1.png",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "images_with_list_text_Adeqii": {
+      "type": "images-with-list-text",
+      "blocks": {
+        "image_block_kLf7PW": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256105_1.png",
+            "image_link": ""
+          }
+        },
+        "list_text_NJLKaA": {
+          "type": "list_text",
+          "settings": {
+            "title": "",
+            "text": "<ul><li>Priority support (2-hour response)<\/li><li>Free next-day delivery (save £5\/order)<\/li><li>Quarterly health coach video calls<\/li><li>Body composition tracking & analysis<\/li><li>Nutrition consultation (1x per quarter)<\/li><li>VIP-only webinars & events<\/li><li>Supplement discount: 35% off (extra 10%)<\/li><li>settlehealth Points: 1.5x earning rate<\/li><\/ul>",
+            "button_label": "",
+            "button_link": "",
+            "color_scheme_card": "scheme-1"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_kLf7PW",
+        "list_text_NJLKaA"
+      ],
+      "disabled": true,
+      "name": "Images with list text",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Subscribe to a <em>better you<\/em>",
+        "heading_size": "h1",
+        "text": "<p>settlehealth was designed around the basis of curating your own journey, pay as you go and subscription options are available<\/p>",
+        "button_label": "Start my journey",
+        "button_link": "shopify:\/\/collections",
+        "button_style": "secondary",
+        "color_scheme": "scheme-1",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "team_carousel_BXYGe4": {
+      "type": "team-carousel-product",
+      "blocks": {
+        "team_block_CYjERb": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "name": "Imrana Mohid",
+            "designation": "Prescribing Pharmacist",
+            "text": "Experience as a Primary Care Network (PCN) Clinical Pharmacist, Superintendent Community Pharmacist and Private Weight-Loss Prescriber. Focused on patient-centred care, medication optimisation and long-term condition management.",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "team_block_3ftVVg": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_28.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent Pharmacist",
+            "text": "Vast experience across some of the UK’s leading pharmacies. Specialising in clinical safety and digital healthcare, with a modern approach that embraces innovation and raises the standard. The driving force that leads our team of highly skilled clinicians. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_9EYiea": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_24.png",
+            "name": "Kiran Williamson",
+            "designation": "Director Of Operations",
+            "text": "Experienced leader with a track record of scaling high-growth businesses through process optimisation, cross-functional leadership, and data-driven decision making. Specialises in building operational infrastructure that supports rapid commercial expansion.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_m3Hye8": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Aumbreen Masood",
+            "designation": "Prescribing Pharmacist",
+            "text": "Specialises in weight loss, with a diverse background in community pharmacy management providing both NHS and private clinical services. Experienced in patient assessment, diagnosis and prescribing across a range of acute and chronic conditions. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_4A6JDD": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_23.png",
+            "name": "Nafisa Raza",
+            "designation": "Prescribing Pharmacist",
+            "text": "Patient-centred approach with hands-on experience working in a GP surgery. Specialised in weight management and type 2 diabetes, and dedicated to helping patients make sustainable health improvements using a personalised, evidence-based approach.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_yXJrDp": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Fahima Tamannah",
+            "designation": "Prescribing Pharmacist",
+            "text": "Over a decade of experience in community pharmacy and store management, working both privately and with the NHS. A personable approach to help drive patients towards their weight-loss goals and long-term health.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_ECLNDX": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Islam Ahmed",
+            "designation": "Prescribing Pharmacist",
+            "text": "Extensive experience within health in justice, supporting diverse patient groups. Committed to improving access to equitable care, particularly for neurodiverse patients. Focus on weight management and evidence-based prescribing to achieve long-term results. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "team_block_CYjERb",
+        "team_block_3ftVVg",
+        "team_block_9EYiea",
+        "team_block_m3Hye8",
+        "team_block_4A6JDD",
+        "team_block_yXJrDp",
+        "team_block_ECLNDX"
+      ],
+      "name": "Team Carousel Product",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Clinicians you can trust <em>Qualified. Compassionate. Committed.<\/em>",
+        "heading_size": "h2",
+        "text": "<p>Our UK-leading clinicians are at the top of their game. Highly skilled and individually specialised. Dedicated to giving you confidence, clarity and a clear path forward. <\/p>",
+        "alignment": "center",
+        "autoplay_enabled": false,
+        "autoplay_timeout": 5,
+        "loop_enabled": false,
+        "enable_pagination": false,
+        "enable_pagination_mobile": false,
+        "enable_navigation": false,
+        "enable_navigation_desktop": false,
+        "color_scheme_swiper": "scheme-32051e61-b6a4-4a5b-80c8-a81092a26e44",
+        "color_scheme": "",
+        "color_scheme_card": "scheme-1",
+        "color_accent": "#a5a5a5",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "them_section_id": ""
+      }
+    },
+    "faq_section_bjxzKR": {
+      "type": "faq-section",
+      "blocks": {
+        "collapsible_row_4VGV9b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Mounjaro safe? ",
+            "row_content": "<p>Mounjaro has been through rigorous clinical trials and is licensed in the UK for effective weight management in adults. It's approved by NICE (the National Institute for Health and Care Excellence) and has one of the most conclusive evidence bases of any weight-loss medication currently available. <\/p><p>As with all medications, it isn't suitable for everyone, which is why a thorough clinical assessment is an essential part of every settlehealth prescription. The most commonly reported side effects are gastrointestinal related and tend to ease as your body adjusts to treatment. Your clinician will review your full health history before prescribing and will support you throughout your treatment.<\/p>"
+          }
+        },
+        "collapsible_row_bzzp7L": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does Mounjaro take to work? ",
+            "row_content": "<p>Many people notice a reduction in appetite and cravings within the first few weeks of starting Mounjaro. Weight-loss changes typically become visible between four and eight weeks, with more significant results building over three to six months.<\/p><p>Mounjaro is introduced at a low starting dose and increased gradually — up to a maximum of 15mg — to allow your body to adjust comfortably. The results build with consistency over time, and your clinician will support you through every stage of that process.<\/p>"
+          }
+        },
+        "collapsible_row_C9p89w": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the difference between Wegovy and Mounjaro? ",
+            "row_content": "<p>Both are clinically proven weight-loss medications that are injected weekly. But they work differently. Wegovy contains semaglutide, which mimics the single hormone glucagon-like peptide (GLP-1) to reduce cravings and help you feel fuller for longer. Mounjaro contains tirzepatide, which targets the two hormones GLP-1 and glucose-dependent insulinotropic polypeptide (GIP) simultaneously to slow digestion, reduce appetite and help you feel fuller for longer. <\/p><p>Individual results vary with both medications. The right choice depends on your health history, your body and your goals. And that’s what we’re here for. Your clinician will assess this during your consultation to find the most effective medication for you. <\/p>"
+          }
+        },
+        "collapsible_row_VqL7ez": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Question 4",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+          }
+        },
+        "collapsible_row_in77ce": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "row_content": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4VGV9b",
+        "collapsible_row_bzzp7L",
+        "collapsible_row_C9p89w",
+        "collapsible_row_VqL7ez",
+        "collapsible_row_in77ce"
+      ],
+      "name": "Faq Section",
+      "settings": {
+        "heading": "Questions?<em> We’re here to help.<\/em>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "disclosure_toggle": "plus",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "color_accent": "#a5a5a5",
+        "open_first_collapsible_row": true,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "icon_text_blocks_MDGKWj",
+    "banner_blocks_8Xg6CL",
+    "timeline_blocks_hKYnhL",
+    "image_banner_jHEMRR",
+    "image_with_text_product_D9GCdN",
+    "images_with_list_text_Adeqii",
+    "team_carousel_BXYGe4",
+    "faq_section_bjxzKR"
+  ]
+}

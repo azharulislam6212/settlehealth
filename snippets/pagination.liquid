@@ -1,0 +1,148 @@
+{% comment %}
+  Renders a set of links for paginated results. Must be used within paginate tags.
+
+  Usage:
+  {% paginate results by 2 %}
+    {% render 'pagination', paginate: paginate, anchor: '#yourID' %}
+  {% endpaginate %}
+
+  Accepts:
+  - paginate: {Object}
+  - anchor: {String} (optional) This can be added so that on page reload it takes you to wherever you've placed your anchor tag.
+{% endcomment %}
+
+{{ 'component-pagination.css' | asset_url | stylesheet_tag }}
+
+{%- if paginate.parts.size > 0 -%}
+  <div class="pagination-wrapper" data-page="{{ paginate.current_page }}">
+    <nav class="pagination pagination--flex" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+
+  
+          <div>
+            <a
+              href="{{ paginate.previous.url }}{{ anchor }}"
+              class="pagination__item pagination__item--next pagination__item-arrow   {% unless paginate.previous  %}  pagination__disabled  {% endunless %}"
+              aria-label="{{ 'general.pagination.previous' | t }}"
+            >
+              <span class="svg-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3334_223)">
+<path d="M10.0003 18.3327C14.6027 18.3327 18.3337 14.6017 18.3337 9.99935C18.3337 5.39698 14.6027 1.66602 10.0003 1.66602C5.39795 1.66602 1.66699 5.39698 1.66699 9.99935C1.66699 14.6017 5.39795 18.3327 10.0003 18.3327Z" stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_3334_223">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+              </span>
+
+              Previous
+            </a>
+          </div>
+       
+
+
+      <ul class="pagination__list list-unstyled" role="list">
+      
+
+        {% comment %} {%- for part in paginate.parts -%}
+          <li>
+            {%- if part.is_link -%}
+              <a
+                href="{{ part.url }}{{ anchor }}"
+                class="pagination__item link"
+                aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+              >
+                {{- part.title -}}
+              </a>
+            {%- else -%}
+              {%- if part.title == paginate.current_page -%}
+                <a
+                  role="link"
+                  aria-disabled="true"
+                  class="pagination__item pagination__item--current light"
+                  aria-current="page"
+                  aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+                >
+                  {{- part.title -}}
+                </a>
+              {%- else -%}
+                <span class="pagination__item">{{ part.title }}</span>
+              {%- endif -%}
+            {%- endif -%}
+          </li>
+        {%- endfor -%} {% endcomment %}
+
+
+        {%- assign previous_page = 0 -%}
+{%- for part in paginate.parts -%}
+  <li>
+    {%- if part.is_link -%}
+      <a
+        href="{{ part.url }}{{ anchor }}"
+        class="pagination__item"
+        aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+      >
+        {{- part.title -}}
+      </a>
+    {%- else -%}
+      {%- if part.title == paginate.current_page -%}
+        <a
+          role="link"
+          aria-disabled="true"
+          class="pagination__item pagination__item--current"
+          aria-current="page"
+          aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+        >
+          {{- part.title -}}
+        </a>
+      {%- else -%}
+
+      {%- assign count = previous_page | plus: 1 -%}
+        {%- if previous_page != 0 and part.title > count -%}
+          <span class="pagination__dots">…</span>
+        {%- endif -%}
+        <span class="pagination__item">{{ part.title }}</span>
+      {%- endif -%}
+    {%- endif -%}
+  </li>
+  {%- assign previous_page = part.title -%}
+{%- endfor -%}
+
+
+ 
+      
+      </ul>
+
+      
+          <div>
+            
+            <a
+              href="{{ paginate.next.url }}{{ anchor }}"
+              class="pagination__item pagination__item--prev pagination__item-arrow   {% unless paginate.next  %}  pagination__disabled  {% endunless %} motion-reduce"
+              aria-label="{{ 'general.pagination.next' | t }}"
+            >
+            Next
+              <span class="svg-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3334_272)">
+<path d="M10.0003 18.3327C14.6027 18.3327 18.3337 14.6017 18.3337 9.99935C18.3337 5.39698 14.6027 1.66602 10.0003 1.66602C5.39795 1.66602 1.66699 5.39698 1.66699 9.99935C1.66699 14.6017 5.39795 18.3327 10.0003 18.3327Z" stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_3334_272">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+              </span>
+            </a>
+          </div>
+      
+
+
+    </nav>
+  </div>
+{%- endif -%}

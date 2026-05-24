@@ -1,0 +1,373 @@
+{{ 'section-card-with-button.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+    @media screen and (min-width: 992px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
+  }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div
+  class="card-with-button section-{{ section.id }}-padding  color-{{ section.settings.color_scheme }} gradient  isolate {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  {% if settings.animations_reveal_on_scroll %}
+    data-cascade
+  {% endif %}
+>
+  <div class="{{ section.settings.page_width }}">
+ 
+    <div class="row align-items-stretch">
+      <div class="col-12">
+        <div class="card-with-flex">
+          <div class="card-with-image-wrapper">
+            {% if section.settings.heading != blank  %}
+              <h2 class="card-with--title inline-richtext {{ section.settings.heading_size }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" data-cascade>
+            {{ section.settings.heading }}
+          </h2>
+            {% endif %}
+   
+
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'image_with_text' -%}
+                  <div
+                    class="card-with-image {{ block.settings.image_position}} color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                
+                    {% if block.settings.image != blank %}
+                      <div class="card-with-text__image">
+                        {% render "responsive-img" with image: block.settings.image %}
+                      </div>
+                    {% else %}
+                      <div class="card-with-text__image">
+                        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                    {% endif %}
+
+                        <div class="card-with-text-box__content">
+                      {% if block.settings.title != blank %}
+                        <h3 class="card-with-image-box__title">{{ block.settings.title }}</h3>
+                      {% endif %}
+                      {% if block.settings.text != blank %}
+                        <div class="card-with-image-box__text">{{ block.settings.text }}</div>
+                      {% endif %}
+
+                      {% if block.settings.button_label != blank %}
+                        <a href="{{ block.settings.button_link }}" class="card-with-image-box__btn btn link-underline">
+                          {{ block.settings.button_label }}
+                        </a>
+                      {% endif %}
+                    </div>
+
+
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+
+          <div class="card-with-buttons draga-parent-element color-{{ section.settings.color_scheme_card }} gradient {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" data-cascade>
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'button' -%}
+                       {% if block.settings.button_label != blank %}
+                        <button class="card-with-button_item dragable_button">
+
+                        <span class="svg-icon">
+                            <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.89988 7.78366C6.68687 6.16461 8.5792 5.17462 9.78474 6.19736L9.89495 6.30043L11.4588 7.85124C11.8173 8.20695 12.2479 8.48163 12.7217 8.65676C13.1954 8.83189 13.7011 8.90339 14.2048 8.86644L14.4083 8.84544L16.5915 8.55784C18.2106 8.34483 19.2006 10.2372 18.1786 11.4423L18.0755 11.5525L16.5247 13.1163C16.1688 13.4748 15.894 13.9055 15.7187 14.3793C15.5434 14.8531 15.4718 15.359 15.5087 15.8628L15.5293 16.0654L15.8173 18.2495C16.0304 19.8685 14.138 20.8585 12.9337 19.8362L12.8219 19.7339L11.2589 18.1827C10.9004 17.8268 10.4697 17.5519 9.99588 17.3767C9.52209 17.2014 9.01622 17.1298 8.5124 17.1667L8.30974 17.1873L6.1265 17.4749C4.50665 17.6883 3.51666 15.796 4.5398 14.5912L4.64208 14.4794L6.19328 12.9164C6.54899 12.5579 6.82368 12.1272 6.99881 11.6535C7.17393 11.1798 7.24543 10.674 7.20848 10.1704L7.18788 9.9677L6.89988 7.78366ZM8.6509 7.55257L8.93851 9.73581C9.03928 10.4992 8.97245 11.2754 8.74266 12.0103C8.51286 12.7452 8.12563 13.4212 7.60794 13.9912L7.44582 14.1613L5.89461 15.7243L8.07785 15.4367C8.84124 15.3359 9.61742 15.4027 10.3524 15.6325C11.0873 15.8623 11.7633 16.2495 12.3333 16.7672L12.5033 16.9294L14.0663 18.4806L13.7787 16.2973C13.6779 15.5339 13.7448 14.7578 13.9746 14.0228C14.2044 13.2879 14.5916 12.6119 15.1093 12.0419L15.2718 11.8727L16.8226 10.3089L14.6394 10.5965C13.876 10.6972 13.0998 10.6304 12.3649 10.4006C11.6299 10.1708 10.9539 9.78359 10.3839 9.26589L10.2147 9.10338L8.6509 7.55257ZM13.3753 1.17676C13.5233 1.10341 13.6889 1.07305 13.8533 1.08913C14.0177 1.10522 14.1743 1.1671 14.3053 1.26774L14.3892 1.34149L15.0684 2.01603L16.0182 1.89028C16.1915 1.86717 16.3678 1.89603 16.5246 1.9732C16.6815 2.05037 16.812 2.17238 16.8995 2.32377C16.9869 2.47516 17.0275 2.6491 17.016 2.82357C17.0045 2.99804 16.9415 3.16516 16.8349 3.30377L16.7604 3.38802L16.0858 4.06721L16.2116 5.017C16.2346 5.19031 16.2056 5.36655 16.1284 5.52338C16.0511 5.68021 15.929 5.81059 15.7776 5.89797C15.6262 5.98536 15.4522 6.02583 15.2778 6.01426C15.1033 6.00268 14.9363 5.93958 14.7977 5.83296L14.7139 5.75921L14.0347 5.08467L13.0849 5.21042C12.9116 5.23353 12.7353 5.20467 12.5784 5.1275C12.4215 5.05033 12.2911 4.92832 12.2036 4.77693C12.1161 4.62554 12.0756 4.45159 12.087 4.27713C12.0985 4.10266 12.1616 3.93553 12.2681 3.79692L12.3427 3.71268L13.0172 3.03349L12.8915 2.0837C12.8673 1.90094 12.901 1.71522 12.9878 1.55257C13.0746 1.38993 13.2101 1.25851 13.3753 1.17676Z" fill="url(#paint0_linear_917_441)"/>
+<defs>
+<linearGradient id="paint0_linear_917_441" x1="3.90213" y1="15.6797" x2="19.6522" y2="7.87463" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FCD091"/>
+<stop offset="0.341346" stop-color="#F9C4B6"/>
+<stop offset="0.663462" stop-color="#C08CE1"/>
+<stop offset="1" stop-color="#95B0FB"/>
+</linearGradient>
+</defs>
+</svg>
+
+                        </span>
+
+                          {{ block.settings.button_label }}
+                        </button>
+                      {% endif %}
+                 
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+  </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+{% schema %}
+{
+  "name": "Card with buttons",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Full Width"
+        }
+      ],
+      "default": "container",
+      "label": "Layout Width"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Section heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "hxl",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+
+        {
+      "type": "color_scheme",
+      "id": "color_scheme_card",
+      "label": "Card color",
+      "default": "scheme-1"
+    },
+
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_with_text",
+      "name": "Image With Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image Position",
+          "options": [
+            {
+              "value": "align-items-start",
+              "label": "Top"
+            },
+            {
+              "value": "align-items-center",
+              "label": "Center"
+            },
+            {
+              "value": "align-items-end",
+              "label": "Bottom"
+            }
+          ],
+          "default": "align-items-center"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "t:sections.multicolumn.blocks.column.settings.text.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.multirow.blocks.row.settings.button_label.default",
+          "label": "t:sections.multirow.blocks.row.settings.button_label.label",
+          "info": "t:sections.multirow.blocks.row.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.multirow.blocks.row.settings.button_link.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        }
+      ]
+    },
+
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 7,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.multirow.blocks.row.settings.button_label.default",
+          "label": "t:sections.multirow.blocks.row.settings.button_label.label",
+          "info": "t:sections.multirow.blocks.row.settings.button_label.info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card with buttons",
+      "blocks": [
+        {
+          "type": "image_with_text"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

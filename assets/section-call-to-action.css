@@ -1,0 +1,134 @@
+.call-to-action{
+    position: relative;
+    border-radius: 10px;
+}
+.is-hidden {
+  display: none;
+}
+.call-to-action__flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 23px;
+}
+
+.call-to-action__text{
+    display: flex;
+     flex-direction: row;
+     align-items: center;
+     gap: 24px;
+
+  
+
+  font-style: normal;
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+	font-size: 15.975px;
+line-height: 23px;
+display: flex;
+align-items: center;
+
+color: color(var(--color-foreground));
+flex: 1;
+
+}
+.call-to-action__text p{
+    margin: 0;
+}
+.button--action{
+ 
+padding: 0 12px;
+gap: 12.12px;
+border-radius: 94.5729px;
+ 
+text-decoration: none;
+  font-style: normal;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+font-size: 12.1247px;
+line-height: 17px;
+flex: 0 0 98px;
+height: 27px;
+display: inline-flex;
+  justify-content: center;
+  align-items: center;
+background-color: #000000;
+color: #FFFFFF;
+}
+
+.call-to-action__actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.button--precheck{
+       
+box-sizing: border-box;
+ 
+min-width: 132.16px;
+height: 35.16px;
+border: 1.21247px solid rgb(var(--color-foreground));
+border-radius: 67.8985px;
+ /* Start pre-check */
+
+  
+font-family: var(--font-heading-family);
+font-style: normal;
+font-weight: 200;
+font-size: 13.3372px;
+line-height: 18px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: rgb(var(--color-foreground));
+text-decoration: none;
+transition: 0.3s ease;
+}
+
+.button--precheck:hover{
+    background-color: rgb(var(--color-heading));
+    color: rgb(var(--color-background));
+    transition: 0.3s ease;
+}
+
+.dismiss-button{
+        /* Dismiss */
+font-family: var(--font-heading-family);
+font-style: normal;
+font-weight: 200;
+font-size: 13.3372px;
+line-height: 18px;
+ 
+text-decoration-line: none;
+
+color: rgb(var(--color-foreground));
+background: transparent;
+border: 0;
+box-shadow: none;
+padding: 0;
+cursor: pointer;
+
+}
+@media screen and (max-width:  1440px) {
+.call-to-action__text {
+	font-size: 13.975px;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+.call-to-action__text {
+display: block;
+	 
+}
+.button--action{
+    margin-bottom: 10px;
+}
+.call-to-action__flex {
+	flex-direction: column;
+}
+}

@@ -1,0 +1,88 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "blocks": {
+        "newslatter_pbmyCX": {
+          "type": "newslatter",
+          "settings": {
+            "position_index": 2,
+            "heading": "Weekly newsletter",
+            "text": "No spam. Just the latest releases and tips, interesting articles, and exclusive interviews in your inbox every week.",
+            "policy_text": "Read about our <a href=\"\/policies\/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">privacy policy.<\/a>",
+            "color_scheme_card": ""
+          }
+        }
+      },
+      "block_order": [
+        "newslatter_pbmyCX"
+      ],
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": true,
+        "padding_top": 40,
+        "padding_bottom": 96,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 48
+      }
+    },
+    "newsletter_YL9GDc": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_6rhwMf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign up for our newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_MVjNhA": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about releases and industry news and insights.<\/p>"
+          }
+        },
+        "email_form_fDqiWt": {
+          "type": "email_form",
+          "settings": {
+            "policy_text": "We care about your data in our privacy policy."
+          }
+        }
+      },
+      "block_order": [
+        "heading_6rhwMf",
+        "paragraph_MVjNhA",
+        "email_form_fDqiWt"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
+        "full_width": true,
+        "padding_top": 56,
+        "padding_bottom": 96,
+        "padding_top_tab": 56,
+        "padding_bottom_tab": 96,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 48
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter_YL9GDc"
+  ]
+}

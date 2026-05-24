@@ -1,0 +1,156 @@
+.sticky-card-blocks{
+    position: relative;
+}
+
+.sticky-card__bg{
+    z-index: -1;
+    align-items: center;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+       display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: sticky;
+    inset: 0 auto auto;
+}
+.sticky-card__bg svg, 
+.sticky-card__bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+      grid-area: 1 / 1 / 2 / 2;
+}
+.sticky-card__content{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.sticky-section__title{
+font-size: 60px;
+line-height: 82px;
+text-align: center;
+max-width: 959px;
+margin: 0 auto;
+}
+
+.sticky-section__title em{
+    color: rgba(var(--color-accent));
+    font-style: normal;
+    display: block;
+}
+
+.sticky-card{
+    border-radius: 60px;
+    flex-flow: column;
+    justify-content: space-between;
+    width:40vw;
+    max-width: 42.3rem;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7rem 4rem;
+    display: flex;
+    position: sticky;
+}
+
+.sticky-card__1{
+    top: 20%;
+}
+
+.sticky-card__2{
+    top: 20%;
+    transform: rotate(5deg);
+}
+
+.sticky-card__3{
+    margin-bottom: 3rem;
+    top: 20%;
+    transform: rotate(-2deg);
+}
+.sticky-card__4{
+    margin-bottom: 4rem;
+    top: 20%;
+    transform: rotate(3deg);
+}
+
+
+.sticky-card__icon{
+    max-width: 30px;
+    line-height: 0;
+    margin-bottom: 44px;
+}
+
+.sticky-card__title{
+ 
+font-size: 24px;
+line-height: 33px;
+ margin: 0 0 40px;
+
+
+}
+
+.sticky-card__text{
+font-style: normal;
+font-weight: 260;
+font-size: 16px;
+line-height: 24px;
+ margin: 0;
+}
+
+.sticky-card__text p{
+ margin: 0;
+}
+.sticky-section__mobile {
+    display: none;
+}
+
+.sticky-card__inner{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+
+@media screen and (max-width: 768px) {
+
+.sticky-card__content{
+    display: none;
+}
+
+.sticky-section__mobile {
+    display: block;
+}
+
+.sticky-card__bg{
+       position: relative;
+               height: auto;
+}
+.sticky-card{
+  width: 100%;
+   max-width: 90%;
+   transform: none;
+   position: relative;
+}
+
+.sticky-card-blocks{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.sticky-card__bg{
+       grid-area: 1 / 1 / 2 / 2;
+}
+.sticky-card__inner{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.sticky-section__title{
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+}
+
+.sticky-card__inner {
+    padding-top: 10%;
+    padding-bottom: 30%;
+}
+
+}

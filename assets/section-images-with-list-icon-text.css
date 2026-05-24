@@ -1,0 +1,98 @@
+.images-with-list-icon-text{
+    position: relative;
+}
+ 
+.images-with-list__grid{
+    display: flex;
+
+}
+ 
+.images-with-list__grid > :first-child {
+ flex: 1;
+}
+
+.images-with-list__grid > :last-child {
+ flex: 1;
+}
+
+.images-with-list__grid:not(:last-child){
+    margin-bottom: 96px;
+}
+
+.image-position--right{
+    flex-direction: row-reverse;
+}
+
+ .list__grid--image img{
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .list__grid--content{
+    padding: 120px 128px 120px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ .image-position--right  .list__grid--content{
+    padding: 120px 96px 120px 128px;
+ }
+ 
+ 
+.list__grid--content ul{
+    padding: 0 ;
+    list-style: none;
+    margin: 16px 0 0;
+}
+ 
+.list__grid--content  ul li{
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+.list__grid--content  ul li::before{
+    content: '';
+    background-image: url(check-icon.svg);
+        width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+
+
+}
+
+.list__grid--content .list-text__title{
+font-style: normal;
+font-size: 30px;
+line-height: 41px;
+ margin: 0 0 10px;
+}
+ .list__grid--image-wrap   {
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+} 
+
+@media screen and (max-width: 1280px) {
+.list__grid--content {
+    padding: 40px 20px 40px 60px;
+}
+}
+@media screen and (max-width: 768px) {
+ 
+.images-with-list__grid{
+ flex-direction: column;
+}
+
+ .list__grid--content {
+    padding: 40px 20px;
+}
+.image-position--right .list__grid--content {
+    padding: 40px;
+}
+
+}

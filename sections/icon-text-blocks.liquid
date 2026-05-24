@@ -1,0 +1,264 @@
+{{ 'section-icon-text-block.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+
+   .section-{{ section.id }}-padding{
+        --color-accent: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+        --color-accent-gradient: {{ section.settings.color_accent_gradient }};
+        --color-link: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+      }
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+    @media screen and (min-width: 992px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
+  }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div
+  class="icon-text-blocks section-{{ section.id }}-padding  color-{{ section.settings.color_scheme }} gradient  isolate {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  {% if settings.animations_reveal_on_scroll %}
+    data-cascade
+  {% endif %}
+>
+  <div class="{{ section.settings.page_width }}">
+    {%- unless section.settings.heading == blank -%}
+      <div class="row">
+        <div class="section--header text-center col-12 m-auto">
+          <h2 class="section--title inline-richtext {{ section.settings.heading_size }}">
+            {{ section.settings.heading }}
+          </h2>
+        </div>
+      </div>
+    {%- endunless -%}
+    <div class="row align-items-stretch">
+      <div class="col-12">
+        <div class="icon-block__flex">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'icon_text_block' -%}
+                <div
+                  class="icon-text-block color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  
+                    <div class="icon_text_count">
+                      {{ forloop.index }}
+                    </div>
+                
+
+                  <div class="icon-text-content">
+                    {% if block.settings.title != blank %}
+                      <h3 class="icon-text__title">{{ block.settings.title }}</h3>
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                      <div class="icon-text__text">{{ block.settings.text }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%- if section.settings.enable_divider -%}
+   <div class="section-divider"></div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Icon Text Blocks",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+         {
+      "type": "checkbox",
+      "id": "enable_divider",
+      "default": true,
+      "label": "Enable divider"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Full Width"
+        }
+      ],
+      "default": "container-fluid",
+      "label": "Layout Width"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Section Heading",
+      "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_text_block",
+      "name": "Icon Text Block",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "t:sections.multicolumn.blocks.column.settings.text.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon Text Blocks",
+      "blocks": [
+        {
+          "type": "icon_text_block"
+        },
+        {
+          "type": "icon_text_block"
+        },
+        {
+          "type": "icon_text_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

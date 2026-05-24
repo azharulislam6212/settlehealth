@@ -1,0 +1,23 @@
+
+{% if link.links.size > 0 %}
+  <div class="header__inline-mega-menu color-{{ section.settings.menu_color_scheme }} gradient">
+    <div class="page-width">
+      <div class="mega-menu__innner">
+        <div class="row row-cols-1 row-cols-md-4 row-cols-lg-4">
+          {%- for childlink in link.links -%}
+            <div class="col">
+              <a href="{{childlink.url}}" class="mega-menu-title">{{ childlink.title | escape }}</a>
+              <ul class="megamenu-list">
+                {%- for grandchild in childlink.links -%}
+                  <li>
+                    <a href="{{ grandchild.url }}" class="link-animation">{{ grandchild.title | escape }}</a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+    </div>
+{% endif %}

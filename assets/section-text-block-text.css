@@ -1,0 +1,47 @@
+.text-block-section{
+    position: relative;
+}
+.text-block-section .section--header{
+     padding-bottom: 0;
+
+}
+.text-block-section .section--title{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.text-block-section .section--title em{
+font-style: normal;
+font-family: var(--font-heading-family);
+font-weight: var(--font-heading-weight);
+font-size: 64.8676px;
+line-height: 89px;
+display: inline;
+letter-spacing: 0.13em;
+background: linear-gradient(
+  92deg,
+  rgba(142, 58, 42, 1) 0%,
+  rgba(243, 228, 181, 1) 36.06%,
+  rgba(142, 58, 42, 1) 67.31%,
+  rgba(142, 58, 42, 1) 100%
+);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+.text-block-section .section--title{
+        font-size: calc(var(--font-heading-scale) * 2.6rem);
+}
+.text-block-section .section--title em {
+    font-size: 34.8676px;
+    line-height: 89px;
+ 
+}
+
+}

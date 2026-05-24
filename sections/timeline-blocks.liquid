@@ -1,0 +1,490 @@
+{{ 'section-timeline-blocks.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding{
+         --color-accent: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+       
+         --color-link: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+       }
+
+
+     .section-{{ section.id }}-padding {
+       padding-top: {{ section.settings.padding_top_mobile }}px;
+       padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+     }
+     @media screen and (min-width: 992px) {
+       .section-{{ section.id }}-padding {
+         padding-top: {{ section.settings.padding_top_tab }}px;
+         padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+       }
+   }
+
+     @media screen and (min-width: 1024px) {
+       .section-{{ section.id }}-padding {
+         padding-top: {{ section.settings.padding_top }}px;
+         padding-bottom: {{ section.settings.padding_bottom }}px;
+       }
+     }
+{%- endstyle -%}
+
+<div
+  class="timeline-blocks-section section-{{ section.id }}-padding  color-{{ section.settings.color_scheme }} gradient  isolate {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  {% if settings.animations_reveal_on_scroll %}
+    data-cascade
+  {% endif %}
+>
+  <div class="{{ section.settings.page_width }}">
+    {%- unless section.settings.heading == blank -%}
+      <div class="row">
+        <div class="section--header  text-center col-12 m-auto">
+          <h2 class="section--title inline-richtext {{ section.settings.heading_size }}">
+            {{ section.settings.heading }}
+          </h2>
+          {% if section.settings.text != blank %}
+            <div class="section--text">
+              {{ section.settings.text }} 
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {%- endunless -%}
+    <div class="row align-items-stretch">
+      <div class="col-12">
+        <div class="timeline-flex-wrapper">
+          <div class="timeline-blocks" style=" --color-accent: {{ section.settings.timeline_color_accent.red }},{{ section.settings.timeline_color_accent.green }},{{ section.settings.timeline_color_accent.blue }};">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'timeline_block' -%}
+                  <div
+                    class="timeline-block__item  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <div class="timeline-block__content">
+                      <div class="timeline-block__header">
+                        {% if block.settings.pre_text != blank %}
+                          <div class="timeline-block__pre_text">{{ block.settings.pre_text }}</div>
+                        {% endif %}
+                        {% if block.settings.title != blank %}
+                          <h3 class="timeline-block__title">{{ block.settings.title }}</h3>
+                        {% endif %}
+                      </div>
+
+                       <div class="timeline-block__text">
+                           {{  block.settings.text }}
+                       </div>
+                    </div>
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+          <div class="timeline-image-grid">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'image_block' -%}
+                  <div
+                    class="timeline-image-block color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% if block.settings.image != blank %}
+                      {% if block.settings.image_link != blank %}
+                        <a href="{{ block.settings.image_link }}">
+                      {% endif %}
+                      
+                      {% render "responsive-img" with image: block.settings.image %}
+                      {% if block.settings.image_link != blank %}
+                        </a>
+                      {% endif %}
+                    {% else %}
+                      {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {% endif %}
+                  </div>
+
+                {%- when 'image_over_text' -%}
+                  <div
+                    class="timeline-over-text-block  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <div
+                      class="timeline-over-text-inner  color-{{ block.settings.color_scheme_card }} gradient"
+                      style="--color-background: {{ block.settings.color_background }}; --color-accent: {{ block.settings.color_accent.red }},{{ block.settings.color_accent.green }},{{ block.settings.color_accent.blue }};"
+                    >
+                      {%- if block.settings.text_1 != blank -%}
+                        <div
+                          class="timeline-over-text__1"  >
+                          <p>{{ block.settings.text_1 }}</p>
+                        </div>
+                      {%- endif -%}
+
+                      
+                      {%- if block.settings.text_2 != blank -%}
+                        <div class="timeline-over-text__2" >
+                          <p>{{ block.settings.text_2 }}</p>
+                        </div>
+                      {%- endif -%}
+
+
+                      {% if block.settings.image != blank %}
+                        <div class="timeline-over__image">
+                          {% render "responsive-img" with image: block.settings.image %}
+                        </div>
+
+                      {% else %}
+                        <div class="timeline-over__image">
+                          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                        </div>
+                      {% endif %}
+
+                    </div>
+                  </div>
+
+                {%- when 'image_over_list' -%}
+                  <div
+                    class="image_over_list__block color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {% if block.settings.image %}
+                      <div class="image_over_list__bg">
+                        {% render "responsive-img" with image: block.settings.image %}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                      <div class="image_over_list-content" style="--color-accent: {{ block.settings.color_accent.red }},{{ block.settings.color_accent.green }},{{ block.settings.color_accent.blue }};">
+                        <div class="image_over_list__inner">
+                          {{ block.settings.text }}
+                        </div>
+                      </div>
+                    {% endif %}
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%- if section.settings.enable_divider -%}
+   <div class="section-divider"></div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Timeline Blocks",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+            {
+      "type": "checkbox",
+      "id": "enable_divider",
+      "default": true,
+      "label": "Enable divider"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Full Width"
+        }
+      ],
+      "default": "container",
+      "label": "Layout Width"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Section heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "hxl",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "t:sections.image-with-text.blocks.text.settings.text.default",
+      "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    },
+        {
+      "type": "color",
+      "id": "timeline_color_accent",
+      "label": "Timeline Accent Color",
+      "default": "#CCF9AB"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "timeline_block",
+      "name": "Timeline Block",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "pre_text",
+          "default": "Week 1",
+          "label": "Pre text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "t:sections.multicolumn.blocks.column.settings.text.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "image_over_list",
+      "name": "Image over list",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+          {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    }
+      ]
+    },
+    {
+      "type": "image_over_text",
+      "name": "Image Over Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+
+        {
+          "type": "inline_richtext",
+          "id": "text_1",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "Image text 1"
+        },
+
+        {
+          "type": "inline_richtext",
+          "id": "text_2",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "Image text 2"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+        {
+          "type": "color_background",
+          "id": "color_background",
+          "label": "Background Color",
+          "default": "linear-gradient(103.46deg, #16527F 33.54%, #94CBF5 88.16%), linear-gradient(325.26deg, #E4BFAA 9.46%, #CC9D82 55.29%, #C78D6E 68.83%, #BB805E 103.83%), linear-gradient(194.03deg, #A59768 1.87%, #DFD09F 90%), linear-gradient(164.74deg, #A59768 1.42%, #DFD09F 89.28%)"
+        },
+          {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    }
+      ]
+    },
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Image Link"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Timeline Blocks",
+      "blocks": [
+        {
+          "type": "timeline_block"
+        },
+        {
+          "type": "timeline_block"
+        },
+        {
+          "type": "timeline_block"
+        },
+        {
+          "type": "timeline_block"
+        },
+        {
+          "type": "image_over_text"
+        },
+        {
+          "type": "image_over_list"
+        },
+        {
+          "type": "image_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

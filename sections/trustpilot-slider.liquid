@@ -1,0 +1,544 @@
+{{ 'trustpilot-review-section.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width:768px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
+  }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+    .trustpilot__content{
+        position: relative;
+    }
+.gvlp-tpcarousel.gvlp-section .section-title {
+    text-align: left;
+    margin: 0 auto 40px;
+    color: #232121;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    color: var(--title-color);
+}
+.gvlp-tpcarousel.gvlp-section .section-title {
+    max-width: none;
+    margin-bottom: 55px;
+    text-align: center;
+}
+.gvlp-tpcarousel.gvlp-section .section-title em{
+      color: var(--accent-color);
+      font-style:normal;
+}
+
+@media only screen and (max-width: 1024px) {
+.gvlp-tpcarousel.gvlp-section .section-title {
+        max-width: none;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 767px) {
+.gvlp-tpcarousel.gvlp-section .section-title  {
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+}
+
+{%- endstyle -%}
+
+{% liquid
+  assign column = section.settings.column
+  assign column_medium = section.settings.column_medium
+  assign column_mobile = section.settings.column_mobile
+
+  assign enable_pagination = section.settings.enable_pagination
+  assign enable_navigation = section.settings.enable_navigation
+  assign enable_scroll = section.settings.enable_scroll
+  assign autoplay = section.settings.autoplay_enabled
+  assign loop = section.settings.loop_enabled
+  assign delay = section.settings.autoplay_timeout | times: 1000
+  assign freemode = false
+%}
+
+<div
+  class="tp-slider section-trustpilot-review  "
+>
+
+<div class="gvlp-tpcarousel gvlp-section section-{{ section.id }}-padding"    style="
+    --background: {{ section.settings.sec_background }};
+    --accent-color:{{ section.settings.accent_color}};
+    --title-color:{{ section.settings.title_color}};
+    --text-color:{{ section.settings.text_color}};
+    --button-bg-color:{{ section.settings.button_bg}};
+    --button-text-color:{{ section.settings.button_text_color}};
+  ">
+  <div class="gvlp-section-inner">
+  {% unless section.settings.heading_main == blank %}
+      <div class="section-title-header text-center">
+        {% if section.settings.heading_main != blank %}
+          <h2 class="section-title {{ section.settings.heading_size }}">{{ section.settings.heading_main }}</h2>
+        {% endif %}
+      </div>
+  {% endunless %}
+
+
+    <div class="trustpilot-flex-wrapper">
+      {% if section.settings.enable_riveiew_head %}
+        <div class="trustpilot__header">
+          <div class="trustpilot__heading">
+            {% if section.settings.heading != blank %}
+              <h2 class="trustpilot-title h2">{{ section.settings.heading }}</h2>
+            {% endif %}
+            {% if section.settings.star_image != blank %}
+              <div class="trustpilot__star-image">
+                {% render 'icon-img' with image: section.settings.star_image %}
+              </div>
+            {% endif %}
+
+            {% if section.settings.text %}
+              <span class="trustpilot-review_text">
+                {{ section.settings.text }}
+              </span>
+            {% endif %}
+
+            {% if section.settings.logo_image != blank %}
+              <div class="trustpilot__logo-image">
+                {% render 'icon-img' with image: section.settings.logo_image %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+      <div class="trustpilot__content">
+        <slideshow-swiper>
+          <div class="trustpilot__inner">
+            <div
+              class="slideshow__swiper swiper product-feed"
+              data-centeredslides="false"
+              data-slidesDesktop="{{column}}"
+              data-slidesTab="{{column_medium}}"
+              data-slidesMobile="{{column_mobile}}"
+              data-autoPlay="{{ autoplay }}"
+              data-delay="{{ delay }}"
+              data-loop="{{ loop }}"
+              data-paginationType="bullets"
+              data-freemode="{{ freemode }}"
+              data-freemomentum="false"
+              data-mousewheel="false"
+              data-desktopspace="25"
+              data-tabspace="25"
+              data-mobilespace="15"
+            >
+              <div class="swiper-wrapper product-feed-container row row-cols-{{column_mobile}} row-cols-md-{{column_medium}} row-cols-lg-{{column}}">
+                {%- for block in section.blocks -%}
+                  <div class="swiper-slide col">
+                    <div class="trustpilot__review-widget  color-{{ section.settings.box_color_scheme }} gradient">
+                      <div class="trustpilot-review__header">
+                        {% if block.settings.star_image != blank %}
+                          <div class="trustpilot-review__star">
+                            {% render 'responsive-img' with image: block.settings.star_image %}
+                          </div>
+                        {% endif %}
+
+      
+                      </div>
+
+                      {% if block.settings.title != blank %}
+                        <h4 class="trustpilot-review__title">
+                          {{ block.settings.title }}
+                        </h4>
+                      {% endif %}
+                      {% if block.settings.text != blank %}
+                        <p class="trustpilot-review__text">
+                          {{ block.settings.text }}
+                        </p>
+                      {% endif %}
+
+                      {% if block.settings.author_name != blank or block.settings.published_date != blank %}
+                        <div class="author--box">
+                          <p class="author-name">{{ block.settings.author_name }}</p>
+                          <p class="published-date">{{ block.settings.published_date }}</p>
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                {%- endfor -%}
+              </div>
+
+              {% if enable_pagination %}
+                <div class="pagination-wrap color-{{ section.settings.color_scheme_swiper }}">
+                  <div class="swiper-pagination"></div>
+                </div>
+              {% endif %}
+
+              {% if enable_scroll %}
+                <div class="scrollbar-wrap color-{{ section.settings.color_scheme_swiper }}">
+                  <div class="swiper-scrollbar"></div>
+                </div>
+              {% endif %}
+            </div>
+
+            {% if enable_navigation %}
+              <div class="swiper-navigation-wrapper color-{{ section.settings.color_scheme_swiper }}">
+                <div class="swiper-button-prev">
+                  <svg width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.76123 13.1011L12.7612 24.1011" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.7612 2.10107L1.76123 13.1011" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="swiper-button-next">
+                  <svg width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.2388 12.8989L2.23877 1.89893" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2.23877 23.8989L13.2388 12.8989" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </slideshow-swiper>
+      </div>
+    </div>
+
+        <div class="footer-trust-wrapper">
+
+            {% if section.settings.text_mobile %}
+              <span class="trustpilot-review_text">
+                {{ section.settings.text_mobile }}
+              </span>
+            {% endif %}
+
+            {% if section.settings.logo_image != blank %}
+              <div class="trustpilot__logo-image">
+                {% render 'icon-img' with image: section.settings.logo_image %}
+              </div>
+            {% endif %}
+      </div>
+
+</div>
+</div>
+</div>
+{% schema %}
+{
+  "name": "Trustpilot Slider",
+  "settings": [
+        {
+      "type": "color_background",
+      "id": "sec_background",
+      "label": "Background",
+      "default": "#E3F2F8"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#a15cff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#83EDFF"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#210847"
+    },
+    {
+      "type": "header",
+      "content": "Column Wdith"
+    },
+    {
+      "type": "select",
+      "id": "column",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ],
+      "default": "3",
+      "label": "Large"
+    },
+    {
+      "type": "select",
+      "id": "column_medium",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ],
+      "default": "3",
+      "label": "Medium"
+    },
+    {
+      "type": "select",
+      "id": "column_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "1",
+      "label": "Mobile"
+    },
+
+    {
+      "type": "inline_richtext",
+      "id": "heading_main",
+      "default": "Section heading",
+      "label": "Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_riveiew_head",
+      "default": true,
+      "label": "Review Head Widget"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Excellent",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "star_image",
+      "label": "Star image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "default": "Based on <strong>12,506 reviews</strong>",
+      "label": "Review text"
+    },
+     {
+      "type": "inline_richtext",
+      "id": "text_mobile",
+      "default": "Rated <strong>4.4</strong> / 5 • <strong>12,506 reviews</strong>",
+      "label": "Mobile Review text"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Truspilot logo"
+    },
+    {
+      "type": "header",
+      "content": "Slider Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enabled",
+      "label": "Enable Auto Play",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_timeout",
+      "label": "Chnage Time",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "s"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop_enabled",
+      "label": "Enable Loop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_scroll",
+      "label": "Enable Scroll",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination",
+      "label": "Enable Pagination",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_navigation",
+      "label": "Enable Naviagtion",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Desktop",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Desktop",
+      "default": 76
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 46
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "star_image",
+          "label": "Star image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Great company.",
+          "label": "Title"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Great company.Olivia was a massive help. Quick response helpful and sorted the...",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "default": "Alice,",
+          "label": "Author name"
+        },
+        {
+          "type": "text",
+          "id": "published_date",
+          "label": "Published date"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trustpilot Slider",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

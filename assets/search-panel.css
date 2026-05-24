@@ -1,0 +1,94 @@
+.search-input__panel {
+    max-width: 1048px;
+    margin: 20px auto 0;
+
+    /* Rectangle 21 */
+
+    box-sizing: border-box;
+
+    background: transparent;
+    border: 0.798958px solid rgb(var(--color-border));
+    border-radius: 77px;
+    position: relative;
+
+}
+
+.search-input__field {
+    height: 80px;
+    border-radius: 77px;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    font-family: var(--font-body-family);
+    font-style: normal;
+    font-weight: 260;
+    font-size: 23.3px;
+    line-height: 32px;
+    width: 100%;
+    padding: 0 100px 0 70px;
+}
+
+.search-input__panel .search-icon {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(var(--color-foreground));
+}
+
+.search-input__panel .search-input__button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(var(--color-secondary-button-text));
+    background: rgb(var(--color-secondary-button));
+    height: 65px;
+    border: 0;
+    padding: 0 32px;
+    font-family: var(--font-body-family);
+    font-style: normal;
+    font-weight: 260;
+    font-size: 22.65px;
+    line-height: 31px;
+    border-radius: 62.17px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+
+.search-input__panel .search-input__button:hover {
+    background: rgb(var(--color-secondary-button-hover));
+    color: rgb(var(--color-secondary-button-hover-text));
+}
+
+
+.search-input__panel:has(.search-input__field:focus) {
+  border-color: rgb(var(--color-aaccent));
+}
+
+@media screen and (max-width: 992px) {
+
+
+    .search-input__panel .search-icon {
+        left: 14px;
+        width: 20px;
+    }
+
+    .search-input__field {
+        height: 54px;
+        font-size: 14.3px;
+        line-height: 23px;
+        padding: 0 88px 0 43px;
+    }
+
+    .search-input__panel .search-input__button {
+        right: 5px;
+        height: 44px;
+        padding: 0 23px;
+        font-size: 16.65px;
+        line-height: 31px;
+
+    }
+
+}

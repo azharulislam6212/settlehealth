@@ -1,0 +1,31 @@
+
+.inner-paage-header{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.inner-paage__title {
+    flex: 0 0 60%;
+    margin: 0;
+}
+
+.inner-paage--title {
+    margin: 0;
+}
+
+.inner-paage--caption-text{
+    margin: 0 0 12px;
+}
+
+@media screen and (max-width: 768px) {
+
+.inner-paage-header{
+    flex-direction: column;
+}
+.inner-paage__title {
+    flex: 1;
+    margin: 0;
+}
+
+}

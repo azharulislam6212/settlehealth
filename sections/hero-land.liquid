@@ -1,0 +1,304 @@
+
+{% style %}
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
+  }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+
+
+}
+     .purple-box-hero-wrapper {
+      position: relative;
+      min-height: 400px;
+      background: var(--background);
+      text-align: center;
+    }
+    .purple-box-hero-container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-header {
+      margin-bottom: 40px;
+    }
+    .hero-header h1 {
+      color: var(--title-color);
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0 0 15px 0;
+    }
+    .hero-header h1 span , .hero-header h1 em {
+      color: var(--accent-color);
+      font-style: normal;
+    }
+    .hero-header .hero-subtitle {
+       color: var(--sub-title-color);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin: 0 0 55px;
+    }
+    .purple-hero-box {
+      background: var(--text-bg-color);
+      border-radius: 20px;
+      padding: 45px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+    }
+    .purple-hero-box .hero-description {
+      color: var(--text-color);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+        .purple-hero-box .hero-description p:not(:last-child){
+           margin-bottom: 15px
+        }
+    @media (max-width: 768px) {
+      .purple-box-hero-wrapper {
+        min-height: 0;
+      }
+      .hero-header {
+        margin-bottom: 30px;
+      }
+      .hero-header h1 {
+        font-size: 30px;
+      }
+      .hero-header .hero-subtitle {
+        font-size: 20px;
+      }
+      .purple-hero-box {
+        padding: 40px 30px;
+        margin: 0 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      .purple-hero-box {
+        padding: 30px 20px;
+      }
+    }
+{% endstyle %}
+
+<div class="purple-box-hero-wrapper" style="
+    --background: {{ section.settings.sec_background }};
+    --accent-color:{{ section.settings.accent_color}};
+    --title-color:{{ section.settings.title_color}};
+    --sub-title-color:{{ section.settings.sub_title_color}};
+    --text-bg-color:{{ section.settings.text_bg}};
+    --text-color:{{ section.settings.text_color}};"> 
+  <div class="gv-section-inner">
+    <div class="purple-box-hero-container section-{{ section.id }}-padding" 
+    >
+      <div class="hero-header">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'title' -%}
+        <h1>{{ block.settings.title }}</h1>
+              {%- when 'sub_title' -%}
+        <p class="hero-subtitle">{{ block.settings.sub_title }}</p>
+              {%- endcase -%}
+        {%- endfor -%}
+        </div>
+
+      <div class="purple-hero-box">
+           {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'description' -%}
+        <div class="hero-description">{{ block.settings.descritpiton }}
+        </div>
+           {%- endcase -%}
+        {%- endfor -%}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Hero landing",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+        {
+      "type": "color_background",
+      "id": "sec_background",
+      "label": "Background",
+      "default": "linear-gradient(180deg, #210847 79%, #f2f9fc 21%)"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#a48af9"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "sub_title_color",
+      "label": "Sub title color",
+      "default": "#ffffff"
+    },
+       {
+      "type": "color",
+      "id": "text_bg",
+      "label": "Text Background",
+      "default": "#a15cff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Desktop",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Desktop",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 30
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Title",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "witching from <em>Mounjaro</em> to Wegovy",
+          "label": "Title"
+        },
+      ]
+    },
+        {
+      "type": "sub_title",
+      "name": "Sub Title",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "sub_title",
+          "default": "Thinking about moving from Mounjaro to Wegovy? What you need to know.",
+          "label": "Sub Title"
+        },
+      ]
+    },
+            {
+      "type": "description",
+      "name": "Description",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "descritpiton",
+          "default": "<p>Wegovy is a clinically proven, cost-effective alternative to Mounjaro. With Mounjaro prices rising, now could be the right time to consider a change.</p>",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero landing",
+      "blocks": [
+        {
+          "type": "title"
+        },
+        {
+          "type": "sub_title"
+        },
+        {
+          "type": "description"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

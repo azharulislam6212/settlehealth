@@ -1,0 +1,204 @@
+.card-blocks{
+    position: relative;
+}
+
+.card-blocks .section--header{
+    padding-bottom: 7.5rem;
+}
+
+
+.card-blocks__inner{
+    max-width: 1228px;
+    margin: 0 auto;
+}
+
+
+.card-blocks__flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
+}
+
+.card-block__card{
+    padding: 16px 20px;
+
+    /* Rectangle 240651154 */
+
+box-sizing: border-box;
+  
+ 
+border: 1px solid #F5F5F5;
+border-radius: 11.3598px;
+width: 100%;
+
+}
+
+.card-block__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.card-block__badge{
+/* Frame 2141255913 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 3.40793px 9.08782px;
+
+height: 19.86px;
+ 
+background: rgb(var(--color-accent));
+border-radius: 47.6341px;
+ 
+
+font-family: var(--font-body-family);
+font-style: normal;
+font-weight: 423;
+font-size: 9.52682px;
+line-height: 13px;
+
+color: #FFFFFF;
+margin: 0;
+ 
+}
+.card-block__badge-outline{
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 3.40793px 9.08782px;
+
+height: 19.86px;
+ 
+background: transparent;
+ 
+border-radius: 12.88px;
+ 
+
+font-family: var(--font-body-family);
+font-style: normal;
+font-weight: 423;
+font-size: 9.52682px;
+line-height: 13px;
+
+color: rgb(var(--color-accent));
+border: 1px solid rgb(var(--color-accent));
+margin: 0;
+}
+
+.card-block__inner{
+    text-align: center;
+}
+.card-block__card__title{
+/* Estrodiol */
+ 
+font-style: normal;
+ 
+font-size: 20px;
+line-height: 27px;
+ 
+margin: 0 0 20px;
+
+}
+
+.card-block__card__text{
+margin-bottom: 30px;
+}
+
+.card-block__card__text p{
+    margin: 0;
+}
+
+.card-block__card__img{
+    margin-bottom: 30px;
+}
+
+
+.card-button{
+    /* Frame 2141256444 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 15.1628px 8.91931px;
+gap: 8.92px;
+height: 42.17px;
+background: #FFFFFF;
+border: 1px solid rgb(var(--color-accent));
+border-radius: 62.4352px;
+ 
+
+font-family: var(--font-body-family);
+font-style: normal;
+font-weight: var(--font-body-weight);
+font-size: 14.2709px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: rgb(var(--color-accent));
+
+ text-decoration: none;
+ transition: 0.3s ease;
+
+}
+.card-button:hover{
+      background-color: rgb(var(--color-accent));
+      color: rgb(var(--color-heading));
+}
+
+.card-blocks-carousel{
+    overflow: hidden;
+}
+
+.card-blocks-carousel .card-slider {
+    overflow: visible;
+}
+
+
+.card-blocks-carousel .card-block__header{
+    margin-bottom: 43px;
+}
+
+.card-blocks-carousel .card-block__card__title{
+ margin: 0 0 12px;
+}
+
+.card-blocks-carousel .card-block__card__text{
+ margin: 0 0 12px;
+}
+.card-blocks-carousel .card-block__card__img {
+    margin-bottom: -66px;
+    z-index: 1;
+
+}
+
+.card-blocks-carousel .card-button{
+    z-index: 2;
+        position: relative;
+}
+.card-blocks-carousel .card-button:hover{
+      background-color: rgb(var(--color-accent));
+      color: rgb(var(--color-background));
+}
+@media screen and (max-width: 768px) {
+.card-blocks .section--header{
+    padding-bottom: 2.4rem;
+}
+
+.card-blocks__flex{
+    grid-template-columns: 1fr;
+}
+
+}

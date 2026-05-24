@@ -1,0 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme-landing",
+  "sections": {
+    "welcome_modal": {
+      "type": "welcome-modal",
+      "blocks": {
+        "icon_block_AbcCaK": {
+          "type": "icon_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Overlay.svg",
+            "title": "UK-registered pharmacy"
+          }
+        },
+        "icon_block_4zUPaV": {
+          "type": "icon_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Overlay_1.svg",
+            "title": "Discreet delivery"
+          }
+        },
+        "icon_block_3DdTCx": {
+          "type": "icon_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Overlay_2.svg",
+            "title": "Ongoing support"
+          }
+        }
+      },
+      "block_order": [
+        "icon_block_AbcCaK",
+        "icon_block_4zUPaV",
+        "icon_block_3DdTCx"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/logo-mark.svg",
+        "image_link": "https:\/\/settlehealth-health-store.myshopify.com\/",
+        "title": "Start your <em>weight loss <\/em>journey today",
+        "text": "<p>Takes 2 minutes. Doctor-reviewed &delivered to your door.<\/p>",
+        "button_label": "Get started",
+        "button_link": "shopify:\/\/pages\/category-weightloss",
+        "button_label_2": "Already using treatment? Continue here",
+        "button_link_2": "",
+        "color_scheme": "scheme-8ddf1822-a6f3-4440-aa61-7bdafe718eb8"
+      }
+    }
+  },
+  "order": [
+    "welcome_modal"
+  ]
+}

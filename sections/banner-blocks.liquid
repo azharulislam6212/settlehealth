@@ -1,0 +1,1120 @@
+{{ 'section-banner-blocks.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+         --color-accent: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+         --color-link: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+       }
+
+
+     .section-{{ section.id }}-padding {
+       padding-top: {{ section.settings.padding_top_mobile }}px;
+       padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+     }
+     @media screen and (min-width: 992px) {
+       .section-{{ section.id }}-padding {
+         padding-top: {{ section.settings.padding_top_tab }}px;
+         padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+       }
+   }
+
+     @media screen and (min-width: 1024px) {
+       .section-{{ section.id }}-padding {
+         padding-top: {{ section.settings.padding_top }}px;
+         padding-bottom: {{ section.settings.padding_bottom }}px;
+       }
+     }
+{%- endstyle -%}
+ 
+<div
+  class="banner-blocks section-{{ section.id }}-padding  color-{{ section.settings.color_scheme }} gradient  isolate {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  {% if settings.animations_reveal_on_scroll %}
+    data-cascade
+  {% endif %}
+>
+  <div class="{{ section.settings.page_width }}">
+    {%- unless section.settings.heading == blank -%}
+      <div class="row">
+        <div class="section--header section--header-flex text-center col-12 m-auto">
+          <h2 class="section--title inline-richtext {{ section.settings.heading_size }}">
+            {{ section.settings.heading }}
+          </h2>
+          {% if section.settings.text != blank %}
+            <div class="section--text">
+              <p>{{ section.settings.text }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {%- endunless -%}
+    <div class="row align-items-stretch">
+      <div class="col-12">
+        <div class="banner-block-grid">
+
+        <div class="banner-block-two">
+          <div class="banner-block__inner">
+             {%- for block in section.blocks -%}
+            {%- case block.type -%}
+
+            {%- when 'image_over_icon_text' -%}
+
+
+                <div
+                  class="image-over-icon-text__block color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {% if block.settings.image %}
+                    <div class="image-over-icon__bg">
+                      {% render "responsive-img" with image: block.settings.image %}
+                    </div>
+                  {% endif %}
+
+                  <div class="image-over-icon-text-content" style="--color-accent: {{ block.settings.color_accent.red }},{{ block.settings.color_accent.green }},{{ block.settings.color_accent.blue }};">
+                     
+                      {% if block.settings.pre_text != blank %}
+                        <div class="image-over-icon__pre_text">{{ block.settings.pre_text }}</div>
+                      {% endif %}
+                      {% if block.settings.title != blank %}
+                        <h3 class="image-over-icon__title">{{ block.settings.title }}</h3>
+                      {% endif %}
+                   
+
+                    <div class="image-overlay-icons">
+                      {%- for i in (1..2) -%}
+                        {%- capture icon_image_c -%}icon_image_{{ i }}{%- endcapture -%}
+                        {%- capture block_title_c -%}block_title_{{ i }}{%- endcapture -%}
+                        {%- capture block_text_c -%}block_text_{{ i }}{%- endcapture -%}
+                        {%- liquid
+                          assign icon_image = block.settings[icon_image_c]
+                          assign block_title = block.settings[block_title_c]
+                          assign block_text = block.settings[block_text_c]
+                        %}
+
+                        <div
+                          class="banner-icon__block  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                          {{ block.shopify_attributes }}
+                          {% if settings.animations_reveal_on_scroll %}
+                            data-cascade
+                            style="--animation-order: {{ i }};"
+                          {% endif %}
+                        >
+                          {% if icon_image != blank %}
+                            <div class="banner-icon__icon">
+                              {% render "responsive-img" with image: icon_image %}
+                            </div>
+                          {%- else -%}
+                            <div class="banner-icon__icon">
+                              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                            </div>
+                          {% endif %}
+
+                          <div class="banner-icon-content">
+                            {% if block_title != blank %}
+                              <h3 class="banner-icon__title">{{ block_title }}</h3>
+                            {% endif %}
+                            {% if block_text != blank %}
+                              <div class="banner-icon__text">{{ block_text }}</div>
+                            {% endif %}
+                          </div>
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+            
+
+            {%- when 'image_block_over_text' -%}
+
+                <div class="image_block_over__wrap  color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"   {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}>
+
+                    {% if block.settings.image != blank %}
+                    
+                    {% render "responsive-img" with image: block.settings.image %} 
+                  {% else %}
+                    {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {% endif %}
+
+                  <div class="image_block_over-text__content" style="--color-accent: {{ block.settings.color_accent.red }},{{ block.settings.color_accent.green }},{{ block.settings.color_accent.blue }};">
+                      {% if block.settings.title != blank %}
+                        <h3 class="image_block_over__title">{{ block.settings.title }}</h3>
+                      {% endif %}
+
+                       {% if block.settings.text != blank %}
+                        <p class="image_block_over__text">{{ block.settings.text }}</p>
+                      {% endif %}
+
+                  </div>
+
+
+
+                </div>
+
+
+              {%- endcase -%}
+          {%- endfor -%}
+             
+          </div>
+        </div>
+
+
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'banner_overlay_text' -%}
+                <div
+                  class="banner-overlay-text__block color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {% if block.settings.image %}
+                    <div class="banner-overlay__bg">
+                      {% render "responsive-img" with image: block.settings.image %}
+                    </div>
+                  {% endif %}
+
+                  <div class="banner-overlay-text-content" style="--color-accent: {{ block.settings.color_accent.red }},{{ block.settings.color_accent.green }},{{ block.settings.color_accent.blue }};">
+                    <div class="banner-overlay-text__header">
+                      {% if block.settings.pre_text != blank %}
+                        <div class="banner-overlay__pre_text">{{ block.settings.pre_text }}</div>
+                      {% endif %}
+                      {% if block.settings.title != blank %}
+                        <h3 class="banner-overlay__title">{{ block.settings.title }}</h3>
+                      {% endif %}
+                    </div>
+
+                    <div class="banner-overlay-icons">
+                      {%- for i in (1..4) -%}
+                        {%- capture icon_image_c -%}icon_image_{{ i }}{%- endcapture -%}
+                        {%- capture block_title_c -%}block_title_{{ i }}{%- endcapture -%}
+                        {%- capture block_text_c -%}block_text_{{ i }}{%- endcapture -%}
+                        {%- liquid
+                          assign icon_image = block.settings[icon_image_c]
+                          assign block_title = block.settings[block_title_c]
+                          assign block_text = block.settings[block_text_c]
+                        %}
+
+                        <div
+                          class="banner-icon__block  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                          {{ block.shopify_attributes }}
+                          {% if settings.animations_reveal_on_scroll %}
+                            data-cascade
+                            style="--animation-order: {{ i }};"
+                          {% endif %}
+                        >
+                          {% if icon_image != blank %}
+                            <div class="banner-icon__icon">
+                              {% render "responsive-img" with image: icon_image %}
+                            </div>
+                          {%- else -%}
+                            <div class="banner-icon__icon">
+                              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                            </div>
+                          {% endif %}
+
+                          <div class="banner-icon-content">
+                            {% if block_title != blank %}
+                              <h3 class="banner-icon__title">{{ block_title }}</h3>
+                            {% endif %}
+                            {% if block_text != blank %}
+                              <div class="banner-icon__text">{{ block_text }}</div>
+                            {% endif %}
+                          </div>
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+              {%- when 'image_block' -%}
+                <div
+                  class="banner-image-block color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {% if block.settings.image != blank %}
+                    {% if block.settings.image_link != blank %}
+                      <a href="{{ block.settings.image_link }}">
+                    {% endif %}
+
+                    {% render "responsive-img" with image: block.settings.image %}
+                    {% if block.settings.image_link != blank %}
+                      </a>
+                    {% endif %}
+                  {% else %}
+                    {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {% endif %}
+                </div>
+              {%- when 'image_block_wide' -%}
+                <div
+                  class="banner-image-block-wide color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {% if block.settings.image != blank %}
+                    {% if block.settings.image_link != blank %}
+                      <a href="{{ block.settings.image_link }}">
+                    {% endif %}
+
+                    {% render "responsive-img" with image: block.settings.image %}
+                    {% if block.settings.image_link != blank %}
+                      </a>
+                    {% endif %}
+                  {% else %}
+                    {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {% endif %}
+                </div>
+
+              
+               
+
+              {%- when 'text_block' -%}
+
+                   <div
+                  class="banner-text-block-wide color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+
+                <div class="banner-text-block--row" style="--color-accent: {{ block.settings.color_accent.red }},{{ block.settings.color_accent.green }},{{ block.settings.color_accent.blue }};">
+
+                <div class="banner-text__column">
+
+                {%- if block.settings.title != blank -%}
+                  <h3 class="banner-text__title">{{ block.settings.title  }}</h3>
+                {%- endif -%}
+
+                 {%- if block.settings.text != blank -%}
+                  <div class="banner-text__text">{{ block.settings.text  }}</div>
+                {%- endif -%}
+
+                 {%- if block.settings.note != blank -%}
+                  <p class="banner-text__note">{{ block.settings.note  }}</p>
+                {%- endif -%}
+
+
+                </div>
+                <div class="banner-text__line">
+
+                {%- if block.settings.line_text_1 -%}
+                       <div class="banner-line-button">
+                        {{ block.settings.line_text_1 }}
+                       </div>
+                {%- endif -%}
+
+                        {%- if block.settings.line_text_2 -%}
+                       <div class="banner-line-button">
+                        {{ block.settings.line_text_2 }}
+                       </div>
+                {%- endif -%}
+            
+             {%- if block.settings.line_text_3 -%}
+                       <div class="banner-line-button">
+                        {{ block.settings.line_text_3 }}
+                       </div>
+                {%- endif -%}
+
+                    {%- if block.settings.line_text_4 -%}
+                       <div class="banner-line-button">
+                        {{ block.settings.line_text_4 }}
+                       </div>
+                {%- endif -%}
+
+                </div>
+
+                </div>
+
+
+              
+                </div>
+
+              {%- when 'image_over_text' -%}
+                <div
+                  class="image-over-text-block   {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <div
+                    class="image-over-text-inner  color-{{ block.settings.color_scheme_card }} gradient"
+                    style="--color-background: {{ block.settings.color_background }} ;  --color-accent: {{ block.settings.color_accent.red }},{{ block.settings.color_accent.green }},{{ block.settings.color_accent.blue }};"
+                  >
+                    <div class="image-over__content">
+                      {% if block.settings.title != blank %}
+                        <h3 class="image-with-text-box__title">{{ block.settings.title }}</h3>
+                      {% endif %}
+                      {% if block.settings.text != blank %}
+                        <p class="image-with-text-box__text">{{ block.settings.text }}</p>
+                      {% endif %}
+                    </div>
+
+                    {%- if block.settings.text_1 != blank -%}
+                      <div
+                        class="image-over-text__1"
+                        style="
+                        --position_text_1_x: {{ block.settings.position_text_1_x |  append: '%' }};
+                        --position_text_1_y: {{ block.settings.position_text_1_y |  append: '%' }};
+                        --sm_position_text_1_x: {{ block.settings.sm_position_text_1_x |  append: '%' }};
+                        --sm_position_text_1_y: {{ block.settings.sm_position_text_1_y |  append: '%' }};
+                        "
+                      >
+                        <p>{{ block.settings.text_1 }}</p>
+                      </div>
+                    {%- endif -%}
+
+                    {% if block.settings.image != blank %}
+                      <div
+                        class="image-over__image"
+                        style="--image_position_x: {{ block.settings.image_position_x |  append: '%' }}; --image_position_y: {{ block.settings.image_position_y |  append: '%' }}"
+                      >
+                        {% render "responsive-img" with image: block.settings.image %}
+                      </div>
+
+                    {% else %}
+                      <div class="image-over__image">
+                        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                    {% endif %}
+
+                    {%- if block.settings.text_2 != blank -%}
+                      <div
+                        class="image-over-text__2"
+                        style="
+                         --position_text_2_x: {{ block.settings.position_text_2_x |  append: '%' }};
+                         --position_text_2_y: {{ block.settings.position_text_2_y |  append: '%' }};
+                         --sm_position_text_2_x: {{ block.settings.sm_position_text_2_x |  append: '%' }};
+                         --sm_position_text_2_y: {{ block.settings.sm_position_text_2_y |  append: '%' }};
+                         "
+                      >
+                        <p>{{ block.settings.text_2 }}</p>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%- if section.settings.enable_divider -%}
+   <div class="section-divider"></div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Banner Blocks",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+           {
+      "type": "checkbox",
+      "id": "enable_divider",
+      "default": true,
+      "label": "Enable divider"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Full Width"
+        }
+      ],
+      "default": "container-fluid",
+      "label": "Layout Width"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Section heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "hxl",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "t:sections.image-with-text.blocks.text.settings.text.default",
+      "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "t:sections.image-with-text.blocks.button.settings.button_label.default",
+      "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+      "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "banner_overlay_text",
+      "name": "Banner Overlay Icon Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "pre_text",
+          "default": "Pair text with an image to focus on your chosen product,",
+          "label": "Pre text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "header",
+          "content": "Blcok One"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image_1",
+          "label": "Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_title_1",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_text_1",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "header",
+          "content": "Blcok Two"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image_2",
+          "label": "Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_title_2",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_text_2",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "header",
+          "content": "Blcok Three"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image_3",
+          "label": "Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_title_3",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_text_3",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "header",
+          "content": "Blcok Four"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image_4",
+          "label": "Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_title_4",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_text_4",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+           {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    }
+      ]
+    },
+        {
+      "type": "image_over_icon_text",
+      "name": "Image Over Icon Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "pre_text",
+          "default": "Pair text with an image to focus on your chosen product,",
+          "label": "Pre text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "header",
+          "content": "Blcok One"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image_1",
+          "label": "Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_title_1",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_text_1",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "header",
+          "content": "Blcok Two"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image_2",
+          "label": "Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_title_2",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "block_text_2",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+           {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    }
+      ]
+    },
+    {
+      "type": "image_over_text",
+      "name": "Image Over Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "image_position_x",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Image Position X",
+          "default": 54
+        },
+        {
+          "type": "range",
+          "id": "image_position_y",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Image Position Y",
+          "default": 0
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_1",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "Image text 1"
+        },
+        {
+          "type": "range",
+          "id": "position_text_1_x",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Position X",
+          "default": 30
+        },
+        {
+          "type": "range",
+          "id": "position_text_1_y",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Position Y",
+          "default": 70
+        },
+        {
+          "type": "header",
+          "content": "Position max 1290px"
+        },
+         {
+          "type": "range",
+          "id": "sm_position_text_1_x",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Position X",
+          "default": 12 
+        },
+        {
+          "type": "range",
+          "id": "sm_position_text_1_y",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Position Y",
+          "default": 70 
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_2",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "Image text 2"
+        },
+        {
+          "type": "range",
+          "id": "position_text_2_x",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Position X",
+          "default": 78
+        },
+        {
+          "type": "range",
+          "id": "position_text_2_y",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Position Y",
+          "default": 42
+        },
+          {
+          "type": "range",
+          "id": "sm_position_text_2_x",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Position X",
+          "default": 79
+        },
+        {
+          "type": "range",
+          "id": "sm_position_text_2_y",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Position Y",
+          "default": 18
+        },
+      {
+          "type": "header",
+          "content": "Position max 1290px"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+        {
+          "type": "color_background",
+          "id": "color_background",
+          "label": "Background Color",
+          "default": "linear-gradient(103.46deg, #16527F 33.54%, #94CBF5 88.16%), linear-gradient(325.26deg, #E4BFAA 9.46%, #CC9D82 55.29%, #C78D6E 68.83%, #BB805E 103.83%), linear-gradient(194.03deg, #A59768 1.87%, #DFD09F 90%), linear-gradient(164.74deg, #A59768 1.42%, #DFD09F 89.28%)"
+        },
+   {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    }
+      ]
+    },
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Image Link"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        }
+      ]
+    },
+        {
+      "type": "image_block_over_text",
+      "name": "Image Block Over Text",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+         {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+         {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    }
+      ]
+    },
+       {
+      "type": "image_block_wide",
+      "name": "Image Block Wide",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Image Link"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        }
+      ]
+    },
+       {
+      "type": "text_block",
+      "name": "Text Block",
+      "limit": 1,
+      "settings": [
+         {
+          "type": "text",
+          "id": "title",
+          "default": "Your Dosing",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "Text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "note",
+          "default": "Speak with our clinicians, we will help you find that perfect dose",
+          "label": "note"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "line_text_1",
+          "default": "Month 4 7.5mg",
+          "label": "Line text"
+        },
+          {
+          "type": "inline_richtext",
+          "id": "line_text_2",
+          "default": "Month 4 7.5mg",
+          "label": "Line text"
+        },
+               {
+          "type": "inline_richtext",
+          "id": "line_text_3",
+          "default": "Month 4 7.5mg",
+          "label": "Line text"
+        },
+                {
+          "type": "inline_richtext",
+          "id": "line_text_4",
+          "default": "Month 4 7.5mg",
+          "label": "Line text"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+          {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    }
+      ]
+    },
+  ],
+  "presets": [
+    {
+      "name": "Banner Blocks",
+      "blocks": [
+        {
+          "type": "banner_overlay_text"
+        },
+        {
+          "type": "image_block"
+        },
+        {
+          "type": "image_over_text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

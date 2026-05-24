@@ -1,0 +1,54 @@
+.counter-blocks{
+    position: relative;
+}
+ 
+ 
+ .counter__flex {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 32px;
+   padding: 64px;
+   border-radius: 16px;
+ }
+ .counter-item {
+  text-align: center;
+ }
+
+ .counter__title{
+      font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+
+ 
+font-size: 60px;
+line-height: 82px;
+ 
+margin: 0 0 12px;
+ }
+
+ .counter__text{
+ 
+font-weight: 300;
+font-size: 16px;
+line-height: 22px;
+ 
+
+ }
+
+ .counter__text p{
+  margin: 0;
+ } 
+
+ 
+
+ 
+@media screen and (max-width: 750px) {
+ 
+ .counter__flex {
+   display: grid;
+   grid-template-columns: 1fr;
+   
+   padding: 32px;
+ 
+ }
+ }
+  

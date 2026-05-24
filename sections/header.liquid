@@ -1,0 +1,1151 @@
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{%- if settings.predictive_search_enabled -%}
+  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+
+{%- if section.settings.menu_type_desktop == 'mega' -%}
+  <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+
+
+<style>
+  header-drawer {
+    justify-self: start;
+  }
+
+  {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
+    .scrolled-past-header .header__heading-logo-wrapper {
+      width: 75%;
+    }
+  {%- endif -%}
+
+  {%- if section.settings.menu_type_desktop != "drawer" -%}
+    @media screen and (min-width: 990px) {
+      header-drawer {
+        display: none;
+      }
+    }
+  {%- endif -%}
+
+  .menu-drawer-container {
+    display: flex;
+  }
+
+  .list-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .list-menu--inline {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+ 
+  .list-menu__item {
+    display: flex;
+    align-items: center;
+    line-height: calc(1 + 0.3 / var(--font-body-scale));
+  }
+
+  .list-menu__item--link {
+    text-decoration: none;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    line-height: calc(1 + 0.8 / var(--font-body-scale));
+  }
+
+  @media screen and (min-width: 750px) {
+    .list-menu__item--link {
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+  }
+</style>
+
+{%- style -%}
+  .header {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom:{{ section.settings.padding_bottom_moblie }}px;
+  }
+
+  .section-header {
+    position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-header {
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .header {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .drawer-menu{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+   .header:not(.drawer-menu) .menu-link-item,   .header:not(.drawer-menu) .header__icon{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .header__inline-menu>ul>li>.header__inline-submenu--wrapper{
+          padding-top: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  for block in section.blocks
+    if block.type == '@app'
+      assign has_app_block = true
+    endif
+  endfor
+-%}
+
+  {%- liquid
+    assign social_links = false
+    assign localization_forms = false
+
+    if settings.social_twitter_link != blank or settings.social_facebook_link != blank or settings.social_pinterest_link != blank or settings.social_instagram_link != blank or settings.social_youtube_link != blank or settings.social_vimeo_link != blank or settings.social_tiktok_link != blank or settings.social_tumblr_link != blank or settings.social_snapchat_link != blank
+      assign social_links = true
+    endif
+
+    if localization.available_countries.size > 1 and section.settings.enable_country_selector or section.settings.enable_language_selector and localization.available_languages.size > 1
+      assign localization_forms = true
+    endif
+
+      if section.settings.menu
+        assign main_menu_linklist = section.settings.menu
+      else
+        assign main_menu_linklist = 'main-menu'
+      endif
+      assign mobile_menu_linklist = main_menu_linklist
+
+
+       assign transparent = false
+  if section.settings.transparent 
+      assign transparent = true
+   endif 
+
+  if template == 'index' and section.settings.transparent_on_home  
+     assign transparent = true
+   endif 
+
+  if  template == 'product'
+      if section.settings.transparent_product 
+          assign transparent = true
+          else 
+          assign transparent = false
+          endif
+   endif 
+
+
+  -%}
+
+
+
+<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="{% if transparent %} is-transparent {% endif %}">
+
+
+{% capture logo %}
+
+     {%- if request.page_type == 'index' -%}
+        <h1 class="header__heading">
+      {%- endif -%}
+          <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+            {%- if section.settings.logo != blank -%}
+              <div class="header__heading-logo-wrapper header-grid__logo {% if  section.settings.transparent_logo == blank %} header-grid__logo--one-image {% endif %}" style="--logo-width: {{ section.settings.logo_width | default: 200 | times: 0.1 }}rem; --logo-width-mobile: {{ section.settings.logo_width_mobile | default: 150 | times: 0.1 }}rem;">
+                  {%- if section.settings.logo != blank -%}
+        {%- assign logo = section.settings.logo -%}
+        {%- assign logo_image_size_2x = logo.width | times: 2 | at_most: 5760 -%}
+        <img
+          srcset="{{ logo | image_url: width: logo.width }} 1x, {{ logo | image_url: width: logo_image_size_2x }} 2x"
+          src="{{- logo | image_url: width: logo.width -}}"
+          loading="lazy"
+          width="{{- logo.width -}}"
+          height="{{- logo.height -}}"
+          loading="lazy"
+          alt="{{- logo.alt | default: shop.name | escape -}}"
+          style="object-position: {{ logo.presentation.focal_point }}"
+        >
+      {%- endif -%}
+      {%- if transparent and section.settings.logo != blank -%}
+        {%- if section.settings.transparent_logo != blank -%}
+          {%- assign transparent_logo = section.settings.transparent_logo | default: logo -%}
+          {%- assign transparent_logo_width_size_2x = transparent_logo.width | times: 2 | at_most: 5760 %}
+          <img
+            srcset="{{ transparent_logo | image_url: width: transparent_logo.width }} 1x, {{ transparent_logo | image_url: width: transparent_logo_width_size_2x }} 2x"
+            src="{{- transparent_logo | image_url: width: transparent_logo.width -}}"
+            width="{{- transparent_logo.width -}}"
+            height="{{- transparent_logo.height -}}"
+            loading="lazy"
+            alt="{{- transparent_logo.alt | default: shop.name | escape -}}"
+            style="object-position: {{ transparent_logo.presentation.focal_point }}"
+          >
+        {%- endif -%}
+      {%- endif -%}
+              </div>
+            {%- else -%}
+              <span class="h2">{{ shop.name }}</span>
+            {%- endif -%}
+          </a>
+      {%- if request.page_type == 'index' -%}
+        </h1>
+      {%- endif -%}
+  
+{% endcapture %}
+ 
+  {%- liquid
+  assign has_social_icons = true
+  if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
+    assign has_social_icons = false
+  endif
+ %}
+
+
+  {% capture drawer %}
+
+    <menu-drawer> 
+  <nav class="mobile-drawer header__drawer"
+    data-drawer="hamburger"
+    aria-label="main-menu"
+    id="header-menu">
+    <div class="drawer__content gradient motion-reduce color-{{ section.settings.menu_color_scheme }}">
+      <div class="drawer__top">
+        <div class="drawer__top__left">
+                 Menu
+        </div>
+        <div class="drawer__top__right">
+
+        <a href="{{ section.settings.login_link }}" class="menu-account-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.5 8C8.433 8 10 6.433 10 4.5C10 2.567 8.433 1 6.5 1C4.567 1 3 2.567 3 4.5C3 6.433 4.567 8 6.5 8Z" fill="#2E2E25" stroke="#2E2E25" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 13C12 11.6739 11.4205 10.4021 10.3891 9.46447C9.35764 8.52678 7.95869 8 6.5 8C5.04131 8 3.64236 8.52678 2.61091 9.46447C1.57946 10.4021 1 11.6739 1 13" fill="#2E2E25"/>
+<path d="M12 13C12 11.6739 11.4205 10.4021 10.3891 9.46447C9.35764 8.52678 7.95869 8 6.5 8C5.04131 8 3.64236 8.52678 2.61091 9.46447C1.57946 10.4021 1 11.6739 1 13" stroke="black" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.5 8C5.04131 8 3.64236 8.52678 2.61091 9.46447C1.57946 10.4021 1 11.6739 1 13H12C12 11.6739 11.4205 10.4021 10.3891 9.46447C9.35764 8.52678 7.95869 8 6.5 8Z" fill="#2E2E25" stroke="#2E2E25" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        </a>
+
+      <a href="{{ routes.cart_url }}"  class="menu-cart-icon">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.4 10.4C9.6785 10.4 9.1 10.9785 9.1 11.7C9.1 12.0448 9.23696 12.3754 9.48076 12.6192C9.72456 12.863 10.0552 13 10.4 13C10.7448 13 11.0754 12.863 11.3192 12.6192C11.563 12.3754 11.7 12.0448 11.7 11.7C11.7 11.3552 11.563 11.0246 11.3192 10.7808C11.0754 10.537 10.7448 10.4 10.4 10.4ZM0 0V1.3H1.3L3.64 6.2335L2.756 7.826C2.6585 8.008 2.6 8.2225 2.6 8.45C2.6 8.79478 2.73696 9.12544 2.98076 9.36924C3.22456 9.61304 3.55522 9.75 3.9 9.75H11.7V8.45H4.173C4.1299 8.45 4.08857 8.43288 4.05809 8.4024C4.02762 8.37193 4.0105 8.3306 4.0105 8.2875C4.0105 8.255 4.017 8.229 4.03 8.2095L4.615 7.15H9.4575C9.945 7.15 10.374 6.877 10.595 6.4805L12.922 2.275C12.9675 2.171 13 2.0605 13 1.95C13 1.77761 12.9315 1.61228 12.8096 1.49038C12.6877 1.36848 12.5224 1.3 12.35 1.3H2.7365L2.1255 0M3.9 10.4C3.1785 10.4 2.6 10.9785 2.6 11.7C2.6 12.0448 2.73696 12.3754 2.98076 12.6192C3.22456 12.863 3.55522 13 3.9 13C4.24478 13 4.57544 12.863 4.81924 12.6192C5.06304 12.3754 5.2 12.0448 5.2 11.7C5.2 11.3552 5.06304 11.0246 4.81924 10.7808C4.57544 10.537 4.24478 10.4 3.9 10.4Z" fill="#2E2E25"/>
+          </svg>
+        </a>  
+
+        <button class="drawer__button drawer__close_button"
+          data-first-focus
+          data-drawer-toggle="hamburger"
+          aria-label="drawer-close">
+          <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.15625 0.84375L0.84375 8.15625M0.84375 0.84375L8.15625 8.15625" stroke="#2E2E25" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+
+        </button>
+        </div>
+
+      </div>
+
+      <div class="drawer__inner_custom">
+
+
+         {% render 'mobile-drawer-menu', mobile_menu_linklist:  mobile_menu_linklist %}
+
+    
+              <div class="drawer__inner__footer">
+
+
+                 {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'contact_info' -%}
+
+                {% if  block.settings.title  != blank %}
+                      <p class="menu-lebel">
+                {{ block.settings.title }}
+              </p>
+                {% endif %}
+          
+              <div class="drawer-contact-info">
+                <div class="contact-item">
+
+                  <a href="tel:{{ block.settings.call_number }}" data-rel="external"  class="contact-item__button button button--primary"> {{ block.settings.call_lebel }} </a>
+                  <span class="conact-text">  {{ block.settings.call_text }}</span>
+
+                </div>
+                  <div class="contact-item">
+                  <a href="mailto:{{ block.settings.email_address }}"  data-rel="external" class="contact-item__button button button--secondary"> {{ block.settings.email_lebel }}</a>
+                  <span class="conact-text">{{ block.settings.email_text }}</span>
+
+                </div>
+
+              </div>
+
+                  {%- endcase -%}
+      {%- endfor -%}
+              
+
+
+              </div>
+
+
+      </div>
+    </div>
+
+    <span class="drawer__underlay" data-drawer-underlay> </span>
+  </nav>
+  </menu-drawer>
+{% endcapture %}
+
+
+   <div class="header-wrapper"  style="--sticky-background-color: {{ section.settings.sticky_header_background.red }},{{ section.settings.sticky_header_background.green }},{{ section.settings.sticky_header_background.blue }};  --sticky-text-color: {{ section.settings.sticky_text_color.red}},{{ section.settings.sticky_text_color.green }},{{ section.settings.sticky_text_color.blue }}">
+
+  <header class="header  {{ section.settings.page_width}} color-{{ section.settings.color_scheme }} gradient  {% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}  header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }}{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+   
+    {% if  section.settings.menu != blank and section.settings.mobile_logo_position contains 'center' %}
+      <button class="header__mobile__button" data-drawer-toggle="hamburger" aria-label="Open menu" aria-haspopup="true" aria-expanded="true" aria-controls="header-menu">
+       {% comment %} <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3.5" width="15" height="2" rx="1" fill="currentColor"/>
+        <rect y="6" width="22" height="2" rx="1" fill="currentColor"/>
+        <rect x="4" y="12" width="15" height="2" rx="1" fill="currentColor"/>
+        </svg> {% endcomment %}
+
+        <svg width="25" height="17" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.375 16.5C0.985421 16.5 0.659088 16.368 0.396005 16.104C0.132922 15.84 0.000921408 15.5137 4.74137e-06 15.125C-0.000911925 14.7363 0.131088 14.41 0.396005 14.146C0.660922 13.882 0.987255 13.75 1.375 13.75H23.375C23.7646 13.75 24.0914 13.882 24.3554 14.146C24.6194 14.41 24.7509 14.7363 24.75 15.125C24.7491 15.5137 24.6171 15.8405 24.354 16.1054C24.0909 16.3703 23.7646 16.5018 23.375 16.5H1.375ZM1.375 9.625C0.985421 9.625 0.659088 9.493 0.396005 9.229C0.132922 8.965 0.000921408 8.63867 4.74137e-06 8.25C-0.000911925 7.86133 0.131088 7.535 0.396005 7.271C0.660922 7.007 0.987255 6.875 1.375 6.875H23.375C23.7646 6.875 24.0914 7.007 24.3554 7.271C24.6194 7.535 24.7509 7.86133 24.75 8.25C24.7491 8.63867 24.6171 8.96546 24.354 9.23038C24.0909 9.49529 23.7646 9.62683 23.375 9.625H1.375ZM1.375 2.75C0.985421 2.75 0.659088 2.618 0.396005 2.354C0.132922 2.09 0.000921408 1.76367 4.74137e-06 1.375C-0.000911925 0.986333 0.131088 0.66 0.396005 0.396C0.660922 0.132 0.987255 0 1.375 0H23.375C23.7646 0 24.0914 0.132 24.3554 0.396C24.6194 0.66 24.7509 0.986333 24.75 1.375C24.7491 1.76367 24.6171 2.09046 24.354 2.35537C24.0909 2.62029 23.7646 2.75183 23.375 2.75H1.375Z" fill="currentColor"/>
+</svg>
+
+
+
+      </button>
+     {% endif %}
+  
+  
+    {%- liquid
+      if section.settings.logo_position == 'top-center' or section.settings.menu == blank
+        render 'header-search', input_id: 'Search-In-Modal-1'
+      endif
+    -%}
+
+    {%- if section.settings.logo_position != 'middle-center' -%}
+           {{ logo }}
+    {%- endif -%}
+
+ 
+
+     {%- liquid
+      if section.settings.menu != blank
+        if section.settings.menu_type_desktop == 'menu'
+          render 'header-main-menu'
+        endif
+      endif
+    %} 
+
+
+
+
+    {%- if section.settings.logo_position == 'middle-center' -%}
+        {{ logo }}
+    {%- endif -%}
+
+    <div class="header__icons {% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+   
+    {%- if section.settings.enable_country_selector or  section.settings.enable_language_selector -%}
+    <div class="desktop-localization-wrapper">
+        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+          <localization-form class="small-hide medium-hide" data-prevent-hide>
+            {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
+              <div>
+                <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
+                {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {% endif %}
+
+        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+          <localization-form class="small-hide medium-hide" data-prevent-hide>
+            {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+              <div>
+                <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+                {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+       <a href="{{ section.settings.login_link }}" class="login-button">
+        {%- liquid
+              if customer
+                echo 'customer.account_fallback' | t
+              else
+                echo 'customer.log_in' | t
+              endif
+            -%}
+       </a>
+
+       {% if section.settings.show_icons %}
+      
+   
+       {% render 'header-search', input_id: 'Search-In-Modal' %}
+
+  
+      {%- if shop.customer_accounts_enabled != false and section.settings.enable_customer_avatar -%}
+        <a
+          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+          class="header__icon header__icon--account link focus-inset"
+          rel="nofollow"
+        >
+          {%- if section.settings.enable_customer_avatar -%}
+            <account-icon>
+              {%- if customer and customer.has_avatar? -%}
+                {{ customer | avatar }}
+              {%- else -%}
+                <span class="svg-icon">
+             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.9714 20.1875C20.686 17.9316 18.679 16.1738 16.2733 15.1972C17.4696 14.2999 18.3533 13.049 18.7992 11.6216C19.2451 10.1942 19.2305 8.66274 18.7576 7.24407C18.2847 5.8254 17.3775 4.59148 16.1643 3.71709C14.9512 2.84271 13.4937 2.37219 11.9983 2.37219C10.5029 2.37219 9.04535 2.84271 7.83221 3.71709C6.61907 4.59148 5.71179 5.8254 5.2389 7.24407C4.76601 8.66274 4.75148 10.1942 5.19736 11.6216C5.64325 13.049 6.52694 14.2999 7.72327 15.1972C5.31757 16.1738 3.3105 17.9316 2.02515 20.1875C1.9455 20.3156 1.89242 20.4583 1.86905 20.6073C1.84569 20.7563 1.85252 20.9085 1.88914 21.0548C1.92575 21.2011 1.99141 21.3385 2.08221 21.4589C2.17301 21.5794 2.28709 21.6803 2.41767 21.7557C2.54826 21.8312 2.69268 21.8796 2.84235 21.8981C2.99202 21.9166 3.14388 21.9049 3.28891 21.8635C3.43395 21.8222 3.56918 21.7521 3.68659 21.6574C3.80399 21.5628 3.90117 21.4455 3.97233 21.3125C5.67108 18.3763 8.67108 16.625 11.9983 16.625C15.3255 16.625 18.3255 18.3772 20.0242 21.3125C20.1784 21.5605 20.4231 21.7388 20.7064 21.8097C20.9897 21.8806 21.2895 21.8386 21.5423 21.6925C21.7952 21.5464 21.9814 21.3077 22.0614 21.0268C22.1415 20.746 22.1092 20.445 21.9714 20.1875ZM7.12327 9.5C7.12327 8.53582 7.40919 7.59329 7.94486 6.7916C8.48053 5.98991 9.2419 5.36507 10.1327 4.99609C11.0235 4.62712 12.0037 4.53057 12.9493 4.71868C13.895 4.90678 14.7636 5.37108 15.4454 6.05286C16.1272 6.73464 16.5915 7.60328 16.7796 8.54894C16.9677 9.4946 16.8712 10.4748 16.5022 11.3656C16.1332 12.2564 15.5084 13.0177 14.7067 13.5534C13.905 14.0891 12.9625 14.375 11.9983 14.375C10.7058 14.3735 9.46669 13.8594 8.55277 12.9455C7.63885 12.0316 7.12476 10.7925 7.12327 9.5Z" fill="currentColor"/>
+            </svg>
+
+                            </span>
+                          {%- endif -%}
+                        </account-icon>
+                      {%- else -%}
+                        <span class="svg-icon">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.9714 20.1875C20.686 17.9316 18.679 16.1738 16.2733 15.1972C17.4696 14.2999 18.3533 13.049 18.7992 11.6216C19.2451 10.1942 19.2305 8.66274 18.7576 7.24407C18.2847 5.8254 17.3775 4.59148 16.1643 3.71709C14.9512 2.84271 13.4937 2.37219 11.9983 2.37219C10.5029 2.37219 9.04535 2.84271 7.83221 3.71709C6.61907 4.59148 5.71179 5.8254 5.2389 7.24407C4.76601 8.66274 4.75148 10.1942 5.19736 11.6216C5.64325 13.049 6.52694 14.2999 7.72327 15.1972C5.31757 16.1738 3.3105 17.9316 2.02515 20.1875C1.9455 20.3156 1.89242 20.4583 1.86905 20.6073C1.84569 20.7563 1.85252 20.9085 1.88914 21.0548C1.92575 21.2011 1.99141 21.3385 2.08221 21.4589C2.17301 21.5794 2.28709 21.6803 2.41767 21.7557C2.54826 21.8312 2.69268 21.8796 2.84235 21.8981C2.99202 21.9166 3.14388 21.9049 3.28891 21.8635C3.43395 21.8222 3.56918 21.7521 3.68659 21.6574C3.80399 21.5628 3.90117 21.4455 3.97233 21.3125C5.67108 18.3763 8.67108 16.625 11.9983 16.625C15.3255 16.625 18.3255 18.3772 20.0242 21.3125C20.1784 21.5605 20.4231 21.7388 20.7064 21.8097C20.9897 21.8806 21.2895 21.8386 21.5423 21.6925C21.7952 21.5464 21.9814 21.3077 22.0614 21.0268C22.1415 20.746 22.1092 20.445 21.9714 20.1875ZM7.12327 9.5C7.12327 8.53582 7.40919 7.59329 7.94486 6.7916C8.48053 5.98991 9.2419 5.36507 10.1327 4.99609C11.0235 4.62712 12.0037 4.53057 12.9493 4.71868C13.895 4.90678 14.7636 5.37108 15.4454 6.05286C16.1272 6.73464 16.5915 7.60328 16.7796 8.54894C16.9677 9.4946 16.8712 10.4748 16.5022 11.3656C16.1332 12.2564 15.5084 13.0177 14.7067 13.5534C13.905 14.0891 12.9625 14.375 11.9983 14.375C10.7058 14.3735 9.46669 13.8594 8.55277 12.9455C7.63885 12.0316 7.12476 10.7925 7.12327 9.5Z" fill="currentColor"/>
+            </svg>
+
+            </span>
+          {%- endif -%}
+          <span class="visually-hidden">
+            {%- liquid
+              if customer
+                echo 'customer.account_fallback' | t
+              else
+                echo 'customer.log_in' | t
+              endif
+            -%}
+          </span>
+        </a>
+      {%- endif -%}
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+        {%- endcase -%}
+      {%- endfor -%}
+
+      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+          {% if cart == empty %}
+            <span class="svg-icon">
+       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.8634 4.77906C20.7579 4.65261 20.6258 4.55087 20.4766 4.48105C20.3274 4.41123 20.1647 4.37503 20 4.375H5.1875L4.67469 1.54844C4.62751 1.28939 4.49096 1.05509 4.28882 0.886351C4.08668 0.717614 3.83175 0.625128 3.56844 0.625H1.25C0.951631 0.625 0.665483 0.743526 0.454505 0.954505C0.243526 1.16548 0.125 1.45163 0.125 1.75C0.125 2.04837 0.243526 2.33452 0.454505 2.5455C0.665483 2.75647 0.951631 2.875 1.25 2.875H2.62906L4.96437 15.7188C5.02707 16.0599 5.15676 16.3852 5.34594 16.6759C5.01101 17.0678 4.78272 17.5394 4.68309 18.0452C4.58345 18.551 4.61583 19.0739 4.7771 19.5635C4.93837 20.0532 5.2231 20.493 5.60381 20.8406C5.98452 21.1881 6.44837 21.4318 6.95063 21.5479C7.45288 21.664 7.97659 21.6488 8.47124 21.5036C8.9659 21.3585 9.4148 21.0883 9.77465 20.7192C10.1345 20.3501 10.3932 19.8944 10.5257 19.3962C10.6582 18.8981 10.6601 18.3741 10.5312 17.875H13.7187C13.5623 18.4807 13.5992 19.1202 13.8242 19.7039C14.0492 20.2877 14.4511 20.7865 14.9736 21.1305C15.496 21.4746 16.113 21.6467 16.7382 21.6228C17.3633 21.5989 17.9653 21.3801 18.46 20.9972C18.9547 20.6142 19.3173 20.0862 19.497 19.4869C19.6767 18.8877 19.6647 18.2473 19.4624 17.6553C19.2602 17.0633 18.878 16.5493 18.3692 16.1852C17.8604 15.8212 17.2506 15.6253 16.625 15.625H7.54719C7.45951 15.6249 7.37465 15.5941 7.30734 15.5379C7.24003 15.4817 7.19453 15.4037 7.17875 15.3175L6.96125 14.125H17.3844C17.9993 14.125 18.5946 13.9091 19.0667 13.5151C19.5387 13.121 19.8574 12.5738 19.9672 11.9688L21.1072 5.70062C21.1365 5.53854 21.1299 5.37199 21.0877 5.21275C21.0456 5.05351 20.9691 4.90546 20.8634 4.77906ZM8.375 18.625C8.375 18.7733 8.33101 18.9183 8.2486 19.0417C8.16619 19.165 8.04906 19.2611 7.91201 19.3179C7.77497 19.3747 7.62417 19.3895 7.47868 19.3606C7.3332 19.3316 7.19956 19.2602 7.09467 19.1553C6.98978 19.0504 6.91835 18.9168 6.88941 18.7713C6.86047 18.6258 6.87532 18.475 6.93209 18.338C6.98886 18.2009 7.08498 18.0838 7.20832 18.0014C7.33166 17.919 7.47666 17.875 7.625 17.875C7.82391 17.875 8.01468 17.954 8.15533 18.0947C8.29598 18.2353 8.375 18.4261 8.375 18.625ZM16.625 19.375C16.4767 19.375 16.3317 19.331 16.2083 19.2486C16.085 19.1662 15.9889 19.0491 15.9321 18.912C15.8753 18.775 15.8605 18.6242 15.8894 18.4787C15.9183 18.3332 15.9898 18.1996 16.0947 18.0947C16.1996 17.9898 16.3332 17.9184 16.4787 17.8894C16.6242 17.8605 16.775 17.8753 16.912 17.9321C17.0491 17.9889 17.1662 18.085 17.2486 18.2083C17.331 18.3317 17.375 18.4767 17.375 18.625C17.375 18.8239 17.296 19.0147 17.1553 19.1553C17.0147 19.296 16.8239 19.375 16.625 19.375ZM17.75 11.5675C17.7343 11.6533 17.6892 11.7309 17.6225 11.787C17.5558 11.8431 17.4716 11.8742 17.3844 11.875H6.5525L5.59812 6.625H18.6519L17.75 11.5675Z" fill="currentColor"/>
+        </svg>
+
+            </span>
+          {% else %}
+            <span class="svg-icon">
+         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.8634 4.77906C20.7579 4.65261 20.6258 4.55087 20.4766 4.48105C20.3274 4.41123 20.1647 4.37503 20 4.375H5.1875L4.67469 1.54844C4.62751 1.28939 4.49096 1.05509 4.28882 0.886351C4.08668 0.717614 3.83175 0.625128 3.56844 0.625H1.25C0.951631 0.625 0.665483 0.743526 0.454505 0.954505C0.243526 1.16548 0.125 1.45163 0.125 1.75C0.125 2.04837 0.243526 2.33452 0.454505 2.5455C0.665483 2.75647 0.951631 2.875 1.25 2.875H2.62906L4.96437 15.7188C5.02707 16.0599 5.15676 16.3852 5.34594 16.6759C5.01101 17.0678 4.78272 17.5394 4.68309 18.0452C4.58345 18.551 4.61583 19.0739 4.7771 19.5635C4.93837 20.0532 5.2231 20.493 5.60381 20.8406C5.98452 21.1881 6.44837 21.4318 6.95063 21.5479C7.45288 21.664 7.97659 21.6488 8.47124 21.5036C8.9659 21.3585 9.4148 21.0883 9.77465 20.7192C10.1345 20.3501 10.3932 19.8944 10.5257 19.3962C10.6582 18.8981 10.6601 18.3741 10.5312 17.875H13.7187C13.5623 18.4807 13.5992 19.1202 13.8242 19.7039C14.0492 20.2877 14.4511 20.7865 14.9736 21.1305C15.496 21.4746 16.113 21.6467 16.7382 21.6228C17.3633 21.5989 17.9653 21.3801 18.46 20.9972C18.9547 20.6142 19.3173 20.0862 19.497 19.4869C19.6767 18.8877 19.6647 18.2473 19.4624 17.6553C19.2602 17.0633 18.878 16.5493 18.3692 16.1852C17.8604 15.8212 17.2506 15.6253 16.625 15.625H7.54719C7.45951 15.6249 7.37465 15.5941 7.30734 15.5379C7.24003 15.4817 7.19453 15.4037 7.17875 15.3175L6.96125 14.125H17.3844C17.9993 14.125 18.5946 13.9091 19.0667 13.5151C19.5387 13.121 19.8574 12.5738 19.9672 11.9688L21.1072 5.70062C21.1365 5.53854 21.1299 5.37199 21.0877 5.21275C21.0456 5.05351 20.9691 4.90546 20.8634 4.77906ZM8.375 18.625C8.375 18.7733 8.33101 18.9183 8.2486 19.0417C8.16619 19.165 8.04906 19.2611 7.91201 19.3179C7.77497 19.3747 7.62417 19.3895 7.47868 19.3606C7.3332 19.3316 7.19956 19.2602 7.09467 19.1553C6.98978 19.0504 6.91835 18.9168 6.88941 18.7713C6.86047 18.6258 6.87532 18.475 6.93209 18.338C6.98886 18.2009 7.08498 18.0838 7.20832 18.0014C7.33166 17.919 7.47666 17.875 7.625 17.875C7.82391 17.875 8.01468 17.954 8.15533 18.0947C8.29598 18.2353 8.375 18.4261 8.375 18.625ZM16.625 19.375C16.4767 19.375 16.3317 19.331 16.2083 19.2486C16.085 19.1662 15.9889 19.0491 15.9321 18.912C15.8753 18.775 15.8605 18.6242 15.8894 18.4787C15.9183 18.3332 15.9898 18.1996 16.0947 18.0947C16.1996 17.9898 16.3332 17.9184 16.4787 17.8894C16.6242 17.8605 16.775 17.8753 16.912 17.9321C17.0491 17.9889 17.1662 18.085 17.2486 18.2083C17.331 18.3317 17.375 18.4767 17.375 18.625C17.375 18.8239 17.296 19.0147 17.1553 19.1553C17.0147 19.296 16.8239 19.375 16.625 19.375ZM17.75 11.5675C17.7343 11.6533 17.6892 11.7309 17.6225 11.787C17.5558 11.8431 17.4716 11.8742 17.3844 11.875H6.5525L5.59812 6.625H18.6519L17.75 11.5675Z" fill="currentColor"/>
+      </svg>
+            
+            </span>
+          {% endif %}
+        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count}} <span class="count-text"> Item</span></span>
+            {%- endif -%}
+            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+          </div>
+        {%- endif -%}
+      </a>
+
+           {% endif %}
+
+      {% if  section.settings.menu != blank and section.settings.mobile_logo_position contains 'left' %}
+      <button class="header__mobile__button" data-drawer-toggle="hamburger" aria-label="Open menu" aria-haspopup="true" aria-expanded="true" aria-controls="header-menu">
+       <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3.5" width="15" height="2" rx="1" fill="currentColor"/>
+        <rect y="6" width="22" height="2" rx="1" fill="currentColor"/>
+        <rect x="4" y="12" width="15" height="2" rx="1" fill="currentColor"/>
+        </svg>
+      </button>
+      {% endif %}
+
+
+    </div>
+  </header>
+  </div>
+
+
+</{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
+
+{{ drawer }}
+  
+
+{%- if settings.cart_type == "notification" -%}
+  {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
+{%- endif -%}
+
+
+{% javascript %}
+  class StickyHeader extends HTMLElement {
+    constructor() {
+      super();
+      this._resizeHandler = null;
+    }
+
+    connectedCallback() {
+      this.header = document.querySelector('.section-header');
+      this.header_wrapper = document.querySelector('.header-wrapper');
+      this.headerIsAlwaysSticky =
+        this.getAttribute('data-sticky-type') === 'always' ||
+        this.getAttribute('data-sticky-type') === 'reduce-logo-size';
+      this.headerBounds = {};
+
+      this.setHeaderHeight();
+
+      // Resize fix
+      this.debouncedSetHeaderHeight = this.debounce(this.setHeaderHeight.bind(this), 100);
+      window.addEventListener('resize', this.debouncedSetHeaderHeight);
+
+      // matchMedia fix with rAF
+      window.matchMedia('(max-width: 990px)').addEventListener('change', () => {
+        requestAnimationFrame(() => this.setHeaderHeight());
+      });
+
+      if (this.headerIsAlwaysSticky) {
+        this.header.classList.add('shopify-section-header-sticky');
+      }
+
+      this.currentScrollTop = 0;
+      this.preventReveal = false;
+      this.predictiveSearch = this.querySelector('predictive-search');
+
+      this.onScrollHandler = this.onScroll.bind(this);
+      this.hideHeaderOnScrollUp = () => (this.preventReveal = true);
+
+      this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.addEventListener('scroll', this.onScrollHandler, false);
+
+      this.createObserver();
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.removeEventListener('scroll', this.onScrollHandler);
+      window.removeEventListener('resize', this.debouncedSetHeaderHeight);
+    }
+
+    setHeaderHeight() {
+      if (!this.header) return;
+      document.documentElement.style.setProperty('--header-height', `${this.header_wrapper.offsetHeight}px`);
+    }
+
+    createObserver() {
+      const observer = new IntersectionObserver((entries, observer) => {
+        this.headerBounds = entries[0].intersectionRect;
+        observer.disconnect();
+      });
+
+      observer.observe(this.header);
+    }
+
+    onScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
+
+      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        this.header.classList.add('scrolled-past-header');
+        if (this.preventHide) return;
+        requestAnimationFrame(this.hide.bind(this));
+      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        this.header.classList.add('scrolled-past-header');
+        if (!this.preventReveal) {
+          requestAnimationFrame(this.reveal.bind(this));
+        } else {
+          window.clearTimeout(this.isScrolling);
+
+          this.isScrolling = setTimeout(() => {
+            this.preventReveal = false;
+          }, 66);
+
+          requestAnimationFrame(this.hide.bind(this));
+        }
+      } else if (scrollTop <= this.headerBounds.top) {
+        this.header.classList.remove('scrolled-past-header');
+        requestAnimationFrame(this.reset.bind(this));
+      }
+
+      this.currentScrollTop = scrollTop;
+    }
+
+    hide() {
+      if (this.headerIsAlwaysSticky) return;
+      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+      this.closeMenuDisclosure();
+      this.closeSearchModal();
+    }
+
+    reveal() {
+      if (this.headerIsAlwaysSticky) return;
+      this.header.classList.add('shopify-section-header-sticky', 'animate');
+      this.header.classList.remove('shopify-section-header-hidden');
+    }
+
+    reset() {
+      if (this.headerIsAlwaysSticky) return;
+      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+    }
+
+    closeMenuDisclosure() {
+      this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');
+      this.disclosures.forEach((disclosure) => disclosure.close());
+    }
+
+    closeSearchModal() {
+      this.searchModal = this.searchModal || this.header.querySelector('details-modal');
+      if (this.searchModal != null) {
+        this.searchModal.close(false);
+      }
+    }
+
+    // Utility: debounce
+    debounce(func, wait = 100) {
+      let timeout;
+      return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
+    }
+  }
+
+  customElements.define('sticky-header', StickyHeader);
+{% endjavascript %}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if settings.logo %}
+      "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_tiktok_link | json }},
+      {{ settings.social_tumblr_link | json }},
+      {{ settings.social_snapchat_link | json }},
+      {{ settings.social_youtube_link | json }},
+      {{ settings.social_vimeo_link | json }}
+    ],
+    "url": {{ request.origin | append: page.url | json }}
+  }
+</script>
+
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ request.origin | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "section-header",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Full Width"
+        }
+      ],
+      "default": "container-fluid",
+      "label": "Layout Width"
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "t:sections.header.settings.logo_position.options__2.label"
+        },
+        {
+          "value": "top-center",
+          "label": "t:sections.header.settings.logo_position.options__3.label"
+        },
+        {
+          "value": "middle-left",
+          "label": "t:sections.header.settings.logo_position.options__1.label"
+        },
+        {
+          "value": "middle-center",
+          "label": "t:sections.header.settings.logo_position.options__4.label"
+        },
+        {
+          "value": "nav-middle-center",
+          "label": "Menu Center"
+        }
+      ],
+      "default": "middle-left",
+      "label": "t:sections.header.settings.logo_position.label",
+      "info": "t:sections.header.settings.logo_help.content"
+    },
+    {
+      "type": "select",
+      "id": "mobile_logo_position",
+      "options": [
+        {
+          "value": "center",
+          "label": "t:sections.header.settings.mobile_logo_position.options__1.label"
+        },
+        {
+          "value": "left",
+          "label": "t:sections.header.settings.mobile_logo_position.options__2.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.header.settings.mobile_logo_position.label"
+    },
+        {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 400,
+      "step": 5,
+      "unit": "px",
+      "label": "Logo width",
+      "default": 200
+    },
+        {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "min": 50,
+      "max": 250,
+      "step": 5,
+      "unit": "px",
+      "label": "Logo width - Mobile",
+      "default": 150
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "select",
+      "id": "menu_type_desktop",
+      "options": [
+            {
+          "value": "menu",
+          "label": "Menu"
+        },
+        {
+          "value": "drawer",
+          "label": "t:sections.header.settings.menu_type_desktop.options__3.label"
+        }
+      ],
+      "default": "menu",
+      "label": "t:sections.header.settings.menu_type_desktop.label"
+    },
+    {
+      "type": "select",
+      "id": "sticky_header_type",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.header.settings.sticky_header_type.options__1.label"
+        },
+        {
+          "value": "on-scroll-up",
+          "label": "t:sections.header.settings.sticky_header_type.options__2.label"
+        },
+        {
+          "value": "always",
+          "label": "t:sections.header.settings.sticky_header_type.options__3.label"
+        },
+        {
+          "value": "reduce-logo-size",
+          "label": "t:sections.header.settings.sticky_header_type.options__4.label"
+        }
+      ],
+      "default": "on-scroll-up",
+      "label": "t:sections.header.settings.sticky_header_type.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_line_separator",
+      "default": true,
+      "label": "t:sections.header.settings.show_line_separator.label"
+    },
+      {
+      "type": "checkbox",
+      "id": "show_icons",
+      "default": true,
+      "label": "Icons"
+    },
+      {
+      "type": "header",
+      "content": "Transparent"
+    },
+        {
+      "type": "image_picker",
+      "id": "transparent_logo",
+      "label": "Logo"
+    },
+    {
+      "type": "checkbox",
+      "id": "transparent_on_home",
+      "label": "Transparent on home page"
+    },
+   {
+      "type": "checkbox",
+      "id": "transparent",
+      "label": "Transparent on all pages"
+    },
+    {
+      "type": "header",
+      "content": "Login Button"
+    },
+        {
+      "type": "url",
+      "id": "login_link",
+      "label": "Login link"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.header__1.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "menu_color_scheme",
+      "label": "t:sections.header.settings.menu_color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "sticky_header_background",
+      "label": "Sticky header Background",
+      "default": "#ffffff"
+    },
+        {
+      "type": "color",
+      "id": "sticky_text_color",
+      "label": "Sticky text color",
+      "default": "#0A0A0A"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.header__utilities.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_country_selector",
+      "default": true,
+      "label": "t:sections.header.settings.enable_country_selector.label",
+      "info": "t:sections.header.settings.enable_country_selector.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_language_selector",
+      "default": true,
+      "label": "t:sections.header.settings.enable_language_selector.label",
+      "info": "t:sections.header.settings.enable_language_selector.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_customer_avatar",
+      "default": true,
+      "label": "t:sections.header.settings.enable_customer_avatar.label",
+      "info": "t:sections.header.settings.enable_customer_avatar.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.header.settings.margin_bottom.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_moblie",
+      "min": 0,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+        {
+      "name": "Menu block",
+      "type": "menu_block",
+      "settings": [
+                {
+          "type": "text",
+          "id": "link_title",
+          "label": "Mega menu trigger",
+          "info": "Enter the name of the menu item you'd like to apply a mega menu."
+        },
+        {
+          "type": "link_list",
+          "label": "Choose menu",
+          "id": "block_menu"
+        }
+      ]
+    },
+         {
+      "name": "Product List",
+      "type": "product_list",
+      "settings": [
+                {
+          "type": "text",
+          "id": "link_title",
+          "label": "Mega menu trigger",
+          "info": "Enter the name of the menu item you'd like to apply a mega menu."
+        },
+        {
+          "type": "product_list",
+          "label": "Choose products",
+          "id": "product_list"
+        },
+         {
+          "type": "color_scheme",
+          "id": "color_scheme_product",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+            {
+      "type": "header",
+      "content": "Slider Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enabled",
+      "label": "Enable Auto Play",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_timeout",
+      "label": "Chnage Time",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "s"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop_enabled",
+      "label": "Enable Loop",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination",
+      "label": "Enable Pagination",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_navigation",
+      "label": "Enable Naviagtion",
+      "default": true
+    },
+        
+            {
+      "type": "color_scheme",
+      "id": "color_scheme_swiper",
+      "label": "Swiper Navigation",
+      "default": "scheme-2"
+    }
+      ]
+    },
+     {
+      "name": "Button",
+      "type": "button_link",
+      "settings": [
+         {
+          "type": "text",
+          "id": "link_title",
+          "label": "Mega menu trigger",
+          "info": "Enter the name of the menu item you'd like to apply a mega menu."
+        },
+       {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Behind Image"
+        },
+         {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+           {
+          "type": "text",
+          "id": "text",
+           "default": "Start Your Weight Loss Journey",
+          "label": "Link text"
+        },
+              {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link url"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
+        }
+      ]
+    },
+         {
+      "name": "Contact Info",
+      "type": "contact_info",
+      "settings": [
+           {
+          "type": "text",
+          "id": "title",
+           "default": "HAVE A QUESTION?",
+          "label": "Title"
+        },
+               {
+          "type": "text",
+          "id": "call_number",
+          "label": "Call Number"
+        },
+           {
+          "type": "text",
+          "id": "call_lebel",
+           "default": "Call",
+          "label": "Call Lebel"
+        },
+       {
+          "type": "text",
+          "id": "call_text",
+           "default": "Mon - Fri 9am - 5pm",
+          "label": "Call Text"
+        },
+                 {
+          "type": "text",
+          "id": "email_address",
+          "label": "Email Address"
+        },
+           {
+          "type": "text",
+          "id": "email_lebel",
+           "default": "Email",
+          "label": "Email lebel"
+        },
+       {
+          "type": "text",
+          "id": "email_text",
+           "default": "We aim to reply in 48hrs",
+          "label": "Email Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

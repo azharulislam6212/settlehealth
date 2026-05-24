@@ -1,0 +1,249 @@
+{{ 'welcome-modal.css' | asset_url | stylesheet_tag }}
+<div id="age-modal" class="modal-overlay">
+  <div class="modal-content color-{{ section.settings.color_scheme }} gradient">
+    <button id="close-btn" class="close-btn">×</button>
+    <div class="modal-header">
+      <a href="{{ section.settings.image_link }}">
+        {% if section.settings.image != blank %}
+          {% render 'icon-img' with image: section.settings.image, class: "modal-logo" %}
+        {% endif %}
+      </a>
+    </div>
+    <div class="modal-body">
+      <h2>{{ section.settings.title }}</h2>
+      <div class="modal-text">
+        {{ section.settings.text }}
+      </div>
+      <div class="btn-container">
+        <a href="{{ section.settings.button_link }}" id="enter-btn" class="gv-btn button button--primary">
+          {{- section.settings.button_label }}
+          <svg width="34" height="13" viewBox="0 0 34 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.9453 0C27.5039 1.69922 28.8516 2.99414 29.9883 3.88477C31.125 4.76367 32.1973 5.41992 33.2051 5.85352V6.64453C32.0449 7.20703 30.9199 7.92773 29.8301 8.80664C28.7402 9.67383 27.4394 10.9512 25.9277 12.6387H24.5742C25.6758 10.2832 26.8301 8.47266 28.0371 7.20703H-5.72205e-06V5.43164H28.0371C27.1465 4.30664 26.5254 3.46875 26.1738 2.91797C25.8223 2.35547 25.3008 1.38281 24.6094 0H25.9453Z" fill="white"/>
+          </svg>
+        </a>
+        <a href="{{ section.settings.button_link_2 }}" class="gv-modal-alt button--link">
+          {{- section.settings.button_label_2 -}}
+        </a>
+      </div>
+       <div class="icon-block__bar">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'icon_block' -%}
+                <div
+                  class="icon-block-item"
+                  {{ block.shopify_attributes }}
+                  
+                >
+                  {% if block.settings.image %}
+                    <div class="icon-block__icon">
+                      {% render "responsive-img" with image: block.settings.image %}
+                    </div>
+                  {% endif %}
+
+                  <div class="icon-block__content">
+                    {% if block.settings.title != blank %}
+                      <h3 class="icon-block__title">{{ block.settings.title }}</h3>
+                    {% endif %}
+                  </div>
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+
+        <div class="trusted-bar">
+
+       
+
+         <div class="start-icons">
+           <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.82617 23.2441C4.53451 23.0163 4.35677 22.7246 4.29297 22.3691C4.22917 22.0046 4.2793 21.5853 4.44336 21.1113L6.58984 14.7402L1.12109 10.8164C0.710938 10.5339 0.419272 10.2285 0.246095 9.90039C0.0820322 9.57227 0.0592457 9.22591 0.177735 8.86133C0.296225 8.51497 0.519532 8.25977 0.847657 8.0957C1.17578 7.93164 1.5905 7.84961 2.0918 7.84961H8.79102L10.8281 1.49219C10.9922 1.00911 11.2018 0.639974 11.457 0.384766C11.7122 0.129557 12.0267 0.00195312 12.4004 0.00195312C12.765 0.00195312 13.0749 0.129557 13.3301 0.384766C13.5944 0.639974 13.804 1.00911 13.959 1.49219L15.9961 7.84961H22.6953C23.2057 7.84961 23.6204 7.93164 23.9395 8.0957C24.2676 8.25977 24.4909 8.51953 24.6094 8.875C24.7279 9.23047 24.7005 9.57227 24.5273 9.90039C24.3633 10.2285 24.0762 10.5339 23.666 10.8164L18.1973 14.7402L20.3438 21.1113C20.5078 21.5853 20.5579 22.0046 20.4941 22.3691C20.4395 22.7246 20.2663 23.0163 19.9746 23.2441C19.6738 23.472 19.3411 23.554 18.9766 23.4902C18.612 23.4264 18.2246 23.2441 17.8145 22.9434L12.4004 18.9648L6.97266 22.9434C6.57162 23.2441 6.1888 23.4264 5.82422 23.4902C5.45964 23.554 5.12695 23.472 4.82617 23.2441Z" fill="#72B45C"/>
+</svg>
+
+ <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.82617 23.2441C4.53451 23.0163 4.35677 22.7246 4.29297 22.3691C4.22917 22.0046 4.2793 21.5853 4.44336 21.1113L6.58984 14.7402L1.12109 10.8164C0.710938 10.5339 0.419272 10.2285 0.246095 9.90039C0.0820322 9.57227 0.0592457 9.22591 0.177735 8.86133C0.296225 8.51497 0.519532 8.25977 0.847657 8.0957C1.17578 7.93164 1.5905 7.84961 2.0918 7.84961H8.79102L10.8281 1.49219C10.9922 1.00911 11.2018 0.639974 11.457 0.384766C11.7122 0.129557 12.0267 0.00195312 12.4004 0.00195312C12.765 0.00195312 13.0749 0.129557 13.3301 0.384766C13.5944 0.639974 13.804 1.00911 13.959 1.49219L15.9961 7.84961H22.6953C23.2057 7.84961 23.6204 7.93164 23.9395 8.0957C24.2676 8.25977 24.4909 8.51953 24.6094 8.875C24.7279 9.23047 24.7005 9.57227 24.5273 9.90039C24.3633 10.2285 24.0762 10.5339 23.666 10.8164L18.1973 14.7402L20.3438 21.1113C20.5078 21.5853 20.5579 22.0046 20.4941 22.3691C20.4395 22.7246 20.2663 23.0163 19.9746 23.2441C19.6738 23.472 19.3411 23.554 18.9766 23.4902C18.612 23.4264 18.2246 23.2441 17.8145 22.9434L12.4004 18.9648L6.97266 22.9434C6.57162 23.2441 6.1888 23.4264 5.82422 23.4902C5.45964 23.554 5.12695 23.472 4.82617 23.2441Z" fill="#72B45C"/>
+</svg>
+
+ <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.82617 23.2441C4.53451 23.0163 4.35677 22.7246 4.29297 22.3691C4.22917 22.0046 4.2793 21.5853 4.44336 21.1113L6.58984 14.7402L1.12109 10.8164C0.710938 10.5339 0.419272 10.2285 0.246095 9.90039C0.0820322 9.57227 0.0592457 9.22591 0.177735 8.86133C0.296225 8.51497 0.519532 8.25977 0.847657 8.0957C1.17578 7.93164 1.5905 7.84961 2.0918 7.84961H8.79102L10.8281 1.49219C10.9922 1.00911 11.2018 0.639974 11.457 0.384766C11.7122 0.129557 12.0267 0.00195312 12.4004 0.00195312C12.765 0.00195312 13.0749 0.129557 13.3301 0.384766C13.5944 0.639974 13.804 1.00911 13.959 1.49219L15.9961 7.84961H22.6953C23.2057 7.84961 23.6204 7.93164 23.9395 8.0957C24.2676 8.25977 24.4909 8.51953 24.6094 8.875C24.7279 9.23047 24.7005 9.57227 24.5273 9.90039C24.3633 10.2285 24.0762 10.5339 23.666 10.8164L18.1973 14.7402L20.3438 21.1113C20.5078 21.5853 20.5579 22.0046 20.4941 22.3691C20.4395 22.7246 20.2663 23.0163 19.9746 23.2441C19.6738 23.472 19.3411 23.554 18.9766 23.4902C18.612 23.4264 18.2246 23.2441 17.8145 22.9434L12.4004 18.9648L6.97266 22.9434C6.57162 23.2441 6.1888 23.4264 5.82422 23.4902C5.45964 23.554 5.12695 23.472 4.82617 23.2441Z" fill="#72B45C"/>
+</svg>
+
+ <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.82617 23.2441C4.53451 23.0163 4.35677 22.7246 4.29297 22.3691C4.22917 22.0046 4.2793 21.5853 4.44336 21.1113L6.58984 14.7402L1.12109 10.8164C0.710938 10.5339 0.419272 10.2285 0.246095 9.90039C0.0820322 9.57227 0.0592457 9.22591 0.177735 8.86133C0.296225 8.51497 0.519532 8.25977 0.847657 8.0957C1.17578 7.93164 1.5905 7.84961 2.0918 7.84961H8.79102L10.8281 1.49219C10.9922 1.00911 11.2018 0.639974 11.457 0.384766C11.7122 0.129557 12.0267 0.00195312 12.4004 0.00195312C12.765 0.00195312 13.0749 0.129557 13.3301 0.384766C13.5944 0.639974 13.804 1.00911 13.959 1.49219L15.9961 7.84961H22.6953C23.2057 7.84961 23.6204 7.93164 23.9395 8.0957C24.2676 8.25977 24.4909 8.51953 24.6094 8.875C24.7279 9.23047 24.7005 9.57227 24.5273 9.90039C24.3633 10.2285 24.0762 10.5339 23.666 10.8164L18.1973 14.7402L20.3438 21.1113C20.5078 21.5853 20.5579 22.0046 20.4941 22.3691C20.4395 22.7246 20.2663 23.0163 19.9746 23.2441C19.6738 23.472 19.3411 23.554 18.9766 23.4902C18.612 23.4264 18.2246 23.2441 17.8145 22.9434L12.4004 18.9648L6.97266 22.9434C6.57162 23.2441 6.1888 23.4264 5.82422 23.4902C5.45964 23.554 5.12695 23.472 4.82617 23.2441Z" fill="#72B45C"/>
+</svg>
+
+ <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.82617 23.2441C4.53451 23.0163 4.35677 22.7246 4.29297 22.3691C4.22917 22.0046 4.2793 21.5853 4.44336 21.1113L6.58984 14.7402L1.12109 10.8164C0.710938 10.5339 0.419272 10.2285 0.246095 9.90039C0.0820322 9.57227 0.0592457 9.22591 0.177735 8.86133C0.296225 8.51497 0.519532 8.25977 0.847657 8.0957C1.17578 7.93164 1.5905 7.84961 2.0918 7.84961H8.79102L10.8281 1.49219C10.9922 1.00911 11.2018 0.639974 11.457 0.384766C11.7122 0.129557 12.0267 0.00195312 12.4004 0.00195312C12.765 0.00195312 13.0749 0.129557 13.3301 0.384766C13.5944 0.639974 13.804 1.00911 13.959 1.49219L15.9961 7.84961H22.6953C23.2057 7.84961 23.6204 7.93164 23.9395 8.0957C24.2676 8.25977 24.4909 8.51953 24.6094 8.875C24.7279 9.23047 24.7005 9.57227 24.5273 9.90039C24.3633 10.2285 24.0762 10.5339 23.666 10.8164L18.1973 14.7402L20.3438 21.1113C20.5078 21.5853 20.5579 22.0046 20.4941 22.3691C20.4395 22.7246 20.2663 23.0163 19.9746 23.2441C19.6738 23.472 19.3411 23.554 18.9766 23.4902C18.612 23.4264 18.2246 23.2441 17.8145 22.9434L12.4004 18.9648L6.97266 22.9434C6.57162 23.2441 6.1888 23.4264 5.82422 23.4902C5.45964 23.554 5.12695 23.472 4.82617 23.2441Z" fill="#72B45C"/>
+</svg>
+         </div>
+
+        <h5 class="trasted-title">{{  section.settings.trusted_by }}</h5>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('age-modal');
+    const enterBtn = document.getElementById('enter-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const switchProviderLink = document.querySelector('.switch-provider');
+    const pharmacyUrl = '{{ section.settings.button_link }}';
+    // Prevent scrolling
+    document.body.classList.add('modal-open');
+    function redirectToPharmacy() {
+      window.location.href = pharmacyUrl;
+    }
+    enterBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      redirectToPharmacy();
+    });
+    closeBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      redirectToPharmacy();
+    });
+    if (switchProviderLink) {
+      switchProviderLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        redirectToPharmacy();
+      });
+    }
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        redirectToPharmacy();
+      }
+    });
+    const modalLogo = document.querySelector('.modal-logo');
+    modalLogo.addEventListener('click', function (e) {
+      e.preventDefault();
+      redirectToPharmacy();
+    });
+    modalLogo.style.cursor = 'pointer';
+    // Prevent keyboard scrolling (arrow keys, page up/down, space)
+    document.addEventListener('keydown', function (e) {
+      // Prevent scrolling with arrow keys, page up/down, space, home, end
+      if ([32, 33, 34, 35, 36, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+      }
+    });
+    document.addEventListener(
+      'wheel',
+      function (e) {
+        e.preventDefault();
+      },
+      {
+        passive: false,
+      }
+    );
+    document.addEventListener(
+      'touchmove',
+      function (e) {
+        e.preventDefault();
+      },
+      {
+        passive: false,
+      }
+    );
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Welcome Modal",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Logo Image"
+    },
+    {
+      "type": "url",
+      "id": "image_link",
+      "label": "Image Url"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Get started",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Let’s get you started on the right path. Are you new to weight loss programmes, or looking to switch treatments?</p>",
+      "label": "Text"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "trusted_by",
+      "default": "Trusted by over 100,000 patients",
+      "label": "Trusted by"
+    },
+    {
+      "type": "header",
+      "content": "Weghtloss programmes"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Get started",
+      "label": "Button Lebel"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Url"
+    },
+    {
+      "type": "header",
+      "content": "Switch treatments"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "default": "Get started",
+      "label": "Button Lebel"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Button Url"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_block",
+      "name": "Icon Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Welcome Modal"
+    }
+  ]
+}
+{% endschema %}

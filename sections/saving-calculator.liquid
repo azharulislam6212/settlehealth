@@ -1,0 +1,795 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width:768px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
+  }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+  .nb-savings-wrapper {
+    background: var(--background);
+  }
+  .nb-saving-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .nb-savings-content h2 {
+    color: var(--title-color);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 15px 0;
+  }
+  .nb-savings-content h2 span,
+  .nb-savings-content h2 em {
+    color: var(--accent-color);
+    font-style: normal;
+  }
+  .nb-savings-content p {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+  }
+  .nb-savings-calculator {
+    background: var(--clcr-bg-color);
+    border-radius: 20px;
+    padding: 40px;
+     color: var(--clcr-text-color);
+  }
+  .nb-calculator-title {
+    color: var(--clcr-text-color);
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    text-align: left;
+  }
+  .nb-calculator-title span {
+    color: #a48af9;
+  }
+  .nb-calculator-subtitle {
+     color: var(--clcr-text-color);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    opacity: 0.9;
+  }
+  /* Dropdown Styles - Updated for white design */
+  .ppc-treatment-title,
+  .ppc-strength-title {
+    font-family: 'Kind Sans', sans-serif !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 10px;
+    display: block;
+   color: var(--clcr-text-color);
+  }
+  .ppc-wrapper {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  .ppc-wrapper::after {
+    content: '';
+    position: absolute;
+    color: #969ab2;
+    transition: none;
+    top: 25px;
+    right: 0px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    padding: 20px 20px 20px 20px;
+    border-left: 1px solid #bbd1db;
+    margin: 0;
+  }
+  .ppc-wrapper.ppc-active:after {
+    transform: translateY(-50%) scaleY(-1);
+  }
+
+  .ppc-wrapper .arrow-icon svg {
+    transition: 0.3s ease;
+    transform-origin: center;
+  }
+  .ppc-wrapper.ppc-active .arrow-icon svg {
+    transform: scaleY(-1);
+    transition: 0.3s ease all;
+  }
+  .ppc-initial {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ppc-initial > span:first-child,
+  .ppc-dropdown > div > span:first-child {
+    display: block;
+    color: #210847;
+    font-family: 'Kind Sans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+  .ppc-dropdown > div > span:first-child,
+  .ppc-initial > span.active {
+    color: #210847;
+  }
+  .ppc-initial > span:nth-child(2),
+  .ppc-dropdown > div > span:nth-child(2) {
+    font-size: 13px;
+    color: #003659;
+    display: block;
+  }
+  .ppc-initial,
+  .ppc-dropdown > div {
+    position: relative;
+  }
+  .ppc-dropdown > div {
+    padding-right: 100px;
+    padding: 6px 0 10px;
+  }
+  .ppc-dropdown > div > .ppc-dprice {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    color: #683cf5;
+    font-weight: 600;
+  }
+  .ppc-dropdown > div:hover:before {
+    content: '';
+    width: 5px;
+    height: 100%;
+    background: #003659;
+    display: block;
+    position: absolute;
+    left: -16px;
+  }
+  .ppc-dropdown {
+    border: none;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0px;
+    border-top: none;
+    z-index: 10;
+    display: none;
+    margin-top: 5px;
+  }
+  .ppc-weeks {
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    margin-left: -35px;
+    font-size: 11px;
+    color: #969ab2;
+  }
+  .nb-savings-results {
+    margin-top: 20px;
+  }
+  .nb-savings-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .nb-price-item {
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+  }
+  .nb-wegovy-item {
+    background: #683cf5;
+  }
+  .nb-mounjaro-item {
+    background: #a15cff;
+  }
+  .nb-price-header {
+       color: var(--clcr-text-color);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .nb-price-subtitle {
+       color: var(--clcr-text-color);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    opacity: 1;
+  }
+  .nb-price-value {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .nb-savings-summary {
+    margin-top: 20px;
+  }
+  .nb-savings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4e3c6d;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+  }
+  .nb-savings-label {
+   color: var(--clcr-text-color);
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .nb-savings-amount {
+    color: var(--clcr-text-color);
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .nb-savings-disclaimer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .nb-savings-disclaimer p {
+       color: var(--clcr-text-color);
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 1;
+    margin: 0;
+    padding-top: 10px;
+  }
+  @media (max-width: 768px) {
+ 
+    .nb-saving-container {
+      grid-template-columns: 1fr;
+      gap: 17px;
+      margin: 0;
+    }
+    .nb-savings-content h2 {
+      font-size: 30px;
+      text-align: left;
+    }
+    .nb-savings-calculator {
+      padding: 25px 20px;
+    }
+    .nb-savings-comparison {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .nb-calculator-title {
+      font-size: 24px;
+    }
+    .nb-price-item {
+      text-align: left;
+    }
+    .nb-price-header {
+      font-size: 20px;
+    }
+    .nb-price-value {
+      font-size: 24px;
+    }
+  }
+{% endstyle %}
+
+<section
+  class="nb-savings-wrapper section-{{ section.id }}-padding"
+  style="
+    --background: {{ section.settings.sec_background }};
+    --accent-color:{{ section.settings.accent_color}};
+    --title-color:{{ section.settings.title_color}};
+    --text-color:{{ section.settings.text_color}};
+    --button-bg-color:{{ section.settings.button_bg}};
+    --button-text-color:{{ section.settings.button_text_color}};
+    --clcr-bg-color:{{ section.settings.clcr_bg_color}};
+    --clcr-text-color:{{ section.settings.clcr_text_color}};
+  "
+>
+  <div class="gv-section-inner">
+    <div class="nb-saving-container">
+      <!-- Left Column - Content -->
+      <div class="nb-savings-content">
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.text }}</p>
+        {% if section.settings.button_label != blank %}
+          <a href="{{ section.settings.button_link }}" class="gv-btn">{{ section.settings.button_label }}</a>
+        {% endif %}
+      </div>
+
+
+      <!-- Right Column - Calculator -->
+       {% assign first_block = section.blocks[0] %}
+      <div class="nb-savings-calculator">
+        <h3 class="nb-calculator-title">{{ section.settings.clcr_title }}</h3>
+        <p class="nb-calculator-subtitle">{{ section.settings.clcr_sub_title }}</p>
+        <div class="product-price-checker">
+          <span class="ppc-treatment-title">{{ section.settings.clcr_text }}</span>
+          <div class="ppc-mounjaro-wrapper ppc-strength-wrapper ppc-wrapper">
+            <div class="ppc-initial">
+              <span class="active">{{ first_block.settings.dose_title }}</span>
+              <span class="arrow-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 384 512">
+                  <!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+                </svg>
+              </span>
+            </div>
+            <div class="ppc-strength-dropdown ppc-dropdown" style="display: none;">
+
+                 {%- for block in section.blocks -%}
+              <div
+            
+                data-mounjaro="{{ block.settings.mounjaro_price}}"
+                data-wegovy="{{ block.settings.wegovy_price }}"
+                data-wegovy-dose="{{ block.settings.wctual_dose }}"
+                data-wegovy-name="Semaglutide"
+              >
+                <span>{{ block.settings.dose_title }}</span> <span class="ppc-weeks">{{  block.settings.dose_label }}</span> <span class="ppc-dprice">{{  block.settings.mounjaro_price |  prepend: '£'  }}</span>
+              </div>
+
+                 {%- endfor -%}
+
+              {% comment %} <div
+                class="ppc-5"
+                data-mounjaro="169"
+                data-wegovy="125"
+                data-wegovy-dose="1.0mg"
+                data-wegovy-name="Semaglutide"
+              >
+                <span>5mg</span> <span class="ppc-weeks">Step up dose</span> <span class="ppc-dprice">£169</span>
+              </div>
+              <div
+                class="ppc-7-5"
+                data-mounjaro="249"
+                data-wegovy="145"
+                data-wegovy-dose="1.7mg"
+                data-wegovy-name="Semaglutide"
+              >
+                <span>7.5mg</span> <span class="ppc-weeks">Step up dose</span> <span class="ppc-dprice">£249</span>
+              </div>
+              <div
+                class="ppc-10"
+                data-mounjaro="289"
+                data-wegovy="145"
+                data-wegovy-dose="1.7mg"
+                data-wegovy-name="Semaglutide"
+              >
+                <span>10mg</span> <span class="ppc-weeks">Step up dose</span> <span class="ppc-dprice">£289</span>
+              </div>
+              <div
+                class="ppc-12-5"
+                data-mounjaro="299"
+                data-wegovy="145"
+                data-wegovy-dose="1.7mg"
+                data-wegovy-name="Semaglutide"
+              >
+                <span>12.5mg</span> <span class="ppc-weeks">Step up dose</span> <span class="ppc-dprice">£299</span>
+              </div>
+              <div
+                class="ppc-15"
+                data-mounjaro="329"
+                data-wegovy="160"
+                data-wegovy-dose="2.4mg"
+                data-wegovy-name="Semaglutide"
+              >
+                <span>15mg</span> <span class="ppc-weeks">Maintenance</span> <span class="ppc-dprice">£329</span>
+              </div> {% endcomment %}
+            </div>
+          </div>
+        </div>
+        <div class="nb-savings-results" id="savings-results">
+          <div class="nb-savings-comparison">
+            <div class="nb-price-item nb-wegovy-item">
+              <div class="nb-price-header">{{ section.settings.cmp_title_l }}</div>
+              <div class="nb-price-subtitle" id="wegovy-subtitle">{{ section.settings.cmp_sub_title_l }}</div>
+              <div class="nb-price-value" id="wegovy-price">{{ section.settings.cmp_price_l }}</div>
+            </div>
+            <div class="nb-price-item nb-mounjaro-item">
+              <div class="nb-price-header">{{ section.settings.cmp_title_r }}</div>
+              <div class="nb-price-subtitle" id="mounjaro-subtitle">{{ section.settings.cmp_sub_title_r }}</div>
+              <div class="nb-price-value" id="mounjaro-price"> {{ section.settings.cmp_price_r }}</div>
+            </div>
+          </div>
+          <div class="nb-savings-summary">
+            <div class="nb-savings-row">
+              <span class="nb-savings-label">{{ section.settings.monthly_title }}</span>
+              <span class="nb-savings-amount" id="monthly-saving">£34</span>
+            </div>
+            <div class="nb-savings-row">
+              <span class="nb-savings-label">{{  section.settings.annual_title  }}</span>
+              <span class="nb-savings-amount" id="annual-saving">£408</span>
+            </div>
+          </div>
+          <div class="nb-savings-disclaimer"><p>{{ section.settings.disclaimer_note }}</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Toggle dropdown
+    document.querySelectorAll('.ppc-wrapper').forEach((wrapper) => {
+      wrapper.addEventListener('click', function () {
+        this.classList.toggle('ppc-active');
+        const dropdown = this.querySelector('.ppc-dropdown');
+        if (dropdown) {
+          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+
+    // Handle dose selection
+    document.querySelectorAll('.ppc-dropdown > div').forEach((option) => {
+      option.addEventListener('click', function (e) {
+        e.stopPropagation();
+
+        const selectedDose = this.querySelector('span:first-child').textContent;
+        const mounaroPrice = parseInt(this.dataset.mounjaro);
+        const wegovyPrice = parseInt(this.dataset.wegovy);
+        const wegovyDose = this.dataset.wegovyDose;
+        const wegovyName = this.dataset.wegovyName;
+
+        // Update selected option
+        const initialSpan = document.querySelector('.ppc-initial span:first-child');
+        initialSpan.textContent = selectedDose;
+        initialSpan.classList.add('active');
+
+        // Close dropdown
+        document.querySelectorAll('.ppc-dropdown').forEach((dd) => (dd.style.display = 'none'));
+        document.querySelectorAll('.ppc-wrapper').forEach((w) => w.classList.remove('ppc-active'));
+
+        // Calculate savings
+        const monthlySaving = mounaroPrice - wegovyPrice;
+        const annualSaving = monthlySaving * 12;
+
+        // Update results
+        document.getElementById('mounjaro-price').textContent = '£' + mounaroPrice + '.00';
+        document.getElementById('mounjaro-subtitle').textContent = 'Tirzepatide, ' + selectedDose;
+        document.getElementById('wegovy-price').textContent = '£' + wegovyPrice + '.00';
+        document.getElementById('wegovy-subtitle').textContent = wegovyName + ', ' + wegovyDose;
+        document.getElementById('monthly-saving').textContent = '£' + monthlySaving;
+        document.getElementById('annual-saving').textContent = '£' + annualSaving;
+
+        // Show results
+        document.getElementById('savings-results').style.display = 'block';
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.ppc-wrapper')) {
+        document.querySelectorAll('.ppc-dropdown').forEach((dd) => (dd.style.display = 'none'));
+        document.querySelectorAll('.ppc-wrapper').forEach((w) => w.classList.remove('ppc-active'));
+      }
+    });
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "Saving Calculator",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "How much could you <em>save with Wegovy?</em>",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "default": "Switching to Wegovy may help you reduce costs while staying on track with your weight loss.",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "check eligibility",
+      "label": "Button Lebel"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Url"
+    },
+    {
+      "type": "header",
+      "content": "Saving Calculator Info"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "clcr_title",
+      "default": "Wegovy <em>vs</em> Mounjaro",
+      "label": "Calculator Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "clcr_sub_title",
+      "default": "Select your current Mounjaro dose to compare how much you could save.",
+      "label": "Calculator Sub Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "clcr_text",
+      "default": "Your current Mounjaro dose",
+      "label": "Calculator Text"
+    },
+    {
+      "type": "header",
+      "content": "Comparison Left Box"
+    },
+       {
+      "type": "inline_richtext",
+      "id": "cmp_title_l",
+      "default": "Wegovy",
+      "label": "Comparison Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "cmp_sub_title_l",
+      "default": "Semaglutide, 1.7mg",
+      "label": "Comparison Sub Title"
+    },
+       {
+      "type": "text",
+      "id": "cmp_price_l",
+      "default": "£145.00",
+      "info": "please input like £299.00",
+      "label": "Comparison Sub Title"
+    },
+    {
+      "type": "header",
+      "content": "Comparison right Box"
+    },
+          {
+      "type": "inline_richtext",
+      "id": "cmp_title_r",
+      "default": "Mounjaro",
+      "label": "Comparison Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "cmp_sub_title_r",
+      "default": "Tirzepatide, 12.5mg",
+      "label": "Comparison Sub Title"
+    },
+       {
+      "type": "text",
+      "id": "cmp_price_r",
+      "default": "£299.00",
+      "info": "please input like £299.00",
+      "label": "Comparison Sub Title"
+    },
+     {
+      "type": "header",
+      "content": "Monthly title"
+    },
+       {
+      "type": "inline_richtext",
+      "id": "monthly_title",
+      "default": "Your Monthly Saving",
+      "label": "Monthly Title"
+    },
+     {
+      "type": "header",
+      "content": "Annual title"
+    },
+       {
+      "type": "inline_richtext",
+      "id": "annual_title",
+      "default": "Your Annual Saving",
+      "label": "Annual Title"
+    },
+       {
+      "type": "inline_richtext",
+      "id": "disclaimer_note",
+      "default": "Savings calculated based on 12 months at the selected dose.",
+      "label": "Disclaimer note"
+    },
+    {
+      "type": "color_background",
+      "id": "sec_background",
+      "label": "Background",
+      "default": "#f2f9fc"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#a15cff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#210847"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#210847"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#83EDFF"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#210847"
+    },
+     {
+      "type": "header",
+      "content": "Calculator Box Color"
+    },
+        {
+      "type": "color",
+      "id": "clcr_bg_color",
+      "label": "Text Color",
+      "default": "#210847"
+    },
+    {
+      "type": "color",
+      "id": "clcr_text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top Desktop",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom Desktop",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 26
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Select Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "dose_title",
+          "default": "2.5mg",
+          "label": "Dose title"
+        },
+        {
+          "type": "text",
+          "id": "dose_label",
+          "default": "Starting dose",
+          "label": "Dose label"
+        },
+        {
+          "type": "text",
+          "id": "mounjaro_price",
+          "default": "149",
+          "label": "Mounjaro price"
+        },
+        {
+          "type": "text",
+          "id": "wegovy_price",
+          "default": "115",
+          "label": "Dose price"
+        },
+           {
+          "type": "text",
+          "id": "wctual_dose",
+          "default": "0.5mg",
+          "label": "Actual dose"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Saving Calculator",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+      ]
+    }
+  ]
+}
+{% endschema %}

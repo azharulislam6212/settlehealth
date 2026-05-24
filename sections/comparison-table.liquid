@@ -1,0 +1,537 @@
+
+{% style %}
+  .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width:768px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
+  }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+        .medication-comparison-section {
+      background: var(--background);
+    }
+    .medication-comparison-section .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .medication-comparison-section .section-title h2 {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      margin-bottom: 15px;
+      color: var(--title-color);
+    }
+
+    .medication-comparison-section .section-title em {
+      color: var(--accent-color);
+      font-style:normal;
+    }
+    .medication-comparison-section .section-title p {
+      font-size: 16px;
+      line-height: 1.6;
+         color: var(--text-color);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .medication-comparison-section .comparison-table-wrapper {
+      max-width: 1008px;
+      margin: 0 auto;
+    }
+    .medication-comparison-section .comparison-table {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #cee2e9;
+    }
+    .medication-comparison-section .table-header {
+      background: #210847;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .medication-comparison-section .header-cell {
+      padding: 20px 25px;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-right: 1px solid #4e3c6d;
+      border-bottom: 1px solid #cee2e9;
+    }
+    .medication-comparison-section .header-cell:last-child {
+      border-right: none;
+    }
+    .medication-comparison-section .header-cell h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+    }
+    .medication-comparison-section .table-body {
+      display: contents;
+    }
+    .medication-comparison-section .table-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .medication-comparison-section .table-row:nth-child(odd) {
+      background: transparent;
+    }
+    .medication-comparison-section .table-row:nth-child(even) {
+      background: #fff;
+    }
+    .medication-comparison-section .row-header {
+      padding: 18px 25px;
+      border-right: 1px solid #cee2e9;
+      border-bottom: 1px solid #cee2e9;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+    .medication-comparison-section .table-cell {
+      padding: 18px 25px;
+      border-right: 1px solid #cee2e9;
+      border-bottom: 1px solid #cee2e9;
+      display: flex;
+      align-items: center;
+      color: var(--text-color);
+    }
+    .medication-comparison-section .table-cell:last-child {
+      border-right: none;
+    }
+    .medication-comparison-section .table-row:last-child .table-cell,
+    .medication-comparison-section .table-row:last-child .row-header {
+      border-bottom: none;
+    }
+
+    .svg-icon, .mobile-row-icon{
+        line-height:0;
+        width:20px;
+        height:20px
+    }
+
+    .mobile-row-label{
+        display:flex;
+        align-items:center;
+        gap: 5px;
+    }
+    @media only screen and (max-width: 991px) {
+    
+      .medication-comparison-section .section-title h2 {
+        font-size: 30px;
+        text-align: left;
+      }
+      .medication-comparison-section .section-title {
+        margin-bottom: 30px;
+      }
+      .medication-comparison-section .comparison-table {
+        display: none !important;
+      }
+      .medication-comparison-section .mobile-tables {
+        display: block !important;
+      }
+      .medication-comparison-section .mobile-table {
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 24px;
+        border: 1px solid #cee2e9;
+      }
+      .medication-comparison-section .mobile-table:last-child {
+        margin-bottom: 0;
+      }
+      .medication-comparison-section .mobile-header {
+        background: #210847;
+        padding: 20px 18px;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .medication-comparison-section .mobile-header h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+      }
+      .medication-comparison-section .mobile-row {
+        display: flex;
+        padding: 20px 18px;
+        align-items: center;
+        border-bottom: 1px solid #cee2e9;
+      }
+      .medication-comparison-section .mobile-row:last-child {
+        border-bottom: none;
+      }
+      .medication-comparison-section .mobile-row:nth-child(odd) {
+        background: #fff;
+      }
+      .medication-comparison-section .mobile-row-icon {
+        display: inline-block;
+        padding-right: 7px;
+        position: relative;
+        top: 2px;
+      }
+      .medication-comparison-section .mobile-row-content {
+        flex: 1;
+      }
+      .medication-comparison-section .mobile-row-label {
+        font-weight: 500;
+        margin-bottom: 7px;
+        color: #210847;
+      }
+      .medication-comparison-section .mobile-row-value {
+        color: #210847;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .medication-comparison-section .section-title p {
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+    @media only screen and (min-width: 992px) {
+      .medication-comparison-section .mobile-tables {
+        display: none !important;
+      }
+    }
+{% endstyle %}
+
+<section id="aag-table" class="medication-comparison-section section-{{ section.id }}-padding"   style="
+    --background: {{ section.settings.sec_background }};
+    --accent-color:{{ section.settings.accent_color}};
+    --title-color:{{ section.settings.title_color}};
+    --text-color:{{ section.settings.text_color}};
+    --button-bg-color:{{ section.settings.button_bg}};
+    --button-text-color:{{ section.settings.button_text_color}};
+    --clcr-bg-color:{{ section.settings.clcr_bg_color}};
+    --clcr-text-color:{{ section.settings.clcr_text_color}};
+  ">
+  <div class="gv-section-inner">
+    <div class="section-title">
+      <h2>{{ section.settings.title }}</h2>
+      <p>{{ section.settings.text }}</p>
+    </div>
+    <div class="comparison-table-wrapper">
+      <!-- Desktop Table -->
+      <div class="comparison-table">
+        <div class="table-header">
+          <div class="header-cell"><h3></h3></div>
+          <div class="header-cell">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4229 10.768C11.0975 10.4426 10.5698 10.4426 10.2444 10.768C9.91897 11.0934 9.91897 11.6211 10.2444 11.9465L11.9111 13.6132C12.2365 13.9386 12.7641 13.9386 13.0896 13.6132C13.415 13.2877 13.415 12.7601 13.0896 12.4347L11.4229 10.768ZM9.33958 12.8513C9.01414 12.5259 8.48651 12.5259 8.16107 12.8513C7.83563 13.1768 7.83563 13.7044 8.16107 14.0298L9.82774 15.6965C10.1532 16.022 10.6808 16.022 11.0062 15.6965C11.3317 15.3711 11.3317 14.8434 11.0062 14.518L9.33958 12.8513Z" fill="#A48AF9"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.75592 4.1015C9.43049 3.77606 8.90285 3.77606 8.57741 4.1015C8.25197 4.42694 8.25197 4.95457 8.57741 5.28001L8.82149 5.52409L4.83885 9.50673C3.85375 10.4918 3.42616 11.9041 3.69938 13.2702L4.09538 15.2502L2.74408 16.6015C2.41864 16.9269 2.41864 17.4546 2.74408 17.78C3.06951 18.1054 3.59715 18.1054 3.92259 17.78L5.2739 16.4287L7.25393 16.8247C8.62002 17.0979 10.0323 16.6703 11.0174 15.6852L15 11.7026L15.2441 11.9467C15.5695 12.2721 16.0972 12.2721 16.4226 11.9467C16.748 11.6212 16.748 11.0936 16.4226 10.7682L16.1785 10.5241L15.5893 9.93483L10.5893 4.93483L10 4.34558L9.75592 4.1015ZM13.8215 10.5241L10 6.7026L6.01736 10.6852C5.4263 11.2763 5.16975 12.1236 5.33368 12.9433L5.7082 14.8159L7.58079 15.1904C8.40044 15.3543 9.24779 15.0978 9.83885 14.5067L13.8215 10.5241Z" fill="#A48AF9"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9229 3.268C13.5975 2.94257 13.0698 2.94257 12.7444 3.268C12.419 3.59344 12.419 4.12108 12.7444 4.44651L13.8218 5.52393L11.9111 7.43467C11.5856 7.76011 11.5856 8.28774 11.9111 8.61318C12.2365 8.93862 12.7641 8.93862 13.0896 8.61318L15.0003 6.70244L16.0777 7.77985C16.4032 8.10528 16.9308 8.10528 17.2562 7.77985C17.5817 7.45441 17.5817 6.92677 17.2562 6.60134L15.5898 4.93491C15.5897 4.93483 15.5897 4.93475 15.5896 4.93467C15.5895 4.93459 15.5894 4.93451 15.5893 4.93443L13.9229 3.268Z" fill="#A48AF9"></path>
+            </svg>
+            <h3>{{ section.settings.comparison_title_1 }}</h3>
+          </div>
+          <div class="header-cell">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4229 10.768C11.0975 10.4426 10.5698 10.4426 10.2444 10.768C9.91897 11.0934 9.91897 11.6211 10.2444 11.9465L11.9111 13.6132C12.2365 13.9386 12.7641 13.9386 13.0896 13.6132C13.415 13.2877 13.415 12.7601 13.0896 12.4347L11.4229 10.768ZM9.33958 12.8513C9.01414 12.5259 8.48651 12.5259 8.16107 12.8513C7.83563 13.1768 7.83563 13.7044 8.16107 14.0298L9.82774 15.6965C10.1532 16.022 10.6808 16.022 11.0062 15.6965C11.3317 15.3711 11.3317 14.8434 11.0062 14.518L9.33958 12.8513Z" fill="#A48AF9"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.75592 4.1015C9.43049 3.77606 8.90285 3.77606 8.57741 4.1015C8.25197 4.42694 8.25197 4.95457 8.57741 5.28001L8.82149 5.52409L4.83885 9.50673C3.85375 10.4918 3.42616 11.9041 3.69938 13.2702L4.09538 15.2502L2.74408 16.6015C2.41864 16.9269 2.41864 17.4546 2.74408 17.78C3.06951 18.1054 3.59715 18.1054 3.92259 17.78L5.2739 16.4287L7.25393 16.8247C8.62002 17.0979 10.0323 16.6703 11.0174 15.6852L15 11.7026L15.2441 11.9467C15.5695 12.2721 16.0972 12.2721 16.4226 11.9467C16.748 11.6212 16.748 11.0936 16.4226 10.7682L16.1785 10.5241L15.5893 9.93483L10.5893 4.93483L10 4.34558L9.75592 4.1015ZM13.8215 10.5241L10 6.7026L6.01736 10.6852C5.4263 11.2763 5.16975 12.1236 5.33368 12.9433L5.7082 14.8159L7.58079 15.1904C8.40044 15.3543 9.24779 15.0978 9.83885 14.5067L13.8215 10.5241Z" fill="#A48AF9"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9229 3.268C13.5975 2.94257 13.0698 2.94257 12.7444 3.268C12.419 3.59344 12.419 4.12108 12.7444 4.44651L13.8218 5.52393L11.9111 7.43467C11.5856 7.76011 11.5856 8.28774 11.9111 8.61318C12.2365 8.93862 12.7641 8.93862 13.0896 8.61318L15.0003 6.70244L16.0777 7.77985C16.4032 8.10528 16.9308 8.10528 17.2562 7.77985C17.5817 7.45441 17.5817 6.92677 17.2562 6.60134L15.5898 4.93491C15.5897 4.93483 15.5897 4.93475 15.5896 4.93467C15.5895 4.93459 15.5894 4.93451 15.5893 4.93443L13.9229 3.268Z" fill="#A48AF9"></path>
+            </svg>
+            <h3>{{ section.settings.comparison_title_2 }}</h3>
+          </div>
+        </div>
+        <div class="table-body">
+             {%- for block in section.blocks -%}
+          <div class="table-row">
+            <div class="row-header">
+
+                   {% if block.settings.image != blank %}
+                    <span class="svg-icon">
+                    {% render 'icon-img' with image: block.settings.image %}
+                    </span>
+               
+                {% endif %}
+   
+              {{ block.settings.title }}
+            </div>
+            <div class="table-cell">{{ block.settings.wegovy_text }}</div>
+            <div class="table-cell">{{ block.settings.mounjaro_text }}</div>
+          </div>
+             {%- endfor -%}
+ 
+        </div>
+      </div>
+      <!-- Mobile Tables -->
+      <div class="mobile-tables">
+        <!-- Wegovy Mobile Table -->
+        <div class="mobile-table">
+          <div class="mobile-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 20 21" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4229 10.768C11.0975 10.4426 10.5698 10.4426 10.2444 10.768C9.91897 11.0934 9.91897 11.6211 10.2444 11.9465L11.9111 13.6132C12.2365 13.9386 12.7641 13.9386 13.0896 13.6132C13.415 13.2877 13.415 12.7601 13.0896 12.4347L11.4229 10.768ZM9.33958 12.8513C9.01414 12.5259 8.48651 12.5259 8.16107 12.8513C7.83563 13.1768 7.83563 13.7044 8.16107 14.0298L9.82774 15.6965C10.1532 16.022 10.6808 16.022 11.0062 15.6965C11.3317 15.3711 11.3317 14.8434 11.0062 14.518L9.33958 12.8513Z" fill="#A48AF9"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.75592 4.1015C9.43049 3.77606 8.90285 3.77606 8.57741 4.1015C8.25197 4.42694 8.25197 4.95457 8.57741 5.28001L8.82149 5.52409L4.83885 9.50673C3.85375 10.4918 3.42616 11.9041 3.69938 13.2702L4.09538 15.2502L2.74408 16.6015C2.41864 16.9269 2.41864 17.4546 2.74408 17.78C3.06951 18.1054 3.59715 18.1054 3.92259 17.78L5.2739 16.4287L7.25393 16.8247C8.62002 17.0979 10.0323 16.6703 11.0174 15.6852L15 11.7026L15.2441 11.9467C15.5695 12.2721 16.0972 12.2721 16.4226 11.9467C16.748 11.6212 16.748 11.0936 16.4226 10.7682L16.1785 10.5241L15.5893 9.93483L10.5893 4.93483L10 4.34558L9.75592 4.1015ZM13.8215 10.5241L10 6.7026L6.01736 10.6852C5.4263 11.2763 5.16975 12.1236 5.33368 12.9433L5.7082 14.8159L7.58079 15.1904C8.40044 15.3543 9.24779 15.0978 9.83885 14.5067L13.8215 10.5241Z" fill="#A48AF9"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9229 3.268C13.5975 2.94257 13.0698 2.94257 12.7444 3.268C12.419 3.59344 12.419 4.12108 12.7444 4.44651L13.8218 5.52393L11.9111 7.43467C11.5856 7.76011 11.5856 8.28774 11.9111 8.61318C12.2365 8.93862 12.7641 8.93862 13.0896 8.61318L15.0003 6.70244L16.0777 7.77985C16.4032 8.10528 16.9308 8.10528 17.2562 7.77985C17.5817 7.45441 17.5817 6.92677 17.2562 6.60134L15.5898 4.93491C15.5897 4.93483 15.5897 4.93475 15.5896 4.93467C15.5895 4.93459 15.5894 4.93451 15.5893 4.93443L13.9229 3.268Z" fill="#A48AF9"></path>
+            </svg>
+            <h3>{{ section.settings.comparison_title_1 }}</h3>
+          </div>
+
+         {%- for block in section.blocks -%}
+          <div class="mobile-row">
+            <div class="mobile-row-content">
+              <div class="mobile-row-label">
+                <span class="mobile-row-icon">
+                           {% if block.settings.image != blank %}
+                 
+                    {% render 'icon-img' with image: block.settings.image %}
+                   
+               
+                {% endif %}
+                </span  >
+                
+                   {{ block.settings.title }}
+              </div>
+              <div class="mobile-row-value">{{ block.settings.wegovy_text }}</div>
+            </div>
+          </div>
+
+        {%- endfor -%}
+
+        </div>
+        <!-- Mounjaro Mobile Table -->
+        <div class="mobile-table">
+          <div class="mobile-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 20 21" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4229 10.768C11.0975 10.4426 10.5698 10.4426 10.2444 10.768C9.91897 11.0934 9.91897 11.6211 10.2444 11.9465L11.9111 13.6132C12.2365 13.9386 12.7641 13.9386 13.0896 13.6132C13.415 13.2877 13.415 12.7601 13.0896 12.4347L11.4229 10.768ZM9.33958 12.8513C9.01414 12.5259 8.48651 12.5259 8.16107 12.8513C7.83563 13.1768 7.83563 13.7044 8.16107 14.0298L9.82774 15.6965C10.1532 16.022 10.6808 16.022 11.0062 15.6965C11.3317 15.3711 11.3317 14.8434 11.0062 14.518L9.33958 12.8513Z" fill="#A48AF9"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.75592 4.1015C9.43049 3.77606 8.90285 3.77606 8.57741 4.1015C8.25197 4.42694 8.25197 4.95457 8.57741 5.28001L8.82149 5.52409L4.83885 9.50673C3.85375 10.4918 3.42616 11.9041 3.69938 13.2702L4.09538 15.2502L2.74408 16.6015C2.41864 16.9269 2.41864 17.4546 2.74408 17.78C3.06951 18.1054 3.59715 18.1054 3.92259 17.78L5.2739 16.4287L7.25393 16.8247C8.62002 17.0979 10.0323 16.6703 11.0174 15.6852L15 11.7026L15.2441 11.9467C15.5695 12.2721 16.0972 12.2721 16.4226 11.9467C16.748 11.6212 16.748 11.0936 16.4226 10.7682L16.1785 10.5241L15.5893 9.93483L10.5893 4.93483L10 4.34558L9.75592 4.1015ZM13.8215 10.5241L10 6.7026L6.01736 10.6852C5.4263 11.2763 5.16975 12.1236 5.33368 12.9433L5.7082 14.8159L7.58079 15.1904C8.40044 15.3543 9.24779 15.0978 9.83885 14.5067L13.8215 10.5241Z" fill="#A48AF9"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9229 3.268C13.5975 2.94257 13.0698 2.94257 12.7444 3.268C12.419 3.59344 12.419 4.12108 12.7444 4.44651L13.8218 5.52393L11.9111 7.43467C11.5856 7.76011 11.5856 8.28774 11.9111 8.61318C12.2365 8.93862 12.7641 8.93862 13.0896 8.61318L15.0003 6.70244L16.0777 7.77985C16.4032 8.10528 16.9308 8.10528 17.2562 7.77985C17.5817 7.45441 17.5817 6.92677 17.2562 6.60134L15.5898 4.93491C15.5897 4.93483 15.5897 4.93475 15.5896 4.93467C15.5895 4.93459 15.5894 4.93451 15.5893 4.93443L13.9229 3.268Z" fill="#A48AF9"></path>
+            </svg>
+            <h3>{{ section.settings.comparison_title_2 }}</h3>
+          </div>
+
+            {%- for block in section.blocks -%}
+          <div class="mobile-row">
+            <div class="mobile-row-content">
+              <div class="mobile-row-label">
+                <div class="mobile-row-icon">
+                  {% if block.settings.image != blank %}
+               
+                    {% render 'icon-img' with image: block.settings.image %}
+                
+               
+                {% endif %}
+                </div>
+               {{ block.settings.title }}
+              </div>
+              <div class="mobile-row-value">{{ block.settings.mounjaro_text }}</div>
+            </div>
+          </div>
+                 {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "Comparison Table",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "<em>Wegovy vs Mounjaro</em> at a glance",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "default": "Our clinical team has developed a safe, easy-to-follow switching process that’s available immediately.",
+      "label": "Text"
+    },
+        {
+      "type": "inline_richtext",
+      "id": "comparison_title_1",
+      "default": "Wegovy",
+      "label": "Comparison Title 1"
+    },
+            {
+      "type": "inline_richtext",
+      "id": "comparison_title_2",
+      "default": "Mounjaro",
+      "label": "Comparison Title 2"
+    },
+    {
+      "type": "color_background",
+      "id": "sec_background",
+      "label": "Background",
+      "default": "#f2f9fc"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#a15cff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#210847"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#210847"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#83EDFF"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#210847"
+    },
+     {
+      "type": "header",
+      "content": "Calculator Box Color"
+    },
+        {
+      "type": "color",
+      "id": "clcr_bg_color",
+      "label": "Text Color",
+      "default": "#210847"
+    },
+    {
+      "type": "color",
+      "id": "clcr_text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top Desktop",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom Desktop",
+      "default": 65
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 32
+    }
+  ],
+  "blocks": [
+    {
+      "type": "compare_item",
+      "name": "Comapre Item",
+      "settings": [
+           {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Svg icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Active Ingredient",
+          "label": "Dose title"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "wegovy_text",
+          "default": "Semaglutide (a GLP-1 agonist)",
+          "label": "Wegovy label"
+        },
+      {
+          "type": "inline_richtext",
+          "id": "mounjaro_text",
+          "default": "Tirzepatide (a dual GLP and GLP-1 agonist)",
+          "label": "Mounjaro Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comparison Table",
+      "blocks": [
+        {
+          "type": "compare_item"
+        },
+        {
+          "type": "compare_item"
+        },
+        {
+          "type": "compare_item"
+        },
+        {
+          "type": "compare_item"
+        },
+        {
+          "type": "compare_item"
+        },
+        {
+          "type": "compare_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

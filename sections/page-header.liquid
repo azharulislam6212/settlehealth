@@ -1,0 +1,259 @@
+{{ 'section-page-header-section.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+      .section-{{ section.id }}-padding  {
+         --color-accent: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+         --color-link: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+       }
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+    @media screen and (min-width: 992px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
+  }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div
+  class="page-header-section section-{{ section.id }}-padding  color-{{ section.settings.color_scheme }} gradient  isolate {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  {% if settings.animations_reveal_on_scroll %}
+    data-cascade
+  {% endif %}
+>
+  <div class="{{ section.settings.page_width }}">
+ 
+   
+        <div class="page--header">
+ 
+        
+            {% if section.settings.caption != blank %}
+            <p class="page--caption-text">
+              {{ section.settings.caption }} 
+            </p>
+          {% endif %}
+
+          {%- if section.settings.heading != blank -%}
+            <h1 class="page--title inline-richtext {{ section.settings.heading_size }}">
+                {{ section.settings.heading }}
+            </h1>
+          {%- endif -%}
+ 
+
+          {% if section.settings.text != blank %}
+            <div class="page--text">
+             {{ section.settings.text }} 
+            </div>
+          {% endif %}
+
+            <div class="page--list_text" id="responsible-pharmacist-container">
+              <span class="loading-text">Loading...</span>
+            </div>
+
+          <script>
+            (function() {
+              const container = document.getElementById('responsible-pharmacist-container');
+              
+              fetch('https://cur4teinventory.base44.app/api/apps/69207f4d920b20baada78d1a/functions/getPublicRP')
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                  }
+                  return response.json();
+                })
+                .then(data => {
+                  console.log(data);
+                  if (data.name && data.name !== 'Not Available' && data.gphc_number) {
+                    const pharmacistName = data.name;
+                    const gphcNumber = data.gphc_number;
+                    const linkUrl = `https://www.pharmacyregulation.org/registers/pharmacist/${gphcNumber}`;
+                    
+                    container.innerHTML = `<span style="line-height: 30px;margin-right: 8px;">Our responsible pharmacist today is</span><em><a target="_blank" href="${linkUrl}">${pharmacistName} (${gphcNumber})</a></em>`;
+                  } else {
+                    container.innerHTML = 'Our responsible pharmacist information is currently unavailable.';
+                  }
+                })
+                .catch(error => {
+                  console.error('Error fetching responsible pharmacist data:', error);
+                  container.innerHTML = 'Our responsible pharmacist information is currently unavailable.';
+                });
+            })();
+          </script>
+
+
+        </div>
+     
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page header",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Full Width"
+        }
+      ],
+      "default": "container-fluid",
+      "label": "Layout Width"
+    },
+        {
+      "type": "inline_richtext",
+      "id": "caption",
+      "default": "Cation text",
+      "label": "Caption label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Section heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "hxl",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "t:sections.image-with-text.blocks.text.settings.text.default",
+      "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+    },
+    {
+      "type": "richtext",
+      "id": "list_text",
+      "default": "<p>Our responsible pharmacist today is Erran Morris</p>",
+      "label": "List text"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 48
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Page header"
+    }
+  ]
+}
+{% endschema %}

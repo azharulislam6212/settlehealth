@@ -1,0 +1,103 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
+    },
+    "image_call_to_action_8HKebQ": {
+      "type": "image-call-to-action",
+      "blocks": {
+        "image_block_NzQqjY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/settlehealth_M15.jpg"
+          }
+        },
+        "image_block_WBwBmf": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Generated_with_Kive.ai_-_Studio_portrait_photography._A_woman_in_her_mid-thirties_against_a_sky_backdrop._Three-quarter_view__turned_slightly_to_camera-left__mid-laugh_with_her_eyes_a_beaafe4e-d596-4cdb-b90b-1ff777303f43.png"
+          }
+        },
+        "image_block_PXDJwC": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/settlehealth_M6.jpg"
+          }
+        },
+        "image_block_CDPD7j": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_2147236675.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_NzQqjY",
+        "image_block_WBwBmf",
+        "image_block_PXDJwC",
+        "image_block_CDPD7j"
+      ],
+      "name": "Image call to action",
+      "settings": {
+        "page_width": "container-fluid",
+        "heading": "Start your Consultation",
+        "heading_size": "h1",
+        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+        "button_label": "Start your consultation",
+        "button_link": "",
+        "button_style": "primary-outline",
+        "color_scheme": "",
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "padding_top_tab": 68,
+        "padding_bottom_tab": 68,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
+        "them_section_id": ""
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-footer",
+    "image_call_to_action_8HKebQ"
+  ]
+}

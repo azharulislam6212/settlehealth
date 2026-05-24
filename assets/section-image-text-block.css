@@ -1,0 +1,111 @@
+.image-text-block__flex{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+
+.image-text-block__image   {
+    flex: 0 0 345px;
+}
+
+.image-text-block-only{
+     flex: 0 0 370px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 34px 70px;
+     min-height: 200px;
+
+box-sizing: border-box;
+
+border: 1px solid #E8E8E8;
+border-radius: 11.3747px;
+
+font-family: var(--font-heading-family);
+font-style: normal;
+font-weight: 300;
+font-size: 16.2496px;
+line-height: 22px;
+display: flex;
+align-items: center;
+color: rgb(var(--color-heading));
+
+}
+
+.image-text__title{
+    /* One Price. No Surprises */
+ 
+
+ 
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 41px;
+display: flex;
+align-items: center;
+
+background: radial-gradient(48.38% 244.72% at 40.14% 59.74%, rgb(var(--color-accent)) 3.46%, #F5EFDF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+margin: 0 0 40px;
+
+}
+
+@media screen and (max-width: 1380px) {
+.image-text-block__image {
+    flex: 0 0 302px;
+}
+
+.image-text-block-only {
+    flex: 0 0 281px;
+ 
+    padding: 34px 36px;
+ 
+    font-size: 16.2496px;
+ 
+}
+
+.image-text-block__flex {
+ 
+    gap: 40px;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.image-text-block__image {
+    flex: 0 0 302px;
+}
+
+.image-text-block-only {
+    flex: 0 0 281px;
+ 
+    padding: 34px 36px;
+ 
+    font-size: 16.2496px;
+ 
+}
+
+.image-text-block__flex {
+ 
+    gap: 40px;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+.image-text-block__flex {
+    gap: 40px;
+    flex-direction: column;
+}
+.image-text-block__image {
+    flex: 1;
+}
+
+.image-text-block-only{
+     flex: 1;
+
+
+}
+}

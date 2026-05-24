@@ -1,0 +1,115 @@
+ <div class="blog-newsletter color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}>
+
+                      <div class="clock-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.74967 14.0007L12.2497 17.5007L19.2497 10.5007M25.6663 14.0007C25.6663 20.444 20.443 25.6673 13.9997 25.6673C7.55635 25.6673 2.33301 20.444 2.33301 14.0007C2.33301 7.55733 7.55635 2.33398 13.9997 2.33398C20.443 2.33398 25.6663 7.55733 25.6663 14.0007Z" stroke="#414651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                      </div>
+
+                      <div class="blog-newsletter__header">
+                        {%- if block.settings.heading != blank -%}
+                          <h2 class="blog-newsletter__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                        {%- endif -%}
+
+
+                           {% if block.settings.text != blank %}
+                            <p class="blog-newsletter__text">
+                              {{ block.settings.text }}
+                            </p>
+                          {% endif %}
+
+                      </div>
+
+                       
+
+  
+
+                           {%- form 'customer', id: 'ContactBlog', class: 'blog__newsletter_form' -%}
+                                <input type="hidden" name="contact[tags]" value="newsletter">
+                                
+
+                                  <div class="blog-newsletter-form__fields">
+
+                                                                   
+
+
+                                    <label class="newsletter-form__field visually-hidden" for="NewsletterForm--{{ section.id }}">
+                                      {{ 'newsletter.label' | t }}
+                                    </label>
+
+                                    
+                                    <input
+                                      id="NewsletterForm--{{ section.id }}"
+                                      type="email"
+                                      name="contact[email]"
+                                      class="newsletter-form__input"
+                                      value="{{ form.email }}"
+                                      aria-required="true"
+                                      autocorrect="off"
+                                      autocapitalize="off"
+                                      autocomplete="email"
+                                      {% if form.errors %}
+                                        autofocus
+                                        aria-invalid="true"
+                                        aria-describedby="ContactFooter-error"
+                                      {% elsif form.posted_successfully? %}
+                                        aria-describedby="ContactFooter-success"
+                                      {% endif %}
+                                      placeholder="Enter your email"
+                                      required
+                                    >
+
+                                       {% if block.settings.policy_text != blank %}
+                            <p class="policy_newsletter-text">
+                              {{ block.settings.policy_text }}
+                            </p>
+                          {% endif %}
+
+
+                              
+                                    <button
+                                      type="submit"
+                                      class="blog-newsletter-button"
+                                      name="commit"
+                                      id="Subscribe"
+                                      aria-label="{{ 'newsletter.button_label' | t }}"
+                                    >
+                                      <span>Subscribe</span>
+                                 
+                                    </button>
+                                  </div>
+                                  {%- if form.errors -%}
+                                    <small class="newsletter-form__message form__message" id="ContactFooter-error">
+                                      <span class="svg-wrapper">
+                                        {{- 'icon-error.svg' | inline_asset_content -}}
+                                      </span>
+                                      {{- form.errors.translated_fields.email | capitalize }}
+                                      {{ form.errors.messages.email -}}
+                                    </small>
+                                  {%- endif -%}
+                                
+                                {%- if form.posted_successfully? -%}
+                                  <h3
+                                    class="newsletter-form__message newsletter-form__message--success form__message"
+                                    id="ContactFooter-success"
+                                    tabindex="-1"
+                                    autofocus
+                                  >
+                                    <span class="svg-wrapper">
+                                      {{- 'icon-success.svg' | inline_asset_content -}}
+                                    </span>
+                                    {{- 'newsletter.success' | t }}
+                                  </h3>
+                                {%- endif -%}
+                              {%- endform -%}
+
+  
+                           
+
+  
+                        </div>

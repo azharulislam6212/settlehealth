@@ -1,0 +1,608 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme-landing",
+  "sections": {
+    "header_block": {
+      "type": "header-block",
+      "blocks": {
+        "image_block_gY9Hwa": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/settlehealth.svg",
+            "image_link": ""
+          }
+        },
+        "button_jVU64r": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get started",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_block_gY9Hwa",
+        "button_jVU64r"
+      ],
+      "settings": {
+        "sec_background": "#2D1B55",
+        "button_bg": "#83edff",
+        "button_text_color": "#210847",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_tab": 30,
+        "padding_bottom_tab": 30,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "hero_land_d8HqiR": {
+      "type": "hero-land",
+      "blocks": {
+        "title_NRt6je": {
+          "type": "title",
+          "settings": {
+            "title": "Switching from <em>Mounjaro<\/em> to Wegovy"
+          }
+        },
+        "sub_title_8KTPpw": {
+          "type": "sub_title",
+          "settings": {
+            "sub_title": "Thinking about moving from Mounjaro to Wegovy? What you need to know."
+          }
+        },
+        "description_RLp6at": {
+          "type": "description",
+          "settings": {
+            "descritpiton": "<p>Wegovy is a clinically proven and cost-effective alternative to Mounjaro. With Mounjaro prices on the rise, now is the perfect time to consider switching. <\/p><p>No matter who your current weight loss provider is, settlehealth makes the process simple. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_NRt6je",
+        "sub_title_8KTPpw",
+        "description_RLp6at"
+      ],
+      "name": "Hero landing",
+      "settings": {
+        "sec_background": "linear-gradient(180deg, rgba(45, 27, 85, 1), rgba(33, 8, 71, 1) 79%, rgba(242, 249, 252, 1) 79%, rgba(242, 249, 252, 1) 100%)",
+        "accent_color": "#a48af9",
+        "title_color": "#ffffff",
+        "sub_title_color": "#ffffff",
+        "text_bg": "#ffffff",
+        "text_color": "#000000",
+        "padding_top": 50,
+        "padding_bottom": 0,
+        "padding_top_tab": 50,
+        "padding_bottom_tab": 0,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 10
+      }
+    },
+    "section_price_UYffHQ": {
+      "type": "section-price",
+      "blocks": {
+        "title_3WYbDP": {
+          "type": "title",
+          "settings": {
+            "title": "Wegovy"
+          }
+        },
+        "item_QLrphm": {
+          "type": "item",
+          "settings": {
+            "dosage_title": "0.25mg",
+            "dosage_label": "Starting Dose",
+            "dosage_price": "£105"
+          }
+        },
+        "item_zNxBfF": {
+          "type": "item",
+          "settings": {
+            "dosage_title": "0.5mg",
+            "dosage_label": "Step up dose",
+            "dosage_price": "£125"
+          }
+        },
+        "item_UDwhtk": {
+          "type": "item",
+          "settings": {
+            "dosage_title": "1.0mg",
+            "dosage_label": "Step up dose",
+            "dosage_price": "£135"
+          }
+        },
+        "item_hDYtbc": {
+          "type": "item",
+          "settings": {
+            "dosage_title": "1.7mg",
+            "dosage_label": "Step up dose",
+            "dosage_price": "£160"
+          }
+        },
+        "item_xH8BpV": {
+          "type": "item",
+          "settings": {
+            "dosage_title": "2.4mg",
+            "dosage_label": "Step up dose",
+            "dosage_price": "£189"
+          }
+        },
+        "button_txXCRM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start your switch",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_3WYbDP",
+        "item_QLrphm",
+        "item_zNxBfF",
+        "item_UDwhtk",
+        "item_hDYtbc",
+        "item_xH8BpV",
+        "button_txXCRM"
+      ],
+      "name": "Section price",
+      "settings": {
+        "sec_background": "#f2f9fc",
+        "accent_color": "#a15cff",
+        "title_bg_color": "#210847",
+        "title_color": "#ffffff",
+        "text_color": "#210847",
+        "button_bg": "#83edff",
+        "button_text_color": "#210847",
+        "padding_top": 30,
+        "padding_bottom": 50,
+        "padding_top_tab": 30,
+        "padding_bottom_tab": 50,
+        "padding_top_mobile": 6,
+        "padding_bottom_mobile": 26
+      }
+    },
+    "get_started_mDDcGt": {
+      "type": "get-started",
+      "blocks": {
+        "step_block_Fz6JmM": {
+          "type": "step_block",
+          "settings": {
+            "step_number": "01",
+            "title": "Tell us about your treatment",
+            "text": "Complete our quick questionnaire in just 2 minutes. Share your current medication and dosage so we can safely support your weight loss progress and keep you on track.",
+            "block_background": "#210847",
+            "text_color": "#ffffff"
+          }
+        },
+        "image_W4rTE7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1969628114.webp"
+          }
+        },
+        "step_block_bottom_wzdK4y": {
+          "type": "step_block_Bottom",
+          "settings": {
+            "step_number": "02",
+            "title": "Speak to us",
+            "text": "Book a quick 5-minute video consultation with one of our experienced medical professionals. We’ll confirm your medication and dosage to make sure it’s the right choice for your weight loss journey.",
+            "block_background": "#210847",
+            "text_color": "#ffffff"
+          }
+        },
+        "image_bottom_7EDQHG": {
+          "type": "image_bottom",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1336276340-1536x1024.jpg"
+          }
+        },
+        "step_block_bottom_3f6zE7": {
+          "type": "step_block_Bottom",
+          "settings": {
+            "step_number": "03",
+            "title": "We’ll take care of the rest",
+            "text": "Our clinically designed transition process, created by our medical team, outlines the safest switching plan based on your current Mounjaro dose. This ensures a smooth and effective changeover.",
+            "block_background": "#2D1B55",
+            "text_color": "#210847"
+          }
+        }
+      },
+      "block_order": [
+        "step_block_Fz6JmM",
+        "image_W4rTE7",
+        "step_block_bottom_wzdK4y",
+        "image_bottom_7EDQHG",
+        "step_block_bottom_3f6zE7"
+      ],
+      "name": "Get Started",
+      "settings": {
+        "title": "Get started in just <em>three simple steps<\/em>",
+        "button_label": "Start your switch",
+        "button_link": "",
+        "sec_background": "#e3f2f8",
+        "accent_color": "#683cf5",
+        "title_color": "#210847",
+        "text_color": "#210847",
+        "button_bg": "#83edff",
+        "button_text_color": "#210847",
+        "padding_top": 60,
+        "padding_bottom": 75,
+        "padding_top_tab": 60,
+        "padding_bottom_tab": 75,
+        "padding_top_mobile": 25,
+        "padding_bottom_mobile": 35
+      }
+    },
+    "trustpilot_slider_ng8Ukp": {
+      "type": "trustpilot-slider",
+      "blocks": {
+        "review_hpfUtt": {
+          "type": "review",
+          "settings": {
+            "title": "Very fast delivery once checks were…",
+            "text": "Very fast delivery once checks were done. Contacted customer services and Ashleigh was fantastic, answering my questions and organising my consultation a little sooner. Thank you!",
+            "author_name": "Charmaine,",
+            "published_date": "6 September 2025"
+          }
+        },
+        "review_xD3jyH": {
+          "type": "review",
+          "settings": {
+            "title": "Detailed provider",
+            "text": "I think the pricing is good and competitive and the increase isn’t too high.I do think that the form to fill each month is slightly excessive and could be shortened and maybe have a bi-monthly in depth questionnaire when re ordering.Aside from that delivery and service is good.",
+            "author_name": "Bethanie,",
+            "published_date": "1 September 2025"
+          }
+        },
+        "review_hrMFWP": {
+          "type": "review",
+          "settings": {
+            "title": "Smooth easy fast process have been with…",
+            "text": "Smooth easy fast process have been with settlehealth for most of my journey I tried different suppliers but didn't receive the service I always have from settlehealth. Can't fault them.",
+            "author_name": "Juliet campling,",
+            "published_date": "29 May 2025"
+          }
+        },
+        "review_Y8iqxz": {
+          "type": "review",
+          "settings": {
+            "title": "Very informative as they guide…",
+            "text": "Very informative as they guide customers using various injection,vety prompt in delivering and good at communicating with their customers",
+            "author_name": "Ruth Robson,",
+            "published_date": "3 September 2025"
+          }
+        },
+        "review_PQQfeE": {
+          "type": "review",
+          "settings": {
+            "title": "Brilliant",
+            "text": "Fast, reliable never had any problems with settlehealth since starting my monjaro. I would recommend to anyone to buy there weightloss products here!",
+            "author_name": "Loz Mallabuurn,",
+            "published_date": "3 September 2025"
+          }
+        }
+      },
+      "block_order": [
+        "review_hpfUtt",
+        "review_xD3jyH",
+        "review_hrMFWP",
+        "review_Y8iqxz",
+        "review_PQQfeE"
+      ],
+      "name": "Trustpilot Slider",
+      "settings": {
+        "sec_background": "#E3F2F8",
+        "accent_color": "#a15cff",
+        "title_color": "#000000",
+        "text_color": "#000000",
+        "button_bg": "#83edff",
+        "button_text_color": "#210847",
+        "column": "3",
+        "column_medium": "3",
+        "column_mobile": "1",
+        "heading_main": "Over <em>100,000<\/em> Happy Customers",
+        "enable_riveiew_head": true,
+        "heading": "settlehealth Health",
+        "text": "Based on <strong>14,830 Reviews<\/strong>",
+        "text_mobile": "Rated <strong>4<\/strong> \/ 5 • Based <strong>14,830 Reviews<\/strong>",
+        "autoplay_enabled": false,
+        "autoplay_timeout": 5,
+        "loop_enabled": true,
+        "enable_scroll": false,
+        "enable_pagination": false,
+        "enable_navigation": true,
+        "padding_top": 50,
+        "padding_bottom": 76,
+        "padding_top_tab": 46,
+        "padding_bottom_tab": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "saving_calculator_LQJfQX": {
+      "type": "saving-calculator",
+      "blocks": {
+        "item_cJp6T4": {
+          "type": "item",
+          "settings": {
+            "dose_title": "2.5mg",
+            "dose_label": "Starting dose",
+            "mounjaro_price": "155",
+            "wegovy_price": "105",
+            "wctual_dose": "0.25mg"
+          }
+        },
+        "item_VKpQCq": {
+          "type": "item",
+          "settings": {
+            "dose_title": "5mg",
+            "dose_label": "Step up dose",
+            "mounjaro_price": "170",
+            "wegovy_price": "125",
+            "wctual_dose": "0.5mg"
+          }
+        },
+        "item_XhfgfW": {
+          "type": "item",
+          "settings": {
+            "dose_title": "7.5mg",
+            "dose_label": "Step up dose",
+            "mounjaro_price": "230",
+            "wegovy_price": "135",
+            "wctual_dose": "1mg"
+          }
+        },
+        "item_CEyUGi": {
+          "type": "item",
+          "settings": {
+            "dose_title": "10mg",
+            "dose_label": "Step up dose",
+            "mounjaro_price": "260",
+            "wegovy_price": "160",
+            "wctual_dose": "1.7mg"
+          }
+        },
+        "item_QGR9j7": {
+          "type": "item",
+          "settings": {
+            "dose_title": "12.5mg",
+            "dose_label": "Step up dose",
+            "mounjaro_price": "280",
+            "wegovy_price": "189",
+            "wctual_dose": "2.4mg"
+          }
+        },
+        "item_gcwp8e": {
+          "type": "item",
+          "settings": {
+            "dose_title": "15mg",
+            "dose_label": "Maintenance",
+            "mounjaro_price": "300",
+            "wegovy_price": "160",
+            "wctual_dose": "2.4mg"
+          }
+        }
+      },
+      "block_order": [
+        "item_cJp6T4",
+        "item_VKpQCq",
+        "item_XhfgfW",
+        "item_CEyUGi",
+        "item_QGR9j7",
+        "item_gcwp8e"
+      ],
+      "name": "Saving Calculator",
+      "settings": {
+        "title": "How much could you <em>save with Wegovy?<\/em>",
+        "text": "Switching to Wegovy can lower your costs while keeping your weight loss results on track.",
+        "button_label": "Check Eligibility",
+        "button_link": "",
+        "clcr_title": "Wegovy <em>vs<\/em> Mounjaro",
+        "clcr_sub_title": "Select your current Mounjaro dose to compare how much you could save.",
+        "clcr_text": "Your current Mounjaro dose",
+        "cmp_title_l": "Wegovy",
+        "cmp_sub_title_l": "Semaglutide, 0.25mg",
+        "cmp_price_l": "£105",
+        "cmp_title_r": "Mounjaro",
+        "cmp_sub_title_r": "Tirzepatide, 2.5mg",
+        "cmp_price_r": "£155",
+        "monthly_title": "Your Monthly Saving",
+        "annual_title": "Your Annual Saving",
+        "disclaimer_note": "Savings calculated based on 12 months at the selected dose.",
+        "sec_background": "#f2f9fc",
+        "accent_color": "#a15cff",
+        "title_color": "#210847",
+        "text_color": "#210847",
+        "button_bg": "#83edff",
+        "button_text_color": "#210847",
+        "clcr_bg_color": "#210847",
+        "clcr_text_color": "#ffffff",
+        "padding_top": 80,
+        "padding_bottom": 65,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 65,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 26
+      }
+    },
+    "comparison_table_X4Yyer": {
+      "type": "comparison-table",
+      "blocks": {
+        "compare_item_gQMdNt": {
+          "type": "compare_item",
+          "settings": {
+            "title": "Active Ingredient",
+            "wegovy_text": "Semaglutide (a GLP-1 agonist)",
+            "mounjaro_text": "Tirzepatide (a dual GLP and GLP-1 agonist)"
+          }
+        },
+        "compare_item_rd6Djj": {
+          "type": "compare_item",
+          "settings": {
+            "title": "Average Weight Loss",
+            "wegovy_text": "Up to 15% of body weight",
+            "mounjaro_text": "Up to 21% of body weight"
+          }
+        },
+        "compare_item_F6BwGV": {
+          "type": "compare_item",
+          "settings": {
+            "title": "Common Side Effects",
+            "wegovy_text": "Nausea, diarrhoea, vomiting, constipation",
+            "mounjaro_text": "Nausea, diarrhoea, vomiting, constipation"
+          }
+        },
+        "compare_item_cgcUiM": {
+          "type": "compare_item",
+          "settings": {
+            "title": "Injection Frequency",
+            "wegovy_text": "Once weekly",
+            "mounjaro_text": "Once weekly"
+          }
+        },
+        "compare_item_UENzfK": {
+          "type": "compare_item",
+          "settings": {
+            "title": "Cost with settlehealth",
+            "wegovy_text": "From £105 per month",
+            "mounjaro_text": "From £155 per month"
+          }
+        },
+        "compare_item_4iUHQc": {
+          "type": "compare_item",
+          "settings": {
+            "title": "Support Offering",
+            "wegovy_text": "Full clinical and Health Coach support",
+            "mounjaro_text": "Full clinical and Health Coach support"
+          }
+        }
+      },
+      "block_order": [
+        "compare_item_gQMdNt",
+        "compare_item_rd6Djj",
+        "compare_item_F6BwGV",
+        "compare_item_cgcUiM",
+        "compare_item_UENzfK",
+        "compare_item_4iUHQc"
+      ],
+      "name": "Comparison Table",
+      "settings": {
+        "title": "<em>Wegovy vs Mounjaro<\/em> at a glance",
+        "text": "Our clinical team has developed a safe, easy-to-follow switching process that’s available immediately.",
+        "comparison_title_1": "Wegovy",
+        "comparison_title_2": "Mounjaro",
+        "sec_background": "#f2f9fc",
+        "accent_color": "#a15cff",
+        "title_color": "#210847",
+        "text_color": "#210847",
+        "button_bg": "#83edff",
+        "button_text_color": "#210847",
+        "clcr_bg_color": "#210847",
+        "clcr_text_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 65,
+        "padding_top_tab": 0,
+        "padding_bottom_tab": 50,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 32
+      }
+    },
+    "faq_section_Frg4NL": {
+      "type": "faq-section",
+      "blocks": {
+        "accordion_item_jcHn4z": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes settlehealth Health different?",
+            "row_content": "<p>Unlike other providers, we offer a complete weight loss programme that combines expert clinical oversight with personalised 1:1 support from Health & Wellness Coaches. Our holistic approach gives you the guidance, accountability, and tools you need to achieve sustainable, long-term results.<\/p>"
+          }
+        },
+        "accordion_item_6Leap6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What kind of proof do you need for my current medication dose?",
+            "row_content": "<p>To ensure a smooth and safe switch, we just need proof of your current weight loss medication and dose from the last 60 days. A clear photo of your medication box, a copy of your prescription, or a letter from your pharmacy will work perfectly. This helps us maintain continuity of care as you transition to our service.<\/p>"
+          }
+        },
+        "accordion_item_rcL3dc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I choose my starting dose with settlehealth?",
+            "row_content": "<p>When you switch to settlehealth Health, we’ll ask about your current dose to understand your progress so far. Our clinically designed transition process created by our medical team determines the safest and most effective switching plan based on your current Mounjaro dose. Simply provide proof of your existing dose, and our expert clinical team will guide you every step of the way to ensure your journey continues safely and comfortably.<\/p>"
+          }
+        },
+        "accordion_item_PN7p4G": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you support patients across maintenance?",
+            "row_content": "<p>Absolutely - we’re here to support you for the long term, including while you’re on your maintenance dose. You’re welcome to join us at this stage of your journey. We’ll just need proof of your current dose to make sure everything stays safe and right for you.<\/p>"
+          }
+        },
+        "accordion_item_3P9CAU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to switch treatment?",
+            "row_content": "<p>Once you’ve completed our online form and provided proof of your current dose, our clinical team will review everything within 2–3 working days. You’ll then have a short video consultation — an important safety step to ensure your treatment is right for you and that you’re fully supported. After that, your medication will be delivered to you discreetly and reliably.<\/p>"
+          }
+        },
+        "accordion_item_hxJVcU": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "What if I have questions or concerns about side effects?",
+            "row_content": "<p>Your well-being is at the heart of everything we do. If you have any questions or concerns about side effects, please reach out to us. Our clinical team and dedicated Health Coaches are always here to listen, offer guidance, and ensure you feel supported every step of the way.<\/p>"
+          }
+        },
+        "accordion_item_bUgG3d": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Is my personal information kept private?",
+            "row_content": "<p>Yes, completely. We take our responsibility to you very seriously. All your personal and health information is handled with the utmost care and kept entirely confidential and secure, always in line with the highest ethical standards.<br\/><br\/><\/p>"
+          }
+        },
+        "accordion_item_E7kfYt": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "How do I cancel?",
+            "row_content": "<p>You can cancel your subscription by logging into your CheqUp account. Go to \"Manage My Account,\" select \"Cancel My Subscription,\" and follow the prompts. The cancellation will be actioned immediately.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_jcHn4z",
+        "accordion_item_6Leap6",
+        "accordion_item_rcL3dc",
+        "accordion_item_PN7p4G",
+        "accordion_item_3P9CAU",
+        "accordion_item_hxJVcU",
+        "accordion_item_bUgG3d",
+        "accordion_item_E7kfYt"
+      ],
+      "name": "Faq Section",
+      "settings": {
+        "heading": "Frequently asked <em>questions<\/em>"
+      }
+    }
+  },
+  "order": [
+    "header_block",
+    "hero_land_d8HqiR",
+    "section_price_UYffHQ",
+    "get_started_mDDcGt",
+    "trustpilot_slider_ng8Ukp",
+    "saving_calculator_LQJfQX",
+    "comparison_table_X4Yyer",
+    "faq_section_Frg4NL"
+  ]
+}

@@ -1,0 +1,146 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement_bar_AM4dzb": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_P7bK6p": {
+          "type": "announcement",
+          "settings": {
+            "text": "33% all weight loss medication, ending 23rd February | Use code settlehealthNEW at checkout",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_P7bK6p"
+      ],
+      "disabled": true,
+      "name": "t:sections.announcement-bar.presets.name",
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-3",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "menu_block_RiKe4t": {
+          "type": "menu_block",
+          "settings": {
+            "link_title": "EXPLORE",
+            "block_menu": "explore"
+          }
+        },
+        "product_list_UEM4cq": {
+          "type": "product_list",
+          "disabled": true,
+          "settings": {
+            "link_title": "TOP TREATMENTS",
+            "product_list": [],
+            "color_scheme_product": "",
+            "autoplay_enabled": false,
+            "autoplay_timeout": 5,
+            "loop_enabled": false,
+            "enable_pagination": false,
+            "enable_navigation": false,
+            "color_scheme_swiper": ""
+          }
+        },
+        "menu_block_ThyD4H": {
+          "type": "menu_block",
+          "settings": {
+            "link_title": "About Settlehealth",
+            "block_menu": "about"
+          }
+        },
+        "button_link_xhfQiT": {
+          "type": "button_link",
+          "settings": {
+            "link_title": "ABOUT settlehealth",
+            "icon": "shopify://shop_images/Vector--1.svg",
+            "text": "Start Your Wellness Journey",
+            "link_url": "",
+            "color_scheme": "scheme-3"
+          }
+        },
+        "button_link_fBhLgr": {
+          "type": "button_link",
+          "disabled": true,
+          "settings": {
+            "link_title": "ABOUT settlehealth",
+            "text": "Explore our community",
+            "link_url": "",
+            "color_scheme": "scheme-3"
+          }
+        },
+        "contact_info_4RJcFe": {
+          "type": "contact_info",
+          "settings": {
+            "title": "HAVE A QUESTION?",
+            "call_number": "01628 965543",
+            "call_lebel": "Call",
+            "call_text": "Mon - Fri 9am - 5pm",
+            "email_address": "support@settlehealth.co.uk",
+            "email_lebel": "Email",
+            "email_text": "We aim to reply in 48hrs"
+          }
+        }
+      },
+      "block_order": [
+        "menu_block_RiKe4t",
+        "product_list_UEM4cq",
+        "menu_block_ThyD4H",
+        "button_link_xhfQiT",
+        "button_link_fBhLgr",
+        "contact_info_4RJcFe"
+      ],
+      "settings": {
+        "page_width": "container-fluid",
+        "logo_position": "middle-center",
+        "mobile_logo_position": "center",
+        "logo_width": 95,
+        "logo_width_mobile": 95,
+        "menu": "main-menu",
+        "menu_type_desktop": "drawer",
+        "sticky_header_type": "always",
+        "show_line_separator": true,
+        "show_icons": false,
+        "transparent_on_home": true,
+        "transparent": false,
+        "login_link": "",
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-4",
+        "sticky_header_background": "#ffffff",
+        "sticky_text_color": "#0a0a0a",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "padding_top_mobile": 16,
+        "padding_bottom_moblie": 16
+      }
+    }
+  },
+  "order": [
+    "announcement_bar_AM4dzb",
+    "header"
+  ]
+}

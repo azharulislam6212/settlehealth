@@ -1,0 +1,631 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_card_WCKwkJ": {
+      "type": "image-with-card",
+      "blocks": {
+        "heading_UAppw4": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>For minds that won't stop.</em> ADHD assessment and ongoing care, led by UK doctors. Most patients seen within one week.",
+            "heading_size": "h1"
+          }
+        },
+        "list_text_TKAy8x": {
+          "type": "list_text",
+          "settings": {
+            "list_text": "<ul><li>Doctor-led assessments</li><li>CQC-regulated care</li><li>£79 per month</li></ul>",
+            "color_accent": "#8e3a2a"
+          }
+        },
+        "button_hBNyGm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start my journey",
+            "button_link": "shopify://pages/category-weightloss",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UAppw4",
+        "list_text_TKAy8x",
+        "button_hBNyGm"
+      ],
+      "name": "Image with card",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "image": "shopify://shop_images/hero-image.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "enable_content": false,
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "color_accent": "#8e3a2a",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_tab": 30,
+        "padding_bottom_tab": 30,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "image_block_carousel_KFa9HL": {
+      "type": "image-block-carousel",
+      "blocks": {
+        "custom_block_gCDYTb": {
+          "type": "custom_block",
+          "settings": {
+            "image": "shopify://shop_images/Generated_with_Kive.ai_-_in_sage_medical_scrubs__genuine_Duchenne_smile_with_crinkled_eyes__upward_gaze__crossed_arms_confident_pose__stethoscope_draped_naturally__clean_gradient_back.png",
+            "image_url": "",
+            "enable_video": false,
+            "source": "uploaded",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "uploaded_video": "shopify://files/videos/4919748-uhd_2732_1440_25fps.mp4",
+            "cover_image": "shopify://shop_images/Generated_with_Kive.ai_-_in_sage_medical_scrubs__genuine_Duchenne_smile_with_crinkled_eyes__upward_gaze__crossed_arms_confident_pose__stethoscope_draped_naturally__clean_gradient_back.png",
+            "enable_autoplay": false,
+            "enable_loop_video": true,
+            "enable_mute_video": true,
+            "play_button_display": "on-hover"
+          }
+        },
+        "custom_block_Ldh4Pg": {
+          "type": "custom_block",
+          "settings": {
+            "image_url": "",
+            "enable_video": true,
+            "source": "uploaded",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "uploaded_video": "shopify://files/videos/4919748-uhd_2732_1440_25fps.mp4",
+            "enable_autoplay": false,
+            "enable_loop_video": true,
+            "enable_mute_video": true,
+            "play_button_display": "on-hover"
+          }
+        },
+        "custom_block_YA8gJd": {
+          "type": "custom_block",
+          "settings": {
+            "image_url": "",
+            "enable_video": true,
+            "source": "uploaded",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "uploaded_video": "shopify://files/videos/4919748-uhd_2732_1440_25fps.mp4",
+            "enable_autoplay": false,
+            "enable_loop_video": true,
+            "enable_mute_video": true,
+            "play_button_display": "on-hover"
+          }
+        },
+        "custom_block_mQEwJF": {
+          "type": "custom_block",
+          "settings": {
+            "image_url": "",
+            "enable_video": true,
+            "source": "uploaded",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "uploaded_video": "shopify://files/videos/4919748-uhd_2732_1440_25fps.mp4",
+            "enable_autoplay": false,
+            "enable_loop_video": true,
+            "enable_mute_video": true,
+            "play_button_display": "on-hover"
+          }
+        },
+        "custom_block_DyhWTY": {
+          "type": "custom_block",
+          "settings": {
+            "image_url": "",
+            "enable_video": true,
+            "source": "uploaded",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "uploaded_video": "shopify://files/videos/4919748-uhd_2732_1440_25fps.mp4",
+            "enable_autoplay": false,
+            "enable_loop_video": true,
+            "enable_mute_video": true,
+            "play_button_display": "on-hover"
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_gCDYTb",
+        "custom_block_Ldh4Pg",
+        "custom_block_YA8gJd",
+        "custom_block_mQEwJF",
+        "custom_block_DyhWTY"
+      ],
+      "name": "Image block carousel",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container-fluid",
+        "heading": "Settle is changing<em> Thousands of lives with ADHD</em>",
+        "heading_size": "h1",
+        "text": "<p>Real stories, from people who finally feel settled.</p>",
+        "alignment": "center",
+        "image_ratio": "portrait",
+        "autoplay_enabled": false,
+        "autoplay_timeout": 5,
+        "loop_enabled": false,
+        "enable_pagination": false,
+        "enable_pagination_mobile": false,
+        "enable_navigation": true,
+        "enable_navigation_desktop": true,
+        "color_scheme_swiper": "",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "padding_top_tab": 42,
+        "padding_bottom_tab": 42,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 32,
+        "them_section_id": ""
+      }
+    },
+    "icon_text_blocks_d4Ndnr": {
+      "type": "icon-text-blocks",
+      "blocks": {
+        "icon_text_block_ct77A6": {
+          "type": "icon_text_block",
+          "settings": {
+            "title": "Take the assessment",
+            "text": "<p>A 5-minute online questionnaire designed by ADHD specialists. No waiting rooms, no referrals.</p>"
+          }
+        },
+        "icon_text_block_4rdx3F": {
+          "type": "icon_text_block",
+          "settings": {
+            "title": "Meet your doctor",
+            "text": "<p>A 60-minute video consultation with a UK ADHD specialist, usually within 2 weeks. They'll listen, diagnose, and build your plan.</p>"
+          }
+        },
+        "icon_text_block_xPPRHr": {
+          "type": "icon_text_block",
+          "settings": {
+            "title": "Start treatment",
+            "text": "<p>If medication is right for you, your first prescription is dispensed by our in-house pharmacy and delivered discreetly to your door.</p>"
+          }
+        },
+        "icon_text_block_ypV4G6": {
+          "type": "icon_text_block",
+          "settings": {
+            "title": "Ongoing care",
+            "text": "<p>Monthly check-ins, repeat prescriptions handled automatically, and your doctor on hand whenever you need them. £79/month, cancel anytime.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_block_ct77A6",
+        "icon_text_block_4rdx3F",
+        "icon_text_block_xPPRHr",
+        "icon_text_block_ypV4G6"
+      ],
+      "name": "Icon Text Blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container-fluid",
+        "heading": "From booked to settled, <em>In literally 4 steps</em>",
+        "heading_size": "h1",
+        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "color_accent": "#8e3a2a",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_tab": 60,
+        "padding_bottom_tab": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "image_text_block_9qENk6": {
+      "type": "image-text-block",
+      "blocks": {
+        "image_pKAqKX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group_13_1.png"
+          }
+        },
+        "text_block_jge7h3": {
+          "type": "text_block",
+          "settings": {
+            "title": "One Price. No Surprises",
+            "text": "<p>That covers everything: your psychiatrist, your medication, your reviews, and your prescriptions delivered to your door. No top-ups, no admin fees, no surprise invoices when you change dose.</p>"
+          }
+        },
+        "text_PHM88C": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Assessment (one-off) | £349 <br/>Monthly thereafter | £79 </p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_pKAqKX",
+        "text_block_jge7h3",
+        "text_PHM88C"
+      ],
+      "name": "Image Text Block",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "color_accent": "#8e3a2a",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 80,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48
+      }
+    },
+    "custom_banner_7CemVn": {
+      "type": "custom-banner",
+      "blocks": {
+        "blur_text_3Rwrmd": {
+          "type": "blur_text",
+          "settings": {
+            "pre_text": "Assessment",
+            "sub_title": "Adult ADHD",
+            "text": "60-minute psychiatric consultation.",
+            "title": "from  <em>£349</em>",
+            "color_accent": "#8e3a2a"
+          }
+        },
+        "heading_e47Lcm": {
+          "type": "heading",
+          "settings": {
+            "heading": "ADHD assessment for minds that won't stop.",
+            "heading_size": "h1",
+            "accenttext_block": false,
+            "color_accent": "#8e3a2a"
+          }
+        },
+        "text_Ndtawg": {
+          "type": "text",
+          "settings": {
+            "text": "Private, doctor-led ADHD assessment and treatment for adults across the UK. Diagnosis within 14 days. Medication delivered from our own pharmacy. The same psychiatrist, start to finish.",
+            "text_style": "body"
+          }
+        },
+        "buttons_DCQ3tM": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Start my journey",
+            "button_link_1": "shopify://pages/about",
+            "button_style_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "blur_text_3Rwrmd",
+        "heading_e47Lcm",
+        "text_Ndtawg",
+        "buttons_DCQ3tM"
+      ],
+      "name": "Custom image banner",
+      "settings": {
+        "enable_divider": false,
+        "allow_transparent_header": false,
+        "image": "shopify://shop_images/Group_2141256185_1_1.png",
+        "image_overlay_opacity": 0,
+        "image_border_radius": 5,
+        "fixed_attachment": false,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "section_color_scheme": "",
+        "color_scheme": "scheme-3",
+        "color_accent": "#8e3a2a",
+        "stack_images_on_mobile": false,
+        "mobile_content_position": "middle-center",
+        "mobile_content_alignment": "left",
+        "show_text_below": false,
+        "show_mobile_text_box": false,
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "padding_top_tab": 60,
+        "padding_bottom_tab": 0,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "images_with_list_icons_GgtGqA": {
+      "type": "images-with-list-icons",
+      "blocks": {
+        "image_block_wEwtEE": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Image_10.png",
+            "image_position": "left",
+            "title": "Care that doesn't end at the prescription.",
+            "text": "<p>Most ADHD services assess you, prescribe, and disappear. Settle is built to stay with you.</p><ul><li>Same psychiatrist from assessment through to annual review.</li><li>Monthly check-ins during titration, not just a script & silence</li><li>Direct messaging with your clinician & delivered medication</li></ul>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_wEwtEE"
+      ],
+      "name": "Images list icon text",
+      "settings": {
+        "enable_divider": false,
+        "page_width": "container-fluid",
+        "color_scheme": "",
+        "color_accent": "#ccf9ab",
+        "padding_top": 100,
+        "padding_bottom": 0,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 0,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "search_panel_9wKQee": {
+      "type": "search-panel",
+      "blocks": {
+        "heading_z9ktkC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_MfphRn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_mrweXM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_z9ktkC",
+        "text_MfphRn",
+        "button_mrweXM"
+      ],
+      "name": "Search panel",
+      "settings": {
+        "enable_divider": false,
+        "page_width": "container",
+        "heading": "<em>Not sure if it’s ADHD?</em> Take our 2-minute self-screen. It's the same ASRS questionnaire your GP would use — and it'll tell you whether a full assessment is worth your time.",
+        "heading_size": "h0",
+        "color_scheme": "scheme-1",
+        "color_accent": "#8e3a2a",
+        "padding_top": 110,
+        "padding_bottom": 110,
+        "padding_top_tab": 70,
+        "padding_bottom_tab": 70,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48
+      }
+    },
+    "image_banner_Ydiznr": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_iCFdV7": {
+          "type": "heading",
+          "settings": {
+            "heading": "ADHD care, built for the life you actually live.",
+            "heading_size": "h1"
+          }
+        },
+        "text_xh69nK": {
+          "type": "text",
+          "settings": {
+            "text": "You're not a checklist. You're a freelancer with a deadline, a parent at school pickup, a director in back-to-back meetings. Settle is built for the way ADHD actually shows up — at work, at home, at 11pm when the brain still won't stop.",
+            "text_style": "body"
+          }
+        },
+        "buttons_eRrLpG": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Start my journey",
+            "button_link_1": "shopify://collections/wellness",
+            "button_style_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iCFdV7",
+        "text_xh69nK",
+        "buttons_eRrLpG"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "image": "shopify://shop_images/Mask_group_7.png",
+        "mobile_image": "shopify://shop_images/Mask_group_8.png",
+        "image_overlay_opacity": 10,
+        "image_border_radius": 0,
+        "fixed_attachment": false,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": true,
+        "color_scheme": "scheme-3",
+        "color_accent": "#ccf9ab",
+        "stack_images_on_mobile": false,
+        "mobile_content_position": "middle-center",
+        "mobile_content_alignment": "left",
+        "show_text_below": false,
+        "show_mobile_text_box": true
+      }
+    },
+    "faq_section_fH36Qb": {
+      "type": "faq-section",
+      "blocks": {
+        "collapsible_row_YcCrgQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much does an assessment cost, and what's included?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
+          }
+        },
+        "collapsible_row_PPywAC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How quickly can I be seen?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
+          }
+        },
+        "collapsible_row_x38aBC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What medication do you prescribe?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
+          }
+        },
+        "collapsible_row_LN7pLR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will my GP take over my prescription? (Shared care)",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
+          }
+        },
+        "collapsible_row_km7GmH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Settle right for me if I've been assessed before?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
+          }
+        },
+        "collapsible_row_DkwCyb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I claim through my private medical insurance?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
+          }
+        },
+        "collapsible_row_QWJVyB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What happens after my diagnosis?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_YcCrgQ",
+        "collapsible_row_PPywAC",
+        "collapsible_row_x38aBC",
+        "collapsible_row_LN7pLR",
+        "collapsible_row_km7GmH",
+        "collapsible_row_DkwCyb",
+        "collapsible_row_QWJVyB"
+      ],
+      "name": "Faq Section",
+      "settings": {
+        "heading": "Common questions, <em>answered.</em>",
+        "heading_size": "hxl",
+        "heading_alignment": "left",
+        "text": "<p>Most people land here with the same handful of questions about cost, timelines, medication, and how Settle works alongside the NHS. If yours isn't covered below, our team will reply within one working day, or you can speak to a clinician on a free 15-minute call.</p>",
+        "button_label": "See all questions",
+        "button_link": "shopify://pages/frequently-asked-questions",
+        "button_style": "primary",
+        "layout": "none",
+        "disclosure_toggle": "plus",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "color_accent": "#8e3a2a",
+        "open_first_collapsible_row": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_tab": 60,
+        "padding_bottom_tab": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "author_block_NQYkE6": {
+      "type": "author-block",
+      "blocks": {
+        "heading_bMDpiU": {
+          "type": "heading",
+          "settings": {
+            "heading": "A note from our Director"
+          }
+        },
+        "text_8KgrWe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When I first started working in adult ADHD, the patients I saw were almost always exhausted before they got to me. Years of NHS waitlists, GP rejections, private services that prescribed and disappeared, and the slow erosion of believing themselves about their own brain.<br/>Settle was built to be different.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_VFHi4k": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/Group_1.svg",
+            "title": "Doniert Mcfarlane"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bMDpiU",
+        "text_8KgrWe",
+        "icon_text_VFHi4k"
+      ],
+      "name": "Author block",
+      "settings": {
+        "enable_divider": false,
+        "image": "shopify://shop_images/Generated_with_Kive.ai_-_in_navy_pinstripe_power_suit_with_pearl_statement_necklace__seated_in_blush_velvet_armchair__direct_gaze__polished_blonde_bob__executive_portrait_lighting__cl.png",
+        "color_scheme": "scheme-4",
+        "color_accent": "#a5a5a5",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "image_with_card_WCKwkJ",
+    "image_block_carousel_KFa9HL",
+    "icon_text_blocks_d4Ndnr",
+    "image_text_block_9qENk6",
+    "custom_banner_7CemVn",
+    "images_with_list_icons_GgtGqA",
+    "search_panel_9wKQee",
+    "image_banner_Ydiznr",
+    "faq_section_fH36Qb",
+    "author_block_NQYkE6"
+  ]
+}

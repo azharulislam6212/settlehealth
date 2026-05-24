@@ -1,0 +1,734 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "category_list_TVpC3H": {
+          "type": "category_list",
+          "settings": {
+            "badge_text": "Bestseller",
+            "badge_bg_color": "#ccf9ab",
+            "badge_color": "#2e4e16",
+            "category_1": "Rx",
+            "category_link_1": "",
+            "category_2": "Weekly weight loss injection",
+            "category_link_2": "",
+            "category_text_color": "#2e2e25"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "text_list_n9xGpm": {
+          "type": "text_list",
+          "settings": {
+            "title_1": "22<em>%<\/em>",
+            "text_1": "avg weight loss over a 12 month period",
+            "title_2": "<strong>#<\/strong>1",
+            "text_2": "Weight loss medication with our customers"
+          }
+        },
+        "short_description_48fMMW": {
+          "type": "short_description",
+          "settings": {
+            "text": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier by helping you control your appetite, which lowers your calorie intake."
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "promo_text": "Pay as you go and subscription options available Promo and discount codes can be added at checkout"
+          }
+        },
+        "collapsible_tab_YrMwiT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Weight Loss with settlehealth",
+            "icon": "none",
+            "content": "<ul><li>Partner with clinicians to customise your treatment plan<\/li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal<\/li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians<\/li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_dAKmFD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What is Mounjaro?",
+            "icon": "none",
+            "content": "<ul><li>Partner with clinicians to customise your treatment plan<\/li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal<\/li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians<\/li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_mCgyTh": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to take",
+            "icon": "none",
+            "content": "<ul><li>Partner with clinicians to customise your treatment plan<\/li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal<\/li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians<\/li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_XVBCNd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Potential common side effects",
+            "icon": "none",
+            "content": "<ul><li>Partner with clinicians to customise your treatment plan<\/li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal<\/li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians<\/li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "frequent_bundle_NgYx68": {
+          "type": "frequent_bundle",
+          "settings": {
+            "frequent_bundle": "mounjaro-kwikpen-meal-replacement-bundle",
+            "title": "Frequent Bundle",
+            "image": "shopify:\/\/shop_images\/Group_2141256028.png",
+            "price_suffix": "when purchased with Mounjaro",
+            "background_color": "#f6f7ef",
+            "text_color": "#243d11",
+            "accent_color": "#2e4e16"
+          }
+        },
+        "terms_conditions_dKMfLF": {
+          "type": "terms_conditions",
+          "settings": {
+            "terms_conditions": "<p>Actual price will depend on pay as you go or subscription plan purchase, promotional offers and discount codes are available to input at checkout. Requires an online consultation with a clinician who will determine if treatment is appropriate.<\/p><p><br\/>*In a 72-week clinical trial of Mounjaro® (15 mg), participants with obesity or with overweight and weight-related medical problems achieved an average weight loss of 22.5% along with a reduced-calorie diet and increased exercise. Individual results may vary. Mounjaro® is a registered trade mark of Eli Lilly and Company. Hims & Hers Health, Inc. is not affiliated with or endorsed by Eli Lilly and Company<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_list_TVpC3H",
+        "title",
+        "text_list_n9xGpm",
+        "short_description_48fMMW",
+        "buy_buttons",
+        "collapsible_tab_YrMwiT",
+        "collapsible_tab_dAKmFD",
+        "collapsible_tab_mCgyTh",
+        "collapsible_tab_XVBCNd",
+        "frequent_bundle_NgYx68",
+        "terms_conditions_dKMfLF"
+      ],
+      "settings": {
+        "enable_divider": true,
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "color_accent": "#ccf9ab",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "columns",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "icon_text_blocks_MDGKWj": {
+      "type": "icon-text-blocks",
+      "blocks": {
+        "icon_text_block_nDbBYD": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_1.png",
+            "title": "Complete your online consultation",
+            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.<\/p>"
+          }
+        },
+        "icon_text_block_wJTNQK": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_1.png",
+            "title": "Get approved by our medical team",
+            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.<\/p>"
+          }
+        },
+        "icon_text_block_tx7LL6": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_1.png",
+            "title": "Receive your delivery at your chosen place",
+            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_block_nDbBYD",
+        "icon_text_block_wJTNQK",
+        "icon_text_block_tx7LL6"
+      ],
+      "name": "Icon Text Blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Simple care, that fits <em>around your lifestyle<\/em>",
+        "heading_size": "h1",
+        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "banner_blocks_8Xg6CL": {
+      "type": "banner-blocks",
+      "blocks": {
+        "banner_overlay_text_Ak7rDA": {
+          "type": "banner_overlay_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256167_1.png",
+            "pre_text": "Mounjaro is a weight loss injection you use once a week.",
+            "title": "Mounjaro is the kick start your <em>mind and body needs<\/em>",
+            "icon_image_1": "shopify:\/\/shop_images\/Group_2141256031.svg",
+            "block_title_1": "Weight Loss with settlehealth",
+            "block_text_1": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
+            "icon_image_2": "shopify:\/\/shop_images\/Group_2141256032.svg",
+            "block_title_2": "Weight Loss with settlehealth",
+            "block_text_2": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
+            "icon_image_3": "shopify:\/\/shop_images\/Group_2141256033.svg",
+            "block_title_3": "Weight Loss with settlehealth",
+            "block_text_3": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
+            "icon_image_4": "shopify:\/\/shop_images\/Group_2141256034.svg",
+            "block_title_4": "Weight Loss with settlehealth",
+            "block_text_4": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
+            "color_scheme_card": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+            "color_accent": "#7dae58"
+          }
+        },
+        "image_block_mdkd6m": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_18.png",
+            "image_link": "",
+            "color_scheme_card": "scheme-4"
+          }
+        },
+        "image_block_wide_wyMrwU": {
+          "type": "image_block_wide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256172_4.png",
+            "image_link": "",
+            "color_scheme_card": "scheme-4"
+          }
+        },
+        "image_over_text_H4UHCK": {
+          "type": "image_over_text",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256036_55cd04b6-504f-4200-854e-b92abf3296a5.png",
+            "image_position_x": 50,
+            "image_position_y": 0,
+            "text_1": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
+            "position_text_1_x": 7,
+            "position_text_1_y": 70,
+            "sm_position_text_1_x": 1,
+            "sm_position_text_1_y": 70,
+            "text_2": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
+            "position_text_2_x": 72,
+            "position_text_2_y": 34,
+            "sm_position_text_2_x": 72,
+            "sm_position_text_2_y": 18,
+            "title": "<em>22.5%<\/em>",
+            "text": "average weight loss over a 12 month period",
+            "color_scheme_card": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+            "color_background": "linear-gradient(103.46deg, rgba(22, 82, 127, 1) 33.54%, rgba(148, 203, 245, 1) 88.16%)",
+            "color_accent": "#ccf9ab"
+          }
+        }
+      },
+      "block_order": [
+        "banner_overlay_text_Ak7rDA",
+        "image_block_mdkd6m",
+        "image_block_wide_wyMrwU",
+        "image_over_text_H4UHCK"
+      ],
+      "name": "Banner Blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "",
+        "heading_size": "hxl",
+        "text": "<p> <\/p>",
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "color_scheme": "",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "timeline_blocks_hKYnhL": {
+      "type": "timeline-blocks",
+      "blocks": {
+        "timeline_block_KQUi93": {
+          "type": "timeline_block",
+          "settings": {
+            "pre_text": "Week 1",
+            "title": "Getting Started",
+            "text": "<ul><li>Take your first weekly injection on your chosen consistent day<\/li><li>Appetite may reduce noticeably within the first few days<\/li><li>Mild nausea or bloating can occur as your body adjusts<\/li><\/ul>"
+          }
+        },
+        "timeline_block_fQ6FGi": {
+          "type": "timeline_block",
+          "settings": {
+            "pre_text": "Week 2",
+            "title": "Settling In",
+            "text": "<ul><li>Take your second injection on the same scheduled day<\/li><li>Appetite suppression becomes more predictable and consistent<\/li><li>Prioritise protein, hydration, and structured regular meals<\/li><\/ul>"
+          }
+        },
+        "timeline_block_Td3Pt8": {
+          "type": "timeline_block",
+          "settings": {
+            "pre_text": "Week 3",
+            "title": "Build Consistency",
+            "text": "<ul><li>Take your third weekly injection as scheduled<\/li><li>Energy and satiety patterns should feel more stable<\/li><li>Reorder your next dose to avoid treatment interruption<\/li><\/ul>"
+          }
+        },
+        "timeline_block_wBezVX": {
+          "type": "timeline_block",
+          "settings": {
+            "pre_text": "Week 4",
+            "title": "Completing Month One",
+            "text": "<ul><li>Take your fourth weekly injection this month<\/li><li>Reflect on weight progress and appetite changes<\/li><li>Prepare for potential dose escalation if clinically appropriate<\/li><\/ul>"
+          }
+        },
+        "image_over_text_6JHUdA": {
+          "type": "image_over_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_127.png",
+            "text_1": "Let me know how I can help",
+            "text_2": "I hope your first week goes well",
+            "color_scheme_card": "scheme-1",
+            "color_background": "linear-gradient(307.83deg, rgba(22, 82, 127, 1) 15.17%, rgba(148, 203, 245, 1) 81.18%)",
+            "color_accent": "#ccf9ab"
+          }
+        },
+        "image_over_list_qwznC6": {
+          "type": "image_over_list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_240651200.png",
+            "text": "<ul><li>Sustained Energy <\/li><li>Metabolic Balance <\/li><li>Reduced Cravings <\/li><li>Improved Confidence <\/li><li>Healthier Body Composition<\/li><\/ul>",
+            "color_scheme_card": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+            "color_accent": "#ccf9ab"
+          }
+        },
+        "image_block_XxYpBx": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_240651199.png",
+            "image_link": "",
+            "color_scheme_card": ""
+          }
+        }
+      },
+      "block_order": [
+        "timeline_block_KQUi93",
+        "timeline_block_fQ6FGi",
+        "timeline_block_Td3Pt8",
+        "timeline_block_wBezVX",
+        "image_over_text_6JHUdA",
+        "image_over_list_qwznC6",
+        "image_block_XxYpBx"
+      ],
+      "name": "Timeline Blocks",
+      "settings": {
+        "enable_divider": false,
+        "page_width": "container",
+        "heading": "Your new monthly timeline, <em>weight loss journey<\/em>",
+        "heading_size": "h1",
+        "text": "",
+        "color_scheme": "",
+        "color_accent": "#7dae58",
+        "timeline_color_accent": "#ccf9ab",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "image_banner_jHEMRR": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8W3ptn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalised care.<em> Designed around you.<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_CMKyh7": {
+          "type": "text",
+          "settings": {
+            "text": "Healthy protein intake and regular exercise are essential for weight loss, especially for those taking a GLP-1. That's why our personalized weight loss plans help you   so you can maintain your hard-earned results.",
+            "text_style": "body"
+          }
+        },
+        "buttons_cKMCxR": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Start my journey",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8W3ptn",
+        "text_CMKyh7",
+        "buttons_cKMCxR"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "image": "shopify:\/\/shop_images\/Group_2141256096.png",
+        "image_overlay_opacity": 10,
+        "image_border_radius": 0,
+        "fixed_attachment": false,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+        "color_accent": "#ccf9ab",
+        "stack_images_on_mobile": false,
+        "mobile_content_position": "middle-center",
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
+    "image_with_text_product_D9GCdN": {
+      "type": "image-with-text-product",
+      "blocks": {
+        "heading_txbzdX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mounjaro Kwikpen <em>Pricing Options<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "caption_Gj37VF": {
+          "type": "caption",
+          "settings": {
+            "caption": "Pay As You Go",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text_AyaQYL": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Take your fourth weekly injection this month<\/li><li>Reflect on weight progress and appetite changes<\/li><li>Prepare for potential dose escalation if clinically appropriate<\/li><\/ul>",
+            "text_style": "body"
+          }
+        },
+        "caption_xnjFNF": {
+          "type": "caption",
+          "settings": {
+            "caption": "Subscription",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text_diAEnL": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Take your fourth weekly injection this month<\/li><li>Reflect on weight progress and appetite changes<\/li><li>Prepare for potential dose escalation if clinically appropriate<\/li><\/ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_txbzdX",
+        "caption_Gj37VF",
+        "text_AyaQYL",
+        "caption_xnjFNF",
+        "text_diAEnL"
+      ],
+      "name": "Image with text product",
+      "settings": {
+        "enable_divider": true,
+        "image": "shopify:\/\/shop_images\/Frame_2141256474_1.png",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "images_with_list_text_Adeqii": {
+      "type": "images-with-list-text",
+      "blocks": {
+        "image_block_kLf7PW": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256105_1.png",
+            "image_link": ""
+          }
+        },
+        "list_text_NJLKaA": {
+          "type": "list_text",
+          "settings": {
+            "title": "",
+            "text": "<ul><li>Priority support (2-hour response)<\/li><li>Free next-day delivery (save £5\/order)<\/li><li>Quarterly health coach video calls<\/li><li>Body composition tracking & analysis<\/li><li>Nutrition consultation (1x per quarter)<\/li><li>VIP-only webinars & events<\/li><li>Supplement discount: 35% off (extra 10%)<\/li><li>settlehealth Points: 1.5x earning rate<\/li><\/ul>",
+            "button_label": "",
+            "button_link": "",
+            "color_scheme_card": "scheme-1"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_kLf7PW",
+        "list_text_NJLKaA"
+      ],
+      "name": "Images with list text",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Subscribe to a <em>better you<\/em>",
+        "heading_size": "h1",
+        "text": "<p>settlehealth was designed around the basis of curating your own journey, pay as you go and subscription options are available<\/p>",
+        "button_label": "Start my journey",
+        "button_link": "shopify:\/\/collections",
+        "button_style": "secondary",
+        "color_scheme": "scheme-1",
+        "color_accent": "#7dae58",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "team_carousel_BXYGe4": {
+      "type": "team-carousel-product",
+      "blocks": {
+        "team_block_3ftVVg": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_28.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_m3Hye8": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_23.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_9EYiea": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_24.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_yXJrDp": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_4A6JDD": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_21.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_ECLNDX": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "team_block_3ftVVg",
+        "team_block_m3Hye8",
+        "team_block_9EYiea",
+        "team_block_yXJrDp",
+        "team_block_4A6JDD",
+        "team_block_ECLNDX"
+      ],
+      "name": "Team Carousel Product",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "The best care <em>by the best in medicine<\/em>",
+        "heading_size": "h2",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum,<\/p>",
+        "alignment": "center",
+        "autoplay_enabled": false,
+        "autoplay_timeout": 5,
+        "loop_enabled": false,
+        "enable_pagination": false,
+        "enable_pagination_mobile": false,
+        "enable_navigation": true,
+        "enable_navigation_desktop": true,
+        "color_scheme_swiper": "scheme-32051e61-b6a4-4a5b-80c8-a81092a26e44",
+        "color_scheme": "",
+        "color_scheme_card": "scheme-1",
+        "color_accent": "#a5a5a5",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "them_section_id": ""
+      }
+    },
+    "faq_section_bjxzKR": {
+      "type": "faq-section",
+      "blocks": {
+        "collapsible_row_4VGV9b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 1",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+          }
+        },
+        "collapsible_row_bzzp7L": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 2",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+          }
+        },
+        "collapsible_row_C9p89w": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 3",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+          }
+        },
+        "collapsible_row_VqL7ez": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 4",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4VGV9b",
+        "collapsible_row_bzzp7L",
+        "collapsible_row_C9p89w",
+        "collapsible_row_VqL7ez"
+      ],
+      "name": "Faq Section",
+      "settings": {
+        "heading": "Questions?<em> We’re here to help.<\/em>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "disclosure_toggle": "plus",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "color_accent": "#a5a5a5",
+        "open_first_collapsible_row": true,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "icon_text_blocks_MDGKWj",
+    "banner_blocks_8Xg6CL",
+    "timeline_blocks_hKYnhL",
+    "image_banner_jHEMRR",
+    "image_with_text_product_D9GCdN",
+    "images_with_list_text_Adeqii",
+    "team_carousel_BXYGe4",
+    "faq_section_bjxzKR"
+  ]
+}

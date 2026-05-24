@@ -1,0 +1,313 @@
+<!-- /snippets/header-block.liquid -->
+
+{% comment %}
+  Header block content, used in both mobile header and desktop header.
+
+  Accepts a block, returns the content to render for that block.
+  Collection blocks will render multiple product-grid-item divs.
+
+  Required params:
+  * block: the block that should be rendered.
+
+  {% render 'header-block', block: block %}
+{% endcomment %}
+
+ 
+{%- assign mobile = mobile | default: false -%}
+{%- assign block_show = false -%}
+{%- assign column_count = column_count | at_most: 3 -%}
+{%- assign display = block.settings.display | default: 'all' -%}
+{%- if mobile and display != 'desktop' -%}
+  {%- assign block_show = true -%}
+{%- elsif mobile == false and display != 'mobile' -%}
+  {%- assign block_show = true -%}
+{%- endif -%}
+
+{%- unless block_show -%}
+  {%- continue -%}
+{%- endunless -%}
+
+{% case block.type %}
+  {% when 'image' %}
+    <div
+      {{ block.shopify_attributes -}}
+      {% if block.settings.wide_element %}
+        class="header__dropdown__element--wide"
+      {% endif %}
+    >
+      <div class="header__dropdown__image section--image {{ block.settings.button_position }}" data-header-image>
+        <div class="header__dropdown__image__holder  gradient color-{{ block.settings.color_scheme }}">
+          {%- if block.settings.link != blank -%}
+            <a
+              href="{{ block.settings.link }}"
+              class="link-over-image"
+              {% if block.settings.link.object.title %}
+                aria-label="{{ block.settings.link.object.title | strip_html | escape }}"
+              {% endif %}
+            >
+          {%- endif -%}
+
+          <div class="hero__content__wrapper align--bottom-left">
+            <div
+              class="backdrop--wide"
+              style="--bg: {{ block.settings.overlay_color }}; --opacity: {{ block.settings.overlay_opacity | times: 0.01 }};"
+            >
+              {% unless block.settings.title == '' %}
+                <h2 class="hero__title">
+                  {{ block.settings.title | escape }}
+                </h2>
+              {% endunless %}
+
+              {% if block.settings.text %}
+                <p>{{ block.settings.text }}</p>
+              {% endif %}
+
+              {%- if block.settings.button_position != 'is-below-image' and block.settings.link_text != blank -%}
+                <span class="hero__btn button button--{{ block.settings.button_style}}">
+                  {{ block.settings.link_text | escape }}      
+                   <svg svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon icon-nav-arrow-right size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
+                            </svg>
+                     
+                </span>
+              {%- endif -%}
+            </div>
+          </div>
+
+          {%- if block.settings.link != blank -%}</a>{%- endif -%}
+
+          <div
+            class="media media--{{ block.settings.image_ratio }}  {%if block.settings.image_ratio == 'adapt' and  block.settings.image == blank %} media-placeholder {% endif %}"
+            {% if block.settings.image_ratio == 'adapt' and block.settings.image != blank %}
+              style="padding-bottom: {{ 1 | divided_by:  block.settings.image.aspect_ratio | times: 100 }}%;"
+            {% endif %}
+          >
+            {% if block.settings.image != blank %}
+              {% render 'responsive-img' with image: block.settings.image %}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+          </div>
+        </div>
+
+        {%- if block.settings.button_position == 'is-below-image' and block.settings.link_text != blank -%}
+          <div class="header__dropdown__actions">
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}" class="button button--{{ block.settings.button_style}}">
+                {{ block.settings.link_text | escape }}
+                      <svg svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon icon-nav-arrow-right size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
+                            </svg>
+                     
+              </a>
+            {%- else -%}
+              <span class="button button--{{ block.settings.style}}">
+                {{ block.settings.link_text | escape }}
+                      <svg svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon icon-nav-arrow-right size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
+                            </svg>
+                     
+              </span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+  {% when 'promotion_block' %}
+    <div {{ block.shopify_attributes }}>
+      <div class="header__dropdown__image section--image {{ block.settings.button_style }}" data-header-image>
+        <div class="header__dropdown__image__holder gradient color-{{ block.settings.color_scheme }}">
+          {%- if block.settings.link != blank -%}
+            <a
+              href="{{ block.settings.link }}"
+              class="link-over-image"
+              {% if block.settings.link.object.title %}
+                aria-label="{{ block.settings.link.object.title | strip_html | escape }}"
+              {% endif %}
+            >
+          {%- endif -%}
+          <div class="hero__content__wrapper align--middle-center">
+            <div
+              class="backdrop--wide"
+              style="--bg: {{ block.settings.overlay_color }}; --opacity: {{ block.settings.overlay_opacity | times: 0.01 }};"
+            >
+          
+
+        
+            </div>
+          </div>
+
+          {%- if block.settings.link != blank -%}</a>{%- endif -%}
+
+          <div
+            class="media media--{{ block.settings.image_ratio }}  {%if block.settings.image_ratio == 'adapt' and  block.settings.image == blank %} media-placeholder {% endif %}"
+            {% if block.settings.image_ratio == 'adapt' and block.settings.image != blank %}
+              style="padding-bottom: {{ 1 | divided_by:  block.settings.image.aspect_ratio | times: 100 }}%;"
+            {% endif %}
+          >
+            {% if block.settings.image != blank %}
+              {% render 'responsive-img' with image: block.settings.image %}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  {% when 'image_with_menu' %}
+    <div class="custom-block" {{ block.shopify_attributes }}>
+      <div class="header__dropdown__image section--image" data-header-image>
+        <div class="header__dropdown__image__holder  gradient color-{{ block.settings.color_scheme }}">
+          {%- if block.settings.link != blank -%}
+            <a
+              href="{{ block.settings.link }}"
+              class="link-over-image"
+              {% if block.settings.link.object.title %}
+                aria-label="{{ block.settings.link.object.title | strip_html | escape }}"
+              {% endif %}
+            >
+          {%- endif -%}
+          <div class="hero__content__wrapper align--middle-center">
+            <div
+              class="backdrop--wide"
+              style="--bg: {{ block.settings.overlay_color }}; --opacity: {{ block.settings.overlay_opacity | times: 0.01 }};"
+            >
+              {% unless block.settings.title == '' %}
+                <h2 class="hero__title">
+                  {{ block.settings.title | escape }}
+                </h2>
+              {% endunless %}
+            </div>
+          </div>
+
+          {%- if block.settings.link != blank -%}</a>{%- endif -%}
+
+          <div
+            class="media media--{{ block.settings.image_ratio }}  {%if block.settings.image_ratio == 'adapt' and  block.settings.image == blank %} media-placeholder {% endif %}"
+            {% if block.settings.image_ratio == 'adapt' and block.settings.image != blank %}
+              style="padding-bottom: {{ 1 | divided_by:  block.settings.image.aspect_ratio | times: 100 }}%;"
+            {% endif %}
+          >
+            {% if block.settings.image != blank %}
+              {% render 'responsive-img' with image: block.settings.image %}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="menu-links">
+          {% for link in linklists[block.settings.block_menu].links %}
+            {% assign link_title_handle = link.title | handle %}
+            <a
+              href="{{ link.url }}"
+              data-stagger-first
+              class="navlink navlink--grandchild {% if link.active %} main-menu--active{% endif %}{% if highlight_links contains link_title_handle %} highlight--link{% endif %}"
+            >
+              <span class="navtext">{{ link.title | strip_html | escape }}</span>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  {% when 'image_block' %}
+    <div class="custom-block" {{ block.shopify_attributes }}>
+      <div class="header__dropdown__image section--image" data-header-image>
+        <div class="header__dropdown__image__holder gradient color-{{ block.settings.color_scheme }}">
+     
+
+          {%- if block.settings.link != blank -%}
+            <a
+              href="{{ block.settings.link }}"
+              class="link-over-image"
+              {% if block.settings.link.object.title %}
+                aria-label="{{ block.settings.link.object.title | strip_html | escape }}"
+              {% endif %}
+            >
+          {%- endif -%}
+
+          <div class="hero__content__wrapper align--bottom-center">
+            <div
+              class="backdrop--wide"
+              style="--bg: {{ block.settings.overlay_color }}; --opacity: {{ block.settings.overlay_opacity | times: 0.01 }};"
+            >
+              {%- if block.settings.button_position == 'is-on-image' and block.settings.link_text != blank or block.settings.title != blank -%}
+                
+                  {% if block.settings.title != blank %}
+                  <h2 class="hero__title">
+                    {{ block.settings.title | escape }}
+                  </h2>
+                  {% endif %}
+
+
+                <span class="hero__btn button button--{{ block.settings.button_style}}">
+                  {{ block.settings.link_text | escape }}       <svg svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon icon-nav-arrow-right size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
+                            </svg>
+                     
+                </span>
+              {%- endif -%}
+            </div>
+          </div>
+
+          {%- if block.settings.link != blank -%}</a>{%- endif -%}
+
+          <div
+            class="media media--{{ block.settings.image_ratio }}  {%if block.settings.image_ratio == 'adapt' and  block.settings.image == blank %} media-placeholder {% endif %}"
+            {% if block.settings.image_ratio == 'adapt' and block.settings.image != blank %}
+              style="padding-bottom: {{ 1 | divided_by:  block.settings.image.aspect_ratio | times: 100 }}%;"
+            {% endif %}
+          >
+            {% if block.settings.image != blank %}
+              {% render 'responsive-img' with image: block.settings.image %}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+          </div>
+
+   
+        </div>
+
+        {%- if block.settings.button_position == 'is-below-image' and block.settings.link_text != blank or block.settings.title != blank -%}
+
+  
+
+          <div class="header__dropdown__actions text-center">
+
+           {% if block.settings.title != blank %}
+            <h2 class="hero__title">
+              {{ block.settings.title | escape }}
+            </h2>
+            {% endif %}
+
+
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}" class="button button--{{ block.settings.button_style}}">
+                {{ block.settings.link_text | escape }}   
+                    <svg svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon icon-nav-arrow-right size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
+                            </svg>
+                     
+              </a>
+            {%- else -%}
+              <span class="button button--{{ block.settings.style}}">
+                {{ block.settings.link_text | escape }}     
+                  <svg svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon icon-nav-arrow-right size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
+                            </svg>
+                     
+              </span>
+            {%- endif -%}
+          </div>
+
+          
+        {%- endif -%}
+      </div>
+    </div>
+
+ 
+{% endcase %}

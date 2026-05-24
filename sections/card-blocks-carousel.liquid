@@ -1,0 +1,457 @@
+{{ 'section-card-blocks.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+   .section-{{ section.id }}-padding {
+         --color-accent: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+         --color-link: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+       }
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+    @media screen and (min-width: 992px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
+  }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div
+  class="card-blocks card-blocks-carousel section-{{ section.id }}-padding  color-{{ section.settings.color_scheme }} gradient  isolate {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  {% if settings.animations_reveal_on_scroll %}
+    data-cascade
+  {% endif %}
+>
+  <div class="{{ section.settings.page_width }}">
+    <div class="card-blocks__inner">
+      {%- unless section.settings.heading == blank -%}
+        <div class="row">
+          <div class="section--header section--header-flex text-left col-12 m-auto">
+            <h2 class="section--title inline-richtext {{ section.settings.heading_size }}">
+              {{ section.settings.heading }}
+            </h2>
+            {% if section.settings.text != blank %}
+              <div class="section--text">
+                <p>{{ section.settings.text }}</p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {%- endunless -%}
+
+      {% liquid
+        assign desktop_column = 2.70
+        assign tab_column = 2.50
+        assign mobile_column = 1.25
+
+        assign enable_pagination = section.settings.enable_pagination
+        assign enable_pagination_mobile = section.settings.enable_pagination_mobile
+        assign enable_navigation_desktop = section.settings.enable_navigation_desktop
+        assign enable_navigation = section.settings.enable_navigation
+        assign autoplay = section.settings.autoplay_enabled
+        assign loop = section.settings.loop_enabled
+        assign delay = section.settings.autoplay_timeout | times: 1000
+        assign freemode = false
+      %}
+  <slideshow-swiper>
+      <div
+        class="slideshow__swiper swiper card-slider  {%if enable_pagination_mobile %} pagination_mobile__only {% endif %} {%if enable_navigation_desktop %} navigation_desktop__only {% endif %}"
+        data-centeredslides="false"
+        data-slidesDesktop="{{desktop_column}}"
+        data-slidesTab="{{tab_column}}"
+        data-slidesMobile="{{mobile_column}}"
+        data-autoPlay="{{ autoplay }}"
+        data-delay="{{ delay }}"
+        data-loop="{{ loop }}"
+        data-freemode="{{ freemode }}"
+        data-freemomentum="false"
+        data-mousewheel="false"
+        data-desktopspace="24"
+        data-tabspace="24"
+        data-mobilespace="16"
+      >
+        <div class="swiper-wrapper card-blocks-row row  row-cols-1 row-cols-lg-4">
+         
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'card_block' -%}
+              <div
+                class="card-block__card swiper-slide color-{{ block.settings.color_scheme_card }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                <div
+                  class="card-block__inner"
+                  style="--color-accent: {{ block.settings.color_accent.red }},{{ block.settings.color_accent.green }},{{ block.settings.color_accent.blue }};"
+                >
+                  <div class="card-block__header">
+                    {% if block.settings.badge_text_left != blank %}
+                      <p class="card-block__badge">{{ block.settings.badge_text_left }}</p>
+                    {% endif %}
+
+                    {% if block.settings.badge_text_right != blank %}
+                      <p class="card-block__badge">{{ block.settings.badge_text_right }}</p>
+                    {% endif %}
+                  </div>
+
+                  <div class="card-block__card-content">
+                    {% if block.settings.title != blank %}
+                      <h3 class="card-block__card__title">{{ block.settings.title }}</h3>
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                      <div class="card-block__card__text">{{ block.settings.text }}</div>
+                    {% endif %}
+                  </div>
+
+                  {% if block.settings.image %}
+                    <div class="card-block__card__img">
+                      {% render "responsive-img" with image: block.settings.image %}
+                    </div>
+                  {%- else -%}
+                    <div class="card-block__card__img">
+                      {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    </div>
+                  {% endif %}
+
+                  {% if block.settings.button_label != blank %}
+                    <a href="{{ block.settings.button_link }}" class="card-button">
+                      {{- block.settings.button_label -}}
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+
+      {% if enable_navigation or enable_navigation_desktop %}
+          <div class="swiper-navigation-flex color-{{ section.settings.color_scheme_swiper }}">
+            <div class="swiper-button-prev">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.1875 11.375L4.8125 7L9.1875 2.625" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            </div>
+            <div class="swiper-button-next">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.8125 11.375L9.1875 7L4.8125 2.625" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+            </div>
+          </div>
+        {% endif %}
+        {% if enable_pagination or enable_pagination_mobile %}
+          <div class="pagination-wrap  color-{{ section.settings.color_scheme_swiper }}">
+            <div class="swiper-pagination"></div>
+          </div>
+        {% endif %}
+      </div>
+    </slideshow-swiper>
+    </div>
+  </div>
+</div>
+{%- if section.settings.enable_divider -%}
+  <div class="section-divider"></div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Card Blocks Carousel",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_divider",
+      "default": true,
+      "label": "Enable divider"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Full Width"
+        }
+      ],
+      "default": "container-fluid",
+      "label": "Layout Width"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Section heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "hxl",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "t:sections.image-with-text.blocks.text.settings.text.default",
+      "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+    },
+    {
+      "type": "header",
+      "content": "Slider Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enabled",
+      "label": "Enable Auto Play",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_timeout",
+      "label": "Chnage Time",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "s"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop_enabled",
+      "label": "Enable Loop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination",
+      "label": "Enable Pagination",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination_mobile",
+      "label": "Enable Pagination Mobile Only",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_navigation",
+      "label": "Enable Naviagtion",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_navigation_desktop",
+      "label": "Enable Naviagtion Desktop Only",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_swiper",
+      "label": "Swiper Navigation",
+      "default": "scheme-4"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#A5A5A5"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card_block",
+      "name": "Card block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "t:sections.multicolumn.blocks.column.settings.text.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "badge_text_left",
+          "default": "Popular",
+          "label": "Badge text left"
+        },
+        {
+          "type": "text",
+          "id": "badge_text_right",
+          "default": "Rx",
+          "label": "Badge text Right"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.image-with-text.blocks.button.settings.button_label.default",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+        {
+          "type": "color",
+          "id": "color_accent",
+          "label": "Accent Color",
+          "default": "#A5A5A5"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card Blocks Carousel",
+      "blocks": [
+        {
+          "type": "card_block"
+        },
+        {
+          "type": "card_block"
+        },
+        {
+          "type": "card_block"
+        },
+        {
+          "type": "card_block"
+        },
+        {
+          "type": "card_block"
+        },
+        {
+          "type": "card_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

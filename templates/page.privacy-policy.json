@@ -1,0 +1,50 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "inner_page_header_PWcWqN": {
+      "type": "inner-page-header",
+      "name": "Inner page header",
+      "settings": {
+        "page_width": "container",
+        "caption": "Current as of 20 Jan 2025",
+        "heading": "Privacy Policy",
+        "heading_size": "hxl",
+        "text": "<p>By accessing our website, you are agreeing to be bound by these terms of service, and agree that you are responsible for compliance with any applicable local laws.<\/p>",
+        "color_accent": "#a5a5a5",
+        "color_scheme": "",
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 80,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48
+      }
+    },
+    "main": {
+      "type": "page-policy",
+      "settings": {
+        "page": "privacy-policy",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 80,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48
+      }
+    }
+  },
+  "order": [
+    "inner_page_header_PWcWqN",
+    "main"
+  ]
+}

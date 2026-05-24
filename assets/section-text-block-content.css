@@ -1,0 +1,28 @@
+
+.text_content__flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    margin-top: 64px;
+}
+
+
+.text_content--text  p:last-child {
+    margin-bottom: 0;
+}
+
+
+.text_content--caption-text{
+    color: rgb(var(--color-accent));
+}
+
+
+@media only screen and (max-width: 768px) {
+.text_content__flex{
+    grid-template-columns: 1fr;
+    gap: 32px;
+        margin-top: 32px;
+}
+
+
+}

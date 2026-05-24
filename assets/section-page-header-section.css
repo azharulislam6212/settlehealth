@@ -1,0 +1,118 @@
+.page--caption-text{
+ 
+/* Subtitle */
+font-family:  var(--font-body-family);
+font-style: normal;
+font-weight: var(--font-body-wei);
+font-size: 14px;
+line-height: 19px;
+ 
+margin: 0 0  12px;
+ 
+
+}
+
+
+.page--title {
+ margin: 0 0 24px;
+
+}
+
+.page--text p:last-child{
+    margin: 0;
+}
+
+
+.page--text{
+     margin: 0 0 32px;
+}
+
+.page--list_text{
+
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #D5D7DA;
+    box-shadow: 0 1px 2px #0a0d120d;
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 6px 4px;
+
+}
+
+.page--list_text p{
+    margin: 0;
+}
+
+
+
+@keyframes pulsing {
+  from {
+    box-shadow: 0 0 0 0 var(--blue);
+  }
+  70% {
+    box-shadow: 0 0 0 var(--pulseSize) var(--transparentBlue);
+  }
+  to {
+    box-shadow: 0 0 0 0 var(--transparentBlue);
+  }
+}
+ 
+.page--list_text em{
+ --pulseSize: 8px;
+  --blue: #2E2E25;
+  --transparentBlue: rgb(244, 235, 255);
+}
+ 
+
+
+.page--list_text em{
+    font-style: normal;
+
+    /* Badge */
+
+box-sizing: border-box;
+
+/* Auto layout */
+    display: inline-flex;
+flex-direction: row;
+align-items: center;
+padding: 2px 6px 2px 26px;
+gap: 4px;
+
+ 
+  
+background: #FFFFFF;
+border: 1px solid #D5D7DA;
+/* Shadows/shadow-xs
+
+Shadows allow you to add depth and realism to designs by positioning elements on a z-axis.
+*/
+box-shadow: 0px 1px 2px rgba(10, 13, 18, 0.05);
+border-radius: 6px;
+
+ 
+font-style: normal;
+font-weight: 200;
+font-size: 16px;
+line-height: 24px;
+ 
+position: relative;
+}
+
+
+.page--list_text em::before {
+    content: '';
+  width: var(--pulseSize);
+  height: var(--pulseSize);
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 var(--blue);
+  animation: pulsing 2s infinite;
+  transition: all 0.2s;
+  cursor: pointer;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}

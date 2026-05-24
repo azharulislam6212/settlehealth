@@ -1,0 +1,1008 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "category_image_banner_8Nie9D": {
+      "type": "category-image-banner",
+      "blocks": {
+        "caption_CthCLD": {
+          "type": "caption",
+          "settings": {
+            "text": "Popular"
+          }
+        },
+        "heading_H6Ehne": {
+          "type": "heading",
+          "settings": {
+            "heading": "Manage your menopause.  <em>Feel more like you.<\/em>",
+            "heading_size": "h1",
+            "accenttext_block": false,
+            "color_accent": "#f2b6ad"
+          }
+        },
+        "text_68FUfP": {
+          "type": "text",
+          "settings": {
+            "text": "Menopause affects everyone differently. It can hit you hard, creep up on you or even take you away from yourself. Your symptoms and feelings are individual. We get that, and we’ve got you.",
+            "text_style": "body"
+          }
+        },
+        "list_text_EXGUkE": {
+          "type": "list_text",
+          "settings": {
+            "list_text": "<ul><li>Personalised treatment pathway designed around you<\/li><li>Regular check-ins, pathway reviews and clinical advice<\/li><li>Customised nutrition, sleep and wellbeing support<\/li><\/ul>"
+          }
+        },
+        "buttons_yVBXz9": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Start my journey",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_1": "primary",
+            "button_label_2": "Explore Treatments",
+            "button_link_2": "shopify:\/\/pages\/bmi-calculator",
+            "button_style_2": "secondary-outline"
+          }
+        }
+      },
+      "block_order": [
+        "caption_CthCLD",
+        "heading_H6Ehne",
+        "text_68FUfP",
+        "list_text_EXGUkE",
+        "buttons_yVBXz9"
+      ],
+      "name": "Category image banner",
+      "settings": {
+        "allow_transparent_header": false,
+        "image": "shopify:\/\/shop_images\/Frame_2147236652.png",
+        "image_overlay_opacity": 10,
+        "image_border_radius": 0,
+        "fixed_attachment": false,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+        "color_accent": "#f2b6ad",
+        "stack_images_on_mobile": false,
+        "mobile_content_position": "middle-left",
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
+    "compaire_card_blocks_CDAfwj": {
+      "type": "compaire-card-blocks",
+      "blocks": {
+        "card_block_TV34PD": {
+          "type": "card_block",
+          "settings": {
+            "title": "Patches",
+            "text": "<p>Transdermal HRT (Hormone Replacement Treatment) patches to help regulate hormone levels and effectively manage menopause symptoms. <\/p>",
+            "image": "shopify:\/\/shop_images\/Mask_group_26_2db2b38f-b660-4062-91f4-257b95b975b9.png",
+            "block_title_1": "3 months of treatment",
+            "block_text_1": "Delivered to you",
+            "block_title_2": "Unlimited care",
+            "block_text_2": "15 min check-ins & WhatsApp messaging",
+            "block_title_3": "Treatment Review",
+            "block_text_3": "At month 3 (30 mins)",
+            "block_title_4": "Monitoring",
+            "block_text_4": "Blood test included, 8 weeks after starting treatment",
+            "button_label": "Get Started",
+            "button_link": "",
+            "button_style": "secondary",
+            "color_scheme_card": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0"
+          }
+        },
+        "card_block_NtHV67": {
+          "type": "card_block",
+          "settings": {
+            "title": "Creams",
+            "text": "<p>Soothing creams to relieve post- menopause symptoms such as vaginal dryness, soreness, itching, burning and pain during sex.  <\/p>",
+            "image": "shopify:\/\/shop_images\/Mask_group_25_79afe996-a59e-4b7f-8a06-3e73c0de10fe.png",
+            "block_title_1": "3 months of treatment",
+            "block_text_1": "Delivered to you",
+            "block_title_2": "Unlimited care",
+            "block_text_2": "15 min check-ins & WhatsApp messaging",
+            "block_title_3": "Treatment Review",
+            "block_text_3": "At month 3 (30 mins)",
+            "block_title_4": "Monitoring",
+            "block_text_4": "Blood test included, 8 weeks after starting treatment",
+            "button_label": "Get Started",
+            "button_link": "",
+            "button_style": "secondary",
+            "color_scheme_card": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0"
+          }
+        },
+        "card_block_b6Gg8T": {
+          "type": "card_block",
+          "settings": {
+            "title": "Tablets & Capsules",
+            "text": "<p>A range of oral and vaginal tablets and capsules designed to target menopause symptoms, from vaginal health to endometrial protection.<\/p>",
+            "image": "shopify:\/\/shop_images\/Mask_group_27_bfc0add6-c0ec-4ea3-bd84-8c9e299d6958.png",
+            "block_title_1": "3 months of treatment",
+            "block_text_1": "Delivered to you",
+            "block_title_2": "Unlimited care",
+            "block_text_2": "15 min check-ins & WhatsApp messaging",
+            "block_title_3": "Treatment Review",
+            "block_text_3": "At month 3 (30 mins)",
+            "block_title_4": "Monitoring",
+            "block_text_4": "Blood test included, 8 weeks after starting treatment",
+            "button_label": "Get Started",
+            "button_link": "",
+            "button_style": "secondary",
+            "color_scheme_card": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_TV34PD",
+        "card_block_NtHV67",
+        "card_block_b6Gg8T"
+      ],
+      "name": "Compair card blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container-fluid",
+        "heading": "Customised HRT Treatment. <em>settlehealthd for you.<\/em>",
+        "heading_size": "h1",
+        "text": "<p>We have a range of HRT treatments to personally suit you. Taking the time to understand your needs, we’ll get you on the right path.<\/p>",
+        "color_scheme": "scheme-1",
+        "color_accent": "#f2b6ad",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "icon_text_blocks_MDGKWj": {
+      "type": "icon-text-blocks",
+      "blocks": {
+        "icon_text_block_nDbBYD": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_2.png",
+            "title": "Complete your consultation",
+            "text": "<p>Let’s understand your journey so far. After completing a few questions online, book in a clinician chat so we can help you move forward.<\/p>"
+          }
+        },
+        "icon_text_block_wJTNQK": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_1_08606c4f-565f-4c72-88a5-163cef9111f6.png",
+            "title": "Get approved by a clinician",
+            "text": "<p>If eligible, your clinician will create a personalised treatment pathway to suit your needs and your lifestyle.<\/p>"
+          }
+        },
+        "icon_text_block_tx7LL6": {
+          "type": "icon_text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_1_49b6302d-7103-4e0c-b299-e81d6d97f364.png",
+            "title": "Start your treatment",
+            "text": "<p>Your treatment is delivered and you’re ready to go. Don’t worry, our packaging is discreet. This is your journey, no one else’s.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_block_nDbBYD",
+        "icon_text_block_wJTNQK",
+        "icon_text_block_tx7LL6"
+      ],
+      "name": "Icon Text Blocks",
+      "settings": {
+        "enable_divider": false,
+        "page_width": "container",
+        "heading": "Start your journey <em>with a menopause clinician <\/em>",
+        "heading_size": "h1",
+        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "color_accent": "#f2b6ad",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "stikcy_card_blocks_wr6wY3": {
+      "type": "stikcy-card-blocks",
+      "blocks": {
+        "card_block_aNcE7W": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_1_2438e2fe-81f7-4479-9e35-4085afc3f0d8.svg",
+            "title": "Hot Flushes",
+            "text": "<p>Sudden waves of heat, sweating and a flushed face. They appear from nowhere and stop you in your tracks. <br\/><br\/>Changing hormones can affect your body's temperature regulation. With the right treatment, they can be managed.<\/p>",
+            "color_scheme_card": ""
+          }
+        },
+        "card_block_dcKTim": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_1_2438e2fe-81f7-4479-9e35-4085afc3f0d8.svg",
+            "title": "Vaginal Discomfort",
+            "text": "<p>The dryness, soreness, itching and increased sensitivity can really get you down. <\/p><p><br\/>This is caused by reduced oestrogen levels. A range of treatments are available to help ease the uncomfortable symptoms and restore vaginal health.<\/p>",
+            "color_scheme_card": "scheme-32051e61-b6a4-4a5b-80c8-a81092a26e44"
+          }
+        },
+        "card_block_j3JVtV": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_1_2438e2fe-81f7-4479-9e35-4085afc3f0d8.svg",
+            "title": "Night Sweats",
+            "text": "<p>As hormonal fluctuations impact the body's temperature gauge, episodes of intense heat and perspiration can disrupt sleep. <\/p><p><br\/>We can help restore balance with the right treatment and lifestyle adjustments. <\/p>",
+            "color_scheme_card": "scheme-12aabace-348a-4184-95ad-169e2a162b4f"
+          }
+        },
+        "card_block_67en7P": {
+          "type": "card_block",
+          "settings": {
+            "title": "Brain Fog",
+            "text": "<p>You forget things, can't focus and everything feels a bit fuzzy. Changing hormones affect cognitive function, which can feel very frustrating.<\/p><p><br\/>We'll look at lifestyle adjustments alongside your treatment to get you firing on all cylinders again. <\/p>",
+            "color_scheme_card": "scheme-4"
+          }
+        },
+        "card_block_YqKThi": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_1_2438e2fe-81f7-4479-9e35-4085afc3f0d8.svg",
+            "title": "Mood Changes",
+            "text": "<p>Anxiety, irritability and low mood can take you away from yourself, impacting daily life.<\/p><p><br\/>This is usually linked to hormone imbalances affecting brain chemistry. You're not alone, and we're with you through every step.<\/p>",
+            "color_scheme_card": "scheme-0b2cdb7d-d95a-4547-bcd4-83ea3c2172e9"
+          }
+        },
+        "card_block_KV3PLN": {
+          "type": "card_block",
+          "settings": {
+            "title": "Low Energy",
+            "text": "<p>The disrupted sleep, mental pressure and hormonal changes can leave you feeling depleted.<\/p><p><br\/>Making healthy lifestyle adjustments around diet, exercise and rest will maximise the results of your treatment.<\/p>",
+            "color_scheme_card": "scheme-4"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_aNcE7W",
+        "card_block_dcKTim",
+        "card_block_j3JVtV",
+        "card_block_67en7P",
+        "card_block_YqKThi",
+        "card_block_KV3PLN"
+      ],
+      "name": "Sticky card blocks",
+      "settings": {
+        "enable_divider": false,
+        "heading": "If these symptoms sound familiar<em> you're not alone<\/em>",
+        "heading_size": "hxl",
+        "image": "shopify:\/\/shop_images\/Mask_group_28_31ba44e8-8fdf-4909-acbe-c36688a12586.png",
+        "color_scheme": "scheme-0693f56c-984d-4ac3-bc37-3daf4f550925",
+        "color_accent": "#f2b6ad",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tab": 0,
+        "padding_bottom_tab": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "customer_feedback_8imjkD": {
+      "type": "customer-feedback",
+      "blocks": {
+        "card_block_HnxMpA": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Generated_with_Kive.ai_-_Middle-aged_woman_with_cropped_salt-pepper_hair__focused_expression__crow_s_feet__warm_brown_eyes__cream_cotton_sweatshirt__delicate_gold_stud_earrings__looki.png",
+            "prev_image": "shopify:\/\/shop_images\/Mask_group_29.png",
+            "title": "Sally, 52",
+            "text": "<p>“Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before”<\/p>",
+            "icon_text": "Patch",
+            "color_scheme_card": "scheme-1"
+          }
+        },
+        "card_block_jCRmxM": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Generated_with_Kive.ai_-_Middle-aged_woman_with_brown_shoulder_length_hair__focused_expression__front_on_to_camera__light_crow_s_feet__brown_eyes__blue_blouse__delicate_gold_stud_earr.png",
+            "prev_image": "shopify:\/\/shop_images\/Mask_group_30.png",
+            "title": "Jennifer, 48",
+            "text": "<p>“Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before”<\/p>",
+            "icon_image": "shopify:\/\/shop_images\/ointment_1.svg",
+            "icon_text": "Cream",
+            "color_scheme_card": "scheme-1"
+          }
+        },
+        "card_block_7jbJeC": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Generated_with_Kive.ai_-_Middle-aged_woman_with_blonde_long_hair__focused_expression__front_on_to_camera__heavy_crow_s_feet__soft_blue_eyes__light_green_cotton_jumper__delicate_gold_s.png",
+            "prev_image": "shopify:\/\/shop_images\/Mask_group_31.png",
+            "title": "Karmara, 46",
+            "text": "<p>“Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before”<\/p>",
+            "icon_image": "shopify:\/\/shop_images\/pill_1.svg",
+            "icon_text": "Pill",
+            "color_scheme_card": "scheme-1"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_HnxMpA",
+        "card_block_jCRmxM",
+        "card_block_7jbJeC"
+      ],
+      "disabled": true,
+      "name": "Customer Feedback",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container-fluid",
+        "heading": "Your menopause.<em>Your pathway.<\/em>",
+        "heading_size": "h1",
+        "text": "<p>This is your journey, but you’re not alone. Hear from other women who are now living a life in full colour with settlehealth.<\/p>",
+        "color_scheme": "",
+        "color_accent": "#f2b6ad",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "card_blocks_e3MYER": {
+      "type": "card-blocks",
+      "blocks": {
+        "card_block_JdPzMU": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Estradoil_Box_1.png",
+            "title": "Evorel HRT Patches",
+            "text": "<p>Transdermal HRT (Hormone Replacement Treatment) patches are an effective treatment for menopause symptoms. A steady dose of oestrogen is absorbed into the skin to help regulate hormone levels.<\/p>",
+            "badge_text_left": "Popular",
+            "badge_text_right": "Rx",
+            "button_label": "Learn more",
+            "button_link": "",
+            "color_scheme_card": "scheme-4",
+            "color_accent": "#f2b6ad"
+          }
+        },
+        "card_block_qnPLLC": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256187_2.png",
+            "title": "Gina Vaginal Tablets",
+            "text": "<p>Clinically proven to restore vaginal health post-menopause, the plant-derived active ingredient oestradiol targets vaginal dryness, soreness, itching, burning and pain during sex.<\/p>",
+            "badge_text_left": "Popular",
+            "badge_text_right": "Rx",
+            "button_label": "Learn more",
+            "button_link": "",
+            "color_scheme_card": "scheme-4",
+            "color_accent": "#f2b6ad"
+          }
+        },
+        "card_block_qLAgnA": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Estradoil_Box_1.png",
+            "title": "Ovestin Vaginal Cream",
+            "text": "<p>A soothing cream that relieves post- menopause symptoms such as vaginal dryness, soreness, itching, burning and pain during sex. The active ingredient estriol is a naturally occurring form of oestrogen that helps restore vaginal tissues. <\/p>",
+            "badge_text_left": "Popular",
+            "badge_text_right": "Rx",
+            "button_label": "Learn more",
+            "button_link": "",
+            "color_scheme_card": "scheme-4",
+            "color_accent": "#f2b6ad"
+          }
+        },
+        "card_block_RjnY4Q": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Estradoil_Box_1.png",
+            "title": "Utrogestan Vaginal Capsules",
+            "text": "<p>Designed to protect the lining of the womb if you haven’t had a hysterectomy, this vaginal capsule contains the female hormone progesterone. Taking oestrogen as part of HRT can cause the lining of the womb to thicken, and Utrogestan balances this to keep the lining healthy.<\/p>",
+            "badge_text_left": "Popular",
+            "badge_text_right": "Rx",
+            "button_label": "Learn more",
+            "button_link": "",
+            "color_scheme_card": "scheme-4",
+            "color_accent": "#f2b6ad"
+          }
+        },
+        "card_block_FBgdVJ": {
+          "type": "card_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Estradoil_Box_1.png",
+            "title": "Estrodiol",
+            "text": "<p>Personalised care designed around you. Access a world of data and analytics<\/p>",
+            "badge_text_left": "Popular",
+            "badge_text_right": "Rx",
+            "button_label": "Learn more",
+            "button_link": "",
+            "color_scheme_card": "scheme-4",
+            "color_accent": "#f2b6ad"
+          }
+        },
+        "card_block_MArwQr": {
+          "type": "card_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Estradoil_Box_1.png",
+            "title": "Estrodiol",
+            "text": "<p>Personalised care designed around you. Access a world of data and analytics<\/p>",
+            "badge_text_left": "Popular",
+            "badge_text_right": "Rx",
+            "button_label": "Learn more",
+            "button_link": "",
+            "color_scheme_card": "scheme-4",
+            "color_accent": "#f2b6ad"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_JdPzMU",
+        "card_block_qnPLLC",
+        "card_block_qLAgnA",
+        "card_block_RjnY4Q",
+        "card_block_FBgdVJ",
+        "card_block_MArwQr"
+      ],
+      "name": "Card Blocks",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Explore our range of treatments <em>Designed around you<\/em>",
+        "heading_size": "h1",
+        "text": "",
+        "button_label": "See all treatments",
+        "button_link": "shopify:\/\/collections\/contraception",
+        "button_style": "secondary",
+        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "color_accent": "#f2b6ad",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "image_with_list_text_z4E4R6": {
+      "type": "image-with-list-text",
+      "blocks": {
+        "heading_Fb7wYj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Back to yourself<em> step by step<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "icon_text_yxVhem": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_163287ce-36bb-4696-b5c1-1fc724f6b3bf.svg",
+            "text": "<p>Hot flushes, brain fog, low mood, difficulty sleeping, vaginal dryness. The list goes on. Your journey with settlehealth treats you as a whole. We’ll help bring the balance back, one step at a time.<\/p>"
+          }
+        },
+        "text_99X9xa": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Clinicially designed treatment pathway<\/li><li>Personalised, sensitive  approach<\/li><li>We’ll set a pace that works with your lifestyle<\/li><\/ul>",
+            "text_style": "body"
+          }
+        },
+        "button_EzxkCA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start my journey",
+            "button_link": "shopify:\/\/collections",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fb7wYj",
+        "icon_text_yxVhem",
+        "text_99X9xa",
+        "button_EzxkCA"
+      ],
+      "name": "Image with list text",
+      "settings": {
+        "enable_divider": true,
+        "image": "shopify:\/\/shop_images\/image_133_Vectorized.png",
+        "color_scheme": "",
+        "color_accent": "#f2b6ad",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "call_to_action_banner_GJJ9NA": {
+      "type": "call-to-action-banner",
+      "blocks": {
+        "heading_rtWzyP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Learn more and explore <em>the health hub<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_wqQ9jX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Health Hub brings together clinician-written articles, expert guidance, and practical education to help you better understand your health. <\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_RDxWXX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore",
+            "button_link": "shopify:\/\/collections",
+            "button_style": "primary-outline"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rtWzyP",
+        "text_wqQ9jX",
+        "button_RDxWXX"
+      ],
+      "disabled": true,
+      "name": "Call to action banner",
+      "settings": {
+        "color_scheme": "scheme-0b2cdb7d-d95a-4547-bcd4-83ea3c2172e9",
+        "color_accent": "#f2b6ad",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_tab": 60,
+        "padding_bottom_tab": 60,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "image_with_list_text_3Wefme": {
+      "type": "image-with-list-text",
+      "blocks": {
+        "heading_GmmXYg": {
+          "type": "heading",
+          "settings": {
+            "heading": "A message from our<em> Superintendent Pharmacist<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "signature_text_FMxepG": {
+          "type": "signature_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group.png",
+            "heading": "Erran Morris",
+            "text": "Superintendent Pharmacist"
+          }
+        },
+        "text_8kPxfG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We understand that menopause can be an uncertain time. Navigating your way through the symptoms can feel isolating. But you don't have to do this alone. We'll guide you onto a clear path forward with the right medication and personalised support. <\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_y6bgpW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start my journey",
+            "button_link": "shopify:\/\/collections",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GmmXYg",
+        "signature_text_FMxepG",
+        "text_8kPxfG",
+        "button_y6bgpW"
+      ],
+      "name": "Image with list text",
+      "settings": {
+        "enable_divider": true,
+        "image": "shopify:\/\/shop_images\/Mask_group_2632d13c-3315-4ba8-bf99-2cca608baf11.png",
+        "color_scheme": "",
+        "color_accent": "#f2b6ad",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "image_banner_Eexrpa": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_y4HB8f": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalised Healthcare. <em>Designed for you. Built to last.<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Cmq8iy": {
+          "type": "text",
+          "settings": {
+            "text": "Whatever your story, we take a holistic approach to your healthcare. There is no quick fix for long-term health. One size can’t possibly fit all. Your journey with settlehealth is as individual as you. Ready to take the first step?",
+            "text_style": "body"
+          }
+        },
+        "buttons_EadCpi": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Start my journey",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_y4HB8f",
+        "text_Cmq8iy",
+        "buttons_EadCpi"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "image": "shopify:\/\/shop_images\/iStock-2260857117_1_1.png",
+        "image_overlay_opacity": 10,
+        "image_border_radius": 0,
+        "fixed_attachment": false,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
+        "color_accent": "#f2b6ad",
+        "stack_images_on_mobile": false,
+        "mobile_content_position": "middle-center",
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
+    "multicard_blocks_tqbrNG": {
+      "type": "multicard-blocks",
+      "blocks": {
+        "card_block_3RykGM": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256003.png",
+            "title": "Specialised clinicians <em>in menopause<\/em>",
+            "text": "It’s a confusing time, but you’re in safe hands. Feel heard and understood, with a clear path forward."
+          }
+        },
+        "card_block_JgDMAB": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256172_1.png",
+            "title": "Treatments <em>to suit you<\/em>",
+            "text": "Our wide range of treatments includes patches, topical creams and tablets. Your clinician will work with you to find the right one."
+          }
+        },
+        "card_block_Ye33zX": {
+          "type": "card_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256173_2.png",
+            "title": "Track your <em>changes<\/em>",
+            "text": "Your dashboard gives you access to your treatment pathway so you can record your symptoms and track how they change."
+          }
+        },
+        "card_block_3Pxxam": {
+          "type": "card_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256174.png",
+            "title": "Supporting range <em>of supplements<\/em>",
+            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+          }
+        },
+        "card_block_BNbThw": {
+          "type": "card_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256174.png",
+            "title": "Supporting range <em>of supplements<\/em>",
+            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+          }
+        },
+        "card_block_bRU4AM": {
+          "type": "card_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256173_2.png",
+            "title": "Track your <em>symptoms<\/em>",
+            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+          }
+        },
+        "card_block_8qm7eC": {
+          "type": "card_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2141256003.png",
+            "title": "Experts in treating <em>menopause<\/em>",
+            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_3RykGM",
+        "card_block_JgDMAB",
+        "card_block_Ye33zX",
+        "card_block_3Pxxam",
+        "card_block_BNbThw",
+        "card_block_bRU4AM",
+        "card_block_8qm7eC"
+      ],
+      "name": "Multicard blocks",
+      "settings": {
+        "enable_divider": false,
+        "page_width": "container",
+        "heading": "Complete care <em>through your menopause journey<\/em>",
+        "heading_size": "h1",
+        "text": "",
+        "alignment": "left",
+        "autoplay_enabled": false,
+        "autoplay_timeout": 5,
+        "loop_enabled": false,
+        "enable_pagination": false,
+        "enable_pagination_mobile": false,
+        "enable_navigation": false,
+        "enable_navigation_desktop": false,
+        "color_scheme_swiper": "",
+        "color_scheme": "",
+        "color_scheme_card": "scheme-12aabace-348a-4184-95ad-169e2a162b4f",
+        "color_accent": "#f2b6ad",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "them_section_id": ""
+      }
+    },
+    "team_carousel_BXYGe4": {
+      "type": "team-carousel-product",
+      "blocks": {
+        "team_block_3ftVVg": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_28.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent Pharmacist",
+            "text": "Vast experience across some of the UK’s leading pharmacies. Specialising in clinical safety and digital healthcare, with a modern approach that embraces innovation and raises the standard. The driving force that leads our team of highly skilled clinicians. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_9EYiea": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_24.png",
+            "name": "Kiran Williamson",
+            "designation": "Director Of Operations",
+            "text": "Experienced leader with a track record of scaling high-growth business through process optimisation, cross-functional leadership, and data-driven decision making. Specialises in building operational infrastructure that supports rapid commercial expansion.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_ECLNDX": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Aumbreen Masood",
+            "designation": "Prescribing Pharmacist",
+            "text": "Specialises in weight loss, with a diverse background in community pharmacy management providing both NHS and private clinical services. Experienced in patient assessment, diagnosis and prescribing across a range of acute and chronic conditions. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_m3Hye8": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_23.png",
+            "name": "Nafisa Raza",
+            "designation": "Prescribing Pharmacist",
+            "text": "Patient-centred approach with hands-on experience working in a GP surgery. Specialised in weight management and type 2 diabetes, and dedicated to helping patients make sustainable health improvements using a personalised, evidence-based approach.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_yXJrDp": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Aumbreen Masood",
+            "designation": "Prescribing Pharmacist",
+            "text": "Specialises in weight loss, with a diverse background in community pharmacy management providing both NHS and private clinical services. Experienced in patient assessment, diagnosis and prescribing across a range of acute and chronic conditions. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_4A6JDD": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_21.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "team_block_3ftVVg",
+        "team_block_9EYiea",
+        "team_block_ECLNDX",
+        "team_block_m3Hye8",
+        "team_block_yXJrDp",
+        "team_block_4A6JDD"
+      ],
+      "name": "Team Carousel Product",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Clinicians you can trust<em> Qualified. Compassionate. Committed.<\/em>",
+        "heading_size": "h2",
+        "text": "<p>Our UK-leading clinicians are at the top of their game. Highly skilled and individually specialised. Dedicated to giving you confidence, clarity and a clear path forward. <\/p>",
+        "alignment": "center",
+        "autoplay_enabled": false,
+        "autoplay_timeout": 5,
+        "loop_enabled": false,
+        "enable_pagination": false,
+        "enable_pagination_mobile": false,
+        "enable_navigation": false,
+        "enable_navigation_desktop": false,
+        "color_scheme_swiper": "scheme-32051e61-b6a4-4a5b-80c8-a81092a26e44",
+        "color_scheme": "",
+        "color_scheme_card": "scheme-1",
+        "color_accent": "#a5a5a5",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "them_section_id": ""
+      }
+    },
+    "faq_section_bjxzKR": {
+      "type": "faq-section",
+      "blocks": {
+        "collapsible_row_4VGV9b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 1",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+          }
+        },
+        "collapsible_row_bzzp7L": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 2",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+          }
+        },
+        "collapsible_row_C9p89w": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 3",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+          }
+        },
+        "collapsible_row_VqL7ez": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 4",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4VGV9b",
+        "collapsible_row_bzzp7L",
+        "collapsible_row_C9p89w",
+        "collapsible_row_VqL7ez"
+      ],
+      "name": "Faq Section",
+      "settings": {
+        "heading": "Questions?<em> We’re here to help.<\/em>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "disclosure_toggle": "plus",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "color_accent": "#a5a5a5",
+        "open_first_collapsible_row": true,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "author_block_Q7eG9e": {
+      "type": "author-block",
+      "blocks": {
+        "heading_WMmGM8": {
+          "type": "heading",
+          "settings": {
+            "heading": "A note from our Director"
+          }
+        },
+        "text_p4XQNh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“We have built settlehealth on the principle that health should be personalised, it should grow and change with you. Our team are aligned on the one clear vision that service is everything. Let our team take care of you through your journey with settlehealth”<\/p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_MD8QkF": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_1_976f2227-c59d-4dd1-b7ef-c4c58c8a1d5b.svg",
+            "title": "Kiran Williamson"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WMmGM8",
+        "text_p4XQNh",
+        "icon_text_MD8QkF"
+      ],
+      "name": "Author block",
+      "settings": {
+        "enable_divider": false,
+        "image": "shopify:\/\/shop_images\/Generated_with_Kive.ai_-_in_navy_pinstripe_power_suit_with_pearl_statement_necklace__seated_in_blush_velvet_armchair__direct_gaze__polished_blonde_bob__executive_portrait_lighting__cl.png",
+        "color_scheme": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
+        "color_accent": "#a5a5a5",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "category_image_banner_8Nie9D",
+    "compaire_card_blocks_CDAfwj",
+    "icon_text_blocks_MDGKWj",
+    "stikcy_card_blocks_wr6wY3",
+    "customer_feedback_8imjkD",
+    "card_blocks_e3MYER",
+    "image_with_list_text_z4E4R6",
+    "call_to_action_banner_GJJ9NA",
+    "image_with_list_text_3Wefme",
+    "image_banner_Eexrpa",
+    "multicard_blocks_tqbrNG",
+    "team_carousel_BXYGe4",
+    "faq_section_bjxzKR",
+    "author_block_Q7eG9e"
+  ]
+}

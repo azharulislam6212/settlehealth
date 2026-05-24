@@ -1,0 +1,709 @@
+{{ 'section-banner-card-blocks.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+         --color-accent: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+         --color-link: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+       }
+
+
+     .section-{{ section.id }}-padding {
+       padding-top: {{ section.settings.padding_top_mobile }}px;
+       padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+     }
+     @media screen and (min-width: 992px) {
+       .section-{{ section.id }}-padding {
+         padding-top: {{ section.settings.padding_top_tab }}px;
+         padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+       }
+   }
+
+     @media screen and (min-width: 1024px) {
+       .section-{{ section.id }}-padding {
+         padding-top: {{ section.settings.padding_top }}px;
+         padding-bottom: {{ section.settings.padding_bottom }}px;
+       }
+     }
+{%- endstyle -%}
+
+<div
+  class="banner-card-blocks section-{{ section.id }}-padding  color-{{ section.settings.color_scheme }} gradient  isolate {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  {% if settings.animations_reveal_on_scroll %}
+    data-cascade
+  {% endif %}
+>
+  <div class="{{ section.settings.page_width }}">
+
+  <div class="banner-card-container"> 
+    {%- unless section.settings.heading == blank -%}
+      <div class="row">
+        <div class="section--header section--header-flex  col-12 m-auto">
+          <h2 class="section--title inline-richtext {{ section.settings.heading_size }}">
+            {{ section.settings.heading }}
+          </h2>
+          {% if section.settings.text != blank %}
+            <div class="section--text">
+              <p>{{ section.settings.text }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {%- endunless -%}
+    <div class="row align-items-stretch">
+      <div class="col-12">
+        <div class="banner-card__grid">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'banner_card_block' -%}
+                <div
+                  class="banner-card   {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <div
+                    class="banner-card__inner  color-{{ block.settings.color_scheme_card }} gradient"
+                    style="--color-background: {{ block.settings.color_background }} ;  --color-accent: {{ block.settings.color_accent.red }},{{ block.settings.color_accent.green }},{{ block.settings.color_accent.blue }};"
+                  >
+                    {% if block.settings.image != blank %}
+                      <div  class="banner-card__image" >
+                        {% render "responsive-img" with image: block.settings.image %}
+                      </div>
+                    {% else %}
+                      <div class="banner-card__image">
+                        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                    {% endif %}
+
+                    <div class="banner-card__content">
+                      {% if block.settings.title != blank %}
+                        <h3 class="banner-card__title">{{ block.settings.title }}  </h3>
+                      {% endif %}
+
+                     {% if block.settings.price_text != blank %}
+                        <p class="banner-card__price_text">{{ block.settings.price_text }}</p>
+                      {% endif %}
+                    
+                       {%- if block.settings.text != blank -%}
+                        <div class="banner-card__text">
+                         <p> {{ block.settings.text }} </p>
+                        </div>
+                      {%- endif -%}
+
+                        {%- if block.settings.list_text != blank -%}
+                        <div class="banner-card__list">
+                          {{ block.settings.list_text }}
+                        </div>
+                      {%- endif -%}
+
+                        <div class="banner-card__buttons">
+                    
+                          {%- if block.settings.button_label_1 != blank -%}
+                          <a
+                            {% if block.settings.button_link_1 == blank %}
+                              role="link" aria-disabled="true"
+                            {% else %}
+                              href="{{ block.settings.button_link_1 }}"
+                            {% endif %}
+                            class="button  button--{{  block.settings.button_style_1 }}"
+                          >
+                            {{- block.settings.button_label_1 | escape -}} 
+
+                            <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.071 7.071L1.414 12.728L0 11.314L4.95 6.364L0 1.414L1.414 0L7.071 5.657C7.25847 5.84453 7.36379 6.09884 7.36379 6.364C7.36379 6.62916 7.25847 6.88347 7.071 7.071Z" fill="black"/>
+</svg>
+   
+                          </a>
+                        {%- endif -%}
+                        {%- if block.settings.button_label_2 != blank -%}
+                          <a
+                            {% if block.settings.button_link_2 == blank %}
+                              role="link" aria-disabled="true"
+                            {% else %}
+                              href="{{ block.settings.button_link_2 }}"
+                            {% endif %}
+                            class="button   button--{{  block.settings.button_style_2 }} glass-container"
+                          >
+
+                                <div class="glass-filter"></div>
+                        <div class="glass-overlay"></div>
+                        <div class="glass-specular"></div>
+                            <span class="button--text">
+  {{- block.settings.button_label_2 | escape -}} 
+                            </span>
+                               
+                          </a>
+                        {%- endif -%}
+
+                   
+                      </div>
+
+ 
+                    </div>
+                  </div>
+                </div>
+
+
+                 {%- when 'banner_card_block_2' -%}
+                <div
+                  class="banner-card   {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <div
+                    class="banner-card__inner  color-{{ block.settings.color_scheme_card }} gradient"
+                    style="--color-background: {{ block.settings.color_background }} ;  --color-accent: {{ block.settings.color_accent.red }},{{ block.settings.color_accent.green }},{{ block.settings.color_accent.blue }};"
+                  >
+                    {% if block.settings.image != blank %}
+                      <div
+                        class="banner-card__image"
+                      >
+                        {% render "responsive-img" with image: block.settings.image %}
+                      </div>
+                    {% else %}
+                      <div class="banner-card__image">
+                        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                    {% endif %}
+
+                    <div class="banner-card__content banner-card__content--fix">
+                      {% if block.settings.title != blank %}
+                        <h3 class="banner-card__title">{{ block.settings.title }}  </h3>
+                      {% endif %}
+                     
+                      {% if block.settings.price_text != blank %}
+                        <p class="banner-card__price_text">{{ block.settings.price_text }}</p>
+                      {% endif %}
+                     
+
+                       {%- if block.settings.text != blank -%}
+                        <div class="banner-card__text">
+                         <p> {{ block.settings.text }} </p>
+                        </div>
+                      {%- endif -%}
+
+                      {%- if block.settings.list_text != blank -%}
+                        <div class="banner-card__list">
+                          {{ block.settings.list_text }}
+                        </div>
+                      {%- endif -%}
+
+                      <div class="banner-card__buttons">
+                     
+
+                   {%- if block.settings.button_label_1 != blank -%}
+                  <a
+                    {% if block.settings.button_link_1 == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link_1 }}"
+                    {% endif %}
+                    class="button button--{{ block.settings.button_size_1 }} button--{{  block.settings.button_style_1 }}"
+                  >
+                    {{- block.settings.button_label_1 | escape -}}   
+
+                    <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.071 7.071L1.414 12.728L0 11.314L4.95 6.364L0 1.414L1.414 0L7.071 5.657C7.25847 5.84453 7.36379 6.09884 7.36379 6.364C7.36379 6.62916 7.25847 6.88347 7.071 7.071Z" fill="black"/>
+</svg>
+
+
+                  </a>
+                {%- endif -%}
+                {%- if block.settings.button_label_2 != blank -%}
+                  <a
+                    {% if block.settings.button_link_2 == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link_2 }}"
+                    {% endif %}
+                    class="button button--{{ block.settings.button_size_2 }} glass-container button--{{  block.settings.button_style_2 }}"
+                  >
+
+                      <div class="glass-filter"></div>
+                        <div class="glass-overlay"></div>
+                        <div class="glass-specular"></div>
+                            <span class="button--text">
+                   {{- block.settings.button_label_2 | escape -}} 
+                            </span>
+
+                  </a>
+                {%- endif -%}
+
+                   
+                      </div>
+
+                     
+                    </div>
+                  </div>
+                </div>
+
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+
+</div>
+  </div>
+</div>
+{%- if section.settings.enable_divider -%}
+  <div class="section-divider"></div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Banner card blocks",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_divider",
+      "default": true,
+      "label": "Enable divider"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Full Width"
+        }
+      ],
+      "default": "container-fluid",
+      "label": "Layout Width"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Section heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "hxl",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "t:sections.image-with-text.blocks.text.settings.text.default",
+      "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "t:sections.image-with-text.blocks.button.settings.button_label.default",
+      "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+      "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "banner_card_block",
+      "name": "Banner card 1",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+       {
+          "type": "inline_richtext",
+          "id": "price_text",
+          "label": "Price text"
+        },
+        {
+          "type": "richtext",
+          "id": "list_text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "List content"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+                {
+          "type": "header",
+          "content": "t:sections.image-banner.blocks.buttons.settings.header_1.content"
+        },
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "t:sections.image-banner.blocks.buttons.settings.button_label_1.default",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "select",
+          "id": "button_style_1",
+          "label": "Button Style",
+          "options": [
+          {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "primary-outline",
+              "label": "Primary outline"
+            },
+          {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "secondary-outline",
+              "label": "Secondary outline"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.image-banner.blocks.buttons.settings.header_2.content"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "default": "t:sections.image-banner.blocks.buttons.settings.button_label_2.default",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+        },
+             {
+          "type": "select",
+          "id": "button_style_2",
+          "label": "Button Style",
+          "options": [
+          {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "primary-outline",
+              "label": "Primary outline"
+            },
+          {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "secondary-outline",
+              "label": "Secondary outline"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+        {
+          "type": "color_background",
+          "id": "color_background",
+          "label": "Background Color",
+          "default": "linear-gradient(103.46deg, #16527F 33.54%, #94CBF5 88.16%), linear-gradient(325.26deg, #E4BFAA 9.46%, #CC9D82 55.29%, #C78D6E 68.83%, #BB805E 103.83%), linear-gradient(194.03deg, #A59768 1.87%, #DFD09F 90%), linear-gradient(164.74deg, #A59768 1.42%, #DFD09F 89.28%)"
+        },
+        {
+          "type": "color",
+          "id": "color_accent",
+          "label": "Accent Color",
+          "default": "#CCF9AB"
+        }
+      ]
+    },
+        {
+      "type": "banner_card_block_2",
+      "name": "Banner card 2",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+           {
+          "type": "inline_richtext",
+          "id": "price_text",
+          "label": "Price text"
+        },
+        {
+          "type": "richtext",
+          "id": "list_text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "List content"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+                {
+          "type": "header",
+          "content": "t:sections.image-banner.blocks.buttons.settings.header_1.content"
+        },
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "t:sections.image-banner.blocks.buttons.settings.button_label_1.default",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "select",
+          "id": "button_style_1",
+          "label": "Button Style",
+          "options": [
+          {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "primary-outline",
+              "label": "Primary outline"
+            },
+          {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "secondary-outline",
+              "label": "Secondary outline"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.image-banner.blocks.buttons.settings.header_2.content"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "default": "t:sections.image-banner.blocks.buttons.settings.button_label_2.default",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+        },
+             {
+          "type": "select",
+          "id": "button_style_2",
+          "label": "Button Style",
+          "options": [
+          {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "primary-outline",
+              "label": "Primary outline"
+            },
+          {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "secondary-outline",
+              "label": "Secondary outline"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme_card",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        },
+        {
+          "type": "color_background",
+          "id": "color_background",
+          "label": "Background Color",
+          "default": "linear-gradient(103.46deg, #16527F 33.54%, #94CBF5 88.16%), linear-gradient(325.26deg, #E4BFAA 9.46%, #CC9D82 55.29%, #C78D6E 68.83%, #BB805E 103.83%), linear-gradient(194.03deg, #A59768 1.87%, #DFD09F 90%), linear-gradient(164.74deg, #A59768 1.42%, #DFD09F 89.28%)"
+        },
+        {
+          "type": "color",
+          "id": "color_accent",
+          "label": "Accent Color",
+          "default": "#CCF9AB"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner card blocks",
+      "blocks": [
+        {
+          "type": "banner_card_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

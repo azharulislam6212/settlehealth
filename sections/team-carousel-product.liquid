@@ -1,0 +1,446 @@
+{{ 'section-team-carousel.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+
+    .section-{{ section.id }}-padding  {
+         --color-accent: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+         --color-link: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+       }
+
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+    @media screen and (min-width: 992px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
+  }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+<div
+  id="{{ section.settings.them_section_id |  default:"team-section" }}"
+  class="team-section team-section-product section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  {% if settings.animations_reveal_on_scroll %}
+    data-cascade
+  {% endif %}
+>
+  <div class="{{ section.settings.page_width }}">
+   
+
+    {% liquid
+      assign desktop_column = 3.30
+      assign tab_column = 2.50
+      assign mobile_column = 1.25
+
+      assign enable_pagination = section.settings.enable_pagination
+      assign enable_pagination_mobile = section.settings.enable_pagination_mobile
+      assign enable_navigation_desktop = section.settings.enable_navigation_desktop
+      assign enable_navigation = section.settings.enable_navigation
+      assign autoplay = section.settings.autoplay_enabled
+      assign loop = section.settings.loop_enabled
+      assign delay = section.settings.autoplay_timeout | times: 1000
+      assign freemode = false
+    %}
+
+
+<div class="team-section__innr">
+
+ {%- unless section.settings.heading == blank -%}
+      <div class="row">
+        <div class="section--header text-{{ section.settings.alignment }} col-12 m-auto">
+          <h2 class="section--title inline-richtext {{ section.settings.heading_size }}">
+            {{ section.settings.heading }}
+          </h2>
+          {% if section.settings.text != blank %}
+            <div class="section--text">{{ section.settings.text }}</div>
+          {% endif %}
+        </div>
+      </div>
+    {%- endunless -%}
+    
+    <slideshow-swiper>
+      <div
+        class="slideshow__swiper swiper team-slider  {%if enable_pagination_mobile %} pagination_mobile__only {% endif %} {%if enable_navigation_desktop %} navigation_desktop__only {% endif %}"
+        data-centeredslides="false"
+        data-slidesDesktop="{{desktop_column}}"
+        data-slidesTab="{{tab_column}}"
+        data-slidesMobile="{{mobile_column}}"
+        data-autoPlay="{{ autoplay }}"
+        data-delay="{{ delay }}"
+        data-loop="{{ loop }}"
+        data-freemode="{{ freemode }}"
+        data-freemomentum="false"
+        data-mousewheel="false"
+        data-desktopspace="24"
+        data-tabspace="24"
+        data-mobilespace="16"
+      >
+        <div class="swiper-wrapper team-blocks row   row-cols-1 row-cols-lg-5">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'team_block' -%}
+                <div class="team-card__item swiper-slide col" {{ block.shopify_attributes }}>
+                  <div class="team-card color-{{ section.settings.color_scheme_card }} gradient {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"     {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}>
+                    <div class="team-image">
+                      {% if block.settings.image != blank %}
+                        {% render 'responsive-img' with image: block.settings.image %}
+                      {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                      {% endif %}
+                    </div>
+
+                    <div class="team-card__contentt">
+                      {% if block.settings.name != blank %}
+                        <h2 class="team-name">{{ block.settings.name }}</h2>
+                      {% endif %}
+                      {% if block.settings.designation != blank %}
+                        <h3 class="team-designation">{{ block.settings.designation }}</h3>
+                      {% endif %}
+
+                      {% if block.settings.text != blank %}
+                        <p class="team-card__text rte">{{ block.settings.text }}</p>
+                      {% endif %}
+
+                      {% if block.settings.button_label != blank %}
+                        <a href="{{ block.settings.button_link }}" class="team-card__button link-underline">
+                          {{- block.settings.button_label -}}
+                        </a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+
+        {% if enable_navigation or enable_navigation_desktop %}
+          <div class="swiper-navigation-flex color-{{ section.settings.color_scheme_swiper }}">
+            <div class="swiper-button-prev">
+             <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.197758 5.62485C0.0711276 5.75164 2.58925e-07 5.92351 2.66758e-07 6.1027C2.7459e-07 6.2819 0.0711276 6.45376 0.197758 6.58055L5.60739 11.9902C5.6693 12.0566 5.74395 12.1099 5.8269 12.1469C5.90984 12.1838 5.99939 12.2037 6.09018 12.2053C6.18097 12.2069 6.27116 12.1902 6.35536 12.1562C6.43956 12.1222 6.51605 12.0716 6.58026 12.0073C6.64447 11.9431 6.69509 11.8667 6.7291 11.7825C6.76311 11.6983 6.77981 11.6081 6.77821 11.5173C6.77661 11.4265 6.75673 11.3369 6.71977 11.254C6.68282 11.171 6.62953 11.0964 6.56309 11.0345L2.30751 6.77891L15.1013 6.77891C15.2806 6.77891 15.4526 6.70766 15.5794 6.58085C15.7063 6.45404 15.7775 6.28204 15.7775 6.1027C15.7775 5.92336 15.7063 5.75137 15.5794 5.62455C15.4526 5.49774 15.2806 5.4265 15.1013 5.4265L2.30751 5.4265L6.56309 1.17092C6.62953 1.10902 6.68282 1.03436 6.71977 0.951415C6.75673 0.868468 6.77661 0.778927 6.77821 0.688132C6.77981 0.597338 6.76311 0.507151 6.7291 0.422952C6.69509 0.338753 6.64447 0.262266 6.58026 0.198055C6.51605 0.133844 6.43956 0.0832236 6.35536 0.0492142C6.27116 0.0152047 6.18097 -0.00149699 6.09018 0.000104971C5.99939 0.00170693 5.90984 0.0215797 5.8269 0.0585383C5.74395 0.0954968 5.6693 0.148784 5.60739 0.21522L0.197758 5.62485Z" fill="currentColor"/>
+</svg>
+
+
+            </div>
+            <div class="swiper-button-next">
+
+            <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5798 5.62485C15.7064 5.75164 15.7775 5.92351 15.7775 6.1027C15.7775 6.2819 15.7064 6.45376 15.5798 6.58055L10.1701 11.9902C10.1082 12.0566 10.0336 12.1099 9.95063 12.1469C9.86768 12.1838 9.77814 12.2037 9.68735 12.2053C9.59655 12.2069 9.50637 12.1902 9.42217 12.1562C9.33797 12.1222 9.26148 12.0716 9.19727 12.0073C9.13306 11.9431 9.08244 11.8667 9.04843 11.7825C9.01442 11.6983 8.99772 11.6081 8.99932 11.5173C9.00092 11.4265 9.02079 11.3369 9.05775 11.254C9.09471 11.171 9.148 11.0964 9.21444 11.0345L13.47 6.77891L0.676233 6.77891C0.496893 6.77891 0.324897 6.70766 0.198084 6.58085C0.0712707 6.45404 2.83356e-05 6.28204 2.83435e-05 6.1027C2.83513e-05 5.92336 0.0712707 5.75137 0.198084 5.62455C0.324897 5.49774 0.496893 5.4265 0.676233 5.4265L13.47 5.4265L9.21444 1.17092C9.148 1.10902 9.09471 1.03436 9.05775 0.951415C9.02079 0.868468 9.00092 0.778927 8.99932 0.688132C8.99772 0.597338 9.01442 0.507151 9.04843 0.422952C9.08244 0.338753 9.13306 0.262266 9.19727 0.198055C9.26148 0.133844 9.33797 0.0832236 9.42217 0.0492142C9.50637 0.0152047 9.59655 -0.00149699 9.68735 0.000104971C9.77814 0.00170693 9.86768 0.0215797 9.95063 0.0585383C10.0336 0.0954968 10.1082 0.148784 10.1701 0.21522L15.5798 5.62485Z" fill="currentColor"/>
+</svg>
+
+
+ 
+
+            </div>
+          </div>
+        {% endif %}
+        {% if enable_pagination or enable_pagination_mobile %}
+          <div class="pagination-wrap  color-{{ section.settings.color_scheme_swiper }}">
+            <div class="swiper-pagination"></div>
+          </div>
+        {% endif %}
+      </div>
+    </slideshow-swiper>
+
+    </div>
+  </div>
+</div>
+{%- if section.settings.enable_divider -%}
+   <div class="section-divider"></div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Team Carousel product",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+                  {
+      "type": "checkbox",
+      "id": "enable_divider",
+      "default": false,
+      "label": "Enable divider"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Full Width"
+        }
+      ],
+      "default": "container-fluid",
+      "label": "Layout Width"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Section Heading",
+      "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "t:sections.image-with-text.blocks.text.settings.text.default",
+      "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+    },
+       {
+      "type": "text_alignment",
+      "id": "alignment",
+      "default":  "left",
+      "label": "Alignment"
+    },
+    {
+      "type": "header",
+      "content": "Slider Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enabled",
+      "label": "Enable Auto Play",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_timeout",
+      "label": "Chnage Time",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "s"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop_enabled",
+      "label": "Enable Loop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination",
+      "label": "Enable Pagination",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination_mobile",
+      "label": "Enable Pagination Mobile Only",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_navigation",
+      "label": "Enable Naviagtion",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_navigation_desktop",
+      "label": "Enable Naviagtion Desktop Only",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_swiper",
+      "label": "Swiper Navigation",
+      "default": "scheme-4"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_card",
+      "label": "Card Color",
+      "default": "scheme-4"
+    },
+        {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#CCF9AB"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Desktop",
+      "default": 76
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Desktop",
+      "default": 76
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 68
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 68
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 56
+    },
+    {
+      "type": "text",
+      "id": "them_section_id",
+      "label": "Section Id"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "team_block",
+      "name": "Team",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Person name"
+        },
+           {
+          "type": "text",
+          "id": "designation",
+          "label": "Designation"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.multirow.blocks.row.settings.button_label.default",
+          "label": "t:sections.multirow.blocks.row.settings.button_label.label",
+          "info": "t:sections.multirow.blocks.row.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.multirow.blocks.row.settings.button_link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Team Carousel product",
+      "blocks": [
+        {
+          "type": "team_block"
+        },
+        {
+          "type": "team_block"
+        },
+        {
+          "type": "team_block"
+        },
+        {
+          "type": "team_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
