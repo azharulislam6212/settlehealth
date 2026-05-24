@@ -39,6 +39,7 @@
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false,
+            "button_url": "",
             "promo_text": ""
           }
         }
@@ -54,7 +55,7 @@
         "enable_divider": true,
         "enable_sticky_info": true,
         "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
-        "color_accent": "#ccf9ab",
+        "color_accent": "#8e3a2a",
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
@@ -162,6 +163,7 @@
         "button_label": "See all questions",
         "button_link": "shopify://pages/frequently-asked-questions",
         "button_style": "primary",
+        "image": "shopify://shop_images/Screenshot_2026-05-10_at_21.43.57_1.png",
         "layout": "none",
         "disclosure_toggle": "plus",
         "container_color_scheme": "",
