@@ -177,11 +177,85 @@
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 30
       }
+    },
+    "text_blocks_list_content_PLkrpQ": {
+      "type": "text-blocks-list-content",
+      "blocks": {
+        "text_block_GmgEBB": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>Doctor-led from your first call Every assessment carried out by a CQC-regulated specialist psychiatrist.</p>"
+          }
+        },
+        "text_block_aUXcGt": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>Same clinician, start to finish</p>"
+          }
+        },
+        "text_block_J46Qh4": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>Medication dispensed by our own team and delivered free, in plain packaging.</p>"
+          }
+        },
+        "text_block_jyrRpH": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>Monthly check-ins during titration. Annual reviews after. Direct messaging throughout.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_GmgEBB",
+        "text_block_aUXcGt",
+        "text_block_J46Qh4",
+        "text_block_jyrRpH"
+      ],
+      "name": "List Text blocks",
+      "settings": {
+        "page_width": "container",
+        "caption": "",
+        "heading": "Built around the way ADHD <em>actually shows up.</em>",
+        "heading_size": "hxl",
+        "text": "<p>Most private ADHD services treat assessment as a transaction - book, diagnose, prescribe, disappear. Settle was built to do the opposite.</p><p>Medication is dispensed by our team and delivered to your door. And because we own every step, nothing falls through the gaps between assessment, prescription, and the years of care that follow.</p>",
+        "button_label": "Start my assessment",
+        "link": "shopify://pages/professionals",
+        "button_style": "primary",
+        "color_accent": "#8e3a2a",
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_tab": 60,
+        "padding_bottom_tab": 60,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48
+      }
+    },
+    "featured_blog_jdVYei": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "news",
+        "post_limit": 3,
+        "heading": "How does Settle work?",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "color_scheme": "scheme-6",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "faq_section_bjxzKR"
+    "faq_section_bjxzKR",
+    "text_blocks_list_content_PLkrpQ",
+    "featured_blog_jdVYei"
   ]
 }

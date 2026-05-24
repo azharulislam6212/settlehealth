@@ -1,7 +1,7 @@
 .list-content__flex{
     display: grid;
     gap: 4rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr ;
 }
 
 @media screen and (min-width: 750px) {
