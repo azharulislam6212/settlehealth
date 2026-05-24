@@ -23,7 +23,7 @@ product-info {
   .product__column-sticky {
     display: block;
     position: sticky;
-    top: 3rem;
+    top: 13rem;
     z-index: 2;
   }
 
@@ -78,17 +78,35 @@ product-info {
 
   .product--medium:not(.product--no-media) .product__media-wrapper,
   .product--small:not(.product--no-media) .product__info-wrapper {
-    max-width: 57.11%;
-    width: calc(57.11% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 55.66%;
+    width: calc(55.66% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--medium:not(.product--no-media) .product__info-wrapper,
   .product--small:not(.product--no-media) .product__media-wrapper {
-    max-width: 42.89%;
-    width: calc(42.89% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 44.34%;
+    width: calc(44.34% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 }
 
+@media screen and (min-width: 1280px) {
+
+  .product__info-wrapper {
+    padding: 0 0 0 12.6rem;
+  }
+
+  .product__info-wrapper--extra-padding {
+    padding: 0 0 0 9rem;
+  }
+
+  .product--right .product__info-wrapper {
+    padding: 0 12.6rem 0 0;
+  }
+
+  .product--right .product__info-wrapper--extra-padding {
+    padding: 0 9rem 0 0;
+  }
+}
 /* Dynamic checkout */
 
 .shopify-payment-button__button {
@@ -179,6 +197,14 @@ product-info {
 
 .product-form__input .form__label {
   padding-left: 0;
+font-family: var(--font-inter);
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 32px;
+ 
+
+ margin-bottom: 8px;
 }
 
 .product-form__input .select {
@@ -193,7 +219,7 @@ product-info {
   margin-bottom: 1.5rem;
   gap: 5px;
 }
-
+.product-form__submit[disabled],
 .product-form__submit[aria-disabled='true']+.shopify-payment-button .shopify-payment-button__button[disabled],
 .product-form__submit[disabled]+.shopify-payment-button .shopify-payment-button__button[disabled] {
   cursor: not-allowed;
@@ -1523,9 +1549,7 @@ line-height: 24px;
 
 /* custom code */
 
-.product__media-list .media>* {
-  border-radius: 10px;
-}
+ 
 
 @media screen and (min-width: 750px) {
 
@@ -1575,19 +1599,31 @@ line-height: 24px;
   color: var(--badge-text);
 }
 .product__title {
-  margin-top: 3.3rem;
-  margin-bottom: 2.3rem;
+  margin-top: 2.4rem;
+  margin-bottom: 2rem;
 }
 
 .product__title h1 {
   font-style: normal;
-    font-family: var(--font-heading-family);
-    font-weight: var(--font-heading-weight);
-  font-size: 30px;
-  line-height: 41px;
+font-family: var(--font-inter);
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 40px;
 }
 
+.product__text {
+ padding: 16px 30px 16px 11px;
+background: #F3F4F2;
+ 
+font-family: var(--font-inter);
+font-style: normal;
+font-weight: 500;
+font-size: 13.6px;
+line-height: 24px;
+ 
 
+}
 
 /* text-list */
 
@@ -1687,11 +1723,9 @@ line-height: 24px;
 
 .product-form__submit {
   font-style: normal;
-  font-family: var(--font-body-family);
-  font-weight: var(--font-body-weight);
+ 
   letter-spacing: 0;
-  font-size: 14px;
-  line-height: 19px;
+ min-height: 5rem;
 }
 
 .promo-text {
@@ -1699,13 +1733,12 @@ line-height: 24px;
   font-family: var(--font-body-family);
   font-weight: var(--font-body-weight);
 
-font-size: 10px;
+font-size: 11px;
 line-height: 14px;
 display: flex;
 align-items: center;
 text-align: center;
-color: #A6A6A6;
-  max-width: 244px;
+  max-width: 276px;
   margin: 0 auto;
 
 }
@@ -1824,10 +1857,8 @@ line-height: 19px;
 font-family: var(--font-body-family);
 font-style: normal;
  font-weight: var(--font-body-weight);
-font-size: 10px;
-line-height: 14px;
-
-color: #A6A6A6;
+font-size: 14px;
+ 
 
 }
 
@@ -1841,5 +1872,54 @@ color: #A6A6A6;
 .product__info-container {
   margin-top: 2.4rem;
 }
+
+}
+
+.featured-list{
+list-style: none;
+padding: 16px 0;
+column-count: 2;
+column-gap: 3rem;
+}
+
+.featured-list li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+
+font-family: var(--font-inter);
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 26px;
+ 
+
+}
+
+.subscription-plan-box{
+  /* Label */
+
+box-sizing: border-box;
+border: 1px solid #185859;
+border-radius: 8px;
+margin-top: 6rem;
+
+}
+
+.subscription-plan-header{
+padding: 17px 12px;
+}
+
+.subcrition-head-text{
+ 
+box-sizing: border-box;
+height: 25px;
+background: rgb(var(--color-accent));
+border: 1px solid #F5EFDF;
+border-radius: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
 
 }

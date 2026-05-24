@@ -61,6 +61,7 @@
   {% assign escaped_value = value | escape %}
 
   {%- if picker_type == 'swatch' -%}
+      
     {%- capture help_text -%}
       <span class="visually-hidden">{{ escaped_value }}</span>
       {{ label_unavailable }}
@@ -79,7 +80,10 @@
       help_text: help_text,
       additional_props: input_dataset
     %}
+  
   {%- elsif picker_type == 'button' -%}
+    <div class="product-form__input__item">
+
     <input
       type="radio"
       id="{{ input_id }}"
@@ -98,6 +102,7 @@
       {{ value -}}
       {{ label_unavailable }}
     </label>
+    </div>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
       id="{{ input_id }}"

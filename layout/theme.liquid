@@ -27,7 +27,10 @@
     {% endif %}
       {% if settings.enable_custom_font %}
       {% render 'custom-font' %}
-    {% endif %}
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        {% endif %}
 
     {% render 'meta-tags' %}
 
@@ -137,6 +140,7 @@
           --font-heading-weight: 300;
           --font-heading-bold: 500;
           --font-abc-family: 'ABC Diatype Rounded Unlicensed Trial';
+           --font-inter: "Inter", sans-serif;
          
           {% else %}
           --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
@@ -148,6 +152,8 @@
           --font-heading-style: {{ settings.type_header_font.style }};
           --font-heading-weight: {{ settings.type_header_font.weight }};
           --font-heading-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+          --font-inter: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+ 
           {% endif %}
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};

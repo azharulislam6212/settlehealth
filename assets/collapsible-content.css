@@ -127,8 +127,7 @@
   }
 }
 
-
-.collapsible-content__heading em{
+.collapsible-content .section--header em{
   display: block;
   font-style: normal;
   color: rgba(var(--color-accent));

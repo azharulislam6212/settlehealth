@@ -70,7 +70,7 @@
               assign quantity_rule_soldout = true
             endif
           -%}
-          <a href=""
+          <a href="{{ block.settings.button_url }}"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
@@ -79,21 +79,19 @@
               disabled
             {% endif %}
           >
-            <span>
+            <span class="button--text">
               {%- if product.selected_or_first_available_variant == null -%}
                 {{ 'products.product.unavailable' | t }}
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
 
-              Get started from  
+              Start my assessment
                
               {%- endif -%}
             </span>
 
-             <span id="price-{{ section.id }}">
-                 {{ product.price |  money }}
-              </span>
+         
              
             {%- render 'loading-spinner' -%}
             </a>
