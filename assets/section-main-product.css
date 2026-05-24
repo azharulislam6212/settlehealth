@@ -1903,7 +1903,7 @@ line-height: 26px;
 box-sizing: border-box;
 border: 1px solid #185859;
 border-radius: 8px;
-margin-top: 6rem;
+margin-top: 4rem;
 
 }
 
@@ -1923,6 +1923,15 @@ align-items: center;
 justify-content: center;
 position: relative;
 padding-left: 24px;
+ 
+
+font-family: var(--font-inter);
+font-style: normal;
+font-weight: 600;
+font-size: 14.8px;
+line-height: 24px;
+color: #F5EFDF;
+
 
 }
 
@@ -1930,4 +1939,34 @@ padding-left: 24px;
 .subcrition-head-text svg{
       position: absolute;
     left: 5px;
+}
+
+.subscription-plan-list{
+  list-style: none;
+  padding: 0;
+}
+ .subscription-plan-list li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+
+font-family: var(--font-inter);
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 17px;
+ 
+
+}
+
+
+.subscription-plan__inner{
+   display: grid;
+   grid-template-columns: 1fr 174px;
+   padding: 0 12px;
+ 
+
+background: #F3F4F2;
+
 }

@@ -332,6 +332,33 @@
           "input_color_text": "#2e2e25",
           "shadow": "#2e2e25"
         }
+      },
+      "scheme-b5bcb236-b965-4cc1-9a73-67d3b7fd130f": {
+        "settings": {
+          "accent": "#8e3a2a",
+          "background": "#f0f0f0",
+          "background_gradient": "",
+          "heading": "#2e2e25",
+          "text": "#2e2e25",
+          "primary_button": "#8e3a2a",
+          "primary_button_label": "#ffffff",
+          "primary_button_hover": "#bc6655",
+          "primary_button_label_hover": "#ffffff",
+          "primary_outline_lebel": "#8e3a2a",
+          "primary_button_outline": "linear-gradient(90deg, rgba(142, 58, 42, 1), rgba(245, 239, 223, 1) 32%, rgba(142, 58, 42, 1) 67%, rgba(245, 239, 223, 1) 100%)",
+          "primary_outline_lebel_hover": "#bc6655",
+          "secondary_button": "#0a0a0a",
+          "secondary_button_label": "#ffffff",
+          "secondary_button_hover": "#bc6655",
+          "secondary_button_label_hover": "#ffffff",
+          "secondary_outline_lebel": "#8e3a2a",
+          "secondary_button_outline": "linear-gradient(90deg, rgba(245, 239, 223, 1), rgba(142, 58, 42, 1) 36%, rgba(243, 228, 181, 1) 65%, rgba(188, 102, 85, 1) 97%)",
+          "secondary_outline_lebel_hover": "#bc6655",
+          "border": "#e1e1e1",
+          "input_color": "#ffffff",
+          "input_color_text": "#2e2e25",
+          "shadow": "#2e2e25"
+        }
       }
     }
   },

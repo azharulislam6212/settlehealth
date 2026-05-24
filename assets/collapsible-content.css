@@ -136,26 +136,32 @@
 .faq-qustion__flex{
   display: flex;
   align-items: start;
-  gap: 100px;
-  margin-top: 5.5rem;
+  gap: 64px;
+ 
  
 }
 
  
 
 .faq-qustion--wrapper  {
-  flex: 1;
-  width: 100%;
+    flex: 1;
+    width: 100%;
+    max-width: 578px;
+    margin: 0 0 0 auto;
 }
 
-
-.faq-qustion--text {
-  max-width: 36rem;
-}
+ 
 
 .faq-qustion__text{
   margin-bottom: 24px;
+    max-width: 36rem;
 }
+
+.faq-qustion__img{
+  max-width: 590px;
+  margin-top: 10rem;
+}
+
 
   @media screen and (max-width: 768px) {
 

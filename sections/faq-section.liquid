@@ -64,6 +64,19 @@
                 </span>
               </a>
             {%- endif -%}
+
+
+          
+
+          {%- if section.settings.image != blank -%}
+ 
+              <div class="faq-qustion__img">
+            {% render "responsive-img" with image: section.settings.image %}
+            </div>
+          {%- endif -%}
+
+
+
           </div>
           <div class="faq-qustion--wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
             {%- for block in section.blocks -%}
@@ -240,6 +253,11 @@
       "default": "primary",
       "label": "Button Style"
     },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
     {
       "type": "header",
       "content": "t:sections.collapsible_content.settings.layout_header.content"
