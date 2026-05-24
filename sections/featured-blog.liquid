@@ -4,17 +4,28 @@
 {{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      .section-{{ section.id }}-padding  {
+         --color-accent: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+         --color-link: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+       }
+
+   .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+    @media screen and (min-width: 992px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
   }
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
     }
-  }
 {%- endstyle -%}
 
 {%- liquid
@@ -183,7 +194,13 @@
           class="blog__button button"
           aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
         >
-          {{ 'sections.featured_blog.view_all' | t }}
+
+
+        <span class="button--text">
+          {{ section.settings.button_text }}
+
+        </span>
+
         </a>
       </div>
     {%- endif -%}
@@ -271,6 +288,13 @@
       "info": "t:sections.featured-blog.settings.show_view_all.info"
     },    
     {
+      "type": "text",
+      "id": "button_text",
+      "default": "Treatment tools & tips",
+      "label": "Button label",
+      "info": "View button label"
+    },    
+    {
       "type": "checkbox",
       "id": "show_image",
       "default": true,
@@ -294,30 +318,76 @@
       "label": "t:sections.all.colors.label",
       "info": "t:sections.all.colors.has_cards_info",
       "default": "scheme-1"
-    },    
-    {
+    },  
+        {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#A5A5A5"
+    },  
+  {
       "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
+      "content": "Section padding"
     },
     {
       "type": "range",
       "id": "padding_top",
       "min": 0,
-      "max": 100,
-      "step": 4,
+      "max": 200,
+      "step": 2,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
+      "label": "Padding Top Desktop",
+      "default": 76
     },
     {
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
-      "max": 100,
-      "step": 4,
+      "max": 200,
+      "step": 2,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "label": "Padding Bottom Desktop",
+      "default": 76
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 68
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 68
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 56
     }
   ],
   "presets": [

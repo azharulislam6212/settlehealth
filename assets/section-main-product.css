@@ -1904,7 +1904,7 @@ box-sizing: border-box;
 border: 1px solid #185859;
 border-radius: 8px;
 margin-top: 4rem;
-
+overflow: hidden;
 }
 
 .subscription-plan-header{
@@ -1963,10 +1963,32 @@ line-height: 17px;
 
 .subscription-plan__inner{
    display: grid;
-   grid-template-columns: 1fr 174px;
+   grid-template-columns: 1fr;
    padding: 0 12px;
  
 
 background: #F3F4F2;
 
+}
+
+
+@media screen and (min-width: 750px) {
+
+.subscription-plan__inner{
+   display: grid;
+   grid-template-columns: 1fr 174px;
+}
+
+
+}
+
+
+@media screen and (max-width: 749px) {
+
+
+.subcrition-head-text {
+
+    font-size: 11.8px;
+ 
+}
 }

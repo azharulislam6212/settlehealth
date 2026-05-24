@@ -19,6 +19,7 @@
 @media screen and (min-width: 990px) {
   .blog__posts.articles-wrapper {
     margin-bottom: 0;
+    --grid-desktop-horizontal-spacing: 2.4rem;
   }
 }
 

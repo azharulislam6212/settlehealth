@@ -48,12 +48,13 @@
 
 .article-card .card__heading {
   margin-bottom: 0.6rem;
+  font-size: 1.6rem;
 }
 
 .blog-articles .article-card .card__information,
 .blog__posts .article-card .card__information {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .article-card__info {
@@ -145,7 +146,6 @@
   background: transparent;
 }
 .article-card__image-wrapper {
-  border-radius: 10px !important;
   overflow: hidden;
 }
 .article-card__type{
@@ -202,8 +202,8 @@ font-style: normal;
 font-weight: 300;
 font-size: 14px;
 line-height: 20px;
-/* identical to box height, or 143% */
-color: #535862;
+
+
 }
 
 .article-card .link-animation span{
@@ -218,9 +218,8 @@ font-style: normal;
 font-weight: 200;
 font-size: 16px;
 line-height: 24px;
-/* or 150% */
 
-color: #535862;
+
 margin-top: 4px;
  margin-bottom: 20px;
 
