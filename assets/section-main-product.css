@@ -1921,5 +1921,13 @@ border-radius: 50px;
 display: flex;
 align-items: center;
 justify-content: center;
+position: relative;
+padding-left: 24px;
 
+}
+
+
+.subcrition-head-text svg{
+      position: absolute;
+    left: 5px;
 }
