@@ -27,6 +27,10 @@
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {}
         },
+        "subscription_plan_HEbFHk": {
+          "type": "subscription_plan",
+          "settings": {}
+        },
         "variant_picker_nUGwn6": {
           "type": "variant_picker",
           "settings": {
@@ -48,6 +52,7 @@
         "text_kqckyH",
         "title",
         "recharge_subscriptions_subscription_widget_v2_gnXawD",
+        "subscription_plan_HEbFHk",
         "variant_picker_nUGwn6",
         "buy_buttons"
       ],
@@ -242,12 +247,18 @@
         "heading_size": "h1",
         "columns_desktop": 3,
         "show_view_all": true,
+        "button_text": "Treatment tools & tips",
         "show_image": true,
         "show_date": false,
         "show_author": false,
         "color_scheme": "scheme-6",
+        "color_accent": "#a5a5a5",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "padding_top_tab": 68,
+        "padding_bottom_tab": 68,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
       }
     }
   },

@@ -32,7 +32,7 @@
         "text_list_n9xGpm": {
           "type": "text_list",
           "settings": {
-            "title_1": "22<em>%<\/em>",
+            "title_1": "22<em>%</em>",
             "text_1": "avg weight loss over a 12 month period",
             "title_2": "#1",
             "text_2": "Weight loss medication with our customers"
@@ -57,7 +57,7 @@
           "settings": {
             "heading": "Hair Loss with settlehealth",
             "icon": "none",
-            "content": "<ul><li>Partner with clinicians to customise your treatment plan<\/li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal<\/li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians<\/li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal<\/li><\/ul>",
+            "content": "<ul><li>Partner with clinicians to customise your treatment plan</li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal</li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians</li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal</li></ul>",
             "page": ""
           }
         },
@@ -66,7 +66,7 @@
           "settings": {
             "heading": "What is Finasteride?",
             "icon": "none",
-            "content": "<ul><li>Partner with clinicians to customise your treatment plan<\/li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal<\/li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians<\/li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal<\/li><\/ul>",
+            "content": "<ul><li>Partner with clinicians to customise your treatment plan</li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal</li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians</li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal</li></ul>",
             "page": ""
           }
         },
@@ -75,7 +75,7 @@
           "settings": {
             "heading": "How to take",
             "icon": "none",
-            "content": "<ul><li>Partner with clinicians to customise your treatment plan<\/li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal<\/li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians<\/li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal<\/li><\/ul>",
+            "content": "<ul><li>Partner with clinicians to customise your treatment plan</li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal</li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians</li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal</li></ul>",
             "page": ""
           }
         },
@@ -84,7 +84,7 @@
           "settings": {
             "heading": "Potential common side effects",
             "icon": "none",
-            "content": "<ul><li>Partner with clinicians to customise your treatment plan<\/li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal<\/li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians<\/li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal<\/li><\/ul>",
+            "content": "<ul><li>Partner with clinicians to customise your treatment plan</li><li>If eligible, your treatment will be delivered directly to your door and you will have access to dynamic tools through the Care Portal</li><li>Access to unlimited messaging and ongoing check-ins with licensed clinicians</li><li>Guidance on sleep, nutrition, exercise and more via your Care Portal</li></ul>",
             "page": ""
           }
         },
@@ -93,7 +93,7 @@
           "settings": {
             "frequent_bundle": "mounjaro-kwikpen-meal-replacement-bundle",
             "title": "Frequent Bundle",
-            "image": "shopify:\/\/shop_images\/Group_2141256028.png",
+            "image": "shopify://shop_images/Group_2141256028.png",
             "price_suffix": "when purchased with Mounjaro",
             "background_color": "#f7f2ef",
             "text_color": "#243d11",
@@ -103,7 +103,7 @@
         "terms_conditions_dKMfLF": {
           "type": "terms_conditions",
           "settings": {
-            "terms_conditions": "<p>Actual price will depend on pay as you go or subscription plan purchase, promotional offers and discount codes are available to input at checkout. Requires an online consultation with a clinician who will determine if treatment is appropriate.<\/p><p><br\/>*In a 72-week clinical trial of Mounjaro® (15 mg), participants with obesity or with overweight and weight-related medical problems achieved an average weight loss of 22.5% along with a reduced-calorie diet and increased exercise. Individual results may vary. Mounjaro® is a registered trade mark of Eli Lilly and Company. Hims & Hers Health, Inc. is not affiliated with or endorsed by Eli Lilly and Company<\/p>"
+            "terms_conditions": "<p>Actual price will depend on pay as you go or subscription plan purchase, promotional offers and discount codes are available to input at checkout. Requires an online consultation with a clinician who will determine if treatment is appropriate.</p><p><br/>*In a 72-week clinical trial of Mounjaro® (15 mg), participants with obesity or with overweight and weight-related medical problems achieved an average weight loss of 22.5% along with a reduced-calorie diet and increased exercise. Individual results may vary. Mounjaro® is a registered trade mark of Eli Lilly and Company. Hims & Hers Health, Inc. is not affiliated with or endorsed by Eli Lilly and Company</p>"
           }
         }
       },
@@ -167,25 +167,22 @@
         "icon_text_block_nDbBYD": {
           "type": "icon_text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_f0d82d03-bc63-4836-a45c-4d887dbf7b67.png",
             "title": "Complete your online consultation",
-            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.<\/p>"
+            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.</p>"
           }
         },
         "icon_text_block_wJTNQK": {
           "type": "icon_text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2_bd71179c-0261-4218-8da4-df178e1062b0.png",
             "title": "Get approved by our medical team",
-            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.<\/p>"
+            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.</p>"
           }
         },
         "icon_text_block_tx7LL6": {
           "type": "icon_text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3_9feac641-bb6f-4bd6-925e-f4bc4602d6c3.png",
             "title": "Receive your delivery at your chosen place",
-            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.<\/p>"
+            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.</p>"
           }
         }
       },
@@ -198,7 +195,7 @@
       "settings": {
         "enable_divider": true,
         "page_width": "container",
-        "heading": "Simple care, that fits <em>around your lifestyle<\/em>",
+        "heading": "Simple care, that fits <em>around your lifestyle</em>",
         "heading_size": "h1",
         "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
         "color_accent": "#ffbe74",
@@ -216,19 +213,19 @@
         "banner_overlay_text_Ak7rDA": {
           "type": "banner_overlay_text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_group_1.png",
+            "image": "shopify://shop_images/Mask_group_1.png",
             "pre_text": "Mounjaro is a weight loss injection you use once a week.",
-            "title": "Mounjaro is the kick start your <em>mind and body needs<\/em>",
-            "icon_image_1": "shopify:\/\/shop_images\/Group_2141256031.svg",
+            "title": "Mounjaro is the kick start your <em>mind and body needs</em>",
+            "icon_image_1": "shopify://shop_images/Group_2141256031.svg",
             "block_title_1": "Hair Loss with settlehealth",
             "block_text_1": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
-            "icon_image_2": "shopify:\/\/shop_images\/Group_2141256032.svg",
+            "icon_image_2": "shopify://shop_images/Group_2141256032.svg",
             "block_title_2": "Hair Loss with settlehealth",
             "block_text_2": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
-            "icon_image_3": "shopify:\/\/shop_images\/Group_2141256033.svg",
+            "icon_image_3": "shopify://shop_images/Group_2141256033.svg",
             "block_title_3": "Hair Loss with settlehealth",
             "block_text_3": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
-            "icon_image_4": "shopify:\/\/shop_images\/Group_2141256034.svg",
+            "icon_image_4": "shopify://shop_images/Group_2141256034.svg",
             "block_title_4": "Hair Loss with settlehealth",
             "block_text_4": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
             "color_scheme_card": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
@@ -238,7 +235,7 @@
         "image_block_mdkd6m": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_group_2_267d03af-67cc-4ea3-b57d-d7de22405f83.png",
+            "image": "shopify://shop_images/Mask_group_2_267d03af-67cc-4ea3-b57d-d7de22405f83.png",
             "image_link": "",
             "color_scheme_card": "scheme-4"
           }
@@ -246,7 +243,7 @@
         "image_block_wide_c6F3JR": {
           "type": "image_block_wide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_2141256171.png",
+            "image": "shopify://shop_images/Group_2141256171.png",
             "image_link": "",
             "color_scheme_card": "scheme-4"
           }
@@ -255,7 +252,7 @@
           "type": "image_over_text",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_2141256036_55cd04b6-504f-4200-854e-b92abf3296a5.png",
+            "image": "shopify://shop_images/Group_2141256036_55cd04b6-504f-4200-854e-b92abf3296a5.png",
             "image_position_x": 50,
             "image_position_y": 0,
             "text_1": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
@@ -268,7 +265,7 @@
             "position_text_2_y": 34,
             "sm_position_text_2_x": 72,
             "sm_position_text_2_y": 18,
-            "title": "<em>22.5%<\/em>",
+            "title": "<em>22.5%</em>",
             "text": "average weight loss over a 12 month period",
             "color_scheme_card": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
             "color_background": "linear-gradient(103.46deg, rgba(22, 82, 127, 1) 33.54%, rgba(148, 203, 245, 1) 88.16%)",
@@ -288,7 +285,7 @@
         "page_width": "container",
         "heading": "",
         "heading_size": "hxl",
-        "text": "<p> <\/p>",
+        "text": "<p> </p>",
         "button_label": "Button label",
         "button_link": "",
         "button_style": "primary",
@@ -310,7 +307,7 @@
           "settings": {
             "pre_text": "Week 1",
             "title": "Getting Started",
-            "text": "<ul><li>Take your first weekly injection on your chosen consistent day<\/li><li>Appetite may reduce noticeably within the first few days<\/li><li>Mild nausea or bloating can occur as your body adjusts<\/li><\/ul>"
+            "text": "<ul><li>Take your first weekly injection on your chosen consistent day</li><li>Appetite may reduce noticeably within the first few days</li><li>Mild nausea or bloating can occur as your body adjusts</li></ul>"
           }
         },
         "timeline_block_fQ6FGi": {
@@ -318,7 +315,7 @@
           "settings": {
             "pre_text": "Week 2",
             "title": "Settling In",
-            "text": "<ul><li>Take your second injection on the same scheduled day<\/li><li>Appetite suppression becomes more predictable and consistent<\/li><li>Prioritise protein, hydration, and structured regular meals<\/li><\/ul>"
+            "text": "<ul><li>Take your second injection on the same scheduled day</li><li>Appetite suppression becomes more predictable and consistent</li><li>Prioritise protein, hydration, and structured regular meals</li></ul>"
           }
         },
         "timeline_block_Td3Pt8": {
@@ -326,7 +323,7 @@
           "settings": {
             "pre_text": "Week 3",
             "title": "Build Consistency",
-            "text": "<ul><li>Take your third weekly injection as scheduled<\/li><li>Energy and satiety patterns should feel more stable<\/li><li>Reorder your next dose to avoid treatment interruption<\/li><\/ul>"
+            "text": "<ul><li>Take your third weekly injection as scheduled</li><li>Energy and satiety patterns should feel more stable</li><li>Reorder your next dose to avoid treatment interruption</li></ul>"
           }
         },
         "timeline_block_wBezVX": {
@@ -334,13 +331,13 @@
           "settings": {
             "pre_text": "Week 4",
             "title": "Completing Month One",
-            "text": "<ul><li>Take your fourth weekly injection this month<\/li><li>Reflect on weight progress and appetite changes<\/li><li>Prepare for potential dose escalation if clinically appropriate<\/li><\/ul>"
+            "text": "<ul><li>Take your fourth weekly injection this month</li><li>Reflect on weight progress and appetite changes</li><li>Prepare for potential dose escalation if clinically appropriate</li></ul>"
           }
         },
         "image_over_text_6JHUdA": {
           "type": "image_over_text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_127.png",
+            "image": "shopify://shop_images/image_127.png",
             "text_1": "Let me know how I can help",
             "text_2": "I hope your first week goes well",
             "color_scheme_card": "scheme-1",
@@ -351,7 +348,7 @@
         "image_over_list_qwznC6": {
           "type": "image_over_list",
           "settings": {
-            "text": "<ul><li>Sustained Energy <\/li><li>Metabolic Balance <\/li><li>Reduced Cravings <\/li><li>Improved Confidence <\/li><li>Healthier Body Composition<\/li><\/ul>",
+            "text": "<ul><li>Sustained Energy </li><li>Metabolic Balance </li><li>Reduced Cravings </li><li>Improved Confidence </li><li>Healthier Body Composition</li></ul>",
             "color_scheme_card": "scheme-86f4680d-fe75-4984-945f-5655e98ddff4",
             "color_accent": "#ccf9ab"
           }
@@ -359,7 +356,7 @@
         "image_block_XxYpBx": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_240651199.png",
+            "image": "shopify://shop_images/Rectangle_240651199.png",
             "image_link": "",
             "color_scheme_card": ""
           }
@@ -378,7 +375,7 @@
       "settings": {
         "enable_divider": false,
         "page_width": "container",
-        "heading": "Your new monthly timeline, <em>weight loss journey<\/em>",
+        "heading": "Your new monthly timeline, <em>weight loss journey</em>",
         "heading_size": "h1",
         "text": "",
         "color_scheme": "",
@@ -398,7 +395,7 @@
         "heading_8W3ptn": {
           "type": "heading",
           "settings": {
-            "heading": "Personalised care.<em> Designed around you.<\/em>",
+            "heading": "Personalised care.<em> Designed around you.</em>",
             "heading_size": "h1"
           }
         },
@@ -413,7 +410,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Start my journey",
-            "button_link_1": "shopify:\/\/collections",
+            "button_link_1": "shopify://collections",
             "button_style_1": "primary",
             "button_label_2": "",
             "button_link_2": "",
@@ -429,7 +426,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "allow_transparent_header": false,
-        "image": "shopify:\/\/shop_images\/Group_2141256096_4916b35d-9ba8-4b9c-9b4f-5b9f018f931e.png",
+        "image": "shopify://shop_images/Group_2141256096_4916b35d-9ba8-4b9c-9b4f-5b9f018f931e.png",
         "image_overlay_opacity": 10,
         "image_border_radius": 0,
         "fixed_attachment": false,
@@ -452,7 +449,7 @@
         "heading_txbzdX": {
           "type": "heading",
           "settings": {
-            "heading": "Mounjaro Kwikpen <em>Pricing Options<\/em>",
+            "heading": "Mounjaro Kwikpen <em>Pricing Options</em>",
             "heading_size": "h1"
           }
         },
@@ -467,7 +464,7 @@
         "text_AyaQYL": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Take your fourth weekly injection this month<\/li><li>Reflect on weight progress and appetite changes<\/li><li>Prepare for potential dose escalation if clinically appropriate<\/li><\/ul>",
+            "text": "<ul><li>Take your fourth weekly injection this month</li><li>Reflect on weight progress and appetite changes</li><li>Prepare for potential dose escalation if clinically appropriate</li></ul>",
             "text_style": "body"
           }
         },
@@ -482,7 +479,7 @@
         "text_diAEnL": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Take your fourth weekly injection this month<\/li><li>Reflect on weight progress and appetite changes<\/li><li>Prepare for potential dose escalation if clinically appropriate<\/li><\/ul>",
+            "text": "<ul><li>Take your fourth weekly injection this month</li><li>Reflect on weight progress and appetite changes</li><li>Prepare for potential dose escalation if clinically appropriate</li></ul>",
             "text_style": "body"
           }
         }
@@ -497,7 +494,7 @@
       "name": "Image with text product",
       "settings": {
         "enable_divider": true,
-        "image": "shopify:\/\/shop_images\/Frame_2141256474_1_669f17be-9fe8-49f0-ae5f-4a4f038d5ced.png",
+        "image": "shopify://shop_images/Frame_2141256474_1_669f17be-9fe8-49f0-ae5f-4a4f038d5ced.png",
         "section_color_scheme": "",
         "color_scheme": "",
         "color_accent": "#ffbe74",
@@ -515,7 +512,7 @@
         "image_block_kLf7PW": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_2141256105.png",
+            "image": "shopify://shop_images/Group_2141256105.png",
             "image_link": ""
           }
         },
@@ -523,7 +520,7 @@
           "type": "list_text",
           "settings": {
             "title": "",
-            "text": "<ul><li>Priority support (2-hour response)<\/li><li>Free next-day delivery (save £5\/order)<\/li><li>Quarterly health coach video calls<\/li><li>Body composition tracking & analysis<\/li><li>Nutrition consultation (1x per quarter)<\/li><li>VIP-only webinars & events<\/li><li>Supplement discount: 35% off (extra 10%)<\/li><li>settlehealth Points: 1.5x earning rate<\/li><\/ul>",
+            "text": "<ul><li>Priority support (2-hour response)</li><li>Free next-day delivery (save £5/order)</li><li>Quarterly health coach video calls</li><li>Body composition tracking & analysis</li><li>Nutrition consultation (1x per quarter)</li><li>VIP-only webinars & events</li><li>Supplement discount: 35% off (extra 10%)</li><li>settlehealth Points: 1.5x earning rate</li></ul>",
             "button_label": "",
             "button_link": "",
             "color_scheme_card": "scheme-1"
@@ -538,11 +535,11 @@
       "settings": {
         "enable_divider": true,
         "page_width": "container",
-        "heading": "Subscribe to a <em>better you<\/em>",
+        "heading": "Subscribe to a <em>better you</em>",
         "heading_size": "h1",
-        "text": "<p>settlehealth was designed around the basis of curating your own journey, pay as you go and subscription options are available<\/p>",
+        "text": "<p>settlehealth was designed around the basis of curating your own journey, pay as you go and subscription options are available</p>",
         "button_label": "Start my journey",
-        "button_link": "shopify:\/\/collections",
+        "button_link": "shopify://collections",
         "button_style": "secondary",
         "color_scheme": "scheme-1",
         "color_accent": "#ffbe74",
@@ -560,7 +557,7 @@
         "team_block_3ftVVg": {
           "type": "team_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_group_28.png",
+            "image": "shopify://shop_images/Mask_group_28.png",
             "name": "Erran Morris",
             "designation": "Superintendent",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
@@ -571,7 +568,7 @@
         "team_block_m3Hye8": {
           "type": "team_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_group_23.png",
+            "image": "shopify://shop_images/Mask_group_23.png",
             "name": "Erran Morris",
             "designation": "Superintendent",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
@@ -582,7 +579,7 @@
         "team_block_9EYiea": {
           "type": "team_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_group_24.png",
+            "image": "shopify://shop_images/Mask_group_24.png",
             "name": "Erran Morris",
             "designation": "Superintendent",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
@@ -593,7 +590,7 @@
         "team_block_yXJrDp": {
           "type": "team_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "image": "shopify://shop_images/Mask_group_22.png",
             "name": "Erran Morris",
             "designation": "Superintendent",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
@@ -604,7 +601,7 @@
         "team_block_4A6JDD": {
           "type": "team_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_group_21.png",
+            "image": "shopify://shop_images/Mask_group_21.png",
             "name": "Erran Morris",
             "designation": "Superintendent",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
@@ -615,7 +612,7 @@
         "team_block_ECLNDX": {
           "type": "team_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "image": "shopify://shop_images/Mask_group_22.png",
             "name": "Erran Morris",
             "designation": "Superintendent",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
@@ -637,9 +634,9 @@
       "settings": {
         "enable_divider": true,
         "page_width": "container",
-        "heading": "The best care <em>by the best in medicine<\/em>",
+        "heading": "The best care <em>by the best in medicine</em>",
         "heading_size": "h2",
-        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum,<\/p>",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum,</p>",
         "alignment": "center",
         "autoplay_enabled": false,
         "autoplay_timeout": 5,
@@ -668,28 +665,28 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Question 1",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
           }
         },
         "collapsible_row_bzzp7L": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Question 2",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
           }
         },
         "collapsible_row_C9p89w": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Question 3",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
           }
         },
         "collapsible_row_VqL7ez": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Question 4",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br\/><br\/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. <\/p>"
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
           }
         }
       },
@@ -701,7 +698,7 @@
       ],
       "name": "Faq Section",
       "settings": {
-        "heading": "Questions?<em> We’re here to help.<\/em>",
+        "heading": "Questions?<em> We’re here to help.</em>",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",

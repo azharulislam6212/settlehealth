@@ -1,0 +1,214 @@
+{% assign variant = product.selected_or_first_available_variant %}
+
+<div class="settle-wrapper">
+  {% comment %}
+    =====================
+    Recharge Plans
+    =====================
+  {% endcomment %}
+
+  {% if variant.selling_plan_allocations.size > 0 %}
+    {% for allocation in variant.selling_plan_allocations %}
+      {% assign plan = allocation.selling_plan %}
+
+      {% assign saving = variant.price | minus: allocation.price %}
+      {% assign discount = saving | times: 100 | divided_by: variant.price %}
+
+      {% if forloop.last %}
+        <div class="plan-divider">Or</div>
+      {% endif %}
+
+      <label
+        class="settle-card {% if forloop.first %}active{% endif %}"
+        data-selling-plan="{{ plan.id }}"
+        data-variant="{{ variant.id }}"
+      >
+        <input
+          type="radio"
+          name="custom_plan"
+          {% if forloop.first %}
+            checked
+          {% endif %}
+        >
+
+        <div class="settle-header">
+          <div class="settle-left">
+            <span class="radio-icon"></span>
+
+            <strong>
+              {{ plan.name }}
+            </strong>
+          </div>
+
+          <div class="settle-price">
+            {% unless forloop.last %}
+              {% if allocation.price < variant.price %}
+                <span class="old-price">
+                  {{ variant.price | money }}
+                </span>
+              {% endif %}
+            {% endunless %}
+            <strong>
+              {{ allocation.price | money }}
+            </strong>
+          </div>
+        </div>
+
+        {% if forloop.first %}
+          <div class="popular">Most Popular</div>
+        {% endif %}
+
+        {% if plan.description != blank %}
+          <p>
+            {{ plan.description }}
+          </p>
+        {% endif %}
+
+        {%- assign option_contents = product.metafields.custom.option_content.value -%}
+
+        {% if option_contents != blank %}
+          {%- for option_content in option_contents -%}
+            {% if option_content.title contains plan.name %}
+              <div class="feature-box">
+                {{ option_content.description | metafield_tag }}
+              </div>
+            {% endif %}
+          {%- endfor -%}
+        {% endif %}
+      </label>
+    {% endfor %}
+  {% endif %}
+
+  {% comment %}
+    =====================
+    Included Every Month
+    =====================
+  {% endcomment %}
+
+  {% assign included = product.metafields.custom.included_every_month.value %}
+
+  {% if included != blank %}
+    <h3 class="included-heading">What's included every month.</h3>
+
+    <div class="included-wrapper">
+      {% for item in included %}
+        <div
+          class="included-card {% if forloop.first %}active{% endif %}"
+          data-included="{{ item | escape }}"
+        >
+          <span class="radio-icon"></span>
+
+          <strong>
+            {{ item }}
+          </strong>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  class CustomRecharge {
+    constructor() {
+      document.addEventListener('click', this.handle.bind(this));
+    }
+
+    handle(event) {
+      /*
+        ====================
+        Plan Select
+        ====================
+        */
+
+      let planCard = event.target.closest('.settle-card');
+
+      if (planCard) {
+        document.querySelectorAll('.settle-card').forEach((card) => {
+          card.classList.remove('active');
+
+          let radio = card.querySelector('input');
+
+          if (radio) {
+            radio.checked = false;
+          }
+        });
+
+        planCard.classList.add('active');
+
+        planCard.querySelector('input').checked = true;
+
+        let form = document.querySelector('product-form form[action="/cart/add"]');
+
+        if (form) {
+          let selling = form.querySelector('input[name="selling_plan"]');
+
+          if (selling) {
+            selling.value = planCard.dataset.sellingPlan;
+
+            selling.dispatchEvent(
+              new Event('change', {
+                bubbles: true,
+              })
+            );
+
+            console.log('Selling plan:', selling.value);
+          }
+
+          let variant = form.querySelector('input[name="id"]');
+
+          if (variant) {
+            variant.value = planCard.dataset.variant;
+          }
+        }
+      }
+
+      /*
+        ====================
+        Included Select
+        ====================
+        */
+
+      let include = event.target.closest('.included-card');
+
+      if (include) {
+        include.parentElement.querySelectorAll('.included-card').forEach((item) => {
+          item.classList.remove('active');
+        });
+
+        include.classList.add('active');
+
+        let form = document.querySelector('product-form form[action="/cart/add"]');
+
+        if (form) {
+          let input = form.querySelector('input[name="properties[Included every month]"]');
+
+          if (input) {
+            input.value = include.dataset.included;
+
+            input.dispatchEvent(
+              new Event('change', {
+                bubbles: true,
+              })
+            );
+
+            console.log('Included:', input.value);
+          }
+        }
+      }
+    }
+  }
+
+  new CustomRecharge();
+
+  /*
+Default first included value
+*/
+
+  document.addEventListener('DOMContentLoaded', () => {
+    let first = document.querySelector('.included-card.active');
+
+    if (first) {
+      first.click();
+    }
+  });
+</script>

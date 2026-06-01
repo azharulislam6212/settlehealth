@@ -668,6 +668,10 @@
                   render 'share-button', block: block, share_link: share_url
                 %}
 
+              {%- when 'subscription_plan' -%}
+
+                {%- render 'subscription-plan', product: product, block: block, product_form_id: product_form_id  -%}
+
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
@@ -924,6 +928,7 @@
         assign seo_media = product.featured_media
       endif
     -%}
+    
 
     <script type="application/ld+json">
       {{ product | structured_data }}
@@ -1050,6 +1055,12 @@
           "default": "t:sections.main-product.blocks.text.settings.text.default",
           "label": "t:sections.main-product.blocks.text.settings.text.label"
         }
+      ]
+    },
+    {
+      "type": "subscription_plan",
+      "name": "Subscription Plan",
+      "settings": [
       ]
     },
     {

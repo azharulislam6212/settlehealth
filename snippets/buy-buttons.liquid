@@ -56,6 +56,21 @@
           class="product-variant-id"
         >
 
+  {% assign included = product.metafields.custom.included_every_month.value %}
+
+  {% if included != blank %}
+   
+ 
+      {% for item in included limit: 1 %}
+          <input name="properties[Included every month]" value="{{ item }}" hidden>
+      {% endfor %}
+   
+  {% endif %}
+
+
+      
+
+
         {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
         {%- endif -%}
@@ -70,7 +85,8 @@
               assign quantity_rule_soldout = true
             endif
           -%}
-          <a href="{{ block.settings.button_url }}"
+          <button type="submit"
+            name="add"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
@@ -94,7 +110,7 @@
          
              
             {%- render 'loading-spinner' -%}
-            </a>
+            </button>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
