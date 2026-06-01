@@ -149,9 +149,7 @@ margin-top: 28px;
 .banner-card__buttons .button--primary-outline{
      background: transparent;
 }
-.banner-card__buttons .button--primary-outline:hover{
-    background: rgb(var(--color-secondary-button-hover));
-}
+ 
 
 .banner-card__buttons .button--primary-outline:before {
     background: transparent;

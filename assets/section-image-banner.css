@@ -506,16 +506,14 @@
   min-height: 20px;
   background: rgb(var(--color-accent));
   border-radius: 36.76px;
-
   /* badge */
   font-family: var(--font-body-family);
   font-style: normal;
-  font-weight: 423;
+  font-weight: 323;
   font-size: 10px;
   line-height: 14px;
 
-  /* 200 Weight Loss */
-  color: #2E4E16;
+ 
   margin-bottom: 22px;
 }
 
@@ -565,18 +563,18 @@
   left: 0;
   top: 4px;
   background-color: rgb(var(--color-accent));
-  width: 16px;
-  height: 16px;
+    width: 18px;
+    height: 18px;;
   border-radius: 50px;
 }
 
 .banner-list li::after {
   content: "";
   position: absolute;
-  left: 4px;
-  top: 9px;
+    left: 5px;
+    top: 10px;
   background-color: rgb(var(--color-accent));
-  background-image: url(check-mark.svg);
+  background-image: url(check-white.svg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 8.5px;
@@ -584,8 +582,10 @@
 }
 
 .category-image-banner .button {
-  min-height: 3.6rem;
-  padding: 1.1rem 3.5rem;
+    min-height: 3.6rem;
+    padding: 1.1rem 3.5rem;
+    min-width: 160px;
+    font-size: 12px;
 
 }
 
