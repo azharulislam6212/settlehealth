@@ -308,43 +308,33 @@
         "card_block_kq8GWA": {
           "type": "card_block",
           "settings": {
-            "title": "Access to <em>licensed clinicians</em>",
-            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+            "image": "shopify://shop_images/Group_2141256003.png",
+            "title": "Your medication",
+            "text": "Dispensed by our own UK pharmacy and delivered to your door in plain, discreet packaging. Free, signed-for, and tracked from script to doorstep."
           }
         },
         "card_block_t4EyC9": {
           "type": "card_block",
           "settings": {
-            "title": "Switch between <em>medication plans</em>",
-            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+            "image": "shopify://shop_images/Mask_group_17.png",
+            "title": "1-to-1 clinician support",
+            "text": "Direct messaging with your psychiatrist between appointments for dose questions, side-effect concerns, or anything in between. Replies within one working day."
           }
         },
         "card_block_payUFN": {
           "type": "card_block",
           "settings": {
-            "title": "Track your <em>symptoms</em>",
-            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+            "image": "shopify://shop_images/Mask_group_19.png",
+            "title": "The Settle support library",
+            "text": "ADHD-specific guides, planners, and to-do tools - built with our clinical team. Updated monthly with new techniques, frameworks, and practical strategies."
           }
         },
         "card_block_rXVeJ4": {
           "type": "card_block",
           "settings": {
-            "title": "Supporting range<em> of supplements</em>",
-            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
-          }
-        },
-        "card_block_EVyiCU": {
-          "type": "card_block",
-          "settings": {
-            "title": "Switch between <em>medication plans</em>",
-            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
-          }
-        },
-        "card_block_apCKti": {
-          "type": "card_block",
-          "settings": {
-            "title": "Track your <em>symptoms</em>",
-            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your"
+            "image": "shopify://shop_images/Mask_group_18.png",
+            "title": "Monthly and annual reviews",
+            "text": "Monthly clinical check-ins while we find your right dose, then annual psychiatric reviews once you're settled. Both included - never charged separately."
           }
         }
       },
@@ -352,15 +342,13 @@
         "card_block_kq8GWA",
         "card_block_t4EyC9",
         "card_block_payUFN",
-        "card_block_rXVeJ4",
-        "card_block_EVyiCU",
-        "card_block_apCKti"
+        "card_block_rXVeJ4"
       ],
       "name": "Multicard blocks",
       "settings": {
         "enable_divider": true,
         "page_width": "container",
-        "heading": "What’s included in <em>your weight loss journey</em>",
+        "heading": "<em>What's included every month</em>",
         "heading_size": "h1",
         "text": "",
         "alignment": "left",
@@ -373,8 +361,8 @@
         "enable_navigation_desktop": false,
         "color_scheme_swiper": "",
         "color_scheme": "",
-        "color_scheme_card": "scheme-12aabace-348a-4184-95ad-169e2a162b4f",
-        "color_accent": "#ffbe74",
+        "color_scheme_card": "scheme-13eb1473-4812-4127-bb84-fd93a60f9e39",
+        "color_accent": "#8e3a2a",
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_top_tab": 40,
@@ -384,86 +372,98 @@
         "them_section_id": ""
       }
     },
-    "team_carousel_product_fPwkMj": {
-      "type": "team-carousel-product",
+    "image_block_carousel_QiPbee": {
+      "type": "image-block-carousel",
       "blocks": {
-        "team_block_WbNpwM": {
-          "type": "team_block",
+        "custom_block_TAcwp3": {
+          "type": "custom_block",
           "settings": {
-            "name": "Oliver Cartwright",
-            "designation": "Manchester, UK",
-            "text": "“I started using settlehealth’s weight loss programme earlier this year and it’s genuinely been life-changing. The structure, the support and the results have all been far better than anything I’ve tried before.”",
-            "button_label": "",
-            "button_link": ""
+            "image": "shopify://shop_images/Generated_with_Kive.ai_-_in_sage_medical_scrubs__genuine_Duchenne_smile_with_crinkled_eyes__upward_gaze__crossed_arms_confident_pose__stethoscope_draped_naturally__clean_gradient_back.png",
+            "image_url": "",
+            "enable_video": false,
+            "source": "uploaded",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "uploaded_video": "shopify://files/videos/4919748-uhd_2732_1440_25fps.mp4",
+            "cover_image": "shopify://shop_images/Generated_with_Kive.ai_-_in_sage_medical_scrubs__genuine_Duchenne_smile_with_crinkled_eyes__upward_gaze__crossed_arms_confident_pose__stethoscope_draped_naturally__clean_gradient_back.png",
+            "enable_autoplay": false,
+            "enable_loop_video": true,
+            "enable_mute_video": true,
+            "play_button_display": "on-hover"
           }
         },
-        "team_block_6hHFhP": {
-          "type": "team_block",
+        "custom_block_J4bRAM": {
+          "type": "custom_block",
           "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
-            "button_label": "",
-            "button_link": ""
+            "image_url": "",
+            "enable_video": true,
+            "source": "uploaded",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "uploaded_video": "shopify://files/videos/4919748-uhd_2732_1440_25fps.mp4",
+            "enable_autoplay": false,
+            "enable_loop_video": true,
+            "enable_mute_video": true,
+            "play_button_display": "on-hover"
           }
         },
-        "team_block_BrJEyz": {
-          "type": "team_block",
+        "custom_block_ALzaNN": {
+          "type": "custom_block",
           "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
-            "button_label": "",
-            "button_link": ""
+            "image_url": "",
+            "enable_video": true,
+            "source": "uploaded",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "uploaded_video": "shopify://files/videos/4919748-uhd_2732_1440_25fps.mp4",
+            "enable_autoplay": false,
+            "enable_loop_video": true,
+            "enable_mute_video": true,
+            "play_button_display": "on-hover"
           }
         },
-        "team_block_tfX9A3": {
-          "type": "team_block",
+        "custom_block_zipPfW": {
+          "type": "custom_block",
           "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
-            "button_label": "",
-            "button_link": ""
+            "image_url": "",
+            "enable_video": true,
+            "source": "uploaded",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "uploaded_video": "shopify://files/videos/4919748-uhd_2732_1440_25fps.mp4",
+            "enable_autoplay": false,
+            "enable_loop_video": true,
+            "enable_mute_video": true,
+            "play_button_display": "on-hover"
           }
         },
-        "team_block_hKj7Re": {
-          "type": "team_block",
+        "custom_block_B78naF": {
+          "type": "custom_block",
           "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "team_block_bEbrqD": {
-          "type": "team_block",
-          "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
-            "button_label": "",
-            "button_link": ""
+            "image_url": "",
+            "enable_video": true,
+            "source": "uploaded",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "uploaded_video": "shopify://files/videos/4919748-uhd_2732_1440_25fps.mp4",
+            "enable_autoplay": false,
+            "enable_loop_video": true,
+            "enable_mute_video": true,
+            "play_button_display": "on-hover"
           }
         }
       },
       "block_order": [
-        "team_block_WbNpwM",
-        "team_block_6hHFhP",
-        "team_block_BrJEyz",
-        "team_block_tfX9A3",
-        "team_block_hKj7Re",
-        "team_block_bEbrqD"
+        "custom_block_TAcwp3",
+        "custom_block_J4bRAM",
+        "custom_block_ALzaNN",
+        "custom_block_zipPfW",
+        "custom_block_B78naF"
       ],
-      "name": "Team Carousel Product",
+      "name": "Image block carousel",
       "settings": {
         "enable_divider": true,
-        "page_width": "container",
-        "heading": "Hear from our <em>patients</em>",
-        "heading_size": "h2",
-        "text": "",
-        "alignment": "left",
+        "page_width": "container-fluid",
+        "heading": "Settle is changing<em> Thousands of lives with ADHD</em>",
+        "heading_size": "h1",
+        "text": "<p>Real stories, from people who finally feel settled.</p>",
+        "alignment": "center",
+        "image_ratio": "portrait",
         "autoplay_enabled": false,
         "autoplay_timeout": 5,
         "loop_enabled": false,
@@ -471,16 +471,14 @@
         "enable_pagination_mobile": false,
         "enable_navigation": true,
         "enable_navigation_desktop": true,
-        "color_scheme_swiper": "scheme-32051e61-b6a4-4a5b-80c8-a81092a26e44",
+        "color_scheme_swiper": "",
         "color_scheme": "",
-        "color_scheme_card": "scheme-1",
-        "color_accent": "#ffbe74",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_tab": 40,
-        "padding_bottom_tab": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "padding_top_tab": 42,
+        "padding_bottom_tab": 42,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 32,
         "them_section_id": ""
       }
     },
@@ -490,14 +488,14 @@
         "heading_8W3ptn": {
           "type": "heading",
           "settings": {
-            "heading": "Personalised care.<em> Designed around you.</em>",
+            "heading": "ADHD care, built for the life you actually live.",
             "heading_size": "h1"
           }
         },
         "text_CMKyh7": {
           "type": "text",
           "settings": {
-            "text": "Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before",
+            "text": "You're not a checklist. You're a freelancer with a deadline, a parent at school pickup, a director in back-to-back meetings. Settle is built for the way ADHD actually shows up — at work, at home, at 11pm when the brain still won't stop.",
             "text_style": "body"
           }
         },
@@ -521,6 +519,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "allow_transparent_header": false,
+        "image": "shopify://shop_images/Mask_group_20.png",
         "image_overlay_opacity": 10,
         "image_border_radius": 0,
         "fixed_attachment": false,
@@ -528,93 +527,14 @@
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
-        "show_text_box": false,
-        "color_scheme": "scheme-227beb78-9e4a-4198-8292-5ca682ef7f72",
-        "color_accent": "#ffbe74",
+        "show_text_box": true,
+        "color_scheme": "scheme-7",
+        "color_accent": "#8e3a2a",
         "stack_images_on_mobile": false,
         "mobile_content_position": "middle-center",
         "mobile_content_alignment": "left",
         "show_text_below": false,
         "show_mobile_text_box": true
-      }
-    },
-    "text_block_with_image_geLiDC": {
-      "type": "text-block-with-image",
-      "blocks": {
-        "heading_H8w3fP": {
-          "type": "heading",
-          "settings": {
-            "heading": "A holistic approach  to<em> better health</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_mGBLKV": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We combine science, care, and personalized solutions to provide a comprehensive, lasting approach to well-being.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_VAxfN6": {
-          "type": "button",
-          "settings": {
-            "button_label": "Get Started",
-            "button_link": "shopify://pages/contact",
-            "button_style": "secondary"
-          }
-        },
-        "icon_text_qnxG4e": {
-          "type": "icon_text",
-          "settings": {
-            "title": "<em>Access to our </em>Care Team",
-            "text": "<p>Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before</p>"
-          }
-        },
-        "icon_text_Ht8RW7": {
-          "type": "icon_text",
-          "settings": {
-            "title": "<em>Doctor-trusted</em> treatment plans",
-            "text": "<p>Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before</p>"
-          }
-        },
-        "icon_text_KKdRtQ": {
-          "type": "icon_text",
-          "settings": {
-            "title": "<em>Focussed on </em>all of you",
-            "text": "<p>Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before</p>"
-          }
-        },
-        "icon_text_RYwayB": {
-          "type": "icon_text",
-          "settings": {
-            "title": "<em>Ongoing </em>Support",
-            "text": "<p>Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_H8w3fP",
-        "text_mGBLKV",
-        "button_VAxfN6",
-        "icon_text_qnxG4e",
-        "icon_text_Ht8RW7",
-        "icon_text_KKdRtQ",
-        "icon_text_RYwayB"
-      ],
-      "name": "Text block with image",
-      "settings": {
-        "enable_divider": true,
-        "heading": "Why choose <em>settlehealth</em>",
-        "heading_size": "h1",
-        "text": "",
-        "color_scheme": "",
-        "color_accent": "#a5a5a5",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_tab": 40,
-        "padding_bottom_tab": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30
       }
     },
     "team_carousel_BXYGe4": {
@@ -623,8 +543,9 @@
         "team_block_3ftVVg": {
           "type": "team_block",
           "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
+            "image": "shopify://shop_images/Group_2141256190.png",
+            "name": "Dr Doniert Mcfarlane",
+            "designation": "Clinical Director",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
             "button_label": "",
             "button_link": ""
@@ -633,8 +554,9 @@
         "team_block_m3Hye8": {
           "type": "team_block",
           "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
+            "image": "shopify://shop_images/Mask_group_22.png",
+            "name": "Dr Dilpa Farah",
+            "designation": "Specialist GP",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
             "button_label": "",
             "button_link": ""
@@ -643,8 +565,9 @@
         "team_block_9EYiea": {
           "type": "team_block",
           "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
+            "image": "shopify://shop_images/Mask_group_23.png",
+            "name": "Dr Erran Morris",
+            "designation": "Specialist GP",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
             "button_label": "",
             "button_link": ""
@@ -653,28 +576,9 @@
         "team_block_yXJrDp": {
           "type": "team_block",
           "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "team_block_4A6JDD": {
-          "type": "team_block",
-          "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "team_block_ECLNDX": {
-          "type": "team_block",
-          "settings": {
-            "name": "Erran Morris",
-            "designation": "Superintendent",
+            "image": "shopify://shop_images/Mask_group_24.png",
+            "name": "Dr Nish Patel",
+            "designation": "Lead GP",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum, non auctor turpis risus vel erat. ",
             "button_label": "",
             "button_link": ""
@@ -685,15 +589,13 @@
         "team_block_3ftVVg",
         "team_block_m3Hye8",
         "team_block_9EYiea",
-        "team_block_yXJrDp",
-        "team_block_4A6JDD",
-        "team_block_ECLNDX"
+        "team_block_yXJrDp"
       ],
       "name": "Team Carousel Product",
       "settings": {
         "enable_divider": true,
         "page_width": "container",
-        "heading": "The best care <em>by the best in medicine</em>",
+        "heading": "The best care<em> by the best in mental health</em>",
         "heading_size": "h2",
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra, nisl in commodo interdum, lacus ipsum sodales ipsum,</p>",
         "alignment": "center",
@@ -707,7 +609,7 @@
         "color_scheme_swiper": "scheme-32051e61-b6a4-4a5b-80c8-a81092a26e44",
         "color_scheme": "",
         "color_scheme_card": "scheme-1",
-        "color_accent": "#a5a5a5",
+        "color_accent": "#8e3a2a",
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_top_tab": 40,
@@ -717,65 +619,89 @@
         "them_section_id": ""
       }
     },
-    "faq_section_bjxzKR": {
+    "faq_section_9n6FFJ": {
       "type": "faq-section",
       "blocks": {
-        "collapsible_row_4VGV9b": {
+        "collapsible_row_JLDGJa": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Question 1",
+            "heading": "How much does an assessment cost, and what's included?",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
           }
         },
-        "collapsible_row_bzzp7L": {
+        "collapsible_row_DJrmmd": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Question 2",
+            "heading": "How quickly can I be seen?",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
           }
         },
-        "collapsible_row_C9p89w": {
+        "collapsible_row_gNqeMY": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Question 3",
+            "heading": "What medication do you prescribe?",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
           }
         },
-        "collapsible_row_VqL7ez": {
+        "collapsible_row_Hg3GiP": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Question 4",
+            "heading": "Will my GP take over my prescription? (Shared care)",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
+          }
+        },
+        "collapsible_row_xfXcHG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Settle right for me if I've been assessed before?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
+          }
+        },
+        "collapsible_row_JyNh4p": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I claim through my private medical insurance?",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
+          }
+        },
+        "collapsible_row_BXapVB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What happens after my diagnosis?",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper ligula viverra porttitor ultrices. Proin tellus odio, pretium sed scelerisque id, iaculis ut nulla.<br/><br/>Mauris orci metus, rutrum vel lectus sed, blandit porttitor augue. Nam scelerisque nulla sit amet accumsan commodo. Duis sed lacus ipsum. </p>"
           }
         }
       },
       "block_order": [
-        "collapsible_row_4VGV9b",
-        "collapsible_row_bzzp7L",
-        "collapsible_row_C9p89w",
-        "collapsible_row_VqL7ez"
+        "collapsible_row_JLDGJa",
+        "collapsible_row_DJrmmd",
+        "collapsible_row_gNqeMY",
+        "collapsible_row_Hg3GiP",
+        "collapsible_row_xfXcHG",
+        "collapsible_row_JyNh4p",
+        "collapsible_row_BXapVB"
       ],
       "name": "Faq Section",
       "settings": {
-        "heading": "Questions?<em> We’re here to help.</em>",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-        "button_label": "Button label",
-        "button_link": "",
+        "heading": "Common questions, <em>answered.</em>",
+        "heading_size": "hxl",
+        "heading_alignment": "left",
+        "text": "<p>Most people land here with the same handful of questions about cost, timelines, medication, and how Settle works alongside the NHS. If yours isn't covered below, our team will reply within one working day, or you can speak to a clinician on a free 15-minute call.</p>",
+        "button_label": "See all questions",
+        "button_link": "shopify://pages/frequently-asked-questions",
         "button_style": "primary",
         "layout": "none",
         "disclosure_toggle": "plus",
         "container_color_scheme": "",
         "color_scheme": "",
-        "color_accent": "#a5a5a5",
+        "color_accent": "#8e3a2a",
         "open_first_collapsible_row": true,
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_tab": 40,
-        "padding_bottom_tab": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_tab": 60,
+        "padding_bottom_tab": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
       }
     },
     "author_block_Q7eG9e": {
@@ -828,11 +754,10 @@
     "image_with_list_reverse_text_PkCdah",
     "banner_blocks_8Xg6CL",
     "multicard_blocks_z89Frn",
-    "team_carousel_product_fPwkMj",
+    "image_block_carousel_QiPbee",
     "image_banner_jHEMRR",
-    "text_block_with_image_geLiDC",
     "team_carousel_BXYGe4",
-    "faq_section_bjxzKR",
+    "faq_section_9n6FFJ",
     "author_block_Q7eG9e"
   ]
 }

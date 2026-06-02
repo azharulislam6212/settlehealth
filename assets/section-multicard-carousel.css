@@ -6,7 +6,7 @@
     overflow: hidden;
 }
 .multicard-section  .section--header{
-padding-bottom: 9.4rem;
+padding-bottom: 5rem;
 }
 .multicard-section  .multicard-slider{
     overflow: visible;
@@ -16,6 +16,8 @@ padding-bottom: 9.4rem;
 .multi-card {
     padding: 20px 24px;
     border-radius: 14.42px;
+    text-align: center;
+    height: 100%;
 }
 
 .multicard-wrapper{
@@ -62,7 +64,7 @@ line-height: 24px;
 @media screen and (max-width: 768px) {
 
  .multicard-section .section--header {
-    padding-bottom: 2.4rem;
+    padding-bottom: 2.6rem;
 }
  
      

@@ -6,6 +6,10 @@
 .team-section .section--header{
 padding-bottom: 6.3rem;
 }
+.team-section .section--header em{
+  display: block;
+}
+
 .team-section .team-slider{
     overflow: visible;
 }
@@ -113,10 +117,7 @@ margin: 0 0 22px;
     margin: 0 0 10px;
 }
 
-.team-section__innr{
-    max-width: 1228px;
-    margin: 0 auto;
-}
+ 
 
   @media screen and (max-width: 768px) {
 .team-section .section--header{
