@@ -1,3 +1,8 @@
+
+
+
+
+
 /*
  * ------------------------------------------------------------
  * IMPORTANT: The contents of this file are auto-generated.
@@ -9,474 +14,324 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "page_header_6GJTT6": {
-      "type": "page-header",
-      "name": "Page header",
+    "inner_page_header_z46RAY": {
+      "type": "inner-page-header",
+      "name": "Inner page header",
       "settings": {
         "page_width": "container",
-        "caption": "The team",
-        "heading": "Meet your settlehealth clinicians ",
+        "caption": "",
+        "heading": "Helping you live a life in full colour",
         "heading_size": "hxl",
-        "text": "<p>Qualified. Compassionate. Committed. A clinical team you can trust.<\/p>",
-        "list_text": "<p>Our responsible pharmacist today is <em>Jayshree Dave 2067985<\/em><\/p>",
-        "color_scheme": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
-        "color_accent": "#ccf9ab",
-        "padding_top": 90,
-        "padding_bottom": 90,
+        "text": "<p>Imagine a life in charge of your healthcare. A carefully settlehealthd pathway designed with you, for you. settlehealth is whole-person healthcare that combines clinical expertise, thoughtful technology and human insight. An intelligent system with limitless possibilities. This is life in full colour.<\/p>",
+        "color_accent": "#a5a5a5",
+        "color_scheme": "",
+        "padding_top": 96,
+        "padding_bottom": 96,
         "padding_top_tab": 80,
         "padding_bottom_tab": 80,
         "padding_top_mobile": 48,
         "padding_bottom_mobile": 48
       }
     },
-    "text_img_block_3R7QcN": {
-      "type": "text-img-block",
-      "name": "Text Image block",
-      "settings": {
-        "page_width": "container",
-        "caption": "Regulation",
-        "heading": "Our Regulators",
-        "heading_size": "h2",
-        "text": "<p><a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacy\/9012920\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacy\/9012920\">Click <\/a>to view our licence details<\/p>",
-        "image_1": "shopify:\/\/shop_images\/image_159.png",
-        "image_2": "shopify:\/\/shop_images\/image_160.png",
-        "color_scheme": "scheme-c1c0e958-83fd-40ab-9334-9739ff291f85",
-        "color_accent": "#ccf9ab",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_tab": 40,
-        "padding_bottom_tab": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30
-      }
-    },
-    "text_blocks_flex_MjaEU4": {
-      "type": "text-blocks-flex",
+    "counter_blocks_VhQTwj": {
+      "type": "counter-blocks",
       "blocks": {
-        "text_block_TBCGfJ": {
+        "text_block_WgEA7H": {
           "type": "text_block",
           "settings": {
-            "title": "Erran Elise Morris <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2067798\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2067798\">2067798<\/a>",
-            "id_number": "Superintendent Pharmacist",
-            "text": "<p>Specialises in clinical safety and digital healthcare. The driving force that leads our team of highly skilled clinicians. <\/p>"
+            "title": "400+",
+            "text": "<p>Projects completed<\/p>"
           }
         },
-        "text_block_fx6pfk": {
+        "text_block_dkNhmn": {
           "type": "text_block",
           "settings": {
-            "title": "Aumbreen Masood <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2054688\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2054688\">2054688<\/a>",
-            "id_number": "Prescribing Pharmacist",
-            "text": "<p>Specialises in weight loss, with a diverse background in community pharmacy management.<\/p>"
+            "title": "600%",
+            "text": "<p>Return on investment<\/p>"
           }
         },
-        "text_block_LexY6m": {
+        "text_block_JdnRhb": {
           "type": "text_block",
           "settings": {
-            "title": "Nafisa Raza <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2221589\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2221589\">2221589 <\/a>",
-            "id_number": "Prescribing Pharmacist",
-            "text": "<p>Dedicated to helping patients make sustainable health improvements using a personalised, evidence-based approach.<\/p>"
-          }
-        },
-        "text_block_tE8Vn7": {
-          "type": "text_block",
-          "settings": {
-            "title": "Wing Suet Chan <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2228233\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2228233\">2228233 <\/a>",
-            "id_number": "Prescribing Pharmacist",
-            "text": "<p>Specialised in weight management, and committed to supporting patients with a science-led approach.<\/p>"
-          }
-        },
-        "text_block_pDnncF": {
-          "type": "text_block",
-          "settings": {
-            "title": "Fahima Tamannah <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2083781\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2083781\">2083781<\/a>",
-            "id_number": "Prescribing Pharmacist",
-            "text": "<p> A personable approach to help drive patients towards their weight-loss goals and long-term health.<\/p>"
-          }
-        },
-        "text_block_RmNyEf": {
-          "type": "text_block",
-          "settings": {
-            "title": "Islam Ahmed <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224402\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224402\">2224402<\/a>",
-            "id_number": "Prescribing Pharmacist",
-            "text": "<p>Committed to improving access to equitable care, particularly for neurodiverse patients.<\/p>"
-          }
-        },
-        "text_block_TPteFU": {
-          "type": "text_block",
-          "settings": {
-            "title": "Imrana Haja Mohideen <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224423\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224423\">2224423<\/a>",
-            "id_number": "Prescribing Pharmacist",
-            "text": "<p>Expertise in patient-centred care, medication optimisation and long-term condition management.<\/p>"
-          }
-        },
-        "text_block_JNwLKx": {
-          "type": "text_block",
-          "settings": {
-            "title": "",
-            "id_number": "",
-            "text": ""
-          }
-        },
-        "text_block_yhUx8k": {
-          "type": "text_block",
-          "settings": {
-            "title": "",
-            "id_number": "",
-            "text": ""
-          }
-        },
-        "text_block_6K3DFf": {
-          "type": "text_block",
-          "settings": {
-            "title": "",
-            "id_number": "",
-            "text": ""
-          }
-        },
-        "text_block_4XXNKr": {
-          "type": "text_block",
-          "settings": {
-            "title": "",
-            "id_number": "",
-            "text": ""
-          }
-        },
-        "text_block_xbj9cD": {
-          "type": "text_block",
-          "settings": {
-            "title": "",
-            "id_number": "",
-            "text": ""
+            "title": "10k",
+            "text": "<p>Global downloads<\/p>"
           }
         }
       },
       "block_order": [
-        "text_block_TBCGfJ",
-        "text_block_fx6pfk",
-        "text_block_LexY6m",
-        "text_block_tE8Vn7",
-        "text_block_pDnncF",
-        "text_block_RmNyEf",
-        "text_block_TPteFU",
-        "text_block_JNwLKx",
-        "text_block_yhUx8k",
-        "text_block_6K3DFf",
-        "text_block_4XXNKr",
-        "text_block_xbj9cD"
-      ],
-      "name": "Text blocks flex",
-      "settings": {
-        "page_width": "container",
-        "caption": "GPhC & CQC Regulated",
-        "heading": "Clinicians you can trust",
-        "heading_size": "h1",
-        "text": "<p>Our UK-leading clinicians are at the top of their game. Highly skilled and individually specialised. Dedicated to giving you confidence, clarity and a clear path forward. <\/p>",
-        "button_label": "About us",
-        "link": "shopify:\/\/pages\/about-us",
-        "button_style": "secondary-outline",
-        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_tab": 40,
-        "padding_bottom_tab": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30
-      }
-    },
-    "rich_text_custom_YyFr9y": {
-      "type": "rich-text--custom",
-      "blocks": {
-        "caption_xqWx6k": {
-          "type": "caption",
-          "settings": {
-            "caption": "Regulated",
-            "text_style": "subtitle",
-            "text_size": "medium"
-          }
-        },
-        "heading_fNnDyw": {
-          "type": "heading",
-          "settings": {
-            "heading": "How our prescribers are regulated",
-            "heading_size": "h1"
-          }
-        },
-        "text_9JVri8": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our prescribers are Pharmacist Independent Prescribers regulated by the General Pharmaceutical Council. General Pharmaceutical Council (GPhC) is the independent regulator for pharmacists, pharmacy technicians and pharmacy premises in Great Britain.\u2028<\/p><p>Some of the prescribing services available through settlehealth are provided by Health Finder Pro Limited, an independent third-party clinical provider. Where applicable, your consultation information and relevant health data will be securely shared with Health Finder Pro Limited for the purposes of clinical review, prescribing, and ongoing medical management. Health Finder Pro Limited operates as an independent data controller in relation to the prescribing services it provides, more information can be found on our Privacy Policy, click here to view.<br\/><\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "caption_xqWx6k",
-        "heading_fNnDyw",
-        "text_9JVri8"
-      ],
-      "name": "Custom richtext",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "image_with_list_reverse_text_8CNGkE": {
-      "type": "image-with-list-reverse-text",
-      "blocks": {
-        "heading_VXB3xg": {
-          "type": "heading",
-          "settings": {
-            "heading": "A message from our Superintendent Pharmacist",
-            "heading_size": "h1"
-          }
-        },
-        "text_GAM7Qq": {
-          "type": "text",
-          "settings": {
-            "text": "<p>“We’re here to help you feel healthier and more confident. This goes beyond medication. Our personalised, one-to-one care is designed for lasting change. And our team of clinicians supports you through every step, keeping you motivated and on track.”<\/p>",
-            "text_style": "body"
-          }
-        },
-        "signature_text_nJAW9j": {
-          "type": "signature_text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/getsitecontrol__generate-calligraphy-text__free_1_1.svg",
-            "heading": "Erran Morris",
-            "text": "Superintendent Pharmacist"
-          }
-        }
-      },
-      "block_order": [
-        "heading_VXB3xg",
-        "text_GAM7Qq",
-        "signature_text_nJAW9j"
-      ],
-      "name": "Image list reverse text",
-      "settings": {
-        "enable_divider": true,
-        "image": "shopify:\/\/shop_images\/Image.png",
-        "color_scheme": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
-        "color_accent": "#a5a5a5",
-        "padding_top": 90,
-        "padding_bottom": 90,
-        "padding_top_tab": 60,
-        "padding_bottom_tab": 60,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30
-      }
-    },
-    "image_with_card_fMhbwt": {
-      "type": "image-with-card",
-      "blocks": {
-        "caption_rtU43h": {
-          "type": "caption",
-          "settings": {
-            "caption": "",
-            "text_style": "subtitle",
-            "text_size": "medium"
-          }
-        },
-        "heading_7KXKRf": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our North Star",
-            "heading_size": "h1"
-          }
-        },
-        "text_jMaqpG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This is about you, not us. But it’s important to know how committed we are to your health. Here’s why we do what we do.<\/p><p><strong>Personalised to you <\/strong><\/p><p>A convincing social post, clever marketing campaign or recommendation from a friend. It’s human nature to be drawn in. But one size can’t possibly fit all. What works for them won’t necessarily work for you. Just as we all look different, we’re made differently and we work differently. <\/p><p>We take the time to understand your health story and create a personalised treatment pathway. It’s clinically designed to work specifically for you and adapt as you change.  <\/p><p><strong>Turning confusion into clarity <\/strong><\/p><p>The world is noisy. So many choices with conflicting advice and ever-changing opinions can leave you feeling lost and overwhelmed. <\/p><p>We turn confusion into clarity by filtering, refining and curating a healthcare pathway that suits your body and your lifestyle. <\/p><p><strong>Where science meets compassion<\/strong> <\/p><p>It’s often hard to know who to believe and what will actually work for you. <\/p><p>Our clinicians are individually specialised to give you expert advice. Your medication is scientifically proven to work. Add in the one-to-one support on nutrition, exercise, sleep and mental health. Plus tailored supplements for overall wellbeing. That’s whole-person healthcare.  <\/p><p><strong>For lasting change<\/strong> <\/p><p>Quick fixes aren’t sustainable. The more you try, the further it can lead you away from your health goals.<\/p><p>Lasting changes means a lifestyle change. We work together on a realistic approach, setting achievable goals that you can build upon. Over time, you’ll create lasting habits for long-term health.  <\/p><p><strong>Consistency comes with convenience <\/strong><\/p><p>You don’t have time for unnecessary queues. Whether it’s for an appointment, on the phone or at the doctor. <\/p><p>Discreet delivery, online clinician support and the ability to track your progress puts you in control.<\/p>",
-            "text_style": "body",
-            "text_size": "medium"
-          }
-        }
-      },
-      "block_order": [
-        "caption_rtU43h",
-        "heading_7KXKRf",
-        "text_jMaqpG"
-      ],
-      "name": "Image with card",
-      "settings": {
-        "enable_divider": true,
-        "page_width": "container",
-        "image": "shopify:\/\/shop_images\/04_1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "enable_content": true,
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "color_accent": "#ccf9ab",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_tab": 40,
-        "padding_bottom_tab": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30
-      }
-    },
-    "text_blocks_flex_kR9frQ": {
-      "type": "text-blocks-flex",
-      "blocks": {
-        "text_block_f6rVjx": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_dWrmet": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_aH9G6T": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_HkKwtH": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_UiGBdd": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_FGQGFT": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_WcLGcV": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_pBm3zN": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_y3dCGY": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_EFjRz4": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_Q4e6FP": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        },
-        "text_block_W8Ya9U": {
-          "type": "text_block",
-          "settings": {
-            "title": "Amélie Laurent",
-            "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_f6rVjx",
-        "text_block_dWrmet",
-        "text_block_aH9G6T",
-        "text_block_HkKwtH",
-        "text_block_UiGBdd",
-        "text_block_FGQGFT",
-        "text_block_WcLGcV",
-        "text_block_pBm3zN",
-        "text_block_y3dCGY",
-        "text_block_EFjRz4",
-        "text_block_Q4e6FP",
-        "text_block_W8Ya9U"
+        "text_block_WgEA7H",
+        "text_block_dkNhmn",
+        "text_block_JdnRhb"
       ],
       "disabled": true,
-      "name": "Text blocks flex",
+      "name": "Counter blocks",
       "settings": {
         "page_width": "container",
-        "caption": "GPhC & CQC Regulated",
-        "heading": "Wider Clinical Team",
+        "heading": "",
         "heading_size": "h1",
-        "text": "<p>We’re a cross-disciplinary team that loves to create great experiences for our customers.<\/p>",
-        "button_label": "About us",
-        "link": "shopify:\/\/pages\/about-us",
-        "button_style": "secondary-outline",
-        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "color_scheme": "",
+        "color_scheme_card": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "text_blocks_content_QrD6Tc": {
+      "type": "text-blocks-content",
+      "blocks": {
+        "text_left_block_n8VY36": {
+          "type": "text_left_block",
+          "settings": {
+            "text": "<p>Taking care of your health should be pretty straightforward. But in today’s world, it isn’t. You might be on medication that doesn’t feel right. You could be taking supplements and don’t know why. You may not know where to turn. Too much choice is confusing. And the overload of information can leave you feeling overwhelmed. <\/p><p>settlehealth gives you clarity to find a clear path forward. Your journey with us is individually designed to work with you, for you. Our specialised clinicians are the best in the industry. We take time to listen. We’re compassionate to support you through every step.<\/p>"
+          }
+        },
+        "text_right_block_DfdpwT": {
+          "type": "text_right_block",
+          "settings": {
+            "text": "<p>We don’t just look at your symptoms. We go deeper to find the root cause. Quick fixes aren’t the answer to long-term health. So we work together to identify realistic lifestyle changes you can build into your daily life for lasting change.<\/p><p>Step by step, we help you increase momentum and raise energy levels to enjoy all that is good about life. Feeling your best allows you to do your best. And live your life in full colour.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_left_block_n8VY36",
+        "text_right_block_DfdpwT"
+      ],
+      "name": "Text blocks content",
+      "settings": {
+        "page_width": "container",
+        "caption": "About Us",
+        "heading": "Personalising healthcare to give you a clear path forward",
+        "heading_size": "h1",
+        "text": "",
+        "button_label": "",
+        "link": "",
+        "button_style": "primary",
+        "color_accent": "#fcce96",
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 120,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 100,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 48
+      }
+    },
+    "images_with_list_icons_YcBNEw": {
+      "type": "images-with-list-icons",
+      "blocks": {
+        "image_block_JBVCtB": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Generated_with_Kive.ai_-_Studio_portrait_photography._Two_friends_in_their_mid-thirties_against_a_seamless_painted_gradient_backdrop_deep_navy_blue_hex_16527F_at_the_top_transitioning.png",
+            "image_position": "left",
+            "title": "Healthcare from home",
+            "text": "<p>Life is busy. Time is short. We take care of everything, so you don’t have to. Start your personalised journey without even leaving the house. <\/p><ul><li>No queues. No waiting rooms. 100% online.<\/li><li>Clinically designed treatment pathway designed only for you.<\/li><li>Continued one-to-one support throughout your journey.<\/li><\/ul>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        },
+        "image_block_aYH9cx": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wegovy_hero.png",
+            "image_position": "right",
+            "title": "Stay on your path",
+            "text": "<p>As you progress through your journey, your body will change. We’ll adapt your treatment pathway to change with you.<\/p><ul><li>Speak to a specialised clinician for support, motivation or just a chat.<\/li><li>We’ll advise you on nutrition, exercise, sleep and overall wellbeing.<\/li><li>It’s not just the physical symptoms, we’ll help to keep you mentally strong too.<\/li><\/ul>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_JBVCtB",
+        "image_block_aYH9cx"
+      ],
+      "name": "Images list icon text",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container-full",
+        "color_scheme": "",
+        "color_accent": "#ccf9ab",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 80,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48
+      }
+    },
+    "team_carousel_BXYGe4": {
+      "type": "team-carousel-product",
+      "blocks": {
+        "team_block_rUAVM8": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "name": "Imrana Mohid",
+            "designation": "Prescribing Pharmacist",
+            "text": "Experience as a Primary Care Network (PCN) Clinical Pharmacist, Superintendent Community Pharmacist and Private Weight-Loss Prescriber. Focused on patient-centred care, medication optimisation and long-term condition management.",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "team_block_3ftVVg": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_28.png",
+            "name": "Erran Morris",
+            "designation": "Superintendent Pharmacist",
+            "text": "Vast experience across some of the UK’s leading pharmacies. Specialising in clinical safety and digital healthcare, with a modern approach that embraces innovation and raises the standard. The driving force that leads our team of highly skilled clinicians. ",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_m3Hye8": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Aumbreen Masood",
+            "designation": "Prescribing Pharmacist",
+            "text": "Specialises in weight loss, with a diverse background in community pharmacy management providing both NHS and private clinical services. Experienced in patient assessment, diagnosis and prescribing across a range of acute and chronic conditions.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_9EYiea": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_24.png",
+            "name": "Kiran Williamson",
+            "designation": "Director Of Operations",
+            "text": "Experienced leader with a track record of scaling high-growth businesses through process optimisation, cross-functional leadership, and data-driven decision making. Specialises in building operational infrastructure that supports rapid commercial expansion.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_yXJrDp": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Fahima Tamannah",
+            "designation": "Prescribing Pharmacist",
+            "text": "Over a decade of experience in community pharmacy and store management, working both privately and with the NHS. A personable approach to help drive patients towards their weight-loss goals and long-term health.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_4A6JDD": {
+          "type": "team_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_23.png",
+            "name": "Nafisa Raza",
+            "designation": "Prescribing Pharmacist ",
+            "text": "Patient-centred approach with hands-on experience working in a GP surgery. Specialised in weight management and type 2 diabetes, and dedicated to helping patients make sustainable health improvements using a personalised, evidence-based approach.",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "team_block_ECLNDX": {
+          "type": "team_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_group_22.png",
+            "name": "Islam Ahmed",
+            "designation": "Prescribing Pharmacist",
+            "text": "Extensive experience within health in justice, supporting diverse patient groups. Committed to improving access to equitable care, particularly for neurodiverse patients. Focus on weight management and evidence-based prescribing to achieve long-term results.",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "team_block_rUAVM8",
+        "team_block_3ftVVg",
+        "team_block_m3Hye8",
+        "team_block_9EYiea",
+        "team_block_yXJrDp",
+        "team_block_4A6JDD",
+        "team_block_ECLNDX"
+      ],
+      "name": "Team Carousel",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "heading": "Clinicians you can trust<em> Qualified. Compassionate. Committed.<\/em>",
+        "heading_size": "h2",
+        "text": "<p>Our UK-leading clinicians are at the top of their game. Highly skilled and individually specialised. Dedicated to giving you confidence, clarity and a clear path forward. <\/p>",
+        "alignment": "center",
+        "autoplay_enabled": false,
+        "autoplay_timeout": 5,
+        "loop_enabled": false,
+        "enable_pagination": false,
+        "enable_pagination_mobile": false,
+        "enable_navigation": false,
+        "enable_navigation_desktop": false,
+        "color_scheme_swiper": "scheme-32051e61-b6a4-4a5b-80c8-a81092a26e44",
+        "color_scheme": "",
+        "color_scheme_card": "scheme-1",
+        "color_accent": "#a5a5a5",
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_top_tab": 40,
         "padding_bottom_tab": 40,
         "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30
+        "padding_bottom_mobile": 30,
+        "them_section_id": ""
+      }
+    },
+    "newsletter_k6hNBx": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_tLAb3y": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get healthcare insights straight to your inbox",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_6r4k38": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Sign up to our newsletter <\/strong>for special offers, new product releases and health insights.<\/p>"
+          }
+        },
+        "email_form_JCcqCk": {
+          "type": "email_form",
+          "settings": {
+            "policy_text": "We care about your data in our <a href=\"\/pages\/privacy-policy\" title=\"Privacy Policy\">privacy policy.<\/a>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tLAb3y",
+        "paragraph_6r4k38",
+        "email_form_JCcqCk"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 80,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48
       }
     }
   },
   "order": [
-    "main",
-    "page_header_6GJTT6",
-    "text_img_block_3R7QcN",
-    "text_blocks_flex_MjaEU4",
-    "rich_text_custom_YyFr9y",
-    "image_with_list_reverse_text_8CNGkE",
-    "image_with_card_fMhbwt",
-    "text_blocks_flex_kR9frQ"
+    "inner_page_header_z46RAY",
+    "counter_blocks_VhQTwj",
+    "text_blocks_content_QrD6Tc",
+    "images_with_list_icons_YcBNEw",
+    "team_carousel_BXYGe4",
+    "newsletter_k6hNBx"
   ]
 }

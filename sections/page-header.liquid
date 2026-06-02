@@ -77,14 +77,14 @@
                     const gphcNumber = data.gphc_number;
                     const linkUrl = `https://www.pharmacyregulation.org/registers/pharmacist/${gphcNumber}`;
                     
-                    container.innerHTML = `<span style="line-height: 30px;margin-right: 8px;">Our responsible pharmacist today is</span><em><a target="_blank" href="${linkUrl}">${pharmacistName} (${gphcNumber})</a></em>`;
+                    container.innerHTML = `<span style="line-height: 30px;margin-right: 8px;">Our responsible clinician today is</span><em><a target="_blank" href="${linkUrl}">${pharmacistName} (${gphcNumber})</a></em>`;
                   } else {
-                    container.innerHTML = 'Our responsible pharmacist information is currently unavailable.';
+                    container.innerHTML = 'Our responsible clinician today is currently unavailable.';
                   }
                 })
                 .catch(error => {
                   console.error('Error fetching responsible pharmacist data:', error);
-                  container.innerHTML = 'Our responsible pharmacist information is currently unavailable.';
+                  container.innerHTML = 'Our responsible clinician today is currently unavailable.';
                 });
             })();
           </script>

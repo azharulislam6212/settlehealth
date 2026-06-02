@@ -1,0 +1,482 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "page_header_6GJTT6": {
+      "type": "page-header",
+      "name": "Page header",
+      "settings": {
+        "page_width": "container",
+        "caption": "The team",
+        "heading": "Meet your settlehealth clinicians ",
+        "heading_size": "hxl",
+        "text": "<p>Qualified. Compassionate. Committed. A clinical team you can trust.<\/p>",
+        "list_text": "<p>Our responsible pharmacist today is <em>Jayshree Dave 2067985<\/em><\/p>",
+        "color_scheme": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
+        "color_accent": "#ccf9ab",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 80,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48
+      }
+    },
+    "text_img_block_3R7QcN": {
+      "type": "text-img-block",
+      "name": "Text Image block",
+      "settings": {
+        "page_width": "container",
+        "caption": "Regulation",
+        "heading": "Our Regulators",
+        "heading_size": "h2",
+        "text": "<p><a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacy\/9012920\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacy\/9012920\">Click <\/a>to view our licence details<\/p>",
+        "image_1": "shopify:\/\/shop_images\/image_159.png",
+        "image_2": "shopify:\/\/shop_images\/image_160.png",
+        "color_scheme": "scheme-c1c0e958-83fd-40ab-9334-9739ff291f85",
+        "color_accent": "#ccf9ab",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "text_blocks_flex_MjaEU4": {
+      "type": "text-blocks-flex",
+      "blocks": {
+        "text_block_TBCGfJ": {
+          "type": "text_block",
+          "settings": {
+            "title": "Erran Elise Morris <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2067798\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2067798\">2067798<\/a>",
+            "id_number": "Superintendent Pharmacist",
+            "text": "<p>Specialises in clinical safety and digital healthcare. The driving force that leads our team of highly skilled clinicians. <\/p>"
+          }
+        },
+        "text_block_fx6pfk": {
+          "type": "text_block",
+          "settings": {
+            "title": "Aumbreen Masood <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2054688\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2054688\">2054688<\/a>",
+            "id_number": "Prescribing Pharmacist",
+            "text": "<p>Specialises in weight loss, with a diverse background in community pharmacy management.<\/p>"
+          }
+        },
+        "text_block_LexY6m": {
+          "type": "text_block",
+          "settings": {
+            "title": "Nafisa Raza <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2221589\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2221589\">2221589 <\/a>",
+            "id_number": "Prescribing Pharmacist",
+            "text": "<p>Dedicated to helping patients make sustainable health improvements using a personalised, evidence-based approach.<\/p>"
+          }
+        },
+        "text_block_tE8Vn7": {
+          "type": "text_block",
+          "settings": {
+            "title": "Wing Suet Chan <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2228233\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2228233\">2228233 <\/a>",
+            "id_number": "Prescribing Pharmacist",
+            "text": "<p>Specialised in weight management, and committed to supporting patients with a science-led approach.<\/p>"
+          }
+        },
+        "text_block_pDnncF": {
+          "type": "text_block",
+          "settings": {
+            "title": "Fahima Tamannah <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2083781\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2083781\">2083781<\/a>",
+            "id_number": "Prescribing Pharmacist",
+            "text": "<p> A personable approach to help drive patients towards their weight-loss goals and long-term health.<\/p>"
+          }
+        },
+        "text_block_RmNyEf": {
+          "type": "text_block",
+          "settings": {
+            "title": "Islam Ahmed <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224402\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224402\">2224402<\/a>",
+            "id_number": "Prescribing Pharmacist",
+            "text": "<p>Committed to improving access to equitable care, particularly for neurodiverse patients.<\/p>"
+          }
+        },
+        "text_block_TPteFU": {
+          "type": "text_block",
+          "settings": {
+            "title": "Imrana Haja Mohideen <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224423\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224423\">2224423<\/a>",
+            "id_number": "Prescribing Pharmacist",
+            "text": "<p>Expertise in patient-centred care, medication optimisation and long-term condition management.<\/p>"
+          }
+        },
+        "text_block_JNwLKx": {
+          "type": "text_block",
+          "settings": {
+            "title": "",
+            "id_number": "",
+            "text": ""
+          }
+        },
+        "text_block_yhUx8k": {
+          "type": "text_block",
+          "settings": {
+            "title": "",
+            "id_number": "",
+            "text": ""
+          }
+        },
+        "text_block_6K3DFf": {
+          "type": "text_block",
+          "settings": {
+            "title": "",
+            "id_number": "",
+            "text": ""
+          }
+        },
+        "text_block_4XXNKr": {
+          "type": "text_block",
+          "settings": {
+            "title": "",
+            "id_number": "",
+            "text": ""
+          }
+        },
+        "text_block_xbj9cD": {
+          "type": "text_block",
+          "settings": {
+            "title": "",
+            "id_number": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_TBCGfJ",
+        "text_block_fx6pfk",
+        "text_block_LexY6m",
+        "text_block_tE8Vn7",
+        "text_block_pDnncF",
+        "text_block_RmNyEf",
+        "text_block_TPteFU",
+        "text_block_JNwLKx",
+        "text_block_yhUx8k",
+        "text_block_6K3DFf",
+        "text_block_4XXNKr",
+        "text_block_xbj9cD"
+      ],
+      "name": "Text blocks flex",
+      "settings": {
+        "page_width": "container",
+        "caption": "GPhC & CQC Regulated",
+        "heading": "Clinicians you can trust",
+        "heading_size": "h1",
+        "text": "<p>Our UK-leading clinicians are at the top of their game. Highly skilled and individually specialised. Dedicated to giving you confidence, clarity and a clear path forward. <\/p>",
+        "button_label": "About us",
+        "link": "shopify:\/\/pages\/about-us",
+        "button_style": "secondary-outline",
+        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "rich_text_custom_YyFr9y": {
+      "type": "rich-text--custom",
+      "blocks": {
+        "caption_xqWx6k": {
+          "type": "caption",
+          "settings": {
+            "caption": "Regulated",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "heading_fNnDyw": {
+          "type": "heading",
+          "settings": {
+            "heading": "How our prescribers are regulated",
+            "heading_size": "h1"
+          }
+        },
+        "text_9JVri8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our prescribers are Pharmacist Independent Prescribers regulated by the General Pharmaceutical Council. General Pharmaceutical Council (GPhC) is the independent regulator for pharmacists, pharmacy technicians and pharmacy premises in Great Britain.\u2028<\/p><p>Some of the prescribing services available through settlehealth are provided by Health Finder Pro Limited, an independent third-party clinical provider. Where applicable, your consultation information and relevant health data will be securely shared with Health Finder Pro Limited for the purposes of clinical review, prescribing, and ongoing medical management. Health Finder Pro Limited operates as an independent data controller in relation to the prescribing services it provides, more information can be found on our Privacy Policy, click here to view.<br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "caption_xqWx6k",
+        "heading_fNnDyw",
+        "text_9JVri8"
+      ],
+      "name": "Custom richtext",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_list_reverse_text_8CNGkE": {
+      "type": "image-with-list-reverse-text",
+      "blocks": {
+        "heading_VXB3xg": {
+          "type": "heading",
+          "settings": {
+            "heading": "A message from our Superintendent Pharmacist",
+            "heading_size": "h1"
+          }
+        },
+        "text_GAM7Qq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“We’re here to help you feel healthier and more confident. This goes beyond medication. Our personalised, one-to-one care is designed for lasting change. And our team of clinicians supports you through every step, keeping you motivated and on track.”<\/p>",
+            "text_style": "body"
+          }
+        },
+        "signature_text_nJAW9j": {
+          "type": "signature_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/getsitecontrol__generate-calligraphy-text__free_1_1.svg",
+            "heading": "Erran Morris",
+            "text": "Superintendent Pharmacist"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VXB3xg",
+        "text_GAM7Qq",
+        "signature_text_nJAW9j"
+      ],
+      "name": "Image list reverse text",
+      "settings": {
+        "enable_divider": true,
+        "image": "shopify:\/\/shop_images\/Image.png",
+        "color_scheme": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
+        "color_accent": "#a5a5a5",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_tab": 60,
+        "padding_bottom_tab": 60,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "image_with_card_fMhbwt": {
+      "type": "image-with-card",
+      "blocks": {
+        "caption_rtU43h": {
+          "type": "caption",
+          "settings": {
+            "caption": "",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "heading_7KXKRf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our North Star",
+            "heading_size": "h1"
+          }
+        },
+        "text_jMaqpG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This is about you, not us. But it’s important to know how committed we are to your health. Here’s why we do what we do.<\/p><p><strong>Personalised to you <\/strong><\/p><p>A convincing social post, clever marketing campaign or recommendation from a friend. It’s human nature to be drawn in. But one size can’t possibly fit all. What works for them won’t necessarily work for you. Just as we all look different, we’re made differently and we work differently. <\/p><p>We take the time to understand your health story and create a personalised treatment pathway. It’s clinically designed to work specifically for you and adapt as you change.  <\/p><p><strong>Turning confusion into clarity <\/strong><\/p><p>The world is noisy. So many choices with conflicting advice and ever-changing opinions can leave you feeling lost and overwhelmed. <\/p><p>We turn confusion into clarity by filtering, refining and curating a healthcare pathway that suits your body and your lifestyle. <\/p><p><strong>Where science meets compassion<\/strong> <\/p><p>It’s often hard to know who to believe and what will actually work for you. <\/p><p>Our clinicians are individually specialised to give you expert advice. Your medication is scientifically proven to work. Add in the one-to-one support on nutrition, exercise, sleep and mental health. Plus tailored supplements for overall wellbeing. That’s whole-person healthcare.  <\/p><p><strong>For lasting change<\/strong> <\/p><p>Quick fixes aren’t sustainable. The more you try, the further it can lead you away from your health goals.<\/p><p>Lasting changes means a lifestyle change. We work together on a realistic approach, setting achievable goals that you can build upon. Over time, you’ll create lasting habits for long-term health.  <\/p><p><strong>Consistency comes with convenience <\/strong><\/p><p>You don’t have time for unnecessary queues. Whether it’s for an appointment, on the phone or at the doctor. <\/p><p>Discreet delivery, online clinician support and the ability to track your progress puts you in control.<\/p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "caption_rtU43h",
+        "heading_7KXKRf",
+        "text_jMaqpG"
+      ],
+      "name": "Image with card",
+      "settings": {
+        "enable_divider": true,
+        "page_width": "container",
+        "image": "shopify:\/\/shop_images\/04_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "enable_content": true,
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "color_accent": "#ccf9ab",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "text_blocks_flex_kR9frQ": {
+      "type": "text-blocks-flex",
+      "blocks": {
+        "text_block_f6rVjx": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_dWrmet": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_aH9G6T": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_HkKwtH": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_UiGBdd": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_FGQGFT": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_WcLGcV": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_pBm3zN": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_y3dCGY": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_EFjRz4": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_Q4e6FP": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        },
+        "text_block_W8Ya9U": {
+          "type": "text_block",
+          "settings": {
+            "title": "Amélie Laurent",
+            "id_number": "3289302",
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_f6rVjx",
+        "text_block_dWrmet",
+        "text_block_aH9G6T",
+        "text_block_HkKwtH",
+        "text_block_UiGBdd",
+        "text_block_FGQGFT",
+        "text_block_WcLGcV",
+        "text_block_pBm3zN",
+        "text_block_y3dCGY",
+        "text_block_EFjRz4",
+        "text_block_Q4e6FP",
+        "text_block_W8Ya9U"
+      ],
+      "disabled": true,
+      "name": "Text blocks flex",
+      "settings": {
+        "page_width": "container",
+        "caption": "GPhC & CQC Regulated",
+        "heading": "Wider Clinical Team",
+        "heading_size": "h1",
+        "text": "<p>We’re a cross-disciplinary team that loves to create great experiences for our customers.<\/p>",
+        "button_label": "About us",
+        "link": "shopify:\/\/pages\/about-us",
+        "button_style": "secondary-outline",
+        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tab": 40,
+        "padding_bottom_tab": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "page_header_6GJTT6",
+    "text_img_block_3R7QcN",
+    "text_blocks_flex_MjaEU4",
+    "rich_text_custom_YyFr9y",
+    "image_with_list_reverse_text_8CNGkE",
+    "image_with_card_fMhbwt",
+    "text_blocks_flex_kR9frQ"
+  ]
+}
