@@ -110,17 +110,30 @@ margin: 0;
     margin-bottom: 10px;
 }
 
-.image-with-list__text ul li::before {
-    content: '';
+  
+.image-with-list__text ul li::before{
+    content: "";
     position: absolute;
     left: 0;
     top: 4px;
-    background-image: url(check.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-color: rgb(var(--color-accent));
     width: 16px;
     height: 16px;
+    border-radius: 50px;
 }
+
+.image-with-list__text ul li::after{
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 9px;
+    background-image: url(check-white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 8.5px;
+    height: 9.5px;
+}
+
 
 .icon-text__icon {
     flex: 0 0 29px;

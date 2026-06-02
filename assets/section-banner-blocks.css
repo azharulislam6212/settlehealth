@@ -36,6 +36,9 @@
     position: relative;
     z-index: 1;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .banner-overlay-text__header {
@@ -133,10 +136,8 @@
 
 .banner-block-grid {
     display: grid;
-    grid-template-columns: 356px 1fr 1fr;
+    grid-template-columns: 345px 1fr 1fr;
     gap: 10px;
-    max-width: 1228px;
-    margin: 0 auto;
 }
 
 .banner-overlay-text__block {
@@ -490,7 +491,7 @@ margin: 0;
 }
 @media screen and (max-width: 1400px) {
 .banner-block-grid {
-    grid-template-columns: 324px 1fr 1fr;
+    grid-template-columns: 270px 1fr 1fr;
 }
 .banner-text-block-wide {
     padding: 40px 50px 40px 40px;
@@ -511,7 +512,7 @@ margin: 0;
 }
 @media screen and (max-width: 1290px) {
 .banner-block-grid {
-    grid-template-columns: 277px 1fr 1fr;
+    grid-template-columns: 250px 1fr 1fr;
 }
 .banner-overlay-icons {
     gap: 16px;
@@ -546,6 +547,16 @@ margin: 0;
    padding: 36px 20px 30px 30px; 
 }
 }
+
+
+@media screen and (max-width: 991px) {
+
+    .banner-block-grid {
+        grid-template-columns: 215px 1fr 1fr;
+    }
+
+}
+
 
 @media screen and (max-width: 768px) {
     .banner-block-grid {

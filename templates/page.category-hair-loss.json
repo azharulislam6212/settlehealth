@@ -93,31 +93,31 @@
             "text": "Concerta XL (METHYLPHENIDATE) A long-acting stimulant medication used to treat ADHD in adults and children. Helps improve focus, reduce impulsivity, and quiet the mental restlessness that comes with ADHD.",
             "button_label_1": "Start my assessment",
             "button_link_1": "shopify://collections",
-            "button_style_1": "primary-outline",
+            "button_style_1": "primary",
             "button_label_2": "",
             "button_link_2": "",
             "button_style_2": "primary-outline",
-            "color_scheme_card": "scheme-0693f56c-984d-4ac3-bc37-3daf4f550925",
-            "color_background": "linear-gradient(103.46deg, #16527F 33.54%, #94CBF5 88.16%), linear-gradient(325.26deg, #E4BFAA 9.46%, #CC9D82 55.29%, #C78D6E 68.83%, #BB805E 103.83%), linear-gradient(194.03deg, #A59768 1.87%, #DFD09F 90%), linear-gradient(164.74deg, #A59768 1.42%, #DFD09F 89.28%)",
-            "color_accent": "#ffbe74"
+            "color_scheme_card": "scheme-8c4ea9c1-0632-45e8-b921-bd9af093a6cb",
+            "color_accent": "#ffffff"
           }
         },
         "banner_card_block_2_tVkR86": {
           "type": "banner_card_block_2",
           "settings": {
-            "title": "Finasteride",
-            "price_text": "from £19.00",
+            "image": "shopify://shop_images/Group_2141256187_1.png",
+            "title": "Atomoxetine",
+            "price_text": "",
             "list_text": "<ul><li>Prescribed by UK Clinicians</li><li>Discreet Delivery</li><li>Next day delivery available</li></ul>",
-            "text": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
-            "button_label_1": "Start your Wegovy Journey",
+            "text": "A non-stimulant medication used to treat ADHD in adults and children. Taken once daily, it works gradually over several weeks to improve focus and reduce impulsivity.",
+            "button_label_1": "Start my assessment",
             "button_link_1": "shopify://collections",
             "button_style_1": "primary",
-            "button_label_2": "Learn more",
-            "button_link_2": "shopify://collections",
+            "button_label_2": "",
+            "button_link_2": "",
             "button_style_2": "primary-outline",
-            "color_scheme_card": "scheme-0693f56c-984d-4ac3-bc37-3daf4f550925",
+            "color_scheme_card": "scheme-8c4ea9c1-0632-45e8-b921-bd9af093a6cb",
             "color_background": "linear-gradient(103.46deg, #16527F 33.54%, #94CBF5 88.16%), linear-gradient(325.26deg, #E4BFAA 9.46%, #CC9D82 55.29%, #C78D6E 68.83%, #BB805E 103.83%), linear-gradient(194.03deg, #A59768 1.87%, #DFD09F 90%), linear-gradient(164.74deg, #A59768 1.42%, #DFD09F 89.28%)",
-            "color_accent": "#ffbe74"
+            "color_accent": "#ffffff"
           }
         }
       },
@@ -151,22 +151,22 @@
         "icon_text_block_nDbBYD": {
           "type": "icon_text_block",
           "settings": {
-            "title": "Complete your online consultation",
-            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.</p>"
+            "title": "Book your assessement",
+            "text": "<p>A 60-minute video consultation with a psychiatrist who specialises in adult ADHD. Available within 14 days, evenings and weekends included.</p>"
           }
         },
         "icon_text_block_wJTNQK": {
           "type": "icon_text_block",
           "settings": {
-            "title": "Get approved by our medical team",
-            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.</p>"
+            "title": "Receive a clear diagnosis",
+            "text": "<p>We assess properly - no 20-minute box-ticking. You'll leave with a written diagnosis, a treatment plan, and a clinician who knows your history.</p>"
           }
         },
         "icon_text_block_tx7LL6": {
           "type": "icon_text_block",
           "settings": {
-            "title": "Receive your delivery at your chosen place",
-            "text": "<p>Start making real progress with plans tailored to your body and lifestyle, plus ongoing unlimited access to licensed providers.</p>"
+            "title": "Start treatment, stay supported",
+            "text": "<p>If medication is right for you, we prescribe, dispense, and deliver from our own pharmacy. Monthly reviews while we titrate. Annual reviews once you're settled.</p>"
           }
         }
       },
@@ -179,10 +179,10 @@
       "settings": {
         "enable_divider": true,
         "page_width": "container",
-        "heading": "Simple care, that fits <em>around your lifestyle</em>",
+        "heading": "From booked to settled, <em>In three simple steps</em>",
         "heading_size": "h1",
         "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
-        "color_accent": "#ffbe74",
+        "color_accent": "#8e3a2a",
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_top_tab": 40,
@@ -197,14 +197,15 @@
         "heading_mWCtam": {
           "type": "heading",
           "settings": {
-            "heading": "You control your dose, either on <em>Pay-As-You-Go or Subscription</em>",
+            "heading": "Your dose, found together.",
             "heading_size": "h2"
           }
         },
         "icon_text_aawnma": {
           "type": "icon_text",
           "settings": {
-            "text": "<p>Personalised care designed around you. Access a world of data and analytics so you can manage your health like never before</p>"
+            "image": "shopify://shop_images/80_1.svg",
+            "text": "<p>Around 80% of adults respond well to first-line stimulant treatment - NICE NG87</p>"
           }
         },
         "text_XBr4mj": {
@@ -223,8 +224,9 @@
       "name": "Image list reverse text",
       "settings": {
         "enable_divider": true,
+        "image": "shopify://shop_images/clariry.png",
         "color_scheme": "scheme-c9887d75-c590-4613-95c1-7242de98cce2",
-        "color_accent": "#ffbe74",
+        "color_accent": "#8e3a2a",
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_top_tab": 40,
@@ -236,31 +238,32 @@
     "banner_blocks_8Xg6CL": {
       "type": "banner-blocks",
       "blocks": {
-        "image_over_icon_text_G9kWKN": {
-          "type": "image_over_icon_text",
+        "banner_overlay_text_cbC33y": {
+          "type": "banner_overlay_text",
           "settings": {
-            "pre_text": "Mounjaro is a weight loss injection you use once a week.",
-            "title": "Haircare based on science,<em> mind and body needs</em>",
-            "block_title_1": "Hair Loss with settlehealth",
-            "block_text_1": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
-            "block_title_2": "Hair Loss with settlehealth",
-            "block_text_2": "Mounjaro is a weight loss injection you use once a week. It makes reaching a lower body mass index (BMI) easier",
-            "color_scheme_card": "scheme-0693f56c-984d-4ac3-bc37-3daf4f550925",
-            "color_accent": "#ffbe74"
-          }
-        },
-        "image_block_over_text_RE3zxT": {
-          "type": "image_block_over_text",
-          "settings": {
-            "title": "Support your journey with our <em>daily hair supplement</em>",
-            "text": "Finasteride and Minoxidil work best when used alongside supplementation",
-            "color_scheme_card": "scheme-0693f56c-984d-4ac3-bc37-3daf4f550925",
-            "color_accent": "#ffbe74"
+            "image": "shopify://shop_images/Group_2141256045_1.png",
+            "pre_text": "",
+            "title": "",
+            "icon_image_1": "shopify://shop_images/Group_2141256031.svg",
+            "block_title_1": "One clinician, start to finish.",
+            "block_text_1": "The psychiatrist who diagnoses you is the one who titrates, reviews, and prescribes for you long-term. No handoffs, no re-explaining your history.",
+            "icon_image_2": "shopify://shop_images/Group_2141256032.svg",
+            "block_title_2": "Our own pharmacy.",
+            "block_text_2": "Medication dispensed by our own pharmacy, Our GPhC-registered pharmacy, and delivered free in plain packaging.",
+            "icon_image_3": "shopify://shop_images/Group_2141256033.svg",
+            "block_title_3": "Care that doesn't end at the script.",
+            "block_text_3": "Monthly check-ins during titration. Annual psychiatric reviews after. Direct messaging with your clinician throughout.",
+            "icon_image_4": "shopify://shop_images/Group_2141256034.svg",
+            "block_title_4": "Built for adult lives.",
+            "block_text_4": "Evening and weekend appointments. No GP gatekeeping. Diagnosis paperwork your employer, insurer, or GP will accept.",
+            "color_scheme_card": "scheme-3",
+            "color_accent": "#8e3a2a"
           }
         },
         "image_block_mdkd6m": {
           "type": "image_block",
           "settings": {
+            "image": "shopify://shop_images/Mask_group_14_1.png",
             "image_link": "",
             "color_scheme_card": "scheme-4"
           }
@@ -268,14 +271,14 @@
         "image_block_wide_xHQg3R": {
           "type": "image_block_wide",
           "settings": {
+            "image": "shopify://shop_images/Group_2141256188_1.png",
             "image_link": "",
             "color_scheme_card": "scheme-4"
           }
         }
       },
       "block_order": [
-        "image_over_icon_text_G9kWKN",
-        "image_block_over_text_RE3zxT",
+        "banner_overlay_text_cbC33y",
         "image_block_mdkd6m",
         "image_block_wide_xHQg3R"
       ],

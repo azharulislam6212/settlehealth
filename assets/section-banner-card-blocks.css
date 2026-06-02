@@ -5,10 +5,11 @@
     padding-bottom:  6.3rem;
 }
 
-.banner-card-container{
-    max-width: 1228px;
-    margin: 0 auto;
+
+.banner-card-blocks .section--title{
+        max-width: 460px;
 }
+ 
 .banner-card__grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -21,6 +22,7 @@
     grid-template-rows: 1fr;
     border-radius: 10px;
     overflow: hidden;
+    height: 100%;
 }
 
 .banner-card__image ,
@@ -37,14 +39,14 @@
     object-fit: cover;
 }
 .banner-card__content{
-    padding: 40px 28px 40px 40px;
+    padding: 30px 28px 30px 40px;
 }
 
 .banner-card__title{
 font-style: normal;
 font-size: 30px;
 line-height: 41px;
-margin: 0 0 20px;
+margin: 0 0 16px;
 position: relative;
 }
 .banner-card__price_text{
@@ -62,7 +64,7 @@ position: relative;
 }
 
 .banner-card__list{
-    margin-bottom: 48px;
+    margin-bottom: 27px;
     max-width: 357px;
 }
 
@@ -75,6 +77,10 @@ position: relative;
   position: relative;
   padding-left: 28px;
   margin-bottom: 12px;
+    font-style: normal;
+    font-weight: 260;
+    font-size: 10.9069px;
+    line-height: 15px;
 }
 .banner-card__content li:last-child{
   margin-bottom: 0;
@@ -83,7 +89,7 @@ position: relative;
     content: "";
     position: absolute;
     left: 0;
-    top: 4px;
+    top: 0;
     background-color: rgb(var(--color-accent));
     width: 16px;
     height: 16px;
@@ -93,7 +99,7 @@ position: relative;
     content: "";
     position: absolute;
     left: 4px;
-    top: 9px;
+    top: 5px;
     background-image: url(check-mark.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -108,8 +114,8 @@ font-size: 16px;
 line-height: 24px;
  ;
 max-width: 295px;
-margin-bottom: 24px;
-margin-top: 28px;
+margin-bottom: 16px;
+margin-top: 16px;
 
 }
 
@@ -120,7 +126,9 @@ margin-top: 28px;
     align-items: center;
     gap: 26px;
 }
-
+.banner-card__buttons .button{
+    height: 50px;
+}
 .banner-card__buttons .button:first-child{
     min-width: 60%;
 }
@@ -162,6 +170,13 @@ margin-top: 28px;
     top: -10px;
     margin-left: 7px;
 }
+
+@media screen and (max-width: 1280px) {
+.banner-card__image img {
+    object-position: 96%;
+}
+
+}
 @media screen and (max-width: 768px) {
 
     .banner-card-blocks  .section--header {
@@ -178,15 +193,13 @@ margin-top: 28px;
     flex-direction: column;
     align-items: start;
 }
-.banner-card__buttons .button{
-    min-width: 100%;
-    width: 100%;
-}
+
+
 
 .banner-card__content {
-    padding: 30px;
+    padding: 20px;
 }
 .banner-card__image img {
-    object-position: 76%;
+    object-position: 96%;
 }
 }
