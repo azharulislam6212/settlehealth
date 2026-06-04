@@ -1,9 +1,10 @@
-{{ 'section-text-img-block.css' | asset_url | stylesheet_tag }}
+{{ 'section-page-header-section.css' | asset_url | stylesheet_tag }}
 {%- style -%}
       .section-{{ section.id }}-padding  {
          --color-accent: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
          --color-link: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
        }
+
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top_mobile }}px;
       padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
@@ -23,54 +24,47 @@
     }
 {%- endstyle -%}
 
-
 <div
-  class="text-img-block-section section-{{ section.id }}-padding  color-{{ section.settings.color_scheme }} gradient  isolate {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  class="page-header-section section-{{ section.id }}-padding  color-{{ section.settings.color_scheme }} gradient  isolate {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
   {% if settings.animations_reveal_on_scroll %}
     data-cascade
   {% endif %}
 >
   <div class="{{ section.settings.page_width }}">
-    <div class="text-block__flex">
-      <div class="text-img__text-block">
-        {% if section.settings.caption != blank %}
-          <p class="text-img--caption">
-            {{ section.settings.caption }}
-          </p>
-        {% endif %}
+ 
+   
+        <div class="page--header">
+ 
+        
+            {% if section.settings.caption != blank %}
+            <p class="page--caption-text">
+              {{ section.settings.caption }} 
+            </p>
+          {% endif %}
 
-        {%- if section.settings.heading != blank -%}
-          <h2 class="text-img--title inline-richtext {{ section.settings.heading_size }}">
-            {{ section.settings.heading }}
-          </h2>
-        {%- endif -%}
+          {%- if section.settings.heading != blank -%}
+            <h1 class="page--title inline-richtext {{ section.settings.heading_size }}">
+                {{ section.settings.heading }}
+            </h1>
+          {%- endif -%}
+ 
 
-        {% if section.settings.text != blank %}
-          <div class="text-img--text">
-            {{ section.settings.text }} 
-          </div>
-        {% endif %}
-      </div>
+          {% if section.settings.text != blank %}
+            <div class="page--text page--text--contact">
+             {{ section.settings.text }} 
+            </div>
+          {% endif %}
 
-      {% if section.settings.image_1 %}
-        <div class="text-img__blcok">
-          {% render "responsive-img" with image: section.settings.image_1 %}
+         
+
         </div>
-      {% endif %}
-
-      {% if section.settings.image_2 %}
-        <div class="text-img__blcok">
-          {% render "responsive-img" with image: section.settings.image_2 %}
-        </div>
-      {% endif %}
-    </div>
+     
   </div>
 </div>
 
-
 {% schema %}
 {
-  "name": "Text Image block",
+  "name": "Page header",
   "class": "section",
   "tag": "section",
   "disabled_on": {
@@ -90,10 +84,10 @@
           "label": "Full Width"
         }
       ],
-      "default": "container",
+      "default": "container-fluid",
       "label": "Layout Width"
     },
-    {
+        {
       "type": "inline_richtext",
       "id": "caption",
       "default": "Cation text",
@@ -139,16 +133,7 @@
       "default": "t:sections.image-with-text.blocks.text.settings.text.default",
       "label": "t:sections.image-with-text.blocks.text.settings.text.label"
     },
-    {
-      "type": "image_picker",
-      "id": "image_1",
-      "label": "Image 1"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_2",
-      "label": "Image 2"
-    },
+ 
     {
       "type": "color_scheme",
       "id": "color_scheme",
@@ -229,7 +214,7 @@
 
   "presets": [
     {
-      "name": "Text Image block"
+      "name": "Page header"
     }
   ]
 }

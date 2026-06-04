@@ -9,8 +9,298 @@
  */
 {
   "sections": {
+    "page_header_contact_rmJxay": {
+      "type": "page-header-contact",
+      "name": "Page header",
+      "settings": {
+        "page_width": "container",
+        "caption": "",
+        "heading": "Got a question? We've got answers",
+        "heading_size": "h0",
+        "text": "<p>support@settlehealth.co.uk -You can also speak to a clinician on a free 15-minute call before booking - just ask. Most answers are below.<br/><br/></p>",
+        "color_scheme": "",
+        "color_accent": "#8e3a2a",
+        "padding_top": 80,
+        "padding_bottom": 60,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 60,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "faq_section_tab_ttpTxm": {
+      "type": "faq-section-tab",
+      "blocks": {
+        "tab_LTLGPV": {
+          "type": "tab",
+          "settings": {
+            "title": "Most Asked",
+            "tab_id": "most",
+            "tips_title_1": "Tip #1",
+            "tips_sub_title_1": "Don’t underplay it",
+            "tips_text_1": "<p>Most people walk into their assessment trying to look more \"together\" than they are. Don't - your psychiatrist needs the real picture to make an accurate diagnosis.</p>",
+            "tips_title_2": "Tip #2",
+            "tips_sub_title_2": "Give it 6-10 weeks",
+            "tips_text_2": "<p>Finding your right ADHD dose takes time. The first dose almost never feels right - that's normal, and it's why we review you every two weeks during titration. The goal isn't speed. It's a dose you can stay on for years.</p>"
+          }
+        },
+        "tab_AJqWB6": {
+          "type": "tab",
+          "settings": {
+            "title": "Assessment & diagnosis",
+            "tab_id": "assessment",
+            "tips_title_1": "Tip #1",
+            "tips_sub_title_1": "Don’t underplay it",
+            "tips_text_1": "<p>Most people walk into their assessment trying to look more \"together\" than they are. Don't - your psychiatrist needs the real picture to make an accurate diagnosis.</p>",
+            "tips_title_2": "Tip #2",
+            "tips_sub_title_2": "Give it 6-10 weeks",
+            "tips_text_2": "<p>Finding your right ADHD dose takes time. The first dose almost never feels right - that's normal, and it's why we review you every two weeks during titration. The goal isn't speed. It's a dose you can stay on for years.</p>"
+          }
+        },
+        "tab_jGamax": {
+          "type": "tab",
+          "settings": {
+            "title": "Medication & titration",
+            "tab_id": "medication",
+            "tips_title_1": "Tip #1",
+            "tips_sub_title_1": "Don’t underplay it",
+            "tips_text_1": "<p>Most people walk into their assessment trying to look more \"together\" than they are. Don't - your psychiatrist needs the real picture to make an accurate diagnosis.</p>",
+            "tips_title_2": "Tip #2",
+            "tips_sub_title_2": "Give it 6-10 weeks",
+            "tips_text_2": "<p>Finding your right ADHD dose takes time. The first dose almost never feels right - that's normal, and it's why we review you every two weeks during titration. The goal isn't speed. It's a dose you can stay on for years.</p>"
+          }
+        },
+        "tab_dRbt3G": {
+          "type": "tab",
+          "settings": {
+            "title": "Pricing & subscription",
+            "tab_id": "pricing",
+            "tips_title_1": "Tip #1",
+            "tips_sub_title_1": "Don’t underplay it",
+            "tips_text_1": "<p>Most people walk into their assessment trying to look more \"together\" than they are. Don't - your psychiatrist needs the real picture to make an accurate diagnosis.</p>",
+            "tips_title_2": "Tip #2",
+            "tips_sub_title_2": "Give it 6-10 weeks",
+            "tips_text_2": "<p>Finding your right ADHD dose takes time. The first dose almost never feels right - that's normal, and it's why we review you every two weeks during titration. The goal isn't speed. It's a dose you can stay on for years.</p>"
+          }
+        },
+        "collapsible_row_Drwet8": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "How much does an assessment cost, and what's included?",
+            "row_content": "<p>Our ADHD assessment costs £XXX and includes a full online psychiatric evaluation, a detailed review of your symptoms and history, a diagnosis where appropriate, and a personalised treatment plan. <br/><br/>You’ll meet with a specialist clinician who will guide you through the process and answer any questions you have.</p>"
+          }
+        },
+        "collapsible_row_AGpbVb": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "How quickly can I be seen?",
+            "row_content": "<p>You can usually book an assessment within a few days, depending on clinician availability. <br/><br/>Once your appointment is confirmed, you’ll complete any required forms online before meeting with a specialist clinician for your assessment.</p>"
+          }
+        },
+        "collapsible_row_FWWb6g": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "assessment",
+            "heading": "How quickly can I be seen?",
+            "row_content": "<p>You can usually book an assessment within a few days, depending on clinician availability. <br/><br/>Once your appointment is confirmed, you’ll complete any required forms online before meeting with a specialist clinician for your assessment.</p>"
+          }
+        },
+        "collapsible_row_Nykqef": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "medication",
+            "heading": "How quickly can I be seen?",
+            "row_content": "<p>You can usually book an assessment within a few days, depending on clinician availability. <br/><br/>Once your appointment is confirmed, you’ll complete any required forms online before meeting with a specialist clinician for your assessment.</p>"
+          }
+        },
+        "collapsible_row_ryWmb3": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "What medication do you prescribe?",
+            "row_content": "<p>If medication is recommended after your assessment, your clinician will discuss the most suitable options based on your needs.<br/><br/>We prescribe commonly used ADHD medications, including stimulant and non-stimulant treatments, and support you through titration to find the right dose.</p>"
+          }
+        },
+        "collapsible_row_wtjkbx": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "Will my GP take over my prescription? (Shared care)",
+            "row_content": "<p>Once your medication and dose are stable, we can provide the necessary information for a shared care agreement with your GP.<br/><br/>Many GPs accept shared care, allowing them to continue your ongoing prescriptions, but acceptance is always at your GP’s discretion.</p>"
+          }
+        },
+        "collapsible_row_kfwDg3": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "assessment",
+            "heading": "Will my GP take over my prescription? (Shared care)",
+            "row_content": "<p>Once your medication and dose are stable, we can provide the necessary information for a shared care agreement with your GP.<br/><br/>Many GPs accept shared care, allowing them to continue your ongoing prescriptions, but acceptance is always at your GP’s discretion.</p>"
+          }
+        },
+        "collapsible_row_nVwhMb": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "medication",
+            "heading": "Will my GP take over my prescription? (Shared care)",
+            "row_content": "<p>Once your medication and dose are stable, we can provide the necessary information for a shared care agreement with your GP.<br/><br/>Many GPs accept shared care, allowing them to continue your ongoing prescriptions, but acceptance is always at your GP’s discretion.</p>"
+          }
+        },
+        "collapsible_row_7pg6pY": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "Is Settle right for me if I've been assessed before?",
+            "row_content": "<p>Yes. If you’ve already had an ADHD assessment, Settle can still support you.<br/><br/>Our clinicians can review your previous assessment, discuss your current needs, and help with ongoing treatment, medication management, or next steps where appropriate.</p>"
+          }
+        },
+        "collapsible_row_pRyGwD": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "Can I claim through my private medical insurance?",
+            "row_content": "<p>Yes. You may be able to claim your ADHD assessment or treatment costs through your private medical insurance, depending on your provider and policy.<br/><br/>We recommend checking directly with your insurer before booking to confirm what is covered and whether any approval is required.</p>"
+          }
+        },
+        "collapsible_row_XAa6Td": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "Can I claim through my private medical insurance?",
+            "row_content": "<p>Yes. You may be able to claim your ADHD assessment or treatment costs through your private medical insurance, depending on your provider and policy.<br/><br/>We recommend checking directly with your insurer before booking to confirm what is covered and whether any approval is required.</p>"
+          }
+        },
+        "collapsible_row_6WhkJD": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "medication",
+            "heading": "Can I claim through my private medical insurance?",
+            "row_content": "<p>Yes. You may be able to claim your ADHD assessment or treatment costs through your private medical insurance, depending on your provider and policy.<br/><br/>We recommend checking directly with your insurer before booking to confirm what is covered and whether any approval is required.</p>"
+          }
+        },
+        "collapsible_row_BgLNak": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "Can I claim through my private medical insurance?",
+            "row_content": "<p>Yes. You may be able to claim your ADHD assessment or treatment costs through your private medical insurance, depending on your provider and policy.<br/><br/>We recommend checking directly with your insurer before booking to confirm what is covered and whether any approval is required.</p>"
+          }
+        },
+        "collapsible_row_fHUWY7": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "pricing",
+            "heading": "Can I claim through my private medical insurance?",
+            "row_content": "<p>Yes. You may be able to claim your ADHD assessment or treatment costs through your private medical insurance, depending on your provider and policy.<br/><br/>We recommend checking directly with your insurer before booking to confirm what is covered and whether any approval is required.</p>"
+          }
+        },
+        "collapsible_row_6GGAWd": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "assessment",
+            "heading": "What happens after my diagnosis?",
+            "row_content": "<p>After your diagnosis, your clinician will explain your results and discuss the best next steps for you.<br/><br/>If appropriate, this may include a personalised treatment plan, medication options, ongoing support, and guidance on managing ADHD in daily life.</p>"
+          }
+        },
+        "collapsible_row_PmC89U": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "Who will I be seeing? A psychiatrist, a pharmacist, or a GP?",
+            "row_content": "<p>You’ll be seen by a qualified specialist clinician experienced in ADHD assessment and treatment.<br/><br/>Depending on your needs, your care may involve a psychiatrist or another appropriately trained healthcare professional who can assess, diagnose, and guide your treatment plan.</p>"
+          }
+        },
+        "collapsible_row_zLJyUF": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "pricing",
+            "heading": "Who will I be seeing? A psychiatrist, a pharmacist, or a GP?",
+            "row_content": "<p>You’ll be seen by a qualified specialist clinician experienced in ADHD assessment and treatment.<br/><br/>Depending on your needs, your care may involve a psychiatrist or another appropriately trained healthcare professional who can assess, diagnose, and guide your treatment plan.</p>"
+          }
+        },
+        "collapsible_row_Wh64eG": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "Is Settle suitable for children?",
+            "row_content": "<p>Settle is designed to support ADHD assessments and treatment for eligible individuals.<br/><br/>Please check our current age requirements before booking, as availability for children and young people may depend on clinician expertise and the services offered.</p>"
+          }
+        },
+        "collapsible_row_7VFTm6": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "pricing",
+            "heading": "Is Settle suitable for children?",
+            "row_content": "<p>Settle is designed to support ADHD assessments and treatment for eligible individuals.<br/><br/>Please check our current age requirements before booking, as availability for children and young people may depend on clinician expertise and the services offered.</p>"
+          }
+        },
+        "collapsible_row_APCyzX": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "most",
+            "heading": "Is everything done online, or do I need to come in?",
+            "row_content": "<p>Everything is completed online, so you can access your assessment and ongoing care from the comfort of your own home.<br/><br/>Your appointments take place through secure video consultations, with your clinician guiding you through each step of the process.</p>"
+          }
+        },
+        "collapsible_row_CKeJF9": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_tab_id": "assessment",
+            "heading": "How much does an assessment cost, and what's included?",
+            "row_content": "<p>Our ADHD assessment costs £XXX and includes a full online psychiatric evaluation, a detailed review of your symptoms and history, a diagnosis where appropriate, and a personalised treatment plan. <br/><br/>You’ll meet with a specialist clinician who will guide you through the process and answer any questions you have.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_LTLGPV",
+        "tab_AJqWB6",
+        "tab_jGamax",
+        "tab_dRbt3G",
+        "collapsible_row_Drwet8",
+        "collapsible_row_AGpbVb",
+        "collapsible_row_FWWb6g",
+        "collapsible_row_Nykqef",
+        "collapsible_row_ryWmb3",
+        "collapsible_row_wtjkbx",
+        "collapsible_row_kfwDg3",
+        "collapsible_row_nVwhMb",
+        "collapsible_row_7pg6pY",
+        "collapsible_row_pRyGwD",
+        "collapsible_row_XAa6Td",
+        "collapsible_row_6WhkJD",
+        "collapsible_row_BgLNak",
+        "collapsible_row_fHUWY7",
+        "collapsible_row_6GGAWd",
+        "collapsible_row_PmC89U",
+        "collapsible_row_zLJyUF",
+        "collapsible_row_Wh64eG",
+        "collapsible_row_7VFTm6",
+        "collapsible_row_APCyzX",
+        "collapsible_row_CKeJF9"
+      ],
+      "name": "Faq tab Section",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "disclosure_toggle": "plus",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "color_accent": "#a5a5a5",
+        "open_first_collapsible_row": false,
+        "padding_top": 20,
+        "padding_bottom": 76,
+        "padding_top_tab": 20,
+        "padding_bottom_tab": 68,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 56
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -18,17 +308,83 @@
     },
     "form": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
-        "padding_top": 36,
+        "padding_top": 56,
         "padding_bottom": 36
+      }
+    },
+    "image_with_text_product_q4Rgq9": {
+      "type": "image-with-text-product",
+      "blocks": {
+        "heading_fNCYmp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Can't find what you're lookingfor?",
+            "heading_size": "h1"
+          }
+        },
+        "text_NP9bNj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>S<strong>till have questions?</strong></p>",
+            "text_style": "body"
+          }
+        },
+        "text_kUfa46": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our patient care team is here to help, Monday to Friday, 9am–5:30pm. Whether you want to ask about pricing, check whether Settle's right for you, or get help with an existing appointment, we'll get back to you within one working day.</p><p>Speak to a clinician before booking If you're not sure whether to book an assessment, you can speak to one of our clinicians on a free 15-minute call — no pressure, no commitment. They'll talk you through what assessment looks like, whether it's likely to be useful for you, and what happens next.<br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "boxed_text_TJUiFC": {
+          "type": "boxed_text",
+          "settings": {
+            "boxed_text": "<p><strong>For clinical urgency: message your clinician through your patient portal</strong></p><p><strong>Email us: </strong><a href=\"tel:support@settlehealth.co.uk\" title=\"tel:support@settlehealth.co.uk\">support@settlehealth.co.uk</a></p>",
+            "color_scheme": ""
+          }
+        },
+        "button_tn7QEX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Try our live chat",
+            "button_link": "#live-chat",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fNCYmp",
+        "text_NP9bNj",
+        "text_kUfa46",
+        "boxed_text_TJUiFC",
+        "button_tn7QEX"
+      ],
+      "name": "Image with text product",
+      "settings": {
+        "enable_divider": true,
+        "image": "shopify://shop_images/1_89ef5cd2-ed9b-452e-bb94-62db9590bd55_png.png",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "scheme-5",
+        "color_accent": "#8e3a2a",
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "padding_top_tab": 68,
+        "padding_bottom_tab": 68,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
       }
     }
   },
   "order": [
+    "page_header_contact_rmJxay",
+    "faq_section_tab_ttpTxm",
     "main",
-    "form"
+    "form",
+    "image_with_text_product_q4Rgq9"
   ]
 }

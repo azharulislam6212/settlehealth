@@ -1,0 +1,548 @@
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+         --color-accent: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+         --color-link: {{ section.settings.color_accent.red }},{{ section.settings.color_accent.green }},{{ section.settings.color_accent.blue }};
+       }
+
+
+   .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width: 992px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_tab }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tab }}px;
+      }
+  }
+
+    @media screen and (min-width: 1024px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="collapsible-content collapsible-{{ section.settings.layout }}-layout isolate{% if section.settings.layout == 'section' %} container {% elsif section.settings.layout == 'none' %} content-container content-container--full-width{% endif %}">
+    <div class="collapsible-content__wrapper section-{{ section.id }}-padding{% if section.settings.layout == 'section' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}">
+      <div class="container">
+        {%- unless section.settings.heading == blank -%}
+          <div class="row">
+            <div class="section--header  text-{{ section.settings.heading_alignment }} col-12 m-auto">
+              <h2 class="section--title inline-richtext {{ section.settings.heading_size }} ">
+                {{ section.settings.heading }}
+              </h2>
+            </div>
+          </div>
+        {%- endunless -%}
+
+        <tabbed-content>
+          <div class="tablist tablist__navlist relative no-js-hidden">
+            <div class="tablist__scroller " role="tablist">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'tab' -%}
+                    <div class="tab__item">
+                      <button
+                        type="button"
+                        class="tablist__tab"
+                        id="tab-{{ forloop.index }}-{{ block.id }}"
+                        role="tab"
+                        aria-controls="panel-{{ forloop.index }}-{{ block.id }}"
+                        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                      >
+                        {{ block.settings.title }}
+                      </button>
+                    </div>
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+          </div>
+
+          <div class="faq-tab--wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {% for tab_block in section.blocks %}
+              {% if tab_block.type == 'tab' %}
+                {% assign current_tab_id = tab_block.settings.tab_id %}
+
+                <div
+                  id="panel-{{  forloop.index }}-{{ tab_block.id }}"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="tab-{{ forloop.index }}-{{ tab_block.id }}"
+                  {% unless forloop.first %}
+                    hidden
+                  {% endunless %}
+                  {{ tab_block.shopify_attributes }}
+                >
+                  <div class="tab-text-header">
+                    <h2 class="inline-richtext h2">{{ tab_block.settings.title }}</h2>
+                  </div>
+
+                  <div class="tab__content--flex ">
+                    <div class="tab-text__content">
+                      {% for content_block in section.blocks %}
+                        {% if content_block.type == 'collapsible_row' %}
+                          {% assign content_tab_id = content_block.settings.content_tab_id %}
+
+                          {% if content_tab_id == current_tab_id %}
+                            <collapsible-content>
+                              <div
+                                class="accordion {% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                                {{ content_block.shopify_attributes }}
+                              >
+                                <details
+                                  class="disclosure"
+                                  id="Details-{{ content_block.id }}-{{ section.id }}"
+                                  {% if section.settings.open_first_collapsible_row and forloop.first %}
+                                    open
+                                  {% endif %}
+                                >
+                                  <summary
+                                    class="disclosure-header"
+                                    id="Summary-{{ content_block.id }}-{{ section.id }}"
+                                  >
+                                    <h3 class="accordion__title inline-richtext h4">
+                                      {{ content_block.settings.heading | escape }}
+                                    </h3>
+                                    <span class="disclosure__toggle">
+                                      {%- if section.settings.disclosure_toggle == 'plus' -%}
+                                        <svg
+                                          class="plus-icon"
+                                          width="16"
+                                          height="16"
+                                          viewBox="0 0 16 16"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <rect x="7" y="16" width="16" height="2" transform="rotate(-90 7 16)" fill="currentColor"/>
+                                          <rect y="9" width="2" height="16" transform="rotate(-90 0 9)" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg
+                                          class="minus-icon"
+                                          width="16"
+                                          height="2"
+                                          viewBox="0 0 16 2"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <rect y="2" width="2" height="16" transform="rotate(-90 0 2)" fill="currentColor"/>
+                                        </svg>
+
+                                      {%- else -%}
+                                        <svg
+                                          class="icon icon-caret"
+                                          width="12"
+                                          height="8"
+                                          viewBox="0 0 12 8"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <path d="M9.59999 0.5L5.49997 4.60001L1.4 0.500006L0 1.90001L5.49997 7.50001L11.1 2L9.59999 0.5Z" fill="#0A0A0A"/>
+                                        </svg>
+                                      {%- endif -%}
+                                    </span>
+                                  </summary>
+                                  <div class="disclosure__panel has-motion">
+                                    <div
+                                      class="accordion__content disclosure__content rte"
+                                      id="CollapsibleAccordion-{{ content_block.id }}-{{ section.id }}"
+                                      role="region"
+                                      aria-labelledby="Summary-{{ content_block.id }}-{{ section.id }}"
+                                    >
+                                      {{ content_block.settings.row_content }}
+                                    </div>
+                                  </div>
+                                </details>
+                              </div>
+                            </collapsible-content>
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+
+                    <div class="tab__content__tips">
+                      <div class="tips__item   color-{{ section.settings.container_color_scheme }} gradient">
+                        <div class="tips__icon">
+                          <svg
+                            width="45"
+                            height="45"
+                            viewBox="0 0 45 45"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M26.4984 38.6H18.4984C18.0984 38.6 17.8984 38.2 17.8984 37.8C17.8984 37.4 18.0984 37 18.4984 37H26.4984C26.7984 37 27.0984 37.4 27.0984 37.8C27.0984 38.2 26.7984 38.6 26.4984 38.6ZM26.4984 41H18.4984C18.0984 41 17.8984 40.5 17.8984 40.1C17.8984 39.7 18.0984 39.3 18.4984 39.3H26.4984C26.7984 39.3 27.0984 39.7 27.0984 40.1C27.0984 40.5 26.7984 40.9 26.4984 40.9V41ZM24.7984 43.1H20.1984C19.8984 43.1 19.5984 42.8 19.5984 42.3C19.5984 41.9 19.8984 41.6 20.1984 41.6H24.7984C25.0984 41.6 25.3984 41.9 25.3984 42.3C25.3984 42.8 25.0984 43.1 24.7984 43.1Z" fill="#323232" stroke="#323232" stroke-width="0.1" stroke-miterlimit="10"/>
+                            <path d="M26.5016 35.5996H18.5016C18.2016 35.5996 17.9016 35.5996 17.6016 35.2996L17.3016 34.3996C17.3016 31.3996 16.1016 29.6996 14.7016 27.6996V27.5996C13.1016 25.3996 11.6016 23.0996 11.6016 19.2996C11.6016 16.2996 12.6016 13.5996 14.5016 11.5996C16.5016 9.29961 19.3016 8.09961 22.5016 8.09961C25.7016 8.09961 28.5016 9.29961 30.5016 11.5996C32.5016 13.5996 33.5016 16.2996 33.5016 19.2996C33.5016 23.0996 31.9016 25.2996 30.4016 27.5996H30.3016C28.9016 29.5996 27.7016 31.3996 27.7016 34.3996C27.7016 35.0996 27.2016 35.5996 26.5016 35.5996ZM22.5016 9.29961C19.6016 9.29961 17.1016 10.2996 15.4016 12.2996C13.6812 14.2204 12.7523 16.7215 12.8016 19.2996C12.8016 22.6996 14.3016 24.7996 15.7016 26.8996C17.1016 29.0996 18.5016 30.9996 18.5016 34.3996H26.5016C26.5016 30.9996 27.9016 29.0996 29.3016 26.9996V26.8996C30.8016 24.8996 32.3016 22.6996 32.3016 19.2996C32.3016 16.5996 31.3016 14.2996 29.7016 12.2996C27.9016 10.2996 25.4016 9.29961 22.5016 9.29961Z" fill="#323232" stroke="#323232" stroke-width="0.7" stroke-miterlimit="10"/>
+                            <path d="M22.5 6.00039C22.3568 6.00239 22.2176 5.95308 22.1075 5.86138C21.9975 5.76968 21.9239 5.64163 21.9 5.50039V2.50039C21.9 2.34126 21.9632 2.18865 22.0757 2.07613C22.1883 1.9636 22.3409 1.90039 22.5 1.90039C22.6591 1.90039 22.8117 1.9636 22.9243 2.07613C23.0368 2.18865 23.1 2.34126 23.1 2.50039V5.50039C23.1 5.80039 22.8 6.10039 22.5 6.10039V6.00039ZM26.6 6.60039L26.4 6.50039C26.1 6.30039 25.9 6.00039 26.1 5.70039L27.3 3.00039C27.5 2.70039 27.9 2.60039 28.2 2.70039C28.4 2.90039 28.6 3.20039 28.4 3.50039L27.2 6.20039C27.1 6.40039 26.8 6.50039 26.6 6.50039V6.60039ZM18.5 6.60039C18.3701 6.60776 18.2414 6.57273 18.1332 6.50058C18.025 6.42844 17.9431 6.32309 17.9 6.20039L16.6 3.50039C16.5 3.20039 16.6 2.90039 16.9 2.70039C17.2 2.60039 17.6 2.70039 17.7 3.00039L19 5.70039C19.2 6.00039 19 6.40039 18.7 6.50039H18.5V6.60039Z" fill="#323232" stroke="#323232" stroke-width="0.5" stroke-miterlimit="10"/>
+                            <path d="M22.4984 35.2C22.3393 35.2 22.1867 35.1368 22.0742 35.0243C21.9617 34.9117 21.8984 34.7591 21.8984 34.6V31.6C21.8984 31.3 22.0984 31 22.4984 31C22.7984 31 23.0984 31.3 23.0984 31.6V34.6C23.0984 34.9 22.7984 35.2 22.4984 35.2Z" fill="#323232"/>
+                            <path d="M22.3997 31.9996C22.1997 31.9996 21.9997 31.9996 21.8997 31.7996L21.1997 30.7996C21.1013 30.6896 21.0469 30.5472 21.0469 30.3996C21.0469 30.252 21.1013 30.1096 21.1997 29.9996C21.4997 29.7996 21.8997 29.7996 22.1997 29.9996L22.7997 30.9996C23.0997 31.2996 22.9997 31.6996 22.7997 31.8996L22.3997 31.9996Z" fill="#323232"/>
+                            <path d="M22.6007 31.9996L22.3007 31.8996C22.0007 31.6996 21.9007 31.2996 22.2007 30.9996L22.9007 29.9996C23.1007 29.7996 23.5007 29.7996 23.7007 29.9996C24.0007 30.1996 24.0007 30.5996 23.8007 30.7996L23.1007 31.7996L22.6007 31.9996Z" fill="#323232"/>
+                          </svg>
+                        </div>
+                        <div class="tip">
+                          <h4 class="tip-title inline-richtext h5">{{ tab_block.settings.tips_title_1 }}</h4>
+                          <h5 class="tip-subtitle inline-richtext h6">{{ tab_block.settings.tips_sub_title_1 }}</h5>
+                          <div class="tip__text rte">
+                            {{ tab_block.settings.tips_text_1 }}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="tips__item   color-{{ section.settings.container_color_scheme }} gradient">
+                        <div class="tips__icon">
+                          <svg
+                            width="45"
+                            height="45"
+                            viewBox="0 0 45 45"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M26.4984 38.6H18.4984C18.0984 38.6 17.8984 38.2 17.8984 37.8C17.8984 37.4 18.0984 37 18.4984 37H26.4984C26.7984 37 27.0984 37.4 27.0984 37.8C27.0984 38.2 26.7984 38.6 26.4984 38.6ZM26.4984 41H18.4984C18.0984 41 17.8984 40.5 17.8984 40.1C17.8984 39.7 18.0984 39.3 18.4984 39.3H26.4984C26.7984 39.3 27.0984 39.7 27.0984 40.1C27.0984 40.5 26.7984 40.9 26.4984 40.9V41ZM24.7984 43.1H20.1984C19.8984 43.1 19.5984 42.8 19.5984 42.3C19.5984 41.9 19.8984 41.6 20.1984 41.6H24.7984C25.0984 41.6 25.3984 41.9 25.3984 42.3C25.3984 42.8 25.0984 43.1 24.7984 43.1Z" fill="#323232" stroke="#323232" stroke-width="0.1" stroke-miterlimit="10"/>
+                            <path d="M26.5016 35.5996H18.5016C18.2016 35.5996 17.9016 35.5996 17.6016 35.2996L17.3016 34.3996C17.3016 31.3996 16.1016 29.6996 14.7016 27.6996V27.5996C13.1016 25.3996 11.6016 23.0996 11.6016 19.2996C11.6016 16.2996 12.6016 13.5996 14.5016 11.5996C16.5016 9.29961 19.3016 8.09961 22.5016 8.09961C25.7016 8.09961 28.5016 9.29961 30.5016 11.5996C32.5016 13.5996 33.5016 16.2996 33.5016 19.2996C33.5016 23.0996 31.9016 25.2996 30.4016 27.5996H30.3016C28.9016 29.5996 27.7016 31.3996 27.7016 34.3996C27.7016 35.0996 27.2016 35.5996 26.5016 35.5996ZM22.5016 9.29961C19.6016 9.29961 17.1016 10.2996 15.4016 12.2996C13.6812 14.2204 12.7523 16.7215 12.8016 19.2996C12.8016 22.6996 14.3016 24.7996 15.7016 26.8996C17.1016 29.0996 18.5016 30.9996 18.5016 34.3996H26.5016C26.5016 30.9996 27.9016 29.0996 29.3016 26.9996V26.8996C30.8016 24.8996 32.3016 22.6996 32.3016 19.2996C32.3016 16.5996 31.3016 14.2996 29.7016 12.2996C27.9016 10.2996 25.4016 9.29961 22.5016 9.29961Z" fill="#323232" stroke="#323232" stroke-width="0.7" stroke-miterlimit="10"/>
+                            <path d="M22.5 6.00039C22.3568 6.00239 22.2176 5.95308 22.1075 5.86138C21.9975 5.76968 21.9239 5.64163 21.9 5.50039V2.50039C21.9 2.34126 21.9632 2.18865 22.0757 2.07613C22.1883 1.9636 22.3409 1.90039 22.5 1.90039C22.6591 1.90039 22.8117 1.9636 22.9243 2.07613C23.0368 2.18865 23.1 2.34126 23.1 2.50039V5.50039C23.1 5.80039 22.8 6.10039 22.5 6.10039V6.00039ZM26.6 6.60039L26.4 6.50039C26.1 6.30039 25.9 6.00039 26.1 5.70039L27.3 3.00039C27.5 2.70039 27.9 2.60039 28.2 2.70039C28.4 2.90039 28.6 3.20039 28.4 3.50039L27.2 6.20039C27.1 6.40039 26.8 6.50039 26.6 6.50039V6.60039ZM18.5 6.60039C18.3701 6.60776 18.2414 6.57273 18.1332 6.50058C18.025 6.42844 17.9431 6.32309 17.9 6.20039L16.6 3.50039C16.5 3.20039 16.6 2.90039 16.9 2.70039C17.2 2.60039 17.6 2.70039 17.7 3.00039L19 5.70039C19.2 6.00039 19 6.40039 18.7 6.50039H18.5V6.60039Z" fill="#323232" stroke="#323232" stroke-width="0.5" stroke-miterlimit="10"/>
+                            <path d="M22.4984 35.2C22.3393 35.2 22.1867 35.1368 22.0742 35.0243C21.9617 34.9117 21.8984 34.7591 21.8984 34.6V31.6C21.8984 31.3 22.0984 31 22.4984 31C22.7984 31 23.0984 31.3 23.0984 31.6V34.6C23.0984 34.9 22.7984 35.2 22.4984 35.2Z" fill="#323232"/>
+                            <path d="M22.3997 31.9996C22.1997 31.9996 21.9997 31.9996 21.8997 31.7996L21.1997 30.7996C21.1013 30.6896 21.0469 30.5472 21.0469 30.3996C21.0469 30.252 21.1013 30.1096 21.1997 29.9996C21.4997 29.7996 21.8997 29.7996 22.1997 29.9996L22.7997 30.9996C23.0997 31.2996 22.9997 31.6996 22.7997 31.8996L22.3997 31.9996Z" fill="#323232"/>
+                            <path d="M22.6007 31.9996L22.3007 31.8996C22.0007 31.6996 21.9007 31.2996 22.2007 30.9996L22.9007 29.9996C23.1007 29.7996 23.5007 29.7996 23.7007 29.9996C24.0007 30.1996 24.0007 30.5996 23.8007 30.7996L23.1007 31.7996L22.6007 31.9996Z" fill="#323232"/>
+                          </svg>
+                        </div>
+
+                        <div class="tip">
+                          <h4 class="tip-title inline-richtext h5">{{ tab_block.settings.tips_title_2 }}</h4>
+                          <h5 class="tip-subtitle inline-richtext h6">{{ tab_block.settings.tips_sub_title_2 }}</h5>
+                          <div class="tip__text rte">
+                            {{ tab_block.settings.tips_text_2 }}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </tabbed-content>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Faq tab Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "t:sections.collapsible_content.settings.heading.label",
+      "default": "t:sections.collapsible_content.settings.heading.default"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "t:sections.collapsible_content.settings.heading_alignment.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.collapsible_content.settings.layout_header.content"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.collapsible_content.settings.layout.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.collapsible_content.settings.layout.options__1.label"
+        },
+        {
+          "value": "row",
+          "label": "t:sections.collapsible_content.settings.layout.options__2.label"
+        },
+        {
+          "value": "section",
+          "label": "t:sections.collapsible_content.settings.layout.options__3.label"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "disclosure_toggle",
+      "label": "Toggler Icon",
+      "options": [
+        {
+          "value": "arrow",
+          "label": "Arrow"
+        },
+        {
+          "value": "plus",
+          "label": "Plus"
+        }
+      ],
+      "default": "plus"
+    },
+    {
+      "type": "color_scheme",
+      "id": "container_color_scheme",
+      "label": "t:sections.collapsible_content.settings.container_color_scheme.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.collapsible_content.settings.section_color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "default": "#A5A5A5"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first_collapsible_row",
+      "default": false,
+      "label": "t:sections.collapsible_content.settings.open_first_collapsible_row.label"
+    },
+
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Desktop",
+      "default": 76
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Desktop",
+      "default": 76
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Tab",
+      "default": 68
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tab",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Tab",
+      "default": 68
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 56
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab title",
+          "default": "Most Asked"
+        },
+        {
+          "type": "text",
+          "id": "tab_id",
+          "label": "Tab ID",
+          "default": "most"
+        },
+        {
+          "type": "header",
+          "content": "Tips block #1"
+        },
+        {
+          "type": "text",
+          "id": "tips_title_1",
+          "label": "Tips title",
+          "default": "Tip #1"
+        },
+        {
+          "type": "text",
+          "id": "tips_sub_title_1",
+          "label": "Tips sub title",
+          "default": "Don’t underplay it"
+        },
+        {
+          "type": "richtext",
+          "id": "tips_text_1",
+          "label": "Tips text",
+          "default": "<p> Most people walk into their assessment trying to look more</p>"
+        },
+        {
+          "type": "header",
+          "content": "Tips block #2"
+        },
+        {
+          "type": "text",
+          "id": "tips_title_2",
+          "label": "Tips title",
+          "default": "Tip #2"
+        },
+        {
+          "type": "text",
+          "id": "tips_sub_title_2",
+          "label": "Tips sub title",
+          "default": "Don’t underplay it"
+        },
+        {
+          "type": "richtext",
+          "id": "tips_text_2",
+          "label": "Tips text",
+          "default": "<p> Most people walk into their assessment trying to look more</p>"
+        }
+      ]
+    },
+    {
+      "type": "collapsible_row",
+      "name": "t:sections.collapsible_content.blocks.collapsible_row.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "content_tab_id",
+          "default": "most",
+          "label": "Connect Tab ID"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "row_content",
+          "default": "<p>Most people walk into their assessment trying to look more together than they are. Don't - your psychiatrist needs the real picture to make an accurate diagnosis.</p>",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.row_content.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Faq tab Section",
+      "blocks": [
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        },
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

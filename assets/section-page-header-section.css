@@ -24,6 +24,10 @@ margin: 0 0  12px;
          max-width: 768px;
 }
 
+.page--text--contact{
+  max-width: 100%;
+}
+
 .page--list_text{
     box-sizing: border-box;
     background: #fff;

@@ -2441,3 +2441,98 @@ body.drawer-open {
 
 
 
+
+.tablist__scroller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.tablist__tab {
+    padding: 22px 16px;
+    white-space: nowrap;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    font-variant: all-small-caps;
+    font-family: var(--font-heading-family);
+     color: rgb(var(--color-foreground));
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 0;
+     border-radius: 0;
+     background-color: transparent;
+     position: relative;
+     z-index: 1;
+     cursor: pointer;
+     transition: all 0.3s ease-in-out;
+     border: 1px solid #DDDFDF;
+     width: 100%;
+     border-right: 0;
+        overflow: hidden;
+    min-width: 157px;
+  }
+.tab__item:first-child .tablist__tab{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .tab__item:last-child .tablist__tab{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+     border-right: 1px solid #DDDFDF;
+  }
+
+  .tab__item{
+    width: 100%;
+  }
+  .tablist__tab::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background-color: #F5EFDF;
+    width: 0;
+    height: 100%;
+    transition: width 0.4s ease-out, left 0.4s ease-out;
+    z-index: -1;
+  }
+
+  .tablist__tab[aria-selected="true"] {
+    border: 1px solid rgb(var(--color-accent));
+    text-decoration: none;
+    font-style: normal;
+    transition: font-size 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  } 
+
+  .tablist__tab[aria-selected="true"]::before{
+    width: 100%;
+    left: 0;
+    transition: width 0.3s ease-in;
+  }
+
+  .tablist__tab[aria-selected='true'] {
+    border: 1px solid rgb(var(--color-accent));
+  }
+
+
+
+
+@media screen and (max-width:768px) {
+.tablist__scroller {
+    justify-content: start;
+    overflow: auto;
+}
+
+.tablist__tab {
+    padding: 14px 14px;
+    min-width: 120px;
+}
+}
+
+

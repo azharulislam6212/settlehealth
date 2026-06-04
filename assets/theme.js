@@ -16,8 +16,8 @@ var Thm = {
             this.marqueeScroller();
             this.sticky_header();
             this.slideshowSwiper();
-                 this.video_media();
-                 this.collapsibleContent();
+            this.video_media();
+            this.collapsibleContent();
         },
         sticky_header: function () {
 
@@ -220,7 +220,7 @@ var Thm = {
             customElements.define("slideshow-swiper", slideshowSwiper);
 
         },
-       video_media: function () {
+        video_media: function () {
 
 
             class THMLazyLoadingVideo extends HTMLElement {
@@ -624,7 +624,7 @@ var Thm = {
                 customElements.define('collapsible-content', collapsibleContent);
             }
         }
-            
+
     }
 };
 
@@ -634,91 +634,91 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
- 
+
 
 function buildAnimation() {
 
-  const button = gsap.utils.toArray(".button");
+    const button = gsap.utils.toArray(".button");
 
-  if (button != null) {
-    button.forEach((item) => {
-      let span = item.querySelector(".button--text");
-      let tl = gsap.timeline({ paused: true });
-      if (span != null) {
-        tl.to(span, { duration: 0.2, xPercent: -150, ease: "power2.in" });
-        tl.set(span, { xPercent: 150 });
-        tl.to(span, { duration: 0.2, xPercent: 0 });
-        item.addEventListener("mouseenter", () => tl.play(0));
-        item.addEventListener("mouseleave", () => tl.reverse());
-      }
-    });
-  }
+    if (button != null) {
+        button.forEach((item) => {
+            let span = item.querySelector(".button--text");
+            let tl = gsap.timeline({ paused: true });
+            if (span != null) {
+                tl.to(span, { duration: 0.2, xPercent: -150, ease: "power2.in" });
+                tl.set(span, { xPercent: 150 });
+                tl.to(span, { duration: 0.2, xPercent: 0 });
+                item.addEventListener("mouseenter", () => tl.play(0));
+                item.addEventListener("mouseleave", () => tl.reverse());
+            }
+        });
+    }
 
 }
 
 
 function initBlogIsotope(section) {
-  // section is optional: if provided, scope querySelector inside it
-  var scope = section || document;
-  var elem = scope.querySelector('.blog-articles');
+    // section is optional: if provided, scope querySelector inside it
+    var scope = section || document;
+    var elem = scope.querySelector('.blog-articles');
 
-  if (!elem) return;
+    if (!elem) return;
 
-  // Destroy previous Isotope instance if it exists
-  if (elem._isotopeInstance) {
-    elem._isotopeInstance.destroy();
-  }
+    // Destroy previous Isotope instance if it exists
+    if (elem._isotopeInstance) {
+        elem._isotopeInstance.destroy();
+    }
 
-  // Initialize Isotope
-  var grid = new Isotope(elem, {
-    itemSelector: '.article__item',
-    layoutMode: 'fitRows'
-  });
-
-  // Store instance for later cleanup
-  elem._isotopeInstance = grid;
-
-  // Filter select
-  var select = scope.querySelector('.blog-filter-select');
-  if (select) {
-    select.addEventListener('change', function () {
-      var filterValue = this.value;
-      filterValue = (window.filterFns && window.filterFns[filterValue]) || filterValue;
-      grid.arrange({ filter: filterValue });
+    // Initialize Isotope
+    var grid = new Isotope(elem, {
+        itemSelector: '.article__item',
+        layoutMode: 'fitRows'
     });
-  }
+
+    // Store instance for later cleanup
+    elem._isotopeInstance = grid;
+
+    // Filter select
+    var select = scope.querySelector('.blog-filter-select');
+    if (select) {
+        select.addEventListener('change', function () {
+            var filterValue = this.value;
+            filterValue = (window.filterFns && window.filterFns[filterValue]) || filterValue;
+            grid.arrange({ filter: filterValue });
+        });
+    }
 }
 
 // Initial call on page load
 document.addEventListener('DOMContentLoaded', function () {
-  initBlogIsotope();
-  buildAnimation();
+    initBlogIsotope();
+    buildAnimation();
 });
 
 // Shopify section/block events
 document.addEventListener('shopify:section:load', function (event) {
-  initBlogIsotope(event.target);
-  buildAnimation(event.target);
+    initBlogIsotope(event.target);
+    buildAnimation(event.target);
 });
 
 document.addEventListener('shopify:section:reorder', function (event) {
-  initBlogIsotope(event.target);
-  buildAnimation(event.target);
+    initBlogIsotope(event.target);
+    buildAnimation(event.target);
 });
 
 document.addEventListener('shopify:block:select', function (event) {
-  initBlogIsotope(event.target);
+    initBlogIsotope(event.target);
     buildAnimation(event.target);
 });
 
 
- 
- 
-    
-        
- 
-    class DeferredMediaCustom extends HTMLElement {
-      constructor() {
+
+
+
+
+
+class DeferredMediaCustom extends HTMLElement {
+    constructor() {
         super();
 
         this.$ = this.querySelector.bind(this);
@@ -737,24 +737,24 @@ document.addEventListener('shopify:block:select', function (event) {
 
         this.trigger?.addEventListener('click', () => this.handleToggle());
 
-  
 
-      }
 
-      connectedCallback() {
+    }
+
+    connectedCallback() {
         if (Shopify && Shopify.designMode && this.getAttribute('data-autoplay') === 'true') {
-          this.loadContent();
+            this.loadContent();
         } else if (this.getAttribute('data-autoplay') === 'true') {
-          this.loadContent();
+            this.loadContent();
         }
-      }
+    }
 
-      /* ===============================
-         TOGGLE
-      =============================== */
-      handleToggle() {
+    /* ===============================
+       TOGGLE
+    =============================== */
+    handleToggle() {
 
-      
+
 
         this.classList.add('playing');
         this.loadContent();
@@ -762,115 +762,115 @@ document.addEventListener('shopify:block:select', function (event) {
         const video = this.$('.js-media-item-video') || this.$('.js-media-item-video-mobile');
 
         if (video) {
-          if (video.paused || video.ended) {
-            this.pauseAllVideo(video);
-            video.play();
-            this.setButtonState(true);
-          } else {
-            video.pause();
-            this.setButtonState(false);
-          }
+            if (video.paused || video.ended) {
+                this.pauseAllVideo(video);
+                video.play();
+                this.setButtonState(true);
+            } else {
+                video.pause();
+                this.setButtonState(false);
+            }
         }
 
         if (this.player && typeof this.player.getPlayerState === 'function') {
-          const state = this.player.getPlayerState();
+            const state = this.player.getPlayerState();
 
-          if (
-            state === YT.PlayerState.PAUSED ||
-            state === YT.PlayerState.ENDED
-          ) {
-            this.pauseAllVideo(this.player);
-            this.player.playVideo();
-            this.setButtonState(true);
-          } else if (state === YT.PlayerState.PLAYING) {
-            this.player.pauseVideo();
-            this.setButtonState(false);
-          }
+            if (
+                state === YT.PlayerState.PAUSED ||
+                state === YT.PlayerState.ENDED
+            ) {
+                this.pauseAllVideo(this.player);
+                this.player.playVideo();
+                this.setButtonState(true);
+            } else if (state === YT.PlayerState.PLAYING) {
+                this.player.pauseVideo();
+                this.setButtonState(false);
+            }
         }
-      }
+    }
 
-      /* ===============================
-         BUTTON STATE
-      =============================== */
-      setButtonState(isPlaying) {
+    /* ===============================
+       BUTTON STATE
+    =============================== */
+    setButtonState(isPlaying) {
         if (!this.playPauseButton) return;
         this.playPauseButton.dataset.playing = isPlaying ? 'true' : 'false';
-      }
+    }
 
-      /* ===============================
-         YOUTUBE
-      =============================== */
-      onYouTubeIframeAPIReady() {
+    /* ===============================
+       YOUTUBE
+    =============================== */
+    onYouTubeIframeAPIReady() {
         if (this.player) return;
 
         if (typeof YT !== 'undefined' && YT.Player) {
-          this.player = new YT.Player(this.eleVideo, {
-            videoId: this.idVideo,
-            playerVars: { playsinline: 1 },
-            events: {
-              onReady: this.onPlayerYTReady,
-              onStateChange: this.onPlayerStateYTChange,
-            },
-          });
-          return;
+            this.player = new YT.Player(this.eleVideo, {
+                videoId: this.idVideo,
+                playerVars: { playsinline: 1 },
+                events: {
+                    onReady: this.onPlayerYTReady,
+                    onStateChange: this.onPlayerStateYTChange,
+                },
+            });
+            return;
         }
 
         // load script only once
         if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
-          const script = document.createElement('script');
-          script.src = 'https://www.youtube.com/iframe_api';
-          document.head.appendChild(script);
+            const script = document.createElement('script');
+            script.src = 'https://www.youtube.com/iframe_api';
+            document.head.appendChild(script);
         }
 
         // IMPORTANT: global callback (YouTube requirement)
         window.onYouTubeIframeAPIReady = () => {
-          this.onYouTubeIframeAPIReady();
+            this.onYouTubeIframeAPIReady();
         };
-      }
+    }
 
-      onPlayerYTReady = () => {
+    onPlayerYTReady = () => {
         this.pauseAllVideo(this.player);
         this.player.playVideo();
-      };
+    };
 
-      onPlayerStateYTChange(t) {
+    onPlayerStateYTChange(t) {
         if (t.data === YT.PlayerState.PLAYING) {
-          this.onPlayerPlay();
-          this.setButtonState(true);
+            this.onPlayerPlay();
+            this.setButtonState(true);
         } else if (
-          t.data === YT.PlayerState.PAUSED ||
-          t.data === YT.PlayerState.ENDED
+            t.data === YT.PlayerState.PAUSED ||
+            t.data === YT.PlayerState.ENDED
         ) {
-          this.setButtonState(false);
+            this.setButtonState(false);
         }
-      }
+    }
 
-      onPlayerPlay() {
+    onPlayerPlay() {
         this.pauseAllVideo(this.player);
-      }
+    }
 
-      /* ===============================
-         VIMEO
-      =============================== */
+    /* ===============================
+       VIMEO
+    =============================== */
 
-      createVimeoPlayer() {
+    createVimeoPlayer() {
         if (this.playerVimeo) return;
 
         this.playerVimeo = new Vimeo.Player(this.eleVideo, {
-          id: this.idVideo,
-          autoplay: true,
+            id: this.idVideo,
+            autoplay: true,
         });
 
         this.playerVimeo.on('play', () => {
-          this.pauseAllVideo(this.playerVimeo);
+            this.pauseAllVideo(this.playerVimeo);
         });
-      }
+    }
 
 
-      onVimeoIframeAPIReady() {
+    onVimeoIframeAPIReady() {
         if (typeof Vimeo !== 'undefined' && Vimeo.Player) {
-          this.createVimeoPlayer();
-          return;
+            this.createVimeoPlayer();
+            return;
         }
 
         const src = 'https://player.vimeo.com/api/player.js';
@@ -879,51 +879,51 @@ document.addEventListener('shopify:block:select', function (event) {
         let script = document.querySelector(`script[src="${src}"]`);
 
         if (!script) {
-          script = document.createElement('script');
-          script.src = src;
+            script = document.createElement('script');
+            script.src = src;
 
-          script.onload = () => {
-            this.createVimeoPlayer();
-          };
+            script.onload = () => {
+                this.createVimeoPlayer();
+            };
 
-          document.head.appendChild(script);
-          return;
+            document.head.appendChild(script);
+            return;
         }
 
         // script already exists → wait until Vimeo becomes available
         const check = setInterval(() => {
-          if (typeof Vimeo !== 'undefined' && Vimeo.Player) {
-            clearInterval(check);
-            this.createVimeoPlayer();
-          }
+            if (typeof Vimeo !== 'undefined' && Vimeo.Player) {
+                clearInterval(check);
+                this.createVimeoPlayer();
+            }
         }, 50);
-      }
-      /* ===============================
-         LOAD CONTENT
-      =============================== */
+    }
+    /* ===============================
+       LOAD CONTENT
+    =============================== */
 
-      loadContent() {
+    loadContent() {
         if (this.hasAttribute('loaded')) return;
 
         // 🔹 YOUTUBE / VIMEO → hide trigger only
         if (this.typeVideo === 'youtube' || this.typeVideo === 'vimeo') {
-          this.trigger?.classList.add('d-none');
+            this.trigger?.classList.add('d-none');
         }
 
         // 🔹 Load template if exists
         if (this.$('template')) {
-          const node = this.$('template').content.firstElementChild.cloneNode(true);
-          this.appendChild(node);
+            const node = this.$('template').content.firstElementChild.cloneNode(true);
+            this.appendChild(node);
 
         } else {
-          if (this.typeVideo === 'youtube') {
-            this.onYouTubeIframeAPIReady();
-            this.buttonWrapper?.classList.add('display-none');
-          }
+            if (this.typeVideo === 'youtube') {
+                this.onYouTubeIframeAPIReady();
+                this.buttonWrapper?.classList.add('display-none');
+            }
 
-          if (this.typeVideo === 'vimeo') {
-            this.onVimeoIframeAPIReady();
-          }
+            if (this.typeVideo === 'vimeo') {
+                this.onVimeoIframeAPIReady();
+            }
         }
 
 
@@ -931,51 +931,51 @@ document.addEventListener('shopify:block:select', function (event) {
         if (this.getAttribute('data-autoplay') === 'true') {
 
 
-          // HTML5 video
-          const localVideo = this.$('video');
+            // HTML5 video
+            const localVideo = this.$('video');
 
 
-          if (localVideo) {
-            const source = localVideo.querySelector('source');
-            const src = source?.getAttribute('data-src');
-            if (src) {
-              source.setAttribute('src', src);
-              localVideo.load();
-              localVideo.muted = true
-              localVideo.play().catch((err) => {
-                console.warn("Autoplay failed:", err);
-              });
+            if (localVideo) {
+                const source = localVideo.querySelector('source');
+                const src = source?.getAttribute('data-src');
+                if (src) {
+                    source.setAttribute('src', src);
+                    localVideo.load();
+                    localVideo.muted = true
+                    localVideo.play().catch((err) => {
+                        console.warn("Autoplay failed:", err);
+                    });
+                }
+                else {
+                    console.warn("Missing data-src on local video source.");
+                }
             }
-            else {
-              console.warn("Missing data-src on local video source.");
-            }
-          }
 
-          // iframe video (YouTube/Vimeo)
-          const iframe = this.$('iframe');
-          if (iframe) {
-            const src = iframe.getAttribute('data-src');
-            if (src) {
-              iframe.setAttribute('src', src);
+            // iframe video (YouTube/Vimeo)
+            const iframe = this.$('iframe');
+            if (iframe) {
+                const src = iframe.getAttribute('data-src');
+                if (src) {
+                    iframe.setAttribute('src', src);
 
-              iframe.addEventListener(
-                'load',
-                () => {
-                  if (this.typeVideo === 'youtube') {
-                    iframe.contentWindow.postMessage(
-                      '{"event":"command","func":"playVideo","args":""}',
-                      '*'
+                    iframe.addEventListener(
+                        'load',
+                        () => {
+                            if (this.typeVideo === 'youtube') {
+                                iframe.contentWindow.postMessage(
+                                    '{"event":"command","func":"playVideo","args":""}',
+                                    '*'
+                                );
+                            }
+
+                            if (this.typeVideo === 'vimeo') {
+                                iframe.contentWindow.postMessage('{"method":"play"}', '*');
+                            }
+                        },
+                        { once: true }
                     );
-                  }
-
-                  if (this.typeVideo === 'vimeo') {
-                    iframe.contentWindow.postMessage('{"method":"play"}', '*');
-                  }
-                },
-                { once: true }
-              );
+                }
             }
-          }
         }
 
         this.isLoaded(true);
@@ -983,45 +983,171 @@ document.addEventListener('shopify:block:select', function (event) {
         // 🔹 Trigger listeners remain
         const video = this.$('.js-media-item-video');
         if (video && !video.dataset.listenersAdded) {
-          video.addEventListener('play', () => this.setButtonState(true));
-          video.addEventListener('pause', () => this.setButtonState(false));
-          video.addEventListener('ended', () => this.setButtonState(false));
-          video.dataset.listenersAdded = 'true';
+            video.addEventListener('play', () => this.setButtonState(true));
+            video.addEventListener('pause', () => this.setButtonState(false));
+            video.addEventListener('ended', () => this.setButtonState(false));
+            video.dataset.listenersAdded = 'true';
         }
-      }
-
-      /* ===============================
-         PAUSE ALL
-      =============================== */
-      pauseAllVideo(current) {
-        document
-          .querySelectorAll(
-            ".js-media-item-video:has([data-type='youtube'])"
-          )
-          .forEach((el) => {
-            el.player && el.player !== current && el.player.pauseVideo();
-          });
-
-        document
-          .querySelectorAll(
-            ".js-media-item-video:has([data-type='vimeo'])"
-          )
-          .forEach((el) => {
-            el.playerVimeo &&
-              el.playerVimeo !== current &&
-              el.playerVimeo.pause();
-          });
-
-        document
-          .querySelectorAll('.js-media-item-video')
-          .forEach((v) => v !== current && v.pause());
-      }
-
-      isLoaded(val) {
-        val ? this.setAttribute('loaded', '') : this.removeAttribute('loaded');
-      }
     }
+
+    /* ===============================
+       PAUSE ALL
+    =============================== */
+    pauseAllVideo(current) {
+        document
+            .querySelectorAll(
+                ".js-media-item-video:has([data-type='youtube'])"
+            )
+            .forEach((el) => {
+                el.player && el.player !== current && el.player.pauseVideo();
+            });
+
+        document
+            .querySelectorAll(
+                ".js-media-item-video:has([data-type='vimeo'])"
+            )
+            .forEach((el) => {
+                el.playerVimeo &&
+                    el.playerVimeo !== current &&
+                    el.playerVimeo.pause();
+            });
+
+        document
+            .querySelectorAll('.js-media-item-video')
+            .forEach((v) => v !== current && v.pause());
+    }
+
+    isLoaded(val) {
+        val ? this.setAttribute('loaded', '') : this.removeAttribute('loaded');
+    }
+}
 
 customElements.define("deferred-media-custom", DeferredMediaCustom);
 
- 
+
+
+
+if (!customElements.get('tabbed-content')) {
+    class Tabs extends HTMLElement {
+        constructor() {
+            super();
+            this.tabList = this.querySelector('[role="tablist"]');
+            this.activeTab = this.tabList.querySelector('[aria-selected="true"]');
+            this.isVerticalTablist = this.tabList.getAttribute('aria-orientation') === 'vertical';
+            this.tabs = this.querySelectorAll('[role="tab"]');
+            this.panels = this.querySelectorAll('[role="tabpanel"]');
+
+            // If no tab is active by default, activate the first tab.
+            if (!this.activeTab) {
+                this.activeTab = this.tabs[0];
+                this.activateTab(this.activeTab);
+            }
+
+            this.addListeners();
+        }
+
+        addListeners() {
+            this.tabList.addEventListener('click', this.handleClick.bind(this));
+            this.tabList.addEventListener('keydown', this.handleKeydown.bind(this));
+        }
+
+        handleClick(evt) {
+            if (!evt.target.matches('[role="tab"]') || evt.target === this.activeTab) return;
+            this.activateTab(evt.target);
+
+        }
+
+        handleKeydown(evt) {
+            switch (evt.key) {
+                case 'ArrowLeft':
+                case 'ArrowRight':
+                    evt.preventDefault();
+                    if (!this.isVerticalTablist) {
+                        this.switchTabOnKeyPress(evt.key);
+                    }
+                    break;
+
+                case 'ArrowUp':
+                case 'ArrowDown':
+                    evt.preventDefault();
+                    if (this.isVerticalTablist) {
+                        this.switchTabOnKeyPress(evt.key);
+                    }
+                    break;
+
+                case 'Home':
+                    evt.preventDefault();
+                    this.activateTab(this.tabs[0]);
+                    break;
+
+                case 'End':
+                    evt.preventDefault();
+                    this.activateTab(this.tabs[this.tabs.length - 1]);
+                    break;
+            }
+        }
+
+        switchTabOnKeyPress(key) {
+            if (key === 'ArrowRight' || key === 'ArrowDown') {
+                if (this.activeTab === this.tabs[this.tabs.length - 1]) {
+                    this.activateTab(this.tabs[0]);
+                } else {
+                    this.activateTab(this.activeTab.nextElementSibling);
+                }
+            } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
+                if (this.activeTab === this.tabs[0]) {
+                    this.activateTab(this.tabs[this.tabs.length - 1]);
+                } else {
+                    this.activateTab(this.activeTab.previousElementSibling);
+                }
+            }
+        }
+
+        activateTab(tab) {
+            this.deactivateActiveTab();
+
+            Tabs.setTabState(tab, true);
+            tab.removeAttribute('tabindex');
+            this.activeTab = tab;
+
+            const panelId = tab.getAttribute('aria-controls');
+            const panel = document.getElementById(panelId);
+
+            if (panel) {
+                panel.classList.add('fade-in');  // Add animation class
+
+                setTimeout(() => {
+                    panel.classList.remove('fade-in');
+                }, 500);
+            }
+
+            if (document.activeElement.matches('.tablist__tab')) {
+                tab.focus();
+            }
+        }
+
+        deactivateActiveTab() {
+            Tabs.setTabState(this.activeTab, false);
+            this.activeTab.setAttribute('tabindex', '-1');
+            this.activeTab = null;
+        }
+
+        static setTabState(tab, active) {
+            tab.setAttribute('aria-selected', active);
+
+            const panelId = tab.getAttribute('aria-controls');
+            const panel = document.getElementById(panelId);
+
+            if (panel) {
+                if (active) {
+                    panel.hidden = false;
+                } else {
+                    panel.hidden = true;
+                }
+            }
+        }
+
+    }
+
+    customElements.define('tabbed-content', Tabs);
+}
