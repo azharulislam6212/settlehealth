@@ -16,10 +16,10 @@
           "type": "newslatter",
           "settings": {
             "position_index": 2,
-            "heading": "Weekly newsletter",
-            "text": "No spam. Just the latest releases and tips, interesting articles, and exclusive interviews in your inbox every week.",
-            "policy_text": "Read about our <a href=\"\/policies\/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">privacy policy.<\/a>",
-            "color_scheme_card": ""
+            "heading": "The Settle Journal, monthly",
+            "text": "One considered email a month. Honest writing on ADHD, what the research is showing, and what's working for the people we treat. No spam, no algorithm-bait and unsubscribe whenever.",
+            "policy_text": "Read about our <a href=\"/policies/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">privacy policy.</a>",
+            "color_scheme_card": "scheme-4"
           }
         }
       },
@@ -46,14 +46,14 @@
         "heading_6rhwMf": {
           "type": "heading",
           "settings": {
-            "heading": "Sign up for our newsletter",
+            "heading": "The Settle Journal, monthly",
             "heading_size": "h1"
           }
         },
         "paragraph_MVjNhA": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about releases and industry news and insights.<\/p>"
+            "text": "<p>One considered email a month. Honest writing on ADHD - what helps, what the research is showing, and what's working for the people we treat</p>"
           }
         },
         "email_form_fDqiWt": {

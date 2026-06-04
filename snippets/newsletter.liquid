@@ -5,10 +5,9 @@
                   {% endif %}>
 
                       <div class="clock-icon">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.74967 14.0007L12.2497 17.5007L19.2497 10.5007M25.6663 14.0007C25.6663 20.444 20.443 25.6673 13.9997 25.6673C7.55635 25.6673 2.33301 20.444 2.33301 14.0007C2.33301 7.55733 7.55635 2.33398 13.9997 2.33398C20.443 2.33398 25.6663 7.55733 25.6663 14.0007Z" stroke="#414651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+                       <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4763 13.9611L22.7263 1.71114M10.6252 14.3439L13.6913 22.2282C13.9614 22.9228 14.0965 23.2701 14.2911 23.3715C14.4598 23.4594 14.6607 23.4595 14.8295 23.3718C15.0243 23.2706 15.1597 22.9235 15.4306 22.2292L23.1194 2.52687C23.3639 1.90016 23.4862 1.5868 23.4193 1.38657C23.3612 1.21268 23.2248 1.07622 23.0509 1.01813C22.8507 0.951236 22.5373 1.07352 21.9106 1.31809L2.20823 9.00682C1.51398 9.27775 1.16685 9.41321 1.06569 9.60793C0.977992 9.77674 0.978111 9.9777 1.066 10.1464C1.16739 10.341 1.51468 10.4761 2.20925 10.7462L10.0936 13.8123C10.2346 13.8671 10.3051 13.8945 10.3644 13.9369C10.417 13.9744 10.4631 14.0204 10.5006 14.073C10.5429 14.1324 10.5703 14.2029 10.6252 14.3439Z" stroke="CurrentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
                       </div>
 
                       <div class="blog-newsletter__header">
@@ -65,16 +64,14 @@
                                     >
 
                                        {% if block.settings.policy_text != blank %}
-                            <p class="policy_newsletter-text">
-                              {{ block.settings.policy_text }}
-                            </p>
-                          {% endif %}
-
-
-                              
+                                      <p class="policy_newsletter-text">
+                                        {{ block.settings.policy_text }}
+                                      </p>
+                                    {% endif %}
+ 
                                     <button
                                       type="submit"
-                                      class="blog-newsletter-button"
+                                      class="blog-newsletter-button button button--primary"
                                       name="commit"
                                       id="Subscribe"
                                       aria-label="{{ 'newsletter.button_label' | t }}"
@@ -82,6 +79,9 @@
                                       <span>Subscribe</span>
                                  
                                     </button>
+
+
+
                                   </div>
                                   {%- if form.errors -%}
                                     <small class="newsletter-form__message form__message" id="ContactFooter-error">

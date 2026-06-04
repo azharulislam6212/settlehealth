@@ -248,7 +248,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 
-a:not(.button, .reversed-link) {
+a:not(.button, .link) {
   position: relative;
   color: var(--color-link, var(--color-foreground));
   display: inline-block;
@@ -264,9 +264,9 @@ a:not(.button, .reversed-link) {
 
 @media (hover: hover) {
 
-  a:not(.button, .reversed-link):hover,
-  a:not(.button, .reversed-link):focus,
-  a:not(.button, .reversed-link):focus-visible {
+  a:not(.button, .link):hover,
+  a:not(.button, .link):focus,
+  a:not(.button, .link):focus-visible {
     color: var(--color-link-hover, var(--color-foreground));
     background-size: 0% .1rem;
     background-position: right bottom;
@@ -274,11 +274,12 @@ a:not(.button, .reversed-link) {
 
 }
 
-a:not(.button, .reversed-link):hover,
-a:not(.button, .reversed-link):focus,
-a:not(.button, .reversed-link):focus-visible {
+a:not(.button, .link):hover,
+a:not(.button, .link):focus,
+a:not(.button, .link):focus-visible {
   color: var(--color-link-hover, var(--color-foreground));
 }
+
 
 h1,
 h2,
@@ -325,7 +326,6 @@ h5,
     font-size: calc(var(--font-heading-scale) * 4.2rem);
   }
 }
-
 
 
 
