@@ -1,14 +1,10 @@
 .page--caption-text{
- 
-/* Subtitle */
 font-family:  var(--font-body-family);
 font-style: normal;
-font-weight: var(--font-body-wei);
+font-weight: var(--font-body-weight);
 font-size: 14px;
 line-height: 19px;
- 
 margin: 0 0  12px;
- 
 
 }
 
@@ -25,17 +21,17 @@ margin: 0 0  12px;
 
 .page--text{
      margin: 0 0 32px;
+         max-width: 768px;
 }
 
 .page--list_text{
-
     box-sizing: border-box;
     background: #fff;
     border: 1px solid #D5D7DA;
     box-shadow: 0 1px 2px #0a0d120d;
     border-radius: 10px;
     display: inline-flex;
-    padding: 6px 4px;
+    padding: 6px 6px;
 
 }
 
@@ -67,11 +63,7 @@ margin: 0 0  12px;
 
 .page--list_text em{
     font-style: normal;
-
-    /* Badge */
-
 box-sizing: border-box;
-
 /* Auto layout */
     display: inline-flex;
 flex-direction: row;

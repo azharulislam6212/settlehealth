@@ -22,12 +22,12 @@
       "name": "Page header",
       "settings": {
         "page_width": "container",
-        "caption": "The team",
-        "heading": "Meet your settlehealth clinicians ",
+        "caption": "",
+        "heading": "Meet our Clinical team",
         "heading_size": "hxl",
-        "text": "<p>Qualified. Compassionate. Committed. A clinical team you can trust.<\/p>",
-        "list_text": "<p>Our responsible pharmacist today is <em>Jayshree Dave 2067985<\/em><\/p>",
-        "color_scheme": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
+        "text": "<p>Every patient is seen by a UK-registered consultant psychiatrist, working as part of a small, specialist team. No call centres, no rotating clinicians, no algorithm-led prescribing.</p>",
+        "list_text": "<p>Our responsible clinician today is <em> Erran Morris</em></p>",
+        "color_scheme": "scheme-13eb1473-4812-4127-bb84-fd93a60f9e39",
         "color_accent": "#ccf9ab",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -42,14 +42,14 @@
       "name": "Text Image block",
       "settings": {
         "page_width": "container",
-        "caption": "Regulation",
+        "caption": "",
         "heading": "Our Regulators",
         "heading_size": "h2",
-        "text": "<p><a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacy\/9012920\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacy\/9012920\">Click <\/a>to view our licence details<\/p>",
-        "image_1": "shopify:\/\/shop_images\/image_159.png",
-        "image_2": "shopify:\/\/shop_images\/image_160.png",
-        "color_scheme": "scheme-c1c0e958-83fd-40ab-9334-9739ff291f85",
-        "color_accent": "#ccf9ab",
+        "text": "<p>Settle is independently regulated by the UK's two key healthcare authorities. Click each to view our registration details.</p>",
+        "image_1": "shopify://shop_images/image_159_1.png",
+        "image_2": "shopify://shop_images/image_160_1.png",
+        "color_scheme": "scheme-2",
+        "color_accent": "#8e3a2a",
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_top_tab": 40,
@@ -64,57 +64,57 @@
         "text_block_TBCGfJ": {
           "type": "text_block",
           "settings": {
-            "title": "Erran Elise Morris <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2067798\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2067798\">2067798<\/a>",
+            "title": "Erran Elise Morris <a href=\"https://www.pharmacyregulation.org/registers/pharmacist/2067798\" title=\"https://www.pharmacyregulation.org/registers/pharmacist/2067798\">2067798</a>",
             "id_number": "Superintendent Pharmacist",
-            "text": "<p>Specialises in clinical safety and digital healthcare. The driving force that leads our team of highly skilled clinicians. <\/p>"
+            "text": "<p>Specialises in clinical safety and digital healthcare. The driving force that leads our team of highly skilled clinicians. </p>"
           }
         },
         "text_block_fx6pfk": {
           "type": "text_block",
           "settings": {
-            "title": "Aumbreen Masood <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2054688\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2054688\">2054688<\/a>",
+            "title": "Aumbreen Masood <a href=\"https://www.pharmacyregulation.org/registers/pharmacist/2054688\" title=\"https://www.pharmacyregulation.org/registers/pharmacist/2054688\">2054688</a>",
             "id_number": "Prescribing Pharmacist",
-            "text": "<p>Specialises in weight loss, with a diverse background in community pharmacy management.<\/p>"
+            "text": "<p>Specialises in weight loss, with a diverse background in community pharmacy management.</p>"
           }
         },
         "text_block_LexY6m": {
           "type": "text_block",
           "settings": {
-            "title": "Nafisa Raza <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2221589\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2221589\">2221589 <\/a>",
+            "title": "Nafisa Raza <a href=\"https://www.pharmacyregulation.org/registers/pharmacist/2221589\" title=\"https://www.pharmacyregulation.org/registers/pharmacist/2221589\">2221589 </a>",
             "id_number": "Prescribing Pharmacist",
-            "text": "<p>Dedicated to helping patients make sustainable health improvements using a personalised, evidence-based approach.<\/p>"
+            "text": "<p>Dedicated to helping patients make sustainable health improvements using a personalised, evidence-based approach.</p>"
           }
         },
         "text_block_tE8Vn7": {
           "type": "text_block",
           "settings": {
-            "title": "Wing Suet Chan <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2228233\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2228233\">2228233 <\/a>",
+            "title": "Wing Suet Chan <a href=\"https://www.pharmacyregulation.org/registers/pharmacist/2228233\" title=\"https://www.pharmacyregulation.org/registers/pharmacist/2228233\">2228233 </a>",
             "id_number": "Prescribing Pharmacist",
-            "text": "<p>Specialised in weight management, and committed to supporting patients with a science-led approach.<\/p>"
+            "text": "<p>Specialised in weight management, and committed to supporting patients with a science-led approach.</p>"
           }
         },
         "text_block_pDnncF": {
           "type": "text_block",
           "settings": {
-            "title": "Fahima Tamannah <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2083781\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2083781\">2083781<\/a>",
+            "title": "Fahima Tamannah <a href=\"https://www.pharmacyregulation.org/registers/pharmacist/2083781\" title=\"https://www.pharmacyregulation.org/registers/pharmacist/2083781\">2083781</a>",
             "id_number": "Prescribing Pharmacist",
-            "text": "<p> A personable approach to help drive patients towards their weight-loss goals and long-term health.<\/p>"
+            "text": "<p> A personable approach to help drive patients towards their weight-loss goals and long-term health.</p>"
           }
         },
         "text_block_RmNyEf": {
           "type": "text_block",
           "settings": {
-            "title": "Islam Ahmed <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224402\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224402\">2224402<\/a>",
+            "title": "Islam Ahmed <a href=\"https://www.pharmacyregulation.org/registers/pharmacist/2224402\" title=\"https://www.pharmacyregulation.org/registers/pharmacist/2224402\">2224402</a>",
             "id_number": "Prescribing Pharmacist",
-            "text": "<p>Committed to improving access to equitable care, particularly for neurodiverse patients.<\/p>"
+            "text": "<p>Committed to improving access to equitable care, particularly for neurodiverse patients.</p>"
           }
         },
         "text_block_TPteFU": {
           "type": "text_block",
           "settings": {
-            "title": "Imrana Haja Mohideen <a href=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224423\" title=\"https:\/\/www.pharmacyregulation.org\/registers\/pharmacist\/2224423\">2224423<\/a>",
+            "title": "Imrana Haja Mohideen <a href=\"https://www.pharmacyregulation.org/registers/pharmacist/2224423\" title=\"https://www.pharmacyregulation.org/registers/pharmacist/2224423\">2224423</a>",
             "id_number": "Prescribing Pharmacist",
-            "text": "<p>Expertise in patient-centred care, medication optimisation and long-term condition management.<\/p>"
+            "text": "<p>Expertise in patient-centred care, medication optimisation and long-term condition management.</p>"
           }
         },
         "text_block_JNwLKx": {
@@ -175,49 +175,40 @@
       "name": "Text blocks flex",
       "settings": {
         "page_width": "container",
-        "caption": "GPhC & CQC Regulated",
-        "heading": "Clinicians you can trust",
+        "caption": "",
+        "heading": "Our consultant psychiatrists",
         "heading_size": "h1",
-        "text": "<p>Our UK-leading clinicians are at the top of their game. Highly skilled and individually specialised. Dedicated to giving you confidence, clarity and a clear path forward. <\/p>",
+        "text": "<p>The clinician who diagnoses you is the one who titrates, reviews, and prescribes for you long-term. You'll be matched with one, and that's the psychiatrist you'll see, from your first call to your annual review.</p>",
         "button_label": "About us",
-        "link": "shopify:\/\/pages\/about-us",
+        "link": "shopify://pages/about-us",
         "button_style": "secondary-outline",
-        "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
+        "color_scheme": "scheme-1",
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "padding_top_tab": 40,
-        "padding_bottom_tab": 40,
+        "padding_bottom_tab": 0,
         "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30
+        "padding_bottom_mobile": 0
       }
     },
     "rich_text_custom_YyFr9y": {
       "type": "rich-text--custom",
       "blocks": {
-        "caption_xqWx6k": {
-          "type": "caption",
-          "settings": {
-            "caption": "Regulated",
-            "text_style": "subtitle",
-            "text_size": "medium"
-          }
-        },
         "heading_fNnDyw": {
           "type": "heading",
           "settings": {
-            "heading": "How our prescribers are regulated",
+            "heading": "How our clinicians are regulated",
             "heading_size": "h1"
           }
         },
         "text_9JVri8": {
           "type": "text",
           "settings": {
-            "text": "<p>Our prescribers are Pharmacist Independent Prescribers regulated by the General Pharmaceutical Council. General Pharmaceutical Council (GPhC) is the independent regulator for pharmacists, pharmacy technicians and pharmacy premises in Great Britain.\u2028<\/p><p>Some of the prescribing services available through settlehealth are provided by Health Finder Pro Limited, an independent third-party clinical provider. Where applicable, your consultation information and relevant health data will be securely shared with Health Finder Pro Limited for the purposes of clinical review, prescribing, and ongoing medical management. Health Finder Pro Limited operates as an independent data controller in relation to the prescribing services it provides, more information can be found on our Privacy Policy, click here to view.<br\/><\/p>"
+            "text": "<p>Every Settle clinician is a UK-registered Consultant Psychiatrist regulated by the General Medical Council (GMC). The GMC is the independent regulator for doctors practising in the United Kingdom - every Settle psychiatrist holds full GMC registration with a specialist licence to practise in psychiatry, and is on the Specialist Register for General Adult Psychiatry.<br/><br/>Settle's clinical services are delivered by Curate Health Limited, the regulated clinical entity behind Settle, which holds independent registration with the Care Quality Commission. Medication is dispensed by Curate Pharmacy, our in-house pharmacy, registered with the General Pharmaceutical Council.<br/>You can verify any Settle clinician's registration on the GMC's online register at gmc-uk.org.</p>"
           }
         }
       },
       "block_order": [
-        "caption_xqWx6k",
         "heading_fNnDyw",
         "text_9JVri8"
       ],
@@ -226,7 +217,7 @@
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
-        "padding_top": 40,
+        "padding_top": 60,
         "padding_bottom": 52
       }
     },
@@ -236,23 +227,23 @@
         "heading_VXB3xg": {
           "type": "heading",
           "settings": {
-            "heading": "A message from our Superintendent Pharmacist",
+            "heading": "A message from our Medical Director",
             "heading_size": "h1"
           }
         },
         "text_GAM7Qq": {
           "type": "text",
           "settings": {
-            "text": "<p>“We’re here to help you feel healthier and more confident. This goes beyond medication. Our personalised, one-to-one care is designed for lasting change. And our team of clinicians supports you through every step, keeping you motivated and on track.”<\/p>",
+            "text": "<p>When I first started working in adult ADHD, the patients I saw were almost always exhausted before they got to me. Years of NHS waitlists, GP rejections, private services that prescribed and disappeared, and the slow erosion of believing themselves about their own brain.<br/>Settle was built to be different. Every patient sees a consultant psychiatrist — not a pharmacist, not an algorithm, not a different person every six months. The clinician who diagnoses you is the clinician who titrates you, reviews you, and prescribes for you year after year. We're a small team by design. We'd rather see fewer patients well than more patients badly.<br/>If you've been waiting, masking, or wondering — we built this for you.</p>",
             "text_style": "body"
           }
         },
         "signature_text_nJAW9j": {
           "type": "signature_text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/getsitecontrol__generate-calligraphy-text__free_1_1.svg",
-            "heading": "Erran Morris",
-            "text": "Superintendent Pharmacist"
+            "image": "shopify://shop_images/Group.png",
+            "heading": "Dr Doniert Mcfarlane",
+            "text": ""
           }
         }
       },
@@ -263,10 +254,10 @@
       ],
       "name": "Image list reverse text",
       "settings": {
-        "enable_divider": true,
-        "image": "shopify:\/\/shop_images\/Image.png",
-        "color_scheme": "scheme-de6bb912-2838-4bf1-a1be-2dfb855938a0",
-        "color_accent": "#a5a5a5",
+        "enable_divider": false,
+        "image": "shopify://shop_images/Image_11.png",
+        "color_scheme": "scheme-4",
+        "color_accent": "#8e3a2a",
         "padding_top": 90,
         "padding_bottom": 90,
         "padding_top_tab": 60,
@@ -289,14 +280,14 @@
         "heading_7KXKRf": {
           "type": "heading",
           "settings": {
-            "heading": "Our North Star",
+            "heading": "Our philosophy",
             "heading_size": "h1"
           }
         },
         "text_jMaqpG": {
           "type": "text",
           "settings": {
-            "text": "<p>This is about you, not us. But it’s important to know how committed we are to your health. Here’s why we do what we do.<\/p><p><strong>Personalised to you <\/strong><\/p><p>A convincing social post, clever marketing campaign or recommendation from a friend. It’s human nature to be drawn in. But one size can’t possibly fit all. What works for them won’t necessarily work for you. Just as we all look different, we’re made differently and we work differently. <\/p><p>We take the time to understand your health story and create a personalised treatment pathway. It’s clinically designed to work specifically for you and adapt as you change.  <\/p><p><strong>Turning confusion into clarity <\/strong><\/p><p>The world is noisy. So many choices with conflicting advice and ever-changing opinions can leave you feeling lost and overwhelmed. <\/p><p>We turn confusion into clarity by filtering, refining and curating a healthcare pathway that suits your body and your lifestyle. <\/p><p><strong>Where science meets compassion<\/strong> <\/p><p>It’s often hard to know who to believe and what will actually work for you. <\/p><p>Our clinicians are individually specialised to give you expert advice. Your medication is scientifically proven to work. Add in the one-to-one support on nutrition, exercise, sleep and mental health. Plus tailored supplements for overall wellbeing. That’s whole-person healthcare.  <\/p><p><strong>For lasting change<\/strong> <\/p><p>Quick fixes aren’t sustainable. The more you try, the further it can lead you away from your health goals.<\/p><p>Lasting changes means a lifestyle change. We work together on a realistic approach, setting achievable goals that you can build upon. Over time, you’ll create lasting habits for long-term health.  <\/p><p><strong>Consistency comes with convenience <\/strong><\/p><p>You don’t have time for unnecessary queues. Whether it’s for an appointment, on the phone or at the doctor. <\/p><p>Discreet delivery, online clinician support and the ability to track your progress puts you in control.<\/p>",
+            "text": "<p>We built Settle because ADHD care in the UK is broken in a specific, fixable way.</p><p><br/>The NHS waitlist for adult ADHD assessment now sits at five to seven years in most regions. GPs are not trained or supported to refer in any consistent way. Many private providers prescribe and then disappear, leaving patients without follow-up care or annual reviews. And every step of the process - diagnosis, titration, ongoing care, repeat prescriptions - happens at a different place, with a different person, often with weeks of waiting between each.</p><p><br/>Settle's model is the opposite. One clinician sees you from assessment to annual review. One pharmacy dispenses your medication. One brand is accountable for the whole experience. We've structured the business so the parts that usually fall apart - the handoffs, the gaps between providers, the lost prescriptions - can't happen, because there are no handoffs to fail.</p><p><br/>We won't be right for every patient. If you want a quick, low-touch service that runs entirely on automation, there are cheaper providers. If what you want is to be properly diagnosed, properly medicated, and properly looked after - by the same psychiatrist, for as long as you need them - that's what we built.</p>",
             "text_style": "body",
             "text_size": "medium"
           }
@@ -311,7 +302,7 @@
       "settings": {
         "enable_divider": true,
         "page_width": "container",
-        "image": "shopify:\/\/shop_images\/04_1.png",
+        "image": "shopify://shop_images/Image_12.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -342,7 +333,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_dWrmet": {
@@ -350,7 +341,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_aH9G6T": {
@@ -358,7 +349,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_HkKwtH": {
@@ -366,7 +357,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_UiGBdd": {
@@ -374,7 +365,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_FGQGFT": {
@@ -382,7 +373,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_WcLGcV": {
@@ -390,7 +381,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_pBm3zN": {
@@ -398,7 +389,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_y3dCGY": {
@@ -406,7 +397,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_EFjRz4": {
@@ -414,7 +405,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_Q4e6FP": {
@@ -422,7 +413,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         },
         "text_block_W8Ya9U": {
@@ -430,7 +421,7 @@
           "settings": {
             "title": "Amélie Laurent",
             "id_number": "3289302",
-            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.<\/p>"
+            "text": "<p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>"
           }
         }
       },
@@ -455,9 +446,9 @@
         "caption": "GPhC & CQC Regulated",
         "heading": "Wider Clinical Team",
         "heading_size": "h1",
-        "text": "<p>We’re a cross-disciplinary team that loves to create great experiences for our customers.<\/p>",
+        "text": "<p>We’re a cross-disciplinary team that loves to create great experiences for our customers.</p>",
         "button_label": "About us",
-        "link": "shopify:\/\/pages\/about-us",
+        "link": "shopify://pages/about-us",
         "button_style": "secondary-outline",
         "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
         "padding_top": 60,
