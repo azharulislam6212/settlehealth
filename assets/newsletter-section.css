@@ -90,6 +90,7 @@ flex: 1;
 .newsletter-form__custom-button {
   border-radius: 12px;
   min-width: 113px;
+  min-height: 48px;
 }
 
 .newsletter-form__field-wrapper  .policy_newsletter-text{

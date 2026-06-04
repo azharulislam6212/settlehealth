@@ -241,6 +241,7 @@ color: #181D27;
 
 .blog-articles__article  .full-unstyled-link {
   display: inline;
+  position: static;
 }
 
 @media screen and (min-width: 750px) {

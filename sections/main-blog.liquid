@@ -31,13 +31,14 @@
       <div class="main-blog__header">
 
         <ul class="blog-tabs">
-            <li><a href="{{ blogs['news'].url }}/" class="{% if current_tags == nul and blog.handle == "news" %}active{% endif %}">View all</a></li>
+            <li><a href="{{ blogs['news'].url }}/" class="{% if current_tags == nul and blog.handle == "news" %}active{% endif %} link">View all</a></li>
             {% for tag in blogs['news'].all_tags %}
             
-              <li> <a href="{{ blogs['news'].url }}/tagged/{{ tag | handle }}"  class="{% if current_tags.first == tag %}active{% endif %}">{{tag}}</a> </li>
+              <li> <a href="{{ blogs['news'].url }}/tagged/{{ tag | handle }}"  class="{% if current_tags.first == tag %}active{% endif %} link">{{tag}}</a> </li>
            
             {% endfor %}
           </ul>
+
 
 
           {% assign filter_items = blog.metafields.custom.article_filter.value %}
