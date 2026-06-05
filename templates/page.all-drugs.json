@@ -62,7 +62,7 @@
       "name": "Category image banner",
       "settings": {
         "allow_transparent_header": false,
-        "image": "shopify://shop_images/Generated_with_Kive.ai_-_Athletic_woman_in_mint_seamless_activewear_with_raised_arm__eyes_closed_in_serene_expression__shot_against_geometric_color-block_architecture__cyan_sky_backdr.png",
+        "image": "shopify://shop_images/Mask_group_25_1.png",
         "image_overlay_opacity": 10,
         "image_border_radius": 0,
         "fixed_attachment": false,
@@ -86,11 +86,10 @@
           "type": "banner_card_block",
           "name": "Banner card 1",
           "settings": {
-            "image": "shopify://shop_images/Group_2141256187_1.png",
             "title": "Concerta",
             "price_text": "",
-            "list_text": "<ul><li>Prescribed by UK Clinicians</li><li>Discreet Delivery</li><li>Next day delivery available</li></ul>",
-            "text": "Concerta XL (METHYLPHENIDATE) A long-acting stimulant medication used to treat ADHD in adults and children. Helps improve focus, reduce impulsivity, and quiet the mental restlessness that comes with ADHD.",
+            "list_text": "<ul><li>Once-daily dosing, taken in the morning</li><li>12-hour symptom coverage with smooth release</li><li>First-line stimulant option recommended by NICE</li></ul>",
+            "text": "Long-acting stimulant licensed in the UK for ADHD. Uses an osmotic-release system to deliver focus support across a 12-hour working day.",
             "button_label_1": "Start my assessment",
             "button_link_1": "shopify://collections",
             "button_style_1": "primary",
@@ -101,14 +100,14 @@
             "color_accent": "#ffffff"
           }
         },
-        "banner_card_block_2_tVkR86": {
-          "type": "banner_card_block_2",
+        "banner_card_block_B4jRTm": {
+          "type": "banner_card_block",
+          "name": "Banner card 1",
           "settings": {
-            "image": "shopify://shop_images/Group_2141256187_1.png",
             "title": "Atomoxetine",
             "price_text": "",
-            "list_text": "<ul><li>Prescribed by UK Clinicians</li><li>Discreet Delivery</li><li>Next day delivery available</li></ul>",
-            "text": "A non-stimulant medication used to treat ADHD in adults and children. Taken once daily, it works gradually over several weeks to improve focus and reduce impulsivity.",
+            "list_text": "<ul><li>Non-stimulant — not a controlled drug</li><li>Suitable where stimulants aren't tolerated or appropriate</li><li>24-hour continuous symptom control</li></ul>",
+            "text": "A non-stimulant noradrenaline reuptake inhibitor licensed for ADHD in adults and children. Works gradually over 4–6 weeks rather than producing an immediate effect.",
             "button_label_1": "Start my assessment",
             "button_link_1": "shopify://collections",
             "button_style_1": "primary",
@@ -116,27 +115,140 @@
             "button_link_2": "",
             "button_style_2": "primary-outline",
             "color_scheme_card": "scheme-8c4ea9c1-0632-45e8-b921-bd9af093a6cb",
-            "color_background": "linear-gradient(103.46deg, #16527F 33.54%, #94CBF5 88.16%), linear-gradient(325.26deg, #E4BFAA 9.46%, #CC9D82 55.29%, #C78D6E 68.83%, #BB805E 103.83%), linear-gradient(194.03deg, #A59768 1.87%, #DFD09F 90%), linear-gradient(164.74deg, #A59768 1.42%, #DFD09F 89.28%)",
+            "color_accent": "#ffffff"
+          }
+        },
+        "banner_card_block_aRzLAd": {
+          "type": "banner_card_block",
+          "name": "Banner card 1",
+          "settings": {
+            "title": "Ritalin / Ritalin IR",
+            "price_text": "",
+            "list_text": "<ul><li>Flexible dosing 2–3 times daily</li><li>Fast onset within 20–30 minutes</li><li>Useful as an add-on to long-acting stimulants</li></ul>",
+            "text": "A short-acting stimulant used to treat ADHD in adults and children. Provides 3–4 hours of symptom control per dose, useful for fine-tuning coverage.",
+            "button_label_1": "Start my assessment",
+            "button_link_1": "shopify://collections",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary-outline",
+            "color_scheme_card": "scheme-8c4ea9c1-0632-45e8-b921-bd9af093a6cb",
+            "color_accent": "#ffffff"
+          }
+        },
+        "banner_card_block_V8XtUr": {
+          "type": "banner_card_block",
+          "name": "Banner card 1",
+          "settings": {
+            "title": "Elvanse (lisdexamfetamine)",
+            "price_text": "",
+            "list_text": "<ul><li>Up to 13 hours of symptom control</li><li>Once-daily morning dose</li><li>Licensed specifically for adult ADHD (Elvanse Adult)</li></ul>",
+            "text": "A long-acting prodrug stimulant licensed for ADHD in adults and children. Converted in the body into dexamfetamine, giving a smoother profile and lower abuse potential than immediate-release amphetamines.",
+            "button_label_1": "Start my assessment",
+            "button_link_1": "shopify://collections",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary-outline",
+            "color_scheme_card": "scheme-8c4ea9c1-0632-45e8-b921-bd9af093a6cb",
+            "color_accent": "#ffffff"
+          }
+        },
+        "banner_card_block_U4xt6K": {
+          "type": "banner_card_block",
+          "name": "Banner card 1",
+          "settings": {
+            "title": "Equasym XL",
+            "price_text": "",
+            "list_text": "<ul><li>8-hour symptom coverage</li><li>Stronger morning onset, gentler later</li><li>Useful when full-day coverage isn't needed</li></ul>",
+            "text": "A modified-release methylphenidate with a 30:70 immediate-to-sustained release profile. Designed to give a stronger morning effect that tapers through the afternoon.",
+            "button_label_1": "Start my assessment",
+            "button_link_1": "shopify://collections",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary-outline",
+            "color_scheme_card": "scheme-8c4ea9c1-0632-45e8-b921-bd9af093a6cb",
+            "color_accent": "#ffffff"
+          }
+        },
+        "banner_card_block_3MpXdW": {
+          "type": "banner_card_block",
+          "name": "Banner card 1",
+          "settings": {
+            "title": "Medikinet XL",
+            "price_text": "",
+            "list_text": "<ul><li>Once-daily dosing with food</li><li>Balanced morning and afternoon effect</li><li>Alternative when Concerta isn't suitable</li></ul>",
+            "text": "A modified-release methylphenidate with a 50:50 release profile. Gives balanced morning and afternoon coverage across roughly 8 hours.",
+            "button_label_1": "Start my assessment",
+            "button_link_1": "shopify://collections",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary-outline",
+            "color_scheme_card": "scheme-8c4ea9c1-0632-45e8-b921-bd9af093a6cb",
+            "color_accent": "#ffffff"
+          }
+        },
+        "banner_card_block_9rDzi8": {
+          "type": "banner_card_block",
+          "name": "Banner card 1",
+          "settings": {
+            "title": "Dexamfetamine (Amfexa)",
+            "price_text": "",
+            "list_text": "<ul><li>3–5 hour symptom control per dose</li><li>Second-line stimulant option</li><li>Taken 2–3 times daily</li></ul>",
+            "text": "A short-acting stimulant licensed for ADHD when methylphenidate hasn't been effective or tolerated. Acts directly on dopamine and noradrenaline pathways.",
+            "button_label_1": "Start my assessment",
+            "button_link_1": "shopify://collections",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary-outline",
+            "color_scheme_card": "scheme-8c4ea9c1-0632-45e8-b921-bd9af093a6cb",
+            "color_accent": "#ffffff"
+          }
+        },
+        "banner_card_block_g9TPW3": {
+          "type": "banner_card_block",
+          "name": "Banner card 1",
+          "settings": {
+            "title": "Xaggitin XL",
+            "price_text": "",
+            "list_text": "<ul><li>12-hour symptom coverage</li><li>Once-daily morning dosing</li><li>Bioequivalent alternative to Concerta XL</li></ul>",
+            "text": "A long-acting methylphenidate equivalent to Concerta XL, using a similar osmotic-release mechanism. Often used as a cost-effective alternative.",
+            "button_label_1": "Start my assessment",
+            "button_link_1": "shopify://collections",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary-outline",
+            "color_scheme_card": "scheme-8c4ea9c1-0632-45e8-b921-bd9af093a6cb",
             "color_accent": "#ffffff"
           }
         }
       },
       "block_order": [
         "banner_card_block_XFTdrA",
-        "banner_card_block_2_tVkR86"
+        "banner_card_block_B4jRTm",
+        "banner_card_block_aRzLAd",
+        "banner_card_block_V8XtUr",
+        "banner_card_block_U4xt6K",
+        "banner_card_block_3MpXdW",
+        "banner_card_block_9rDzi8",
+        "banner_card_block_g9TPW3"
       ],
       "name": "Banner card blocks",
       "settings": {
         "enable_divider": true,
         "page_width": "container",
-        "heading": "Two of the most prescribed adult ADHD medications in the UK.",
+        "heading": "Treatments that we offer",
         "heading_size": "h1",
         "text": "<p>Your clinician will recommend what's right for you. Both options below are licensed, evidence-based, and dispensed from our own UK pharmacy.</p>",
         "button_label": "Button label",
         "button_link": "",
         "button_style": "primary",
         "color_scheme": "",
-        "color_accent": "#ffbe74",
+        "color_accent": "#8e3a2a",
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_top_tab": 40,
