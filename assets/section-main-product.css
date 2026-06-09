@@ -1615,7 +1615,7 @@ a.product__text {
   font-family: var(--font-inter);
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 40px;
 }
 
@@ -1895,13 +1895,13 @@ a.product__text {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   font-family: var(--font-inter);
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
+    font-size: 14px;
+    line-height: 16px;
 
 
 }
@@ -2026,6 +2026,7 @@ a.product__text {
   cursor: pointer;
   background: white;
   overflow: hidden;
+  font-size: 14px;
 }
 
 .settle-card.active,
@@ -2103,8 +2104,8 @@ a.product__text {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 14.8px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 20px;
 
   color: #323232;
 
@@ -2145,7 +2146,7 @@ a.product__text {
 }
 
 .included-heading {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 20px;
 }
 
@@ -2169,7 +2170,7 @@ a.product__text {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 31px;
 
   color: #727273;

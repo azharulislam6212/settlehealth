@@ -15,14 +15,14 @@
 .list-content--title em{
     font-style: normal;
     color:  rgb(var(--color-accent));
+    display: block;
 }
 
 .list-content--text{
 font-family: var(--font-inter);
 font-style: normal;
-font-weight: 400;
-font-size: 20.8px;
-line-height: 28px;
+font-weight: 300;
+ 
  
 margin-bottom: 3rem;
 
@@ -41,8 +41,7 @@ box-sizing: border-box;
 font-family: var(--font-inter);
 font-style: normal;
 font-weight: 500;
-font-size: 22.5px;
-line-height: 40px;
+
 }
 
 .list-content__block:not(:last-child) .list-content__text{
