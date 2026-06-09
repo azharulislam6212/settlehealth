@@ -60,7 +60,7 @@
         "enable_divider": true,
         "enable_sticky_info": true,
         "color_scheme": "scheme-d57102c0-4174-4eba-aa39-eeabd4724e10",
-        "color_accent": "#8e3a2a",
+        "color_accent": "#6b0010",
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
@@ -173,7 +173,7 @@
         "disclosure_toggle": "plus",
         "container_color_scheme": "",
         "color_scheme": "scheme-b5bcb236-b965-4cc1-9a73-67d3b7fd130f",
-        "color_accent": "#8e3a2a",
+        "color_accent": "#6b0010",
         "open_first_collapsible_row": true,
         "padding_top": 60,
         "padding_bottom": 60,
@@ -227,7 +227,7 @@
         "button_label": "Start my assessment",
         "link": "shopify://pages/professionals",
         "button_style": "primary",
-        "color_accent": "#8e3a2a",
+        "color_accent": "#6b0010",
         "color_scheme": "",
         "padding_top": 80,
         "padding_bottom": 80,
@@ -252,13 +252,173 @@
         "show_date": false,
         "show_author": false,
         "color_scheme": "scheme-6",
-        "color_accent": "#a5a5a5",
+        "color_accent": "#6b0010",
         "padding_top": 36,
         "padding_bottom": 36,
         "padding_top_tab": 68,
         "padding_bottom_tab": 68,
         "padding_top_mobile": 56,
         "padding_bottom_mobile": 56
+      }
+    },
+    "faq_section_product_VGKnFh": {
+      "type": "faq-section-product",
+      "blocks": {
+        "collapsible_row_LRVTPC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "🫁 Digestive Support",
+            "row_content": "<p>Complete 4-tier system: Prebiotics, Probiotics (10B CFU), Postbiotics  (FloraSMART®), and Digestive Enzymes. 89% of trial participants  experienced better digestion.</p>"
+          }
+        },
+        "collapsible_row_Y6Uch6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "❤ Heart Support",
+            "row_content": "<p>Complete 4-tier system: Prebiotics, Probiotics (10B CFU), Postbiotics  (FloraSMART®), and Digestive Enzymes. 89% of trial participants  experienced better digestion.</p>"
+          }
+        },
+        "collapsible_row_ancDKR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "✨ Skin & Hair Support",
+            "row_content": "<p>Complete 4-tier system: Prebiotics, Probiotics (10B CFU), Postbiotics  (FloraSMART®), and Digestive Enzymes. 89% of trial participants  experienced better digestion.</p>"
+          }
+        },
+        "collapsible_row_EGpEhc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "⚡ Endocrine Support",
+            "row_content": "<p>Complete 4-tier system: Prebiotics, Probiotics (10B CFU), Postbiotics  (FloraSMART®), and Digestive Enzymes. 89% of trial participants  experienced better digestion.</p>"
+          }
+        },
+        "collapsible_row_8jztGB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "🛡️Immune Support",
+            "row_content": "<p>Complete 4-tier system: Prebiotics, Probiotics (10B CFU), Postbiotics  (FloraSMART®), and Digestive Enzymes. 89% of trial participants  experienced better digestion.</p>"
+          }
+        },
+        "collapsible_row_c697j6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "💪 Skeletal Support",
+            "row_content": "<p>Complete 4-tier system: Prebiotics, Probiotics (10B CFU), Postbiotics  (FloraSMART®), and Digestive Enzymes. 89% of trial participants  experienced better digestion.</p>"
+          }
+        },
+        "collapsible_row_CUEqKt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "🫁 Brain Support",
+            "row_content": "<p>Complete 4-tier system: Prebiotics, Probiotics (10B CFU), Postbiotics  (FloraSMART®), and Digestive Enzymes. 89% of trial participants  experienced better digestion.</p>"
+          }
+        },
+        "collapsible_row_qy4Rtf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "💧 Hydration Support",
+            "row_content": "<p>Complete 4-tier system: Prebiotics, Probiotics (10B CFU), Postbiotics  (FloraSMART®), and Digestive Enzymes. 89% of trial participants  experienced better digestion.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_LRVTPC",
+        "collapsible_row_Y6Uch6",
+        "collapsible_row_ancDKR",
+        "collapsible_row_EGpEhc",
+        "collapsible_row_8jztGB",
+        "collapsible_row_c697j6",
+        "collapsible_row_CUEqKt",
+        "collapsible_row_qy4Rtf"
+      ],
+      "name": "Faq Section product",
+      "settings": {
+        "heading": "One serving. Nine organ systems. Every base covered.",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "text": "<p>Most people patch their health together with guesswork and  half-measures. One serving of Essentials Pro gives your entire body what it needs.<br/><br/></p>",
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "layout": "row",
+        "disclosure_toggle": "plus",
+        "container_color_scheme": "scheme-13eb1473-4812-4127-bb84-fd93a60f9e39",
+        "color_scheme": "",
+        "color_accent": "#a5a5a5",
+        "open_first_collapsible_row": false,
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "padding_top_tab": 68,
+        "padding_bottom_tab": 68,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "text_icon_card_block_DyBmje": {
+      "type": "text-icon-card-block",
+      "blocks": {
+        "card_block_MjjEPw": {
+          "type": "card_block",
+          "settings": {
+            "icon": "shopify://shop_images/Light.svg",
+            "title": "NAD+ Energy Revival",
+            "text": "<p>NMN 300mg boosts cellular energy production, reversing age-related NAD+ decline.</p>",
+            "tags_list": "NMN 300mg, NMN 300mg"
+          }
+        },
+        "card_block_ighh7p": {
+          "type": "card_block",
+          "settings": {
+            "icon": "shopify://shop_images/Shield.svg",
+            "title": "Senolytic Protection",
+            "text": "<p>Fisetin and Quercetin clear damaged zombie cells that accelerate aging.</p>",
+            "tags_list": "Fisetin, Quercetin, Resveratrol"
+          }
+        },
+        "card_block_XwjPMt": {
+          "type": "card_block",
+          "settings": {
+            "icon": "shopify://shop_images/Atom.svg",
+            "title": "Cellular Renewal",
+            "text": "<p>Spermidine activates autophagy — your body's natural cellular cleanup process.</p>",
+            "tags_list": "Spermidine-driven autophagy"
+          }
+        },
+        "card_block_3PYQ9X": {
+          "type": "card_block",
+          "settings": {
+            "icon": "shopify://shop_images/HeartBeat.svg",
+            "title": "Metabolic Optimization",
+            "text": "<p>Berberine and Astaxanthin activate AMPK and SIRT1 pathways for metabolic health.<br/></p>",
+            "tags_list": "AMPK/SIRT1 Activation"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_MjjEPw",
+        "card_block_ighh7p",
+        "card_block_XwjPMt",
+        "card_block_3PYQ9X"
+      ],
+      "name": "Icon card block",
+      "settings": {
+        "page_width": "container",
+        "caption": "LONGEVITY — ADVANCED CELLULAR SCIENCE",
+        "heading": "Cellular Health Redefined.",
+        "heading_size": "h0",
+        "text": "<p>That’s the Longevity half of your Beckham Stack — targeting all 12 hallmarks of aging.</p>",
+        "button_label": "",
+        "link": "",
+        "button_style": "primary",
+        "color_accent": "#6b0010",
+        "color_scheme": "scheme-6",
+        "color_scheme_card": "scheme-1",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "padding_top_tab": 80,
+        "padding_bottom_tab": 80,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48
       }
     }
   },
@@ -267,6 +427,8 @@
     "related-products",
     "faq_section_bjxzKR",
     "text_blocks_list_content_PLkrpQ",
-    "featured_blog_jdVYei"
+    "featured_blog_jdVYei",
+    "faq_section_product_VGKnFh",
+    "text_icon_card_block_DyBmje"
   ]
 }

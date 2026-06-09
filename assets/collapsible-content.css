@@ -259,3 +259,37 @@ line-height: 31px;
     padding-top: 2rem;
 }
     }
+
+
+
+
+    .faq-column--block  {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 999px;
+  margin: 0 auto;
+    }
+
+
+ .collapsible-row-layout .faq-column--block .accordion {
+    margin-bottom: 0;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.faq-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .faq-column--block {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.collapsible-product .section--header{
+      max-width: 771px;
+}

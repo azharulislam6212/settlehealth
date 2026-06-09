@@ -2059,14 +2059,14 @@ a.product__text {
 }
 
 .active .radio-icon {
-  border-color: #944237;
+  border-color:  rgb(var(--color-accent));
 }
 
 .active .radio-icon:after {
   content: '';
   width: 12px;
   height: 12px;
-  background: #944237;
+  background:  rgb(var(--color-accent));
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -2081,7 +2081,7 @@ a.product__text {
 }
 
 .popular {
-  background: #8c3b33;
+  background: rgb(var(--color-accent));
   color: white;
   display: inline-block;
   padding: 5px 15px;

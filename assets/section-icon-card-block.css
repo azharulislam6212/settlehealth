@@ -1,0 +1,131 @@
+.icon-card-blocks {
+    position: relative;
+}
+
+.card-blocks__flex{
+    display: grid;
+    grid-template-columns: 1.04fr 2fr;
+    gap: 128px;
+}
+.card-blocks__list{
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.card-blocks--caption-text{
+font-family: var(--font-inter);
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: rgb(var(--color-accent));
+}
+
+
+.card-blocks__list>div.icon-card {
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px;
+gap: 64px;
+background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F3F4F2;
+box-shadow: inset -6px -6px 0px rgba(142, 58, 42, 0.1), inset -3px -3px 0px rgba(142, 58, 42, 0.1);
+border-radius: 9px;
+}
+
+.icon-card__icon{
+  /* Icon */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+width: 60px;
+height: 60px;
+
+background: #F3F4F2;
+border: 1px solid rgba(142, 58, 42, 0.04);
+border-radius: 6px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.icon-card__icon img, .icon-card__icon svg{
+    max-width: 24px;
+    height: auto
+}
+
+.icon-card__title{
+font-family: var(--font-inter);
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+margin: 0 0 4px 0;
+}
+.icon-card__text{
+/* NMN 300mg boosts cellular energy production, reversing age-related NAD+ decline. */
+font-family: var(--font-inter);
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+ 
+ margin: 0 0 px 0;
+
+}
+.icon-card__tags-list{
+display: flex;
+align-items: center;   
+gap: 8px;
+margin: 0;
+padding: 0; 
+}
+.icon-card__tag{
+    /* Item */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px 10px;
+gap: 10px;
+height: 28px;
+border: 1px solid rgba(142, 58, 42, 0.1);
+border-radius: 100px;
+/* NMN 300mg */
+font-family: var(--font-inter);
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 28px;
+ 
+ 
+
+}
+@media (max-width: 768px) {
+ .card-blocks__flex{
+    grid-template-columns: 1fr;
+  }
+
+
+  .card-blocks__list{
+   grid-template-columns: 1fr;
+}
+}
+
+
